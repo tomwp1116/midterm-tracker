@@ -41,7 +41,7 @@ def fetch_series_list():
     try:
         resp = requests.get(SERIES_URL, headers=HEADERS, timeout=REQUEST_TIMEOUT)
         resp.raise_for_status()
-        return resp.json().get("series", [])
+        return resp.json().get("series") or []
     except Exception as e:
         print(f"  [Kalshi] Error fetching series list: {e}")
         return []
@@ -52,9 +52,9 @@ def discover_election_series(all_series):
     tickers = set()
     for s in all_series:
         ticker = s.get("ticker", "")
-        title = s.get("title", "").lower()
-        category = s.get("category", "").lower()
-        tags = [t.lower() for t in s.get("tags", [])]
+        title = (s.get("title") or "").lower()
+        category = (s.get("category") or "").lower()
+        tags = [t.lower() for t in (s.get("tags") or [])]
 
         # Match by ticker pattern
         for pattern in ELECTION_TICKER_PATTERNS:
