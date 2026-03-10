@@ -25,19 +25,19 @@ const FALLBACK = buildFallbackData();
 function buildFallbackData() {
   // Senate races
   const senate = [
-    { race_id:"senate-control-2026", chamber:"senate", state:"US", description:"Senate Control", dem_base:0.35, pm:"which-party-will-win-the-senate-in-2026", kalshi:"controls/senate-winner", rcp:"polls/state-of-the-union/generic-congressional-vote", note:"Rep 66%, Dem 35%." },
-    { race_id:"senate-GA-2026", chamber:"senate", state:"GA", description:"Georgia — Ossoff (D-inc) vs. TBD (R)", dem_base:0.52, pm:"georgia-senate-election-winner", kalshi:"senatega/georgia-senate-race/senatega-26", rcp:"polls/senate/general/2026/georgia", note:"R primary May 19.",
+    { race_id:"senate-control-2026", chamber:"senate", state:"US", description:"Senate Control", dem_base:0.47, pm:"which-party-will-win-the-senate-in-2026", kalshi:"controls/senate-winner", rcp:"polls/state-of-the-union/generic-congressional-vote", note:"Rep 54%, Dem 47%." },
+    { race_id:"senate-GA-2026", chamber:"senate", state:"GA", description:"Georgia — Ossoff (D-inc) vs. TBD (R)", dem_base:0.81, pm:"georgia-senate-election-winner", kalshi:"senatega/georgia-senate-race/senatega-26", rcp:"polls/senate/general/2026/georgia", note:"Dem 81% Polymarket / 80% Kalshi. R primary May 19.",
       polls:[{date:"Mar 5",pollster:"Emerson",d:48,r:43,spread:"Ossoff +5",matchup:"Ossoff vs. Collins (general)",url:"https://emersoncollegepolling.com/georgia-2026-poll-senator-ossoff-starts-re-election-near-50-and-outpaces-gop-field/"},{date:"Mar 5",pollster:"Emerson",d:47,r:44,spread:"Ossoff +3",matchup:"Ossoff vs. Carter (general)"},{date:"Feb 18",pollster:"Quinnipiac",d:50,r:42,spread:"Ossoff +8",matchup:"Ossoff vs. Collins (general)"}] },
-    { race_id:"senate-NC-2026", chamber:"senate", state:"NC", description:"North Carolina — Tillis (R-inc) vs. TBD (D)", dem_base:0.48, pm:"north-carolina-senate-election-winner", kalshi:"senatenc/north-carolina-senate-race/senatenc-26", rcp:"polls/senate/general/2026/north-carolina",
+    { race_id:"senate-NC-2026", chamber:"senate", state:"NC", description:"North Carolina — Tillis (R-inc) vs. TBD (D)", dem_base:0.72, pm:"north-carolina-senate-election-winner", kalshi:"senatenc/north-carolina-senate-race/senatenc-26", rcp:"polls/senate/general/2026/north-carolina", note:"Dem ~72%. Competitive D primary.",
       polls:[{date:"Mar 2",pollster:"SurveyUSA",d:46,r:45,spread:"D +1",matchup:"Generic D vs. Tillis"},{date:"Feb 25",pollster:"PPP",d:44,r:47,spread:"Tillis +3",matchup:"Generic D vs. Tillis"}] },
     { race_id:"senate-MI-2026", chamber:"senate", state:"MI", description:"Michigan — Open (Peters D-retiring)", dem_base:0.77, pm:"michigan-senate-election-winner", kalshi:"senatemi/michigan-senate-race/senatemi-26", rcp:"polls/senate/general/2026/michigan",
       polls:[{date:"Feb 28",pollster:"Mitchell",d:51,r:40,spread:"Peters +11",matchup:"Peters vs. generic R"}] },
-    { race_id:"senate-ME-2026", chamber:"senate", state:"ME", description:"Maine — Collins (R-inc) vs. TBD (D)", dem_base:0.58, pm:"maine-senate-election-winner", kalshi:"senateme/maine-senate-race/senateme-26", rcp:"polls/senate/general/2026/maine", note:"D primary June 9.",
+    { race_id:"senate-ME-2026", chamber:"senate", state:"ME", description:"Maine — Collins (R-inc) vs. TBD (D)", dem_base:0.74, pm:"maine-senate-election-winner", kalshi:"senateme/maine-senate-race/senateme-26", rcp:"polls/senate/general/2026/maine", note:"Dem ~74%. D primary June 9.",
       polls:[{date:"Mar 9",pollster:"Quantus",d:49,r:42,spread:"Platner +7",matchup:"Platner (D) vs. Collins (R)",url:"https://quantusinsights.org/f/maine-senate-2026-collins-faces-uncertain-path-to-re-election"},{date:"Mar 9",pollster:"Quantus",d:43,r:45,spread:"Collins +2",matchup:"Mills (D) vs. Collins (R)"},{date:"Mar 9",pollster:"Quantus",d:43,r:38,spread:"Platner +5",matchup:"D primary — Platner vs. Mills vs. Costello LaFlamme"}] },
     { race_id:"senate-AK-2026", chamber:"senate", state:"AK", description:"Alaska — Sullivan (R) vs. Peltola? (D)", dem_base:0.48, pm:"alaska-senate-election-winner", kalshi:"senateak/alaska-senate-race/senateak-26", note:"Ranked-choice. Sullivan 49%, Peltola 48%." },
-    { race_id:"senate-NH-2026", chamber:"senate", state:"NH", description:"New Hampshire — Open (Shaheen D-retiring)", dem_base:0.57, kalshi:"senatenh/new-hampshire-senate-race/senatenh-26", rcp:"polls/senate/general/2026/new-hampshire",
+    { race_id:"senate-NH-2026", chamber:"senate", state:"NH", description:"New Hampshire — Open (Shaheen D-retiring)", dem_base:0.68, kalshi:"senatenh/new-hampshire-senate-race/senatenh-26", rcp:"polls/senate/general/2026/new-hampshire", note:"Dem ~68%. Sununu vs. Scott Brown in R primary.",
       polls:[{date:"Feb 22",pollster:"UNH",d:48,r:44,spread:"D +4",matchup:"Generic D vs. Sununu"}] },
-    { race_id:"senate-OH-2026", chamber:"senate", state:"OH", description:"Ohio — Brown (D) vs. Husted (R)", dem_base:0.45, kalshi:"senateoh/ohio-senate-race/senateoh-26", rcp:"polls/senate/general/2026/ohio", note:"Special election.",
+    { race_id:"senate-OH-2026", chamber:"senate", state:"OH", description:"Ohio — Brown (D) vs. Husted (R)", dem_base:0.58, kalshi:"senateoh/ohio-senate-race/senateoh-26", rcp:"polls/senate/general/2026/ohio", note:"Dem ~58%. Special election.",
       polls:[{date:"Feb 15",pollster:"Emerson",d:42,r:48,spread:"R +6",matchup:"Brown vs. Husted"}] },
     { race_id:"senate-TX-2026", chamber:"senate", state:"TX", description:"Texas — Cornyn/Paxton (R) vs. Talarico (D)", dem_base:0.28, pm:"texas-senate-election-winner", kalshi:"senatetx/texas-senate-race/senatetx-26", rcp:"polls/senate/general/2026/texas",
       polls:[{date:"Mar 1",pollster:"Emerson",d:38,r:52,spread:"Cornyn +14",matchup:"Generic D vs. Cornyn (pre-primary)"}] },
@@ -48,7 +48,7 @@ function buildFallbackData() {
     { race_id:"primary-TX-senate-R-2026", chamber:"senate", state:"TX", description:"Texas Senate — Republican Primary", dem_base:0.45,
       kalshi:"senatetx-r-26", note:"Headed to runoff. No candidate reached 50%.",
       result:{ winner:"Runoff: Cornyn vs. Paxton", party:"R", date:"Mar 3", pct:null, runner_up:null, runner_up_pct:null, note:"Cornyn 38%, Paxton 32%. Runoff TBD." } },
-    { race_id:"senate-IA-2026", chamber:"senate", state:"IA", description:"Iowa — Grassley (R-retiring)", dem_base:0.35, kalshi:"senateia/iowa-senate-race/senateia-26" },
+    { race_id:"senate-IA-2026", chamber:"senate", state:"IA", description:"Iowa — Grassley (R-retiring)", dem_base:0.42, kalshi:"senateia/iowa-senate-race/senateia-26", note:"Could be competitive in blue wave." },
     { race_id:"senate-IL-2026", chamber:"senate", state:"IL", description:"Illinois — Durbin (D-retiring)", dem_base:0.82, kalshi:"senateil/illinois-senate-race/senateil-26", rcp:"polls/senate/general/2026/illinois",
       polls:[{date:"Mar 1",pollster:"Victory",d:55,r:32,spread:"D +23",matchup:"Generic D vs. generic R"}] },
     ...["VA","MN","NJ","CO"].map(st => ({ race_id:`senate-${st}-2026`, chamber:"senate", state:st, description:{VA:"Virginia — Warner (D)",MN:"Minnesota — Klobuchar (D)",NJ:"New Jersey — Open (D-held)",CO:"Colorado — Hickenlooper (D)"}[st], dem_base:{VA:0.72,MN:0.78,NJ:0.75,CO:0.80}[st], kalshi:`senate${st.toLowerCase()}/senate-race/senate${st.toLowerCase()}-26` })),
@@ -114,7 +114,7 @@ function buildFallbackData() {
   const nHouse = allRaces.filter(r => r.chamber === "house" && r.state !== "US").length;
   return {
     updated: "2026-03-10",
-    stats: { senate_rep_pct: 66, house_dem_pct: 78, battleground_senate: 4, battleground_house: nHouse, house_districts_tracked: nHouse, seats_up: 35, polls_tracked: allRaces.reduce((n, r) => n + (r.polls?.length || 0), 0) },
+    stats: { senate_rep_pct: 54, senate_dem_pct: 47, house_dem_pct: 78, house_rep_pct: 22, battleground_senate: 4, battleground_house: nHouse, house_districts_tracked: nHouse, seats_up: 35, polls_tracked: allRaces.reduce((n, r) => n + (r.polls?.length || 0), 0) },
     races: allRaces,
   };
 }
