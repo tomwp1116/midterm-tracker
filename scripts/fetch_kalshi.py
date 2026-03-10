@@ -24,15 +24,17 @@ from config import (
 HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
 SERIES_URL = f"{KALSHI_BASE}/series"
 
-# Patterns that indicate an election series (for dynamic discovery)
+# Patterns that indicate an election series (matched against ticker)
+# These are tight: SENATE*, HOUSE*, GOV* + state code patterns
 ELECTION_TICKER_PATTERNS = [
-    r"^SENATE", r"^HOUSE", r"^GOV", r"^CONTROLS",
-    r"^INPARTY", r"MIDTERM", r"^SEATE",  # catches SEATEAL etc.
-]
-
-ELECTION_TITLE_KEYWORDS = [
-    "senate", "house", "governor", "congress", "midterm",
-    "election winner", "representative", "2026",
+    r"^SENATE[A-Z]{2}$",    # SENATEGA, SENATEMI, etc.
+    r"^SEATE[A-Z]{2}$",     # SEATEAL (Alabama variant)
+    r"^HOUSE[A-Z]{2}\d+$",  # HOUSECA13, HOUSENY17, etc.
+    r"^GOV[A-Z]{2}$",       # GOVGA, GOVCA, etc.
+    r"^CONTROLH$",           # House control
+    r"^CONTROLS$",           # Senate control
+    r"^INPARTY",             # Balance of power
+    r"^KXMIDTERM",           # Midterm-specific
 ]
 
 
@@ -48,28 +50,21 @@ def fetch_series_list():
 
 
 def discover_election_series(all_series):
-    """From the full series list, identify election-related ones."""
+    """From the full series list, identify election-related ones.
+    Uses strict ticker pattern matching plus the 'US Elections' tag."""
     tickers = set()
     for s in all_series:
         ticker = s.get("ticker", "")
-        title = (s.get("title") or "").lower()
-        category = (s.get("category") or "").lower()
         tags = [t.lower() for t in (s.get("tags") or [])]
 
-        # Match by ticker pattern
+        # Primary method: match ticker patterns (most reliable)
         for pattern in ELECTION_TICKER_PATTERNS:
             if re.match(pattern, ticker, re.IGNORECASE):
                 tickers.add(ticker)
                 break
 
-        # Match by title keywords
-        if any(kw in title for kw in ELECTION_TITLE_KEYWORDS):
-            tickers.add(ticker)
-
-        # Match by category or tags
-        if "politic" in category or "election" in category:
-            tickers.add(ticker)
-        if any("election" in t or "politic" in t or "midterm" in t for t in tags):
+        # Secondary: match "US Elections" tag specifically (not "Politics" broadly)
+        if "us elections" in tags:
             tickers.add(ticker)
 
     return tickers
@@ -232,10 +227,10 @@ def fetch_all_election_markets():
         markets = fetch_markets_for_series(series_ticker)
         if markets:
             all_markets.extend(markets)
-        if (i + 1) % 20 == 0:
+        if (i + 1) % 20 == 0 or i == len(sorted_series) - 1:
             print(f"    ... {i+1}/{len(sorted_series)} series done, "
                   f"{len(all_markets)} markets so far")
-        time.sleep(REQUEST_DELAY_SECONDS)
+        time.sleep(0.3)  # Light delay — each call returns 1-5 markets
 
     print(f"  Done: {len(all_markets)} election markets from {len(election_series)} series")
 
