@@ -50,22 +50,18 @@ def fetch_series_list():
 
 
 def discover_election_series(all_series):
-    """From the full series list, identify election-related ones.
-    Uses strict ticker pattern matching plus the 'US Elections' tag."""
+    """From the full series list, identify 2026 midterm election series ONLY.
+    Uses strict ticker pattern matching. No tag/category fallbacks —
+    those match too broadly (2028 races, attorney generals, mayors, etc.)."""
     tickers = set()
     for s in all_series:
         ticker = s.get("ticker", "")
-        tags = [t.lower() for t in (s.get("tags") or [])]
 
-        # Primary method: match ticker patterns (most reliable)
+        # Only match by ticker pattern — these are unambiguous
         for pattern in ELECTION_TICKER_PATTERNS:
             if re.match(pattern, ticker, re.IGNORECASE):
                 tickers.add(ticker)
                 break
-
-        # Secondary: match "US Elections" tag specifically (not "Politics" broadly)
-        if "us elections" in tags:
-            tickers.add(ticker)
 
     return tickers
 
@@ -232,9 +228,17 @@ def fetch_all_election_markets():
                   f"{len(all_markets)} markets so far")
         time.sleep(0.3)  # Light delay — each call returns 1-5 markets
 
-    print(f"  Done: {len(all_markets)} election markets from {len(election_series)} series")
+    print(f"  Done: {len(all_markets)} raw markets from {len(election_series)} series")
 
-    records = [parse_kalshi_market(m) for m in all_markets]
+    # Only keep markets that parsed to a real race ID
+    valid_prefixes = ("senate-", "house-", "governor-", "congress-")
+    records = []
+    for m in all_markets:
+        r = parse_kalshi_market(m)
+        if r["race_id"].startswith(valid_prefixes):
+            records.append(r)
+
+    print(f"  Kept {len(records)} with valid race IDs (filtered {len(all_markets) - len(records)})")
     return records, all_markets
 
 

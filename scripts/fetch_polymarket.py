@@ -229,12 +229,14 @@ def fetch_all_midterm_markets():
                 all_raw.append(m)
         time.sleep(REQUEST_DELAY_SECONDS)
     
-    # Parse all discovered markets
+    # Parse all discovered markets, keeping only those that resolve to real race IDs
+    valid_prefixes = ("senate-", "house-", "governor-", "congress-")
     for raw_market in all_raw:
         record = parse_market_to_record(raw_market)
-        records.append(record)
+        if record["race_id"].startswith(valid_prefixes):
+            records.append(record)
     
-    print(f"  Found {len(records)} unique midterm-related markets")
+    print(f"  Found {len(all_raw)} raw markets, kept {len(records)} with valid race IDs")
     return records, all_raw
 
 
