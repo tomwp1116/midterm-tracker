@@ -103,7 +103,7 @@ function buildFallbackData() {
     if (!r.polls || !r.time_series) return;
     const MO = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
     const lookup = {};
-    r.polls.forEach(p => { const [m,d] = p.date.trim().split(/\s+/); const k = MO[m] ? `${MO[m]}/${parseInt(d)}` : null; if (k) (lookup[k] ||= []).push(p); });
+    r.polls.forEach(p => { const [m,d] = p.date.trim().split(/\s+/); const k = MO[m] ? `${MO[m]}/${parseInt(d)}` : null; if (k) { if(!lookup[k]) lookup[k]=[]; lookup[k].push(p); } });
     r.time_series.forEach(pt => {
       const mp = lookup[pt.date];
       if (mp) { pt.pollDem = mp[0].d; pt.pollRep = mp[0].r; pt.pollster = mp[0].pollster; pt.pollSpread = mp[0].spread; pt.pollMatchup = mp[0].matchup; if (mp.length > 1) pt.pollExtra = mp.slice(1); }
@@ -319,7 +319,7 @@ export default function App(){
           if(!r.polls||!r.time_series)return;
           const MO={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
           const lk={};
-          r.polls.forEach(p=>{const pts=p.date.trim().split(/\s+/);const k=MO[pts[0]]?`${MO[pts[0]]}/${parseInt(pts[1])}`:null;if(k)(lk[k]||=[]).push(p);});
+          r.polls.forEach(p=>{const pts=p.date.trim().split(/\s+/);const k=MO[pts[0]]?`${MO[pts[0]]}/${parseInt(pts[1])}`:null;if(k){if(!lk[k])lk[k]=[];lk[k].push(p);}});
           r.time_series.forEach(pt=>{const mp=lk[pt.date];if(mp){pt.pollDem=mp[0].d;pt.pollRep=mp[0].r;pt.pollster=mp[0].pollster;pt.pollSpread=mp[0].spread;pt.pollMatchup=mp[0].matchup;if(mp.length>1)pt.pollExtra=mp.slice(1);}});
         });
         setData(d);
