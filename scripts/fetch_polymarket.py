@@ -1,13 +1,18 @@
 """
 Fetch 2026 midterm election markets from Polymarket's Gamma API.
-No authentication required — all market data is public.
+No authentication required.
 
-Polymarket Gamma API docs: https://docs.polymarket.com/market-data/overview
-Base URL: https://gamma-api.polymarket.com
+Gamma API: https://gamma-api.polymarket.com
+Docs: https://docs.polymarket.com/market-data/overview
 
-Key endpoints:
-  GET /events?tag=midterms&closed=false   → list of event groups
-  GET /markets?closed=false               → individual tradable markets
+STRATEGY:
+  1. Fetch events by tag ("midterms") — returns event objects with nested markets
+  2. Also fetch individual events by known slugs for races we're tracking
+  3. Parse each market, keeping only those that resolve to real race IDs
+
+The key insight: the /events endpoint returns objects with a "title" field
+(e.g., "Georgia Senate Election Winner") and a nested "markets" array.
+Each market has "question", "outcomePrices", "outcomes", etc.
 """
 import json
 import time
@@ -15,235 +20,262 @@ import re
 import requests
 from datetime import date, datetime
 from config import (
-    POLYMARKET_GAMMA_BASE, POLYMARKET_SEARCH_TAGS,
-    POLYMARKET_SEARCH_QUERIES, USER_AGENT, REQUEST_DELAY_SECONDS,
+    POLYMARKET_GAMMA_BASE, USER_AGENT, REQUEST_DELAY_SECONDS,
     REQUEST_TIMEOUT
 )
 
 HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
 
+# Tags to search
+TAGS = ["midterms", "senate-elections", "house-elections", "governor-midterms"]
+
+# Known event slugs for races we want to track
+# (These are the URL slugs from polymarket.com/event/<slug>)
+KNOWN_SLUGS = [
+    "which-party-will-win-the-senate-in-2026",
+    "which-party-will-win-the-house-in-2026",
+    "balance-of-power-2026-midterms",
+    "georgia-senate-election-winner",
+    "michigan-senate-election-winner",
+    "north-carolina-senate-election-winner",
+    "maine-senate-election-winner",
+    "alaska-senate-election-winner",
+    "new-hampshire-senate-election-winner",
+    "texas-senate-election-winner",
+    "nebraska-senate-election-winner",
+    "west-virginia-senate-election-winner",
+    "new-york-governor-winner-2026",
+    "new-mexico-governor-winner-2026",
+    "alaska-governor-election-winner",
+    "rhode-island-governor-winner-2026",
+    "will-democrats-win-all-core-four-senate-races",
+    "blue-wave-in-2026",
+    "georgia-republican-senate-primary-winner",
+    "maine-democratic-senate-primary-winner",
+    "michigan-democratic-senate-primary-winner",
+]
+
+# State mapping for race ID inference
+STATE_MAP = {
+    "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR",
+    "california": "CA", "colorado": "CO", "connecticut": "CT", "delaware": "DE",
+    "florida": "FL", "georgia": "GA", "hawaii": "HI", "idaho": "ID",
+    "illinois": "IL", "indiana": "IN", "iowa": "IA", "kansas": "KS",
+    "kentucky": "KY", "louisiana": "LA", "maine": "ME", "maryland": "MD",
+    "massachusetts": "MA", "michigan": "MI", "minnesota": "MN",
+    "mississippi": "MS", "missouri": "MO", "montana": "MT", "nebraska": "NE",
+    "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ",
+    "new mexico": "NM", "new york": "NY", "north carolina": "NC",
+    "north dakota": "ND", "ohio": "OH", "oklahoma": "OK", "oregon": "OR",
+    "pennsylvania": "PA", "rhode island": "RI", "south carolina": "SC",
+    "south dakota": "SD", "tennessee": "TN", "texas": "TX", "utah": "UT",
+    "vermont": "VT", "virginia": "VA", "washington": "WA",
+    "west virginia": "WV", "wisconsin": "WI", "wyoming": "WY"
+}
+
 
 def fetch_events_by_tag(tag, limit=100):
-    """Fetch Polymarket events by tag (e.g., 'midterms')."""
+    """Fetch events by tag. Returns list of event objects."""
     url = f"{POLYMARKET_GAMMA_BASE}/events"
     params = {"tag": tag, "closed": "false", "limit": limit}
     try:
         resp = requests.get(url, params=params, headers=HEADERS, timeout=REQUEST_TIMEOUT)
         resp.raise_for_status()
-        return resp.json()
+        return resp.json() if isinstance(resp.json(), list) else []
     except Exception as e:
-        print(f"  [Polymarket] Error fetching tag '{tag}': {e}")
+        print(f"  [PM] Error fetching tag '{tag}': {e}")
         return []
 
 
-def fetch_markets_by_query(query, limit=100):
-    """Search Polymarket markets by text query."""
-    url = f"{POLYMARKET_GAMMA_BASE}/markets"
-    params = {"closed": "false", "limit": limit}
-    # The Gamma API supports text search via the 'tag' or by listing active
-    # markets and filtering client-side
+def fetch_event_by_slug(slug):
+    """Fetch a single event by its slug."""
+    url = f"{POLYMARKET_GAMMA_BASE}/events/slug/{slug}"
     try:
-        resp = requests.get(url, params=params, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
         resp.raise_for_status()
-        all_markets = resp.json()
-        # Client-side filter by query terms
-        q_lower = query.lower()
-        return [
-            m for m in all_markets
-            if q_lower in (m.get("question", "") + " " + m.get("description", "")).lower()
-        ]
+        data = resp.json()
+        # API may return a single event object or a list
+        if isinstance(data, list):
+            return data[0] if data else None
+        return data
     except Exception as e:
-        print(f"  [Polymarket] Error searching '{query}': {e}")
-        return []
+        # Slug may not exist or may have changed
+        return None
 
 
-def parse_market_to_record(market):
+def extract_markets_from_event(event):
     """
-    Convert a Polymarket market object to a standardized record.
+    Extract market records from an event object.
     
-    A market has:
-      - question: "Will Democrats win the 2026 Georgia Senate race?"
-      - outcomePrices: '["0.62","0.38"]'  (Yes/No probabilities)
-      - volume24hr: float
-      - slug: URL-friendly identifier
-      - conditionId: unique market ID
-    """
-    question = market.get("question", "")
-    slug = market.get("slug", "")
-    
-    # Parse outcome prices
-    prices_raw = market.get("outcomePrices", "[]")
-    if isinstance(prices_raw, str):
-        try:
-            prices = json.loads(prices_raw)
-        except json.JSONDecodeError:
-            prices = []
-    else:
-        prices = prices_raw
-    
-    outcomes_raw = market.get("outcomes", "[]")
-    if isinstance(outcomes_raw, str):
-        try:
-            outcomes = json.loads(outcomes_raw)
-        except json.JSONDecodeError:
-            outcomes = []
-    else:
-        outcomes = outcomes_raw
-    
-    yes_price = float(prices[0]) if len(prices) > 0 else None
-    no_price = float(prices[1]) if len(prices) > 1 else None
-    
-    # Try to determine party from question/outcomes
-    dem_price, rep_price = None, None
-    question_lower = question.lower()
-    outcomes_lower = [o.lower() for o in outcomes]
-    
-    if "democrat" in question_lower or "Democratic Party" in question:
-        dem_price = yes_price
-        rep_price = no_price
-    elif "republican" in question_lower or "Republican Party" in question:
-        rep_price = yes_price
-        dem_price = no_price
-    elif len(outcomes) >= 2:
-        # Check outcome labels
-        if any("dem" in o for o in outcomes_lower):
-            dem_idx = next(i for i, o in enumerate(outcomes_lower) if "dem" in o)
-            dem_price = float(prices[dem_idx]) if dem_idx < len(prices) else None
-        if any("rep" in o for o in outcomes_lower):
-            rep_idx = next(i for i, o in enumerate(outcomes_lower) if "rep" in o)
-            rep_price = float(prices[rep_idx]) if rep_idx < len(prices) else None
-
-    # Infer race_id from question/slug
-    race_id = infer_race_id(question, slug)
-    
-    return {
-        "race_id": race_id,
-        "question": question,
-        "slug": slug,
-        "condition_id": market.get("conditionId", ""),
-        "dem_price": dem_price,
-        "rep_price": rep_price,
-        "yes_price": yes_price,
-        "no_price": no_price,
-        "outcomes": outcomes,
-        "volume_24h": market.get("volume24hr", 0),
-        "volume_total": market.get("volumeNum", 0),
-        "liquidity": market.get("liquidityNum", 0),
-        "end_date": market.get("endDate", ""),
-        "active": market.get("active", True),
+    An event looks like:
+    {
+      "title": "Georgia Senate Election Winner",
+      "slug": "georgia-senate-election-winner",
+      "markets": [
+        {"question": "Will the Democrats win...", "outcomePrices": "[\"0.81\",\"0.19\"]", ...},
+        {"question": "Will the Republicans win...", "outcomePrices": "[\"0.19\",\"0.81\"]", ...}
+      ]
     }
+    """
+    event_title = (event.get("title") or "").lower()
+    event_slug = event.get("slug") or ""
+    markets_list = event.get("markets") or []
+
+    # If no nested markets, treat the event itself as a market
+    if not markets_list:
+        markets_list = [event]
+
+    results = []
+    for m in markets_list:
+        question = (m.get("question") or m.get("title") or "").strip()
+        slug = m.get("slug") or event_slug
+        
+        # Parse prices
+        prices_raw = m.get("outcomePrices") or "[]"
+        if isinstance(prices_raw, str):
+            try:
+                prices = json.loads(prices_raw)
+            except json.JSONDecodeError:
+                prices = []
+        else:
+            prices = prices_raw or []
+
+        outcomes_raw = m.get("outcomes") or "[]"
+        if isinstance(outcomes_raw, str):
+            try:
+                outcomes = json.loads(outcomes_raw)
+            except json.JSONDecodeError:
+                outcomes = []
+        else:
+            outcomes = outcomes_raw or []
+
+        yes_price = float(prices[0]) if len(prices) > 0 else None
+        no_price = float(prices[1]) if len(prices) > 1 else None
+
+        # Determine party
+        dem_price, rep_price = None, None
+        text = (question + " " + event_title + " " + " ".join(outcomes)).lower()
+        
+        if "democrat" in text:
+            dem_price = yes_price
+            rep_price = no_price
+        elif "republican" in text:
+            rep_price = yes_price
+            dem_price = no_price
+
+        # Infer race ID from the event title + question
+        combined = (event_title + " " + question + " " + event_slug).lower()
+        race_id = infer_race_id(combined, event_slug)
+
+        results.append({
+            "race_id": race_id,
+            "question": question,
+            "slug": event_slug,
+            "condition_id": m.get("conditionId") or "",
+            "dem_price": dem_price,
+            "rep_price": rep_price,
+            "yes_price": yes_price,
+            "no_price": no_price,
+            "outcomes": outcomes,
+            "volume_24h": m.get("volume24hr") or m.get("volume") or 0,
+            "active": m.get("active", True),
+        })
+
+    return results
 
 
-def infer_race_id(question, slug):
-    """
-    Attempt to create a canonical race_id from the market question/slug.
-    
-    Examples:
-      "Which party will win the 2026 Georgia Senate race?" → "senate-GA-2026"
-      "Who will win Texas House District 23 in 2026?"      → "house-TX-23-2026"
-    """
-    q = question.lower() + " " + slug.lower()
-    
-    # State name → abbreviation mapping
-    state_map = {
-        "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR",
-        "california": "CA", "colorado": "CO", "connecticut": "CT", "delaware": "DE",
-        "florida": "FL", "georgia": "GA", "hawaii": "HI", "idaho": "ID",
-        "illinois": "IL", "indiana": "IN", "iowa": "IA", "kansas": "KS",
-        "kentucky": "KY", "louisiana": "LA", "maine": "ME", "maryland": "MD",
-        "massachusetts": "MA", "michigan": "MI", "minnesota": "MN",
-        "mississippi": "MS", "missouri": "MO", "montana": "MT", "nebraska": "NE",
-        "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ",
-        "new mexico": "NM", "new york": "NY", "north carolina": "NC",
-        "north dakota": "ND", "ohio": "OH", "oklahoma": "OK", "oregon": "OR",
-        "pennsylvania": "PA", "rhode island": "RI", "south carolina": "SC",
-        "south dakota": "SD", "tennessee": "TN", "texas": "TX", "utah": "UT",
-        "vermont": "VT", "virginia": "VA", "washington": "WA",
-        "west virginia": "WV", "wisconsin": "WI", "wyoming": "WY"
-    }
-    
-    # Find state
-    state_code = None
-    for name, code in state_map.items():
-        if name in q:
-            state_code = code
-            break
-    
+def infer_race_id(text, slug):
+    """Infer a canonical race_id from combined event/market text."""
+    t = text.lower()
+
     # Find chamber
     chamber = None
-    if "senate" in q:
+    if "senate" in t:
         chamber = "senate"
-    elif "house" in q:
+    elif "house" in t:
         chamber = "house"
-    elif "governor" in q:
+    elif "governor" in t:
         chamber = "governor"
-    
-    # Find district for house races
+    elif "balance of power" in t or "trifecta" in t or "sweep" in t:
+        chamber = "congress"
+
+    # Find state
+    state_code = None
+    for name, code in STATE_MAP.items():
+        if name in t:
+            state_code = code
+            break
+
+    # District for house
     district = None
     if chamber == "house":
-        dist_match = re.search(r'district\s*(\d+)', q)
+        dist_match = re.search(r'district\s*(\d+)', t)
         if dist_match:
             district = dist_match.group(1)
-    
+
     if chamber and state_code:
         if district:
             return f"{chamber}-{state_code}-{district}-2026"
         return f"{chamber}-{state_code}-2026"
-    
-    # Fallback: use slug
-    return f"pm-{slug[:60]}" if slug else f"pm-unknown-{hash(question) % 10000}"
+    elif chamber and state_code is None and chamber in ("senate", "house"):
+        return f"{chamber}-control-2026"
+    elif chamber == "congress":
+        return f"congress-control-2026"
+
+    # No match — return None-like value that will be filtered out
+    return f"pm-{slug[:60]}" if slug else "pm-unknown"
 
 
 def fetch_all_midterm_markets():
     """
-    Main entry point: gather all Polymarket 2026 midterm markets.
-    Returns (records_list, raw_data_for_archive).
+    Main entry point.
+    1. Fetch events by known tags
+    2. Fetch events by known slugs (catches ones tags might miss)
+    3. Parse and deduplicate
+    4. Keep only markets with valid race IDs
     """
     print("[Polymarket] Fetching 2026 midterm markets...")
-    all_raw = []
     seen_conditions = set()
-    records = []
-    
-    # Method 1: Fetch by known tags
-    for tag in POLYMARKET_SEARCH_TAGS:
+    all_records = []
+
+    # Method 1: Fetch by tags
+    for tag in TAGS:
         events = fetch_events_by_tag(tag)
-        if isinstance(events, list):
-            for event in events:
-                markets = event.get("markets", [])
-                if not markets and isinstance(event, dict):
-                    markets = [event]
-                for m in markets:
-                    cid = m.get("conditionId", "")
-                    if cid and cid not in seen_conditions:
-                        seen_conditions.add(cid)
-                        all_raw.append(m)
-        time.sleep(REQUEST_DELAY_SECONDS)
-    
-    # Method 2: Search by query terms
-    for query in POLYMARKET_SEARCH_QUERIES:
-        matches = fetch_markets_by_query(query)
-        for m in matches:
-            cid = m.get("conditionId", "")
-            if cid and cid not in seen_conditions:
-                seen_conditions.add(cid)
-                all_raw.append(m)
-        time.sleep(REQUEST_DELAY_SECONDS)
-    
-    # Parse all discovered markets, keeping only those that resolve to real race IDs
+        for event in events:
+            markets = extract_markets_from_event(event)
+            for record in markets:
+                cid = record.get("condition_id", "")
+                key = cid or record["race_id"] + record.get("question", "")
+                if key and key not in seen_conditions:
+                    seen_conditions.add(key)
+                    all_records.append(record)
+        time.sleep(0.5)
+
+    # Method 2: Fetch by known slugs
+    for slug in KNOWN_SLUGS:
+        event = fetch_event_by_slug(slug)
+        if event:
+            markets = extract_markets_from_event(event)
+            for record in markets:
+                cid = record.get("condition_id", "")
+                key = cid or record["race_id"] + record.get("question", "")
+                if key and key not in seen_conditions:
+                    seen_conditions.add(key)
+                    all_records.append(record)
+        time.sleep(0.3)
+
+    # Filter: keep only records with valid election race IDs
     valid_prefixes = ("senate-", "house-", "governor-", "congress-")
-    for raw_market in all_raw:
-        record = parse_market_to_record(raw_market)
-        if record["race_id"].startswith(valid_prefixes):
-            records.append(record)
-    
-    print(f"  Found {len(all_raw)} raw markets, kept {len(records)} with valid race IDs")
-    return records, all_raw
+    records = [r for r in all_records if r["race_id"].startswith(valid_prefixes)]
+    raw = all_records  # archive everything for debugging
+
+    print(f"  Found {len(all_records)} raw markets, kept {len(records)} with valid race IDs")
+    return records, raw
 
 
 if __name__ == "__main__":
     records, raw = fetch_all_midterm_markets()
-    # Pretty-print a sample
-    for r in records[:10]:
+    for r in records[:15]:
         print(f"  {r['race_id']:30s}  D:{r['dem_price']}  R:{r['rep_price']}  "
-              f"Vol24h:{r['volume_24h']}")
+              f"Q:{r['question'][:50]}")
     print(f"\nTotal: {len(records)} markets")
