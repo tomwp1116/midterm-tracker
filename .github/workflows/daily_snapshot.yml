@@ -2,36 +2,21 @@ name: Daily Snapshot
 
 on:
   schedule:
-    # Runs at 11 PM Eastern (4 AM UTC next day) every day
     - cron: '0 4 * * *'
   workflow_dispatch:
-    # This lets you also trigger it manually from the GitHub website
 
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Initialize database
-        run: python setup_db.py
-
-      - name: Populate race list
-        run: python real_inventory.py
-
-      - name: Run daily snapshot
-        run: python scripts/daily_snapshot.py
-
+      - run: pip install -r requirements.txt
+      - run: python setup_db.py
+      - run: python real_inventory.py
+      - run: python scripts/daily_snapshot.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"

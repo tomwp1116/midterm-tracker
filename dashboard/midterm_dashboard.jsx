@@ -305,8 +305,15 @@ export default function App(){
 
   // Try to load live JSON (works in production when served alongside the app)
   useEffect(()=>{
-    fetch("dashboard_data.json").then(r=>r.ok?r.json():null).then(d=>{
-      if(d?.races?.length){
+    // Try multiple paths: works on GitHub Pages, local dev, and alongside the JSX
+    const paths = ["data/dashboard_data.json", "dashboard_data.json", "../data/dashboard_data.json"];
+    (async () => {
+      for (const path of paths) {
+        try {
+          const r = await fetch(path);
+          if (!r.ok) continue;
+          const d = await r.json();
+          if (d?.races?.length) {
         // Merge polls into time_series for chart rendering
         d.races.forEach(r=>{
           if(!r.polls||!r.time_series)return;
@@ -316,8 +323,11 @@ export default function App(){
           r.time_series.forEach(pt=>{const mp=lk[pt.date];if(mp){pt.pollDem=mp[0].d;pt.pollRep=mp[0].r;pt.pollster=mp[0].pollster;pt.pollSpread=mp[0].spread;pt.pollMatchup=mp[0].matchup;if(mp.length>1)pt.pollExtra=mp.slice(1);}});
         });
         setData(d);
+            return; // Found valid data, stop trying other paths
+          }
+        } catch(e) { continue; }
       }
-    }).catch(()=>{});
+    })();
   },[]);
 
   const st = data.stats || {};
