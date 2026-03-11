@@ -13,13 +13,68 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/recharts@2.15.3/umd/Recharts.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.26.10/babel.min.js"></script>
+
+  <!-- Shim: make ES-module-style imports resolve to the UMD globals -->
+  <script>
+    // Babel standalone processes "import {X} from 'react'" if we register
+    // these as available modules. But the simpler approach: we'll inject
+    // the needed variables into the global scope before Babel runs.
+    const {
+      useState, useMemo, useCallback, useEffect, useRef, createElement
+    } = React;
+
+    const {
+      XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceLine,
+      ReferenceArea, Area, AreaChart, ComposedChart, Line
+    } = Recharts;
+  </script>
 </head>
 <body>
   <div id="root"></div>
-  <script type="text/babel" data-type="module" src="dashboard/midterm_dashboard.jsx"></script>
-  <script type="text/babel">
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(React.createElement(App));
+  <div id="loading" style="padding: 60px 24px; max-width: 960px; margin: 0 auto; font-family: Georgia, serif;">
+    <h1 style="font-size: 24px; margin-bottom: 8px;">2026 Midterms — Markets vs. Polls</h1>
+    <p style="color: #888;">Loading dashboard...</p>
+  </div>
+
+  <script>
+    // Fetch the JSX source, strip the import/export lines, and run it through Babel
+    fetch('dashboard/midterm_dashboard.jsx')
+      .then(r => {
+        if (!r.ok) throw new Error('Could not load dashboard JSX: ' + r.status);
+        return r.text();
+      })
+      .then(source => {
+        // Strip ES module imports (already available as globals from the shim)
+        let code = source
+          .replace(/^import\s+\{[^}]+\}\s+from\s+["'][^"']+["'];?\s*$/gm, '')
+          .replace(/^import\s+.*from\s+["'][^"']+["'];?\s*$/gm, '');
+
+        // Replace "export default function App" with just "function App"
+        code = code.replace(/export\s+default\s+function\s+/g, 'function ');
+
+        // Compile JSX → JS via Babel
+        const compiled = Babel.transform(code, {
+          presets: ['react'],
+          filename: 'dashboard.jsx',
+        }).code;
+
+        // Execute it
+        const script = document.createElement('script');
+        script.textContent = compiled;
+        document.body.appendChild(script);
+
+        // Remove loading message and render
+        document.getElementById('loading').remove();
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+      })
+      .catch(err => {
+        document.getElementById('loading').innerHTML =
+          '<h1 style="font-size:20px;margin-bottom:8px;">Error loading dashboard</h1>' +
+          '<p style="color:#c44e52;">' + err.message + '</p>' +
+          '<p style="color:#888;margin-top:8px;">Check the browser console for details.</p>';
+        console.error(err);
+      });
   </script>
 </body>
 </html>
