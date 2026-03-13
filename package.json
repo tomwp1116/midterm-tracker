@@ -1,0 +1,32 @@
+{
+  "name": "midterm-tracker",
+  "version": "1.0.0",
+  "description": "**Prediction Markets vs. the Polls** — A journalism project tracking Polymarket and Kalshi odds alongside public polling for every competitive 2026 Senate, House, and Governor race.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomwp1116/midterm-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tomwp1116/midterm-tracker/issues"
+  },
+  "homepage": "https://github.com/tomwp1116/midterm-tracker#readme",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.0",
+    "vite": "^8.0.0"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "recharts": "^3.8.0"
+  }
+}

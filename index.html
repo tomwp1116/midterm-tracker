@@ -1,117 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2026 Midterms — Prediction Markets vs. the Polls</title>
   <meta name="description" content="Tracking Polymarket and Kalshi odds alongside public polling for every competitive 2026 midterm race.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #fff; }
-    #status { padding: 60px 24px; max-width: 960px; margin: 0 auto; font-family: Georgia, serif; }
-    #status h1 { font-size: 24px; margin-bottom: 8px; }
-    #status p { color: #888; line-height: 1.6; }
-    #status .error { color: #c44e52; font-family: monospace; font-size: 13px; white-space: pre-wrap; margin-top: 12px; padding: 12px; background: #fef2f2; border-radius: 4px; }
-  </style>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/recharts@2.15.3/umd/Recharts.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.26.10/babel.min.js"></script>
-  <script>
-    // Make React hooks and Recharts components available as globals
-    // (the JSX file uses import syntax which gets stripped before compilation)
-    var useState = React.useState;
-    var useMemo = React.useMemo;
-    var useCallback = React.useCallback;
-    var useEffect = React.useEffect;
-    var useRef = React.useRef;
-
-    var XAxis = Recharts.XAxis;
-    var YAxis = Recharts.YAxis;
-    var Tooltip = Recharts.Tooltip;
-    var ResponsiveContainer = Recharts.ResponsiveContainer;
-    var ReferenceLine = Recharts.ReferenceLine;
-    var ReferenceArea = Recharts.ReferenceArea;
-    var Area = Recharts.Area;
-    var AreaChart = Recharts.AreaChart;
-    var ComposedChart = Recharts.ComposedChart;
-    var Line = Recharts.Line;
-  </script>
 </head>
 <body>
   <div id="root"></div>
-  <div id="status">
-    <h1>2026 Midterms — Markets vs. Polls</h1>
-    <p>Loading dashboard...</p>
-  </div>
-
-  <script>
-    function showError(msg, detail) {
-      var el = document.getElementById('status');
-      el.innerHTML = '<h1>Error loading dashboard</h1>' +
-        '<p>' + msg + '</p>' +
-        (detail ? '<div class="error">' + detail + '</div>' : '') +
-        '<p style="margin-top:12px;color:#888;">Check the browser console (F12) for more details.</p>';
-    }
-
-    // Step 1: Fetch the JSX source
-    fetch('dashboard/midterm_dashboard.jsx')
-      .then(function(r) {
-        if (!r.ok) throw new Error('Could not load JSX file: HTTP ' + r.status);
-        return r.text();
-      })
-      .then(function(source) {
-        // Step 2: Strip ES module imports and exports (already available as globals)
-        var code = source
-          .replace(/^import\s+\{[^}]+\}\s+from\s+["'][^"']+["'];?\s*$/gm, '')
-          .replace(/^import\s+.*from\s+["'][^"']+["'];?\s*$/gm, '')
-          .replace(/export\s+default\s+function\s+/g, 'function ');
-
-        // Step 3: Compile JSX to JS via Babel
-        var compiled;
-        try {
-          compiled = Babel.transform(code, {
-            presets: ['react'],
-            filename: 'dashboard.jsx',
-          }).code;
-        } catch(e) {
-          showError('Babel compilation failed.', e.message);
-          console.error('Babel error:', e);
-          return;
-        }
-
-        // Step 4: Execute the compiled code (via script element so vars are global)
-        try {
-          var script = document.createElement('script');
-          script.textContent = compiled;
-          document.body.appendChild(script);
-        } catch(e) {
-          showError('Runtime error in dashboard code.', e.message);
-          console.error('Runtime error:', e);
-          return;
-        }
-
-        // Step 5: Check that App is defined
-        if (typeof App !== 'function') {
-          showError('Dashboard loaded but App component was not defined.', 'typeof App = ' + typeof App);
-          return;
-        }
-
-        // Step 6: Render
-        try {
-          document.getElementById('status').style.display = 'none';
-          var root = ReactDOM.createRoot(document.getElementById('root'));
-          root.render(React.createElement(App));
-        } catch(e) {
-          document.getElementById('status').style.display = 'block';
-          showError('React render failed.', e.message);
-          console.error('Render error:', e);
-        }
-      })
-      .catch(function(err) {
-        showError('Failed to load dashboard.', err.message);
-        console.error(err);
-      });
-  </script>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
