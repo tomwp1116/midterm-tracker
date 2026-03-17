@@ -195,101 +195,175 @@ def parse_polls_table(soup, page_url):
 
 def parse_rcp_structured(soup, page_url):
     """
-    Alternative parser that works with RCP's link-based structure.
-    Extracts polls from anchor tags and surrounding text.
+    Parse RealClearPolling's poll table by reading the <tbody> as a token
+    stream.  The page renders each poll as a flat sequence of text nodes
+    inside one big <tbody>:
+
+        Monday, March 16          ← date header
+        2026 Ohio Senate … - …   ← race title (contains /polls/ link)
+        Poll                      ← literal marker
+        Quantus Insights          ← pollster name
+        Results                   ← literal marker
+        Husted                    ← candidate 1
+        46                        ← pct 1
+        Brown                     ← candidate 2
+        44                        ← pct 2
+        Spread                    ← literal marker
+        Husted                    ← spread winner
+        +2                        ← margin
+
+    Walking the tokens in order lets us capture date, pollster, and results
+    correctly instead of chasing individual links.
     """
     polls = []
     current_date = None
-    
-    # Find all links that point to RCP poll pages
-    links = soup.find_all("a", href=True)
-    
-    for link in links:
-        href = link.get("href", "")
-        text = link.get_text(strip=True)
-        
-        # Match race links like "/polls/senate/general/2026/georgia/..."
-        if "/polls/" in href and "/2026/" in href:
-            # Determine chamber and state from URL
-            parts = href.split("/")
-            chamber = None
-            state = None
-            
-            if "senate" in parts:
-                chamber = "senate"
-            elif "house" in parts:
-                chamber = "house"
-            elif "governor" in parts:
-                chamber = "governor"
-            
-            # Find state in URL parts
-            for part in parts:
-                if part.lower() in STATE_MAP:
-                    state = STATE_MAP[part.lower()]
+
+    MONTH_MAP = {
+        "january": 1, "february": 2, "march": 3, "april": 4,
+        "may": 5, "june": 6, "july": 7, "august": 8,
+        "september": 9, "october": 10, "november": 11, "december": 12,
+    }
+    DATE_RE = re.compile(
+        r'(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+'
+        r'(January|February|March|April|May|June|July|August|September|'
+        r'October|November|December)\s+(\d{1,2})',
+        re.IGNORECASE,
+    )
+
+    def href_to_race_id(href):
+        """Convert an RCP poll URL to a canonical race_id."""
+        parts = [p for p in href.split("/") if p]
+        chamber = None
+        state = None
+        if "senate" in parts:
+            chamber = "senate"
+        elif "house" in parts:
+            chamber = "house"
+        elif "governor" in parts:
+            chamber = "governor"
+        for part in parts:
+            lp = part.lower()
+            if lp in STATE_MAP:
+                state = STATE_MAP[lp]
+                break
+            for name, code in STATE_MAP.items():
+                if name.replace(" ", "-") == lp:
+                    state = code
                     break
-                # Also check two-word states encoded as hyphens
-                for name, code in STATE_MAP.items():
-                    if name.replace(" ", "-") == part.lower():
-                        state = code
-                        break
-            
-            if chamber and state:
-                race_id = f"{chamber}-{state}-2026"
-                
-                # Check for primary indicator
-                if "primary" in href.lower():
-                    if "democratic" in href.lower():
-                        race_id += "-primary-D"
-                    elif "republican" in href.lower():
-                        race_id += "-primary-R"
-                
-                # Try to extract results from nearby text
-                parent = link.parent
-                if parent:
-                    full_text = parent.get_text(separator=" ", strip=True)
-                    
-                    # Find candidate percentages
-                    result_matches = re.findall(
-                        r'([A-Z][a-zA-Z\s]+?)\s+(\d{1,2})',
-                        full_text
-                    )
-                    
-                    # Find pollster
-                    pollster = None
-                    pollster_link = parent.find("a", href=lambda h: h and "http" in h and "realclear" not in h)
-                    if pollster_link:
-                        pollster = pollster_link.get_text(strip=True)
-                    
-                    # Find spread
-                    spread_match = re.search(r'([A-Za-z]+)\s*\+(\d+)', full_text)
-                    spread_label = f"{spread_match.group(1)} +{spread_match.group(2)}" if spread_match else None
-                    
-                    candidates = []
-                    for name, pct in result_matches:
-                        name = name.strip()
-                        if name and len(name) > 1 and not name.isdigit():
-                            candidates.append((name, float(pct)))
-                    
-                    if candidates:
-                        polls.append({
-                            "race_id": race_id,
-                            "poll_date": current_date or date.today().isoformat(),
-                            "pollster": pollster or "Unknown",
-                            "candidate_1": candidates[0][0] if len(candidates) > 0 else None,
-                            "candidate_1_pct": candidates[0][1] if len(candidates) > 0 else None,
-                            "candidate_2": candidates[1][0] if len(candidates) > 1 else None,
-                            "candidate_2_pct": candidates[1][1] if len(candidates) > 1 else None,
-                            "candidate_3": candidates[2][0] if len(candidates) > 2 else None,
-                            "candidate_3_pct": candidates[2][1] if len(candidates) > 2 else None,
-                            "spread_label": spread_label,
-                            "spread": (
-                                candidates[0][1] - candidates[1][1]
-                                if len(candidates) >= 2 else None
-                            ),
-                            "rcp_url": f"https://www.realclearpolling.com{href}" if href.startswith("/") else href,
-                            "source_url": page_url,
-                        })
-    
+            if state:
+                break
+        if not (chamber and state):
+            return None
+        rid = f"{chamber}-{state}-2026"
+        if "primary" in href.lower():
+            rid += "-primary-D" if "democratic" in href.lower() else "-primary-R"
+        return rid
+
+    # Collect all text tokens from every <tbody> on the page, preserving
+    # which tokens are /polls/ links so we can anchor the race.
+    for tbody in soup.find_all("tbody"):
+        tokens = []
+        for node in tbody.descendants:
+            if node.name == "a":
+                href = node.get("href", "")
+                txt = node.get_text(strip=True)
+                tokens.append(("link", href, txt))
+            elif not node.name and node.string and node.string.strip():
+                tokens.append(("text", node.string.strip()))
+
+        i = 0
+        while i < len(tokens):
+            tok = tokens[i]
+
+            # Date header
+            if tok[0] == "text":
+                m = DATE_RE.match(tok[1])
+                if m:
+                    month_num = MONTH_MAP[m.group(2).lower()]
+                    day = int(m.group(3))
+                    current_date = f"2026-{month_num:02d}-{day:02d}"
+                    i += 1
+                    continue
+
+            # Race link — anchor for a new poll entry
+            if tok[0] == "link" and "/polls/" in tok[1] and "/2026/" in tok[1]:
+                race_id = href_to_race_id(tok[1])
+                rcp_url = ("https://www.realclearpolling.com" + tok[1]
+                           if tok[1].startswith("/") else tok[1])
+                if not race_id:
+                    i += 1
+                    continue
+
+                # Scan ahead for: Poll marker → pollster → Results marker →
+                # candidate/pct pairs → Spread marker → winner → +N
+                pollster = None
+                candidates = []
+                spread_label = None
+                expecting = "poll_marker"
+
+                j = i + 1
+                while j < min(i + 20, len(tokens)):
+                    t = tokens[j]
+                    val = t[1] if t[0] == "text" else t[2]
+
+                    if expecting == "poll_marker":
+                        if val.lower() == "poll":
+                            expecting = "pollster"
+                    elif expecting == "pollster":
+                        if val.lower() not in ("results", "spread", "poll"):
+                            pollster = val
+                            expecting = "results_marker"
+                    elif expecting == "results_marker":
+                        if val.lower() == "results":
+                            expecting = "candidates"
+                    elif expecting == "candidates":
+                        if val.lower() == "spread":
+                            expecting = "spread_winner"
+                        elif re.match(r'^\d{1,2}$', val):
+                            if candidates and candidates[-1][1] is None:
+                                candidates[-1] = (candidates[-1][0], float(val))
+                        elif re.match(r'^[A-Z]', val) and not re.match(r'^\d', val):
+                            candidates.append((val, None))
+                    elif expecting == "spread_winner":
+                        if re.match(r'^\+\d', val):
+                            # Use the spread winner name if captured, else first candidate
+                            winner = locals().get("spread_winner_name") or (
+                                candidates[0][0].split()[0] if candidates else "")
+                            spread_label = f"{winner} {val}"
+                            break
+                        # Spread-winner name token — extract just the first word
+                        # (the token may be a concatenated cell; we only need the name)
+                        name_match = re.match(r'^([A-Z][a-z]+)', val)
+                        if name_match:
+                            spread_winner_name = name_match.group(1)
+                    j += 1
+
+                # Only emit if we have at least one candidate with a pct
+                filled = [(n, p) for n, p in candidates if p is not None]
+                if filled:
+                    polls.append({
+                        "race_id": race_id,
+                        "poll_date": current_date or date.today().isoformat(),
+                        "pollster": pollster or "Unknown",
+                        "candidate_1": filled[0][0] if len(filled) > 0 else None,
+                        "candidate_1_pct": filled[0][1] if len(filled) > 0 else None,
+                        "candidate_2": filled[1][0] if len(filled) > 1 else None,
+                        "candidate_2_pct": filled[1][1] if len(filled) > 1 else None,
+                        "candidate_3": filled[2][0] if len(filled) > 2 else None,
+                        "candidate_3_pct": filled[2][1] if len(filled) > 2 else None,
+                        "spread_label": spread_label,
+                        "spread": (
+                            filled[0][1] - filled[1][1]
+                            if len(filled) >= 2 else None
+                        ),
+                        "rcp_url": rcp_url,
+                        "source_url": page_url,
+                    })
+                i = j
+                continue
+
+            i += 1
+
     return polls
 
 

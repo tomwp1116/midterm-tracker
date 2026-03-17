@@ -3,11 +3,11 @@
   "stats": {
     "senate_dem_pct": 60,
     "senate_rep_pct": 40,
-    "house_dem_pct": 84,
-    "house_rep_pct": 16,
-    "battleground_senate": 5,
+    "house_dem_pct": 85,
+    "house_rep_pct": 15,
+    "battleground_senate": 6,
     "seats_up": 35,
-    "polls_tracked": 85
+    "polls_tracked": 102
   },
   "races": [
     {
@@ -239,6 +239,15 @@
           "spread": "Hobbs +5",
           "matchup": "Hobbs vs. Biggs",
           "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-03-04",
+          "pollster": "Noble Predictive Insights",
+          "d": 44.0,
+          "r": 35.0,
+          "spread": "Hobbs +9",
+          "matchup": "Hobbs vs. Schweikert",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
         }
       ],
       "time_series": null,
@@ -395,6 +404,15 @@
           "spread": "Donalds +6",
           "matchup": "Donalds vs. Jolly",
           "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-03-04",
+          "pollster": "Univ. of North Florida",
+          "d": 42.0,
+          "r": 36.0,
+          "spread": "Donalds +6",
+          "matchup": "Donalds vs. Jolly",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
         }
       ],
       "time_series": null,
@@ -420,7 +438,7 @@
       "state": "NM",
       "district": null,
       "description": "Will Option B win the New Mexico governor race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.9,
       "pm": "new-mexico-governor-winner-2026",
       "kalshi": null,
       "rcp": "polls/governor/general/2026/new-mexico",
@@ -458,7 +476,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 90,
           "kalshi": null
         }
       ],
@@ -470,7 +488,7 @@
       "state": "NY",
       "district": null,
       "description": "Will the Democrats win the New York governor race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.925,
       "pm": "new-york-governor-winner-2026",
       "kalshi": null,
       "rcp": "polls/governor/general/2026/new-york",
@@ -537,6 +555,33 @@
           "spread": "Hochul +20",
           "matchup": "Hochul vs. Blakeman",
           "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-03-04",
+          "pollster": "Siena",
+          "d": 51.0,
+          "r": 31.0,
+          "spread": "Hochul +20",
+          "matchup": "Hochul vs. Blakeman",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-02-03",
+          "pollster": "Siena",
+          "d": 54.0,
+          "r": 28.0,
+          "spread": "Hochul +26",
+          "matchup": "Hochul vs. Blakeman",
+          "url": "https://www.realclearpolling.com/latest-polls/governor"
+        },
+        {
+          "date": "2026-01-08",
+          "pollster": "Siena",
+          "d": 50.0,
+          "r": 25.0,
+          "spread": "Hochul +25",
+          "matchup": "Hochul vs. Blakeman",
+          "url": "https://www.realclearpolling.com/latest-polls/governor"
         }
       ],
       "time_series": [
@@ -572,7 +617,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 92,
           "kalshi": null
         }
       ],
@@ -584,7 +629,7 @@
       "state": "RI",
       "district": null,
       "description": "Will the Democrats win the Rhode Island governor race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.957,
       "pm": "rhode-island-governor-winner-2026",
       "kalshi": null,
       "rcp": "polls/governor/general/2026/rhode-island",
@@ -622,7 +667,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 96,
           "kalshi": null
         }
       ],
@@ -3584,7 +3629,7 @@
       "state": "US",
       "district": null,
       "description": "Will another party control the House after the 2026 Midterm elections?",
-      "dem_base": 0.845,
+      "dem_base": 0.847,
       "pm": "which-party-will-win-the-house-in-2026",
       "kalshi": "CONTROLH-2026-D",
       "rcp": null,
@@ -3622,7 +3667,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 85,
           "kalshi": 84
         }
       ],
@@ -4398,8 +4443,8 @@
       "state": "GA",
       "district": null,
       "description": "Will the Republicans win the Georgia Senate race in 2026?",
-      "dem_base": 0.795,
-      "pm": "georgia-republican-senate-primary-winner",
+      "dem_base": 0.8,
+      "pm": "georgia-senate-election-winner",
       "kalshi": "SENATEGA-26-R",
       "rcp": "polls/senate/general/2026/georgia",
       "polls": [
@@ -4465,6 +4510,15 @@
           "spread": "Ossoff +5",
           "matchup": "Ossoff vs. Collins",
           "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-03-05",
+          "pollster": "Emerson",
+          "d": 48.0,
+          "r": 43.0,
+          "spread": "Ossoff +5",
+          "matchup": "Ossoff vs. Collins",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
         }
       ],
       "time_series": [
@@ -4500,7 +4554,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 80,
           "kalshi": 80
         }
       ],
@@ -4971,6 +5025,15 @@
           "spread": "Markey +29",
           "matchup": "Markey vs. Deaton",
           "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-02-24",
+          "pollster": "UNH",
+          "d": 56.0,
+          "r": 27.0,
+          "spread": "Markey +29",
+          "matchup": "Markey vs. Deaton",
+          "url": "https://www.realclearpolling.com/latest-polls/senate"
         }
       ],
       "time_series": [
@@ -5068,8 +5131,8 @@
       "state": "ME",
       "district": null,
       "description": "Will the Democrats win the Maine Senate race in 2026?",
-      "dem_base": 0.705,
-      "pm": "maine-democratic-senate-primary-winner",
+      "dem_base": 0.715,
+      "pm": "maine-senate-election-winner",
       "kalshi": "SENATEME-26-D",
       "rcp": "polls/senate/general/2026/maine",
       "polls": [
@@ -5135,6 +5198,33 @@
           "spread": "Platner +7",
           "matchup": "Platner vs. Collins",
           "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-03-09",
+          "pollster": "Quantus Insights",
+          "d": 49.0,
+          "r": 42.0,
+          "spread": "Platner +7",
+          "matchup": "Platner vs. Collins",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-03-04",
+          "pollster": "Pan Atlantic",
+          "d": 44.0,
+          "r": 40.0,
+          "spread": "Platner +4",
+          "matchup": "Platner vs. Collins",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-02-24",
+          "pollster": "UNH",
+          "d": 49.0,
+          "r": 38.0,
+          "spread": "Platner +11",
+          "matchup": "Platner vs. Collins",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
         }
       ],
       "time_series": [
@@ -5170,7 +5260,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 73,
           "kalshi": 70
         }
       ],
@@ -5196,8 +5286,8 @@
       "state": "MI",
       "district": null,
       "description": "Will the Republicans win the Michigan Senate race in 2026?",
-      "dem_base": 0.795,
-      "pm": "michigan-democratic-senate-primary-winner",
+      "dem_base": 0.805,
+      "pm": "michigan-senate-election-winner",
       "kalshi": "SENATEMI-26-D",
       "rcp": "polls/senate/general/2026/michigan",
       "polls": [
@@ -5263,6 +5353,15 @@
           "spread": "Rogers +3",
           "matchup": "Rogers vs. McMorrow",
           "url": "https://www.realclearpolling.com/latest-polls/senate"
+        },
+        {
+          "date": "2026-01-29",
+          "pollster": "Emerson",
+          "d": 43.0,
+          "r": 46.0,
+          "spread": "Mc +3",
+          "matchup": "Rogers vs. McMorrow",
+          "url": "https://www.realclearpolling.com/latest-polls/senate"
         }
       ],
       "time_series": [
@@ -5298,7 +5397,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 82,
           "kalshi": 80
         }
       ],
@@ -5386,6 +5485,15 @@
         {
           "date": "2026-03-10",
           "pollster": "Unknown",
+          "d": 47.0,
+          "r": 41.0,
+          "spread": "Flanagan +6",
+          "matchup": "Flanagan vs. Tafoya",
+          "url": "https://www.realclearpolling.com/latest-polls/senate"
+        },
+        {
+          "date": "2026-02-11",
+          "pollster": "Emerson",
           "d": 47.0,
           "r": 41.0,
           "spread": "Flanagan +6",
@@ -5588,7 +5696,7 @@
       "state": "NC",
       "district": null,
       "description": "Will the Democrats win the North Carolina Senate race in 2026?",
-      "dem_base": 0.805,
+      "dem_base": 0.808,
       "pm": "north-carolina-senate-election-winner",
       "kalshi": "SENATENC-26-D",
       "rcp": "polls/senate/general/2026/north-carolina",
@@ -5610,6 +5718,15 @@
           "spread": "Cooper +10",
           "matchup": "Cooper vs. Whatley",
           "url": "https://www.realclearpolling.com/latest-polls/senate"
+        },
+        {
+          "date": "2026-03-16",
+          "pollster": "PPP",
+          "d": 47.0,
+          "r": 44.0,
+          "spread": "Cooper +3",
+          "matchup": "Cooper vs. Whatley",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
         },
         {
           "date": "2026-03-15",
@@ -5655,6 +5772,15 @@
           "spread": "Cooper +10",
           "matchup": "Cooper vs. Whatley",
           "url": "https://www.realclearpolling.com/latest-polls/senate"
+        },
+        {
+          "date": "2026-02-21",
+          "pollster": "Change Research**",
+          "d": 50.0,
+          "r": 40.0,
+          "spread": "Cooper +10",
+          "matchup": "Cooper vs. Whatley",
+          "url": "https://www.realclearpolling.com/latest-polls/senate"
         }
       ],
       "time_series": [
@@ -5690,7 +5816,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 81,
           "kalshi": 80
         }
       ],
@@ -5752,7 +5878,7 @@
       "state": "NE",
       "district": null,
       "description": "Will the Democrats win the Nebraska Senate race in 2026?",
-      "dem_base": 0.01,
+      "dem_base": 0.168,
       "pm": "nebraska-senate-election-winner",
       "kalshi": "SENATENE-26-D",
       "rcp": "polls/senate/general/2026/nebraska",
@@ -5790,7 +5916,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 32,
           "kalshi": 1
         }
       ],
@@ -5802,7 +5928,7 @@
       "state": "NH",
       "district": null,
       "description": "Will the Democrats win the New Hampshire Senate race in 2026?",
-      "dem_base": 0.845,
+      "dem_base": 0.86,
       "pm": "new-hampshire-senate-election-winner",
       "kalshi": "SENATENH-26-D",
       "rcp": "polls/senate/general/2026/new-hampshire",
@@ -5869,6 +5995,15 @@
           "spread": "Pappas +5",
           "matchup": "Pappas vs. Sununu",
           "url": "https://www.realclearpolling.com/latest-polls/senate"
+        },
+        {
+          "date": "2026-01-29",
+          "pollster": "UNH",
+          "d": 52.0,
+          "r": 42.0,
+          "spread": "Pappas +10",
+          "matchup": "Pappas vs. Brown",
+          "url": "https://www.realclearpolling.com/latest-polls/senate"
         }
       ],
       "time_series": [
@@ -5904,7 +6039,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 88,
           "kalshi": 84
         }
       ],
@@ -6124,6 +6259,15 @@
         {
           "date": "2026-03-17",
           "pollster": "Unknown",
+          "d": 46.0,
+          "r": 44.0,
+          "spread": "Husted +2",
+          "matchup": "Husted vs. Brown",
+          "url": "https://www.realclearpolling.com/latest-polls/2026"
+        },
+        {
+          "date": "2026-03-16",
+          "pollster": "Quantus Insights",
           "d": 46.0,
           "r": 44.0,
           "spread": "Husted +2",
@@ -6525,8 +6669,8 @@
       "chamber": "senate",
       "state": "TX",
       "district": null,
-      "description": "Will Person K win the 2026 Republican Primary?",
-      "dem_base": 0.43,
+      "description": "Will Person B win the Texas Senate race in 2026?",
+      "dem_base": 0.44,
       "pm": "texas-senate-election-winner",
       "kalshi": "SENATETX-26-R",
       "rcp": "polls/senate/general/2026/texas",
@@ -6593,6 +6737,15 @@
           "spread": "Paxton +2",
           "matchup": "Paxton vs. Crockett",
           "url": "https://www.realclearpolling.com/latest-polls/senate"
+        },
+        {
+          "date": "2026-02-09",
+          "pollster": "University of Houston*",
+          "d": 45.0,
+          "r": 43.0,
+          "spread": "Paxton +2",
+          "matchup": "Paxton vs. Crockett",
+          "url": "https://www.realclearpolling.com/latest-polls/senate"
         }
       ],
       "time_series": [
@@ -6628,8 +6781,8 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
-          "kalshi": 43
+          "polymarket": 44,
+          "kalshi": 44
         }
       ],
       "note": null
@@ -6654,7 +6807,7 @@
       "state": "US",
       "district": null,
       "description": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
-      "dem_base": 0.603,
+      "dem_base": 0.6,
       "pm": "will-democrats-win-all-core-four-senate-races",
       "kalshi": "CONTROLS-2026-D",
       "rcp": null,
@@ -6692,7 +6845,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": 71,
+          "polymarket": 70,
           "kalshi": 50
         }
       ],
@@ -6782,7 +6935,7 @@
       "state": "VA",
       "district": null,
       "description": "Will Person A win the West Virginia Senate race in 2026?",
-      "dem_base": 0.94,
+      "dem_base": 0.505,
       "pm": "west-virginia-senate-election-winner",
       "kalshi": "SENATEVA-26-R",
       "rcp": "polls/senate/general/2026/virginia",
@@ -6820,7 +6973,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 7,
           "kalshi": 94
         }
       ],

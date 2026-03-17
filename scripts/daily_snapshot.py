@@ -150,10 +150,20 @@ def save_market_snapshots(conn, pm_records, k_records, snapshot_date):
         rid = r["race_id"]
         if rid not in snapshots:
             snapshots[rid] = {}
-        snapshots[rid]["pm_dem_price"] = r.get("dem_price")
-        snapshots[rid]["pm_rep_price"] = r.get("rep_price")
-        snapshots[rid]["pm_volume_24h"] = r.get("volume_24h")
-        snapshots[rid]["pm_event_slug"] = r.get("slug")
+        # Multiple markets per race (D and R variants): keep first non-None value
+        if r.get("dem_price") is not None:
+            snapshots[rid]["pm_dem_price"] = r["dem_price"]
+        elif "pm_dem_price" not in snapshots[rid]:
+            snapshots[rid]["pm_dem_price"] = None
+        if r.get("rep_price") is not None:
+            snapshots[rid]["pm_rep_price"] = r["rep_price"]
+        elif "pm_rep_price" not in snapshots[rid]:
+            snapshots[rid]["pm_rep_price"] = None
+        try:
+            snapshots[rid]["pm_volume_24h"] = snapshots[rid].get("pm_volume_24h", 0) + float(r.get("volume_24h") or 0)
+        except (TypeError, ValueError):
+            pass
+        snapshots[rid]["pm_event_slug"] = r.get("slug") or snapshots[rid].get("pm_event_slug")
     
     for r in k_records:
         rid = r["race_id"]

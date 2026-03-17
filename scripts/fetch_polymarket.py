@@ -264,12 +264,25 @@ def fetch_all_midterm_markets():
                     all_records.append(record)
         time.sleep(0.3)
 
-    # Filter: keep only records with valid election race IDs
+    # Filter: keep only general-election markets with valid race IDs.
+    # Primary/nominee sub-markets (e.g. "Will X be the nominee?", "Will X win
+    # the primary?") map to the same race_id as the general election but carry
+    # unrelated prices that would corrupt general-election charts.
     valid_prefixes = ("senate-", "house-", "governor-", "congress-")
-    records = [r for r in all_records if r["race_id"].startswith(valid_prefixes)]
+    primary_keywords = ("primary", "nominee", "be the ", "runoff")
+
+    records = []
+    for r in all_records:
+        if not r["race_id"].startswith(valid_prefixes):
+            continue
+        q = r.get("question", "").lower()
+        if any(kw in q for kw in primary_keywords):
+            continue
+        records.append(r)
+
     raw = all_records  # archive everything for debugging
 
-    print(f"  Found {len(all_records)} raw markets, kept {len(records)} with valid race IDs")
+    print(f"  Found {len(all_records)} raw markets, kept {len(records)} general-election markets")
     return records, raw
 
 
