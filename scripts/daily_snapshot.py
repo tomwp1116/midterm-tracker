@@ -499,10 +499,11 @@ def export_dashboard_json(conn, output_path):
     
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2, default=str)
-    
+
     print(f"[Export] Dashboard JSON: {output_path} ({len(races_out)} races, {total_polls} polls)")
 
 
+def export_csv_summary(conn, output_path):
     """Export current daily summary to CSV for easy viewing."""
     import csv
     c = conn.cursor()
@@ -516,7 +517,7 @@ def export_dashboard_json(conn, output_path):
         LEFT JOIN races r ON ds.race_id = r.race_id
         ORDER BY ds.summary_date DESC, r.chamber, r.state
     """)
-    
+
     rows = c.fetchall()
     headers = [
         "race_id", "chamber", "state", "date",
@@ -525,12 +526,12 @@ def export_dashboard_json(conn, output_path):
         "poll_avg_dem%", "poll_avg_rep%",
         "poll_count", "market_poll_gap"
     ]
-    
+
     with open(output_path, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(headers)
         writer.writerows(rows)
-    
+
     print(f"[Export] Saved CSV summary to {output_path}")
 
 
