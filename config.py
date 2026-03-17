@@ -9,6 +9,8 @@ BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 ARCHIVE_DIR = BASE_DIR / "archive"
 DB_PATH = DATA_DIR / "midterms.db"
+# dashboard_data.json must live inside docs/ so GitHub Pages can serve it
+DASHBOARD_JSON = BASE_DIR / "docs" / "data" / "dashboard_data.json"
 
 # ── Polymarket (Gamma API — no auth needed) ────────────
 POLYMARKET_GAMMA_BASE = "https://gamma-api.polymarket.com"

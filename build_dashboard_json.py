@@ -13,7 +13,7 @@ from datetime import date, timedelta
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from config import DB_PATH, DATA_DIR
+from config import DB_PATH, DATA_DIR, DASHBOARD_JSON
 
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
@@ -202,7 +202,8 @@ output = {
     "races": races_out,
 }
 
-out_path = DATA_DIR / "dashboard_data.json"
+out_path = DASHBOARD_JSON
+out_path.parent.mkdir(parents=True, exist_ok=True)
 with open(out_path, "w") as f:
     json.dump(output, f, indent=2, default=str)
 

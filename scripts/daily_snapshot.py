@@ -22,7 +22,7 @@ from pathlib import Path
 
 # Add parent dir to path so we can import config
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from config import DB_PATH, ARCHIVE_DIR, DATA_DIR
+from config import DB_PATH, ARCHIVE_DIR, DATA_DIR, DASHBOARD_JSON
 
 # Import fetchers
 from fetch_polymarket import fetch_all_midterm_markets
@@ -657,7 +657,8 @@ def main():
         export_csv_summary(conn, DATA_DIR / "daily_summary.csv")
     
     # Always export dashboard JSON
-    export_dashboard_json(conn, DATA_DIR / "dashboard_data.json")
+    DASHBOARD_JSON.parent.mkdir(parents=True, exist_ok=True)
+    export_dashboard_json(conn, DASHBOARD_JSON)
     
     conn.close()
     
