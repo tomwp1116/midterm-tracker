@@ -159,8 +159,8 @@ function Chart({data}){const vs=data.flatMap(d=>[d.polymarket,d.kalshi,d.pollDem
     {/* Zone labels rendered via customized ReferenceLine labels */}
     {show50&&<ReferenceLine y={yMax - 1} stroke="none" label={{value:"← Dem. favored",position:"insideTopLeft",fill:DEM,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
     {show50&&<ReferenceLine y={yMin + 1} stroke="none" label={{value:"← Rep. favored",position:"insideBottomLeft",fill:REP,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
-    {hasPM&&<Line type="monotone" dataKey="polymarket" stroke="#222" strokeWidth={2} dot={false}/>}
-    {hasK&&<Line type="monotone" dataKey="kalshi" stroke={hasPM?"#aaa":"#222"} strokeWidth={hasPM?1.5:2} dot={false} strokeDasharray={hasPM?"5 3":"0"}/>}
+    {hasPM&&<Line type="monotone" dataKey="polymarket" stroke="#222" strokeWidth={2} dot={false} connectNulls={true}/>}
+    {hasK&&<Line type="monotone" dataKey="kalshi" stroke={hasPM?"#aaa":"#222"} strokeWidth={hasPM?1.5:2} dot={false} strokeDasharray={hasPM?"5 3":"0"} connectNulls={true}/>}
     <Line dataKey="pollDem" stroke="none" connectNulls={false} isAnimationActive={false} dot={<DDot/>} activeDot={false}/>
     <Line dataKey="pollRep" stroke="none" connectNulls={false} isAnimationActive={false} dot={<RDot/>} activeDot={false}/>
   </ComposedChart></ResponsiveContainer>);}
