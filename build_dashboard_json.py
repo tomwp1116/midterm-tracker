@@ -113,8 +113,9 @@ for rid, chamber, state, district, desc, pm_slug, k_ticker in all_races:
     ts_rows = list(reversed(c.fetchall()))
     time_series = []
     for ts in ts_rows:
+        parts = ts[0].split("-")
         time_series.append({
-            "date": ts[0][5:],  # "2026-02-07" → "02-07"
+            "date": f"{int(parts[1])}/{int(parts[2])}",
             "polymarket": round(ts[2] * 100) if ts[2] else None,
             "kalshi": round(ts[3] * 100) if ts[3] else None,
         })

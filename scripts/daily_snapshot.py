@@ -419,8 +419,10 @@ def export_dashboard_json(conn, output_path):
         for ts in ts_rows:
             pm_d = round(ts[1] * 100) if ts[1] else None
             k_d = round(ts[3] * 100) if ts[3] else None
+            parts = ts[0].split("-")
+            date_str = f"{int(parts[1])}/{int(parts[2])}"
             time_series.append({
-                "date": ts[0],
+                "date": date_str,
                 "polymarket": pm_d,
                 "kalshi": k_d,
             })
