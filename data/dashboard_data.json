@@ -1,11 +1,11 @@
 {
   "updated": "2026-03-17",
   "stats": {
-    "senate_dem_pct": 71,
-    "senate_rep_pct": 29,
-    "house_dem_pct": null,
-    "house_rep_pct": null,
-    "battleground_senate": 0,
+    "senate_dem_pct": 60,
+    "senate_rep_pct": 40,
+    "house_dem_pct": 84,
+    "house_rep_pct": 16,
+    "battleground_senate": 5,
     "seats_up": 35,
     "polls_tracked": 85
   },
@@ -634,7 +634,7 @@
       "state": "AZ",
       "district": "1",
       "description": "Will Republican win the House race for AZ-1?",
-      "dem_base": null,
+      "dem_base": 0.735,
       "pm": null,
       "kalshi": "HOUSEAZ1-26-D",
       "rcp": "latest-polls/house",
@@ -673,7 +673,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 74
         }
       ],
       "note": null
@@ -684,7 +684,7 @@
       "state": "AZ",
       "district": "2",
       "description": "Will Republican win the House race for AZ-2?",
-      "dem_base": null,
+      "dem_base": 0.325,
       "pm": null,
       "kalshi": "HOUSEAZ2-26-D",
       "rcp": "latest-polls/house",
@@ -723,7 +723,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 32
         }
       ],
       "note": null
@@ -734,7 +734,7 @@
       "state": "AZ",
       "district": "6",
       "description": "Will Republican win the House race for AZ-6?",
-      "dem_base": null,
+      "dem_base": 0.77,
       "pm": null,
       "kalshi": "HOUSEAZ6-26-D",
       "rcp": "latest-polls/house",
@@ -773,7 +773,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 77
         }
       ],
       "note": null
@@ -784,7 +784,7 @@
       "state": "CA",
       "district": "13",
       "description": "Will Republican win the House race for CA-13?",
-      "dem_base": null,
+      "dem_base": 0.83,
       "pm": null,
       "kalshi": "HOUSECA13-26-D",
       "rcp": "latest-polls/house",
@@ -823,7 +823,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 83
         }
       ],
       "note": null
@@ -834,7 +834,7 @@
       "state": "CA",
       "district": "21",
       "description": "Will a Republican win the House race for CA-21?",
-      "dem_base": null,
+      "dem_base": 0.835,
       "pm": null,
       "kalshi": "HOUSECA21-26-D",
       "rcp": "latest-polls/house",
@@ -873,7 +873,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 84
         }
       ],
       "note": null
@@ -884,7 +884,7 @@
       "state": "CA",
       "district": "22",
       "description": "Will Republican win the House race for CA-22?",
-      "dem_base": null,
+      "dem_base": 0.725,
       "pm": null,
       "kalshi": "HOUSECA22-26-D",
       "rcp": "latest-polls/house",
@@ -923,7 +923,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 72
         }
       ],
       "note": null
@@ -934,7 +934,7 @@
       "state": "CA",
       "district": "27",
       "description": "Will Republican win the House race for CA-27?",
-      "dem_base": null,
+      "dem_base": 0.93,
       "pm": null,
       "kalshi": "HOUSECA27-26-D",
       "rcp": "latest-polls/house",
@@ -973,7 +973,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 93
         }
       ],
       "note": null
@@ -984,7 +984,7 @@
       "state": "CA",
       "district": "3",
       "description": "Will Republican win the House race for CA-3?",
-      "dem_base": null,
+      "dem_base": 0.9,
       "pm": null,
       "kalshi": "HOUSECA3-26-D",
       "rcp": "latest-polls/house",
@@ -1023,7 +1023,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -1034,7 +1034,7 @@
       "state": "CA",
       "district": "40",
       "description": "Will Republican win the House race for CA-40?",
-      "dem_base": null,
+      "dem_base": 0.235,
       "pm": null,
       "kalshi": "HOUSECA40-26-D",
       "rcp": "latest-polls/house",
@@ -1073,7 +1073,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 24
         }
       ],
       "note": null
@@ -1084,7 +1084,7 @@
       "state": "CA",
       "district": "41",
       "description": "Will Republican win the House race for CA-41?",
-      "dem_base": null,
+      "dem_base": 0.955,
       "pm": null,
       "kalshi": "HOUSECA41-26-D",
       "rcp": "latest-polls/house",
@@ -1123,7 +1123,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         }
       ],
       "note": null
@@ -1134,7 +1134,7 @@
       "state": "CA",
       "district": "45",
       "description": "Will Republican win the House race for CA-45?",
-      "dem_base": null,
+      "dem_base": 0.835,
       "pm": null,
       "kalshi": "HOUSECA45-26-D",
       "rcp": "latest-polls/house",
@@ -1173,7 +1173,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 84
         }
       ],
       "note": null
@@ -1184,7 +1184,7 @@
       "state": "CA",
       "district": "47",
       "description": "Will Republican win the House race for CA-47?",
-      "dem_base": null,
+      "dem_base": 0.955,
       "pm": null,
       "kalshi": "HOUSECA47-26-D",
       "rcp": "latest-polls/house",
@@ -1223,7 +1223,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         }
       ],
       "note": null
@@ -1234,7 +1234,7 @@
       "state": "CA",
       "district": "49",
       "description": "Will a Republican win the House race for CA-49?",
-      "dem_base": null,
+      "dem_base": 0.93,
       "pm": null,
       "kalshi": "HOUSECA49-26-D",
       "rcp": "latest-polls/house",
@@ -1273,7 +1273,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 93
         }
       ],
       "note": null
@@ -1284,7 +1284,7 @@
       "state": "CA",
       "district": "9",
       "description": "Will Republican win the House race for CA-9?",
-      "dem_base": null,
+      "dem_base": 0.895,
       "pm": null,
       "kalshi": "HOUSECA9-26-D",
       "rcp": "latest-polls/house",
@@ -1323,7 +1323,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -1334,7 +1334,7 @@
       "state": "CO",
       "district": "3",
       "description": "Will Republican win the House race for CO-3?",
-      "dem_base": null,
+      "dem_base": 0.335,
       "pm": null,
       "kalshi": "HOUSECO3-26-D",
       "rcp": "latest-polls/house",
@@ -1373,7 +1373,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 34
         }
       ],
       "note": null
@@ -1384,7 +1384,7 @@
       "state": "CO",
       "district": "8",
       "description": "Will Republican win the House race for CO-8?",
-      "dem_base": null,
+      "dem_base": 0.73,
       "pm": null,
       "kalshi": "HOUSECO8-26-D",
       "rcp": "latest-polls/house",
@@ -1423,7 +1423,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 73
         }
       ],
       "note": null
@@ -1434,7 +1434,7 @@
       "state": "CT",
       "district": "5",
       "description": "Will a Republican win the House race for CT-5?",
-      "dem_base": null,
+      "dem_base": 0.895,
       "pm": null,
       "kalshi": "HOUSECT5-26-D",
       "rcp": "latest-polls/house",
@@ -1473,7 +1473,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -1484,7 +1484,7 @@
       "state": "FL",
       "district": "13",
       "description": "Will Republican win the House race for FL-13?",
-      "dem_base": null,
+      "dem_base": 0.245,
       "pm": null,
       "kalshi": "HOUSEFL13-26-D",
       "rcp": "latest-polls/house",
@@ -1523,7 +1523,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 24
         }
       ],
       "note": null
@@ -1534,7 +1534,7 @@
       "state": "FL",
       "district": "23",
       "description": "Will Republican win the House race for FL-23?",
-      "dem_base": null,
+      "dem_base": 0.645,
       "pm": null,
       "kalshi": "HOUSEFL23-26-D",
       "rcp": "latest-polls/house",
@@ -1573,7 +1573,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 64
         }
       ],
       "note": null
@@ -1584,7 +1584,7 @@
       "state": "IA",
       "district": "1",
       "description": "Will Republican win the House race for IA-1?",
-      "dem_base": null,
+      "dem_base": 0.655,
       "pm": null,
       "kalshi": "HOUSEIA1-26-D",
       "rcp": "latest-polls/house",
@@ -1623,7 +1623,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 66
         }
       ],
       "note": null
@@ -1634,7 +1634,7 @@
       "state": "IA",
       "district": "3",
       "description": "Will Republican win the House race for IA-3?",
-      "dem_base": null,
+      "dem_base": 0.68,
       "pm": null,
       "kalshi": "HOUSEIA3-26-D",
       "rcp": "latest-polls/house",
@@ -1673,7 +1673,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 68
         }
       ],
       "note": null
@@ -1684,7 +1684,7 @@
       "state": "IL",
       "district": "17",
       "description": "Will a Republican win the House race for IL-17?",
-      "dem_base": null,
+      "dem_base": 0.895,
       "pm": null,
       "kalshi": "HOUSEIL17-26-D",
       "rcp": "latest-polls/house",
@@ -1723,7 +1723,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -1734,7 +1734,7 @@
       "state": "IN",
       "district": "1",
       "description": "Will a Republican win the House race for IN-1?",
-      "dem_base": null,
+      "dem_base": 0.82,
       "pm": null,
       "kalshi": "HOUSEIN1-26-D",
       "rcp": "latest-polls/house",
@@ -1773,7 +1773,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 82
         }
       ],
       "note": null
@@ -1784,7 +1784,7 @@
       "state": "ME",
       "district": "2",
       "description": "Will Republican win the House race for ME-2?",
-      "dem_base": null,
+      "dem_base": 0.485,
       "pm": null,
       "kalshi": "HOUSEME2-26-D",
       "rcp": "latest-polls/house",
@@ -1823,7 +1823,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 48
         }
       ],
       "note": null
@@ -1834,7 +1834,7 @@
       "state": "MI",
       "district": "10",
       "description": "Will Republican win the House race for MI-10?",
-      "dem_base": null,
+      "dem_base": 0.545,
       "pm": null,
       "kalshi": "HOUSEMI10-26-D",
       "rcp": "latest-polls/house",
@@ -1873,7 +1873,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 55
         }
       ],
       "note": null
@@ -1884,7 +1884,7 @@
       "state": "MI",
       "district": "3",
       "description": "Will a Republican win the House race for MI-3?",
-      "dem_base": null,
+      "dem_base": 0.88,
       "pm": null,
       "kalshi": "HOUSEMI3-26-D",
       "rcp": "latest-polls/house",
@@ -1923,7 +1923,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 88
         }
       ],
       "note": null
@@ -1934,7 +1934,7 @@
       "state": "MI",
       "district": "4",
       "description": "Will Republican win the House race for MI-4?",
-      "dem_base": null,
+      "dem_base": 0.275,
       "pm": null,
       "kalshi": "HOUSEMI4-26-D",
       "rcp": "latest-polls/house",
@@ -1973,7 +1973,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 28
         }
       ],
       "note": null
@@ -1984,7 +1984,7 @@
       "state": "MI",
       "district": "7",
       "description": "Will Republican win the House race for MI-7?",
-      "dem_base": null,
+      "dem_base": 0.635,
       "pm": null,
       "kalshi": "HOUSEMI7-26-D",
       "rcp": "latest-polls/house",
@@ -2023,7 +2023,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 64
         }
       ],
       "note": null
@@ -2034,7 +2034,7 @@
       "state": "MI",
       "district": "8",
       "description": "Will Republican win the House race for MI-8?",
-      "dem_base": null,
+      "dem_base": 0.9,
       "pm": null,
       "kalshi": "HOUSEMI8-26-D",
       "rcp": "latest-polls/house",
@@ -2073,7 +2073,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -2084,7 +2084,7 @@
       "state": "MN",
       "district": "2",
       "description": "Will a Republican win the House race for MN-2?",
-      "dem_base": null,
+      "dem_base": 0.885,
       "pm": null,
       "kalshi": "HOUSEMN2-26-D",
       "rcp": "latest-polls/house",
@@ -2123,7 +2123,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 88
         }
       ],
       "note": null
@@ -2134,7 +2134,7 @@
       "state": "MT",
       "district": "1",
       "description": "Will Republican win the House race for MT-1?",
-      "dem_base": null,
+      "dem_base": 0.42,
       "pm": null,
       "kalshi": "HOUSEMT1-26-D",
       "rcp": "latest-polls/house",
@@ -2173,7 +2173,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 42
         }
       ],
       "note": null
@@ -2184,7 +2184,7 @@
       "state": "NC",
       "district": "1",
       "description": "Will Republican win the House race for NC-1?",
-      "dem_base": null,
+      "dem_base": 0.45,
       "pm": null,
       "kalshi": "HOUSENC1-26-D",
       "rcp": "latest-polls/house",
@@ -2223,7 +2223,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 45
         }
       ],
       "note": null
@@ -2234,7 +2234,7 @@
       "state": "NE",
       "district": "2",
       "description": "Will Republican win the House race for NE-2?",
-      "dem_base": null,
+      "dem_base": 0.825,
       "pm": null,
       "kalshi": "HOUSENE2-26-D",
       "rcp": "latest-polls/house",
@@ -2273,7 +2273,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 82
         }
       ],
       "note": null
@@ -2284,7 +2284,7 @@
       "state": "NH",
       "district": "1",
       "description": "Will a Republican win the House race for NH-1?",
-      "dem_base": null,
+      "dem_base": 0.835,
       "pm": null,
       "kalshi": "HOUSENH1-26-D",
       "rcp": "latest-polls/house",
@@ -2323,7 +2323,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 84
         }
       ],
       "note": null
@@ -2334,7 +2334,7 @@
       "state": "NJ",
       "district": "5",
       "description": "Will a Republican win the House race for NJ-5?",
-      "dem_base": null,
+      "dem_base": 0.875,
       "pm": null,
       "kalshi": "HOUSENJ5-26-D",
       "rcp": "latest-polls/house",
@@ -2373,7 +2373,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 88
         }
       ],
       "note": null
@@ -2384,7 +2384,7 @@
       "state": "NJ",
       "district": "7",
       "description": "Will Republican win the House race for NJ-7?",
-      "dem_base": null,
+      "dem_base": 0.62,
       "pm": null,
       "kalshi": "HOUSENJ7-26-D",
       "rcp": "latest-polls/house",
@@ -2423,7 +2423,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 62
         }
       ],
       "note": null
@@ -2434,7 +2434,7 @@
       "state": "NJ",
       "district": "9",
       "description": "Will Republican win the House race for NJ-9?",
-      "dem_base": null,
+      "dem_base": 0.86,
       "pm": null,
       "kalshi": "HOUSENJ9-26-D",
       "rcp": "latest-polls/house",
@@ -2473,7 +2473,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 86
         }
       ],
       "note": null
@@ -2484,7 +2484,7 @@
       "state": "NM",
       "district": "2",
       "description": "Will Republican win the House race for NM-2?",
-      "dem_base": null,
+      "dem_base": 0.795,
       "pm": null,
       "kalshi": "HOUSENM2-26-D",
       "rcp": "latest-polls/house",
@@ -2523,7 +2523,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         }
       ],
       "note": null
@@ -2534,7 +2534,7 @@
       "state": "NV",
       "district": "1",
       "description": "Will a Republican win the House race for NV-1?",
-      "dem_base": null,
+      "dem_base": 0.915,
       "pm": null,
       "kalshi": "HOUSENV1-26-D",
       "rcp": "latest-polls/house",
@@ -2573,7 +2573,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 92
         }
       ],
       "note": null
@@ -2584,7 +2584,7 @@
       "state": "NV",
       "district": "3",
       "description": "Will Republican win the House race for NV-3?",
-      "dem_base": null,
+      "dem_base": 0.815,
       "pm": null,
       "kalshi": "HOUSENV3-26-D",
       "rcp": "latest-polls/house",
@@ -2623,7 +2623,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 82
         }
       ],
       "note": null
@@ -2634,7 +2634,7 @@
       "state": "NV",
       "district": "4",
       "description": "Will a Republican win the House race for NV-4?",
-      "dem_base": null,
+      "dem_base": 0.885,
       "pm": null,
       "kalshi": "HOUSENV4-26-D",
       "rcp": "latest-polls/house",
@@ -2673,7 +2673,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 88
         }
       ],
       "note": null
@@ -2684,7 +2684,7 @@
       "state": "NY",
       "district": "17",
       "description": "Will Republican win the House race for NY-17?",
-      "dem_base": null,
+      "dem_base": 0.59,
       "pm": null,
       "kalshi": "HOUSENY17-26-D",
       "rcp": "latest-polls/house",
@@ -2723,7 +2723,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 59
         }
       ],
       "note": null
@@ -2734,7 +2734,7 @@
       "state": "NY",
       "district": "18",
       "description": "Will a Republican win the House race for NY-18?",
-      "dem_base": null,
+      "dem_base": 0.91,
       "pm": null,
       "kalshi": "HOUSENY18-26-D",
       "rcp": "latest-polls/house",
@@ -2773,7 +2773,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 91
         }
       ],
       "note": null
@@ -2784,7 +2784,7 @@
       "state": "NY",
       "district": "19",
       "description": "Will Republican win the House race for NY-19?",
-      "dem_base": null,
+      "dem_base": 0.87,
       "pm": null,
       "kalshi": "HOUSENY19-26-D",
       "rcp": "latest-polls/house",
@@ -2823,7 +2823,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 87
         }
       ],
       "note": null
@@ -2834,7 +2834,7 @@
       "state": "NY",
       "district": "22",
       "description": "Will a Republican win the House race for NY-22?",
-      "dem_base": null,
+      "dem_base": 0.865,
       "pm": null,
       "kalshi": "HOUSENY22-26-D",
       "rcp": "latest-polls/house",
@@ -2873,7 +2873,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 86
         }
       ],
       "note": null
@@ -2884,7 +2884,7 @@
       "state": "NY",
       "district": "3",
       "description": "Will a Republican win the House race for NY-3?",
-      "dem_base": null,
+      "dem_base": 0.825,
       "pm": null,
       "kalshi": "HOUSENY3-26-D",
       "rcp": "latest-polls/house",
@@ -2923,7 +2923,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 82
         }
       ],
       "note": null
@@ -2934,7 +2934,7 @@
       "state": "NY",
       "district": "4",
       "description": "Will Republican win the House race for NY-4?",
-      "dem_base": null,
+      "dem_base": 0.725,
       "pm": null,
       "kalshi": "HOUSENY4-26-D",
       "rcp": "latest-polls/house",
@@ -2973,7 +2973,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 72
         }
       ],
       "note": null
@@ -2984,7 +2984,7 @@
       "state": "OH",
       "district": "1",
       "description": "Will a Republican win the House race for OH-1?",
-      "dem_base": null,
+      "dem_base": 0.77,
       "pm": null,
       "kalshi": "HOUSEOH1-26-D",
       "rcp": "latest-polls/house",
@@ -3023,7 +3023,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 77
         }
       ],
       "note": null
@@ -3034,7 +3034,7 @@
       "state": "OH",
       "district": "13",
       "description": "Will Republican win the House race for OH-13?",
-      "dem_base": null,
+      "dem_base": 0.84,
       "pm": null,
       "kalshi": "HOUSEOH13-26-D",
       "rcp": "latest-polls/house",
@@ -3073,7 +3073,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 84
         }
       ],
       "note": null
@@ -3084,7 +3084,7 @@
       "state": "OH",
       "district": "9",
       "description": "Will Republican win the House race for OH-9?",
-      "dem_base": null,
+      "dem_base": 0.665,
       "pm": null,
       "kalshi": "HOUSEOH9-26-D",
       "rcp": "latest-polls/house",
@@ -3123,7 +3123,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 66
         }
       ],
       "note": null
@@ -3134,7 +3134,7 @@
       "state": "OR",
       "district": "5",
       "description": "Will Republican win the House race for OR-5?",
-      "dem_base": null,
+      "dem_base": 0.845,
       "pm": null,
       "kalshi": "HOUSEOR5-26-D",
       "rcp": "latest-polls/house",
@@ -3173,7 +3173,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 84
         }
       ],
       "note": null
@@ -3184,7 +3184,7 @@
       "state": "PA",
       "district": "1",
       "description": "Will Republican win the House race for PA-1?",
-      "dem_base": null,
+      "dem_base": 0.385,
       "pm": null,
       "kalshi": "HOUSEPA1-26-D",
       "rcp": "latest-polls/house",
@@ -3223,7 +3223,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 38
         }
       ],
       "note": null
@@ -3234,7 +3234,7 @@
       "state": "PA",
       "district": "10",
       "description": "Will Republican win the House race for PA-10?",
-      "dem_base": null,
+      "dem_base": 0.8,
       "pm": null,
       "kalshi": "HOUSEPA10-26-D",
       "rcp": "latest-polls/house",
@@ -3273,7 +3273,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         }
       ],
       "note": null
@@ -3284,7 +3284,7 @@
       "state": "PA",
       "district": "17",
       "description": "Will Republican win the House race for PA-17?",
-      "dem_base": null,
+      "dem_base": 0.85,
       "pm": null,
       "kalshi": "HOUSEPA17-26-D",
       "rcp": "latest-polls/house",
@@ -3323,7 +3323,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 85
         }
       ],
       "note": null
@@ -3334,7 +3334,7 @@
       "state": "PA",
       "district": "7",
       "description": "Will Republican win the House race for PA-7?",
-      "dem_base": null,
+      "dem_base": 0.73,
       "pm": null,
       "kalshi": "HOUSEPA7-26-D",
       "rcp": "latest-polls/house",
@@ -3373,7 +3373,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 73
         }
       ],
       "note": null
@@ -3384,7 +3384,7 @@
       "state": "PA",
       "district": "8",
       "description": "Will Republican win the House race for PA-8?",
-      "dem_base": null,
+      "dem_base": 0.59,
       "pm": null,
       "kalshi": "HOUSEPA8-26-D",
       "rcp": "latest-polls/house",
@@ -3423,7 +3423,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 59
         }
       ],
       "note": null
@@ -3434,7 +3434,7 @@
       "state": "TX",
       "district": "15",
       "description": "Will Republican win the House race for TX-15?",
-      "dem_base": null,
+      "dem_base": 0.56,
       "pm": null,
       "kalshi": "HOUSETX15-26-D",
       "rcp": "latest-polls/house",
@@ -3473,7 +3473,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 56
         }
       ],
       "note": null
@@ -3484,7 +3484,7 @@
       "state": "TX",
       "district": "28",
       "description": "Will Republican win the House race for TX-28?",
-      "dem_base": null,
+      "dem_base": 0.76,
       "pm": null,
       "kalshi": "HOUSETX28-26-D",
       "rcp": "latest-polls/house",
@@ -3523,7 +3523,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 76
         }
       ],
       "note": null
@@ -3534,7 +3534,7 @@
       "state": "TX",
       "district": "34",
       "description": "Will Republican win the House race for TX-34?",
-      "dem_base": null,
+      "dem_base": 0.705,
       "pm": null,
       "kalshi": "HOUSETX34-26-D",
       "rcp": "latest-polls/house",
@@ -3573,7 +3573,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 70
         }
       ],
       "note": null
@@ -3584,7 +3584,7 @@
       "state": "US",
       "district": null,
       "description": "Will another party control the House after the 2026 Midterm elections?",
-      "dem_base": null,
+      "dem_base": 0.845,
       "pm": "which-party-will-win-the-house-in-2026",
       "kalshi": "CONTROLH-2026-D",
       "rcp": null,
@@ -3623,7 +3623,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 84
         }
       ],
       "note": null
@@ -3648,7 +3648,7 @@
       "state": "VA",
       "district": "1",
       "description": "Will Republican win the House race for VA-1?",
-      "dem_base": null,
+      "dem_base": 0.77,
       "pm": null,
       "kalshi": "HOUSEVA1-26-D",
       "rcp": "latest-polls/house",
@@ -3687,7 +3687,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 77
         }
       ],
       "note": null
@@ -3698,7 +3698,7 @@
       "state": "VA",
       "district": "2",
       "description": "Will Republican win the House race for VA-2?",
-      "dem_base": null,
+      "dem_base": 0.895,
       "pm": null,
       "kalshi": "HOUSEVA2-26-D",
       "rcp": "latest-polls/house",
@@ -3737,7 +3737,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -3748,7 +3748,7 @@
       "state": "VA",
       "district": "7",
       "description": "Will Republican win the House race for VA-7?",
-      "dem_base": null,
+      "dem_base": 0.885,
       "pm": null,
       "kalshi": "HOUSEVA7-26-D",
       "rcp": "latest-polls/house",
@@ -3787,7 +3787,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 88
         }
       ],
       "note": null
@@ -3798,7 +3798,7 @@
       "state": "WA",
       "district": "3",
       "description": "Will Republican win the House race for WA-3?",
-      "dem_base": null,
+      "dem_base": 0.8,
       "pm": null,
       "kalshi": "HOUSEWA3-26-D",
       "rcp": "latest-polls/house",
@@ -3837,7 +3837,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         }
       ],
       "note": null
@@ -3848,7 +3848,7 @@
       "state": "WI",
       "district": "1",
       "description": "Will Republican win the House race for WI-1?",
-      "dem_base": null,
+      "dem_base": 0.315,
       "pm": null,
       "kalshi": "HOUSEWI1-26-D",
       "rcp": "latest-polls/house",
@@ -3887,7 +3887,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 32
         }
       ],
       "note": null
@@ -3898,7 +3898,7 @@
       "state": "WI",
       "district": "3",
       "description": "Will a Republican win the House race for WI-3?",
-      "dem_base": null,
+      "dem_base": 0.69,
       "pm": null,
       "kalshi": "HOUSEWI3-26-D",
       "rcp": "latest-polls/house",
@@ -3937,7 +3937,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 69
         }
       ],
       "note": null
@@ -3948,7 +3948,7 @@
       "state": "AK",
       "district": null,
       "description": "Will Dustin Darden win the Alaska Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.525,
       "pm": "alaska-senate-election-winner",
       "kalshi": "SENATEAK-26-R",
       "rcp": "polls/senate/general/2026/alaska",
@@ -3957,12 +3957,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 46
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 46
         },
         {
           "date": "3/13",
@@ -3987,7 +3987,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 52
         }
       ],
       "note": null
@@ -3998,7 +3998,7 @@
       "state": "AL",
       "district": null,
       "description": "Will Republicans win the Senate race in Alabama?",
-      "dem_base": null,
+      "dem_base": 0.04,
       "pm": null,
       "kalshi": "SENATEAL-26-D",
       "rcp": "polls/senate/general/2026/alabama",
@@ -4037,7 +4037,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 4
         }
       ],
       "note": null
@@ -4048,7 +4048,7 @@
       "state": "AR",
       "district": null,
       "description": "Will Democratics win the Senate race in Arkansas?",
-      "dem_base": null,
+      "dem_base": 0.025,
       "pm": null,
       "kalshi": "SENATEAR-26-D",
       "rcp": "polls/senate/general/2026/arkansas",
@@ -4087,7 +4087,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 2
         }
       ],
       "note": null
@@ -4098,7 +4098,7 @@
       "state": "AZ",
       "district": null,
       "description": "Will Republicans win the Senate race in Arizona?",
-      "dem_base": null,
+      "dem_base": 0.755,
       "pm": null,
       "kalshi": "SENATEAZ-28-D",
       "rcp": "polls/senate/general/2026/arizona",
@@ -4137,7 +4137,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 76
         }
       ],
       "note": null
@@ -4148,7 +4148,7 @@
       "state": "CA",
       "district": null,
       "description": "Will Republicans win the Senate race in California?",
-      "dem_base": null,
+      "dem_base": 0.905,
       "pm": null,
       "kalshi": "SENATECA-28-D",
       "rcp": "polls/senate/general/2026/california",
@@ -4187,7 +4187,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -4198,7 +4198,7 @@
       "state": "CO",
       "district": null,
       "description": "Will Republicans win the Senate race in Colorado?",
-      "dem_base": null,
+      "dem_base": 0.95,
       "pm": null,
       "kalshi": "SENATECO-26-R",
       "rcp": "polls/senate/general/2026/colorado",
@@ -4207,12 +4207,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 95
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 95
         },
         {
           "date": "3/13",
@@ -4237,7 +4237,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 95
         }
       ],
       "note": null
@@ -4248,7 +4248,7 @@
       "state": "CT",
       "district": null,
       "description": "Will Republicans win the Senate race in Connecticut?",
-      "dem_base": null,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "SENATECT-28-D",
       "rcp": "polls/senate/general/2026/connecticut",
@@ -4287,7 +4287,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 94
         }
       ],
       "note": null
@@ -4298,7 +4298,7 @@
       "state": "DE",
       "district": null,
       "description": "Will Republicans win the Senate race in Delaware?",
-      "dem_base": null,
+      "dem_base": 0.96,
       "pm": null,
       "kalshi": "SENATEDE-26-D",
       "rcp": "polls/senate/general/2026/delaware",
@@ -4337,7 +4337,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         }
       ],
       "note": null
@@ -4348,7 +4348,7 @@
       "state": "FL",
       "district": null,
       "description": "Will Republicans win the Senate race in Florida?",
-      "dem_base": null,
+      "dem_base": 0.15,
       "pm": null,
       "kalshi": "SENATEFL-28-D",
       "rcp": "polls/senate/general/2026/florida",
@@ -4387,7 +4387,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 15
         }
       ],
       "note": null
@@ -4398,7 +4398,7 @@
       "state": "GA",
       "district": null,
       "description": "Will the Republicans win the Georgia Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.795,
       "pm": "georgia-republican-senate-primary-winner",
       "kalshi": "SENATEGA-26-R",
       "rcp": "polls/senate/general/2026/georgia",
@@ -4471,12 +4471,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         },
         {
           "date": "3/13",
@@ -4501,7 +4501,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         }
       ],
       "note": null
@@ -4526,7 +4526,7 @@
       "state": "HI",
       "district": null,
       "description": "Will Republicans win the Senate race in Hawaii?",
-      "dem_base": null,
+      "dem_base": 0.815,
       "pm": null,
       "kalshi": "SENATEHI-28-D",
       "rcp": "polls/senate/general/2026/hawaii",
@@ -4565,7 +4565,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 82
         }
       ],
       "note": null
@@ -4576,7 +4576,7 @@
       "state": "IA",
       "district": null,
       "description": "Will Republicans win the Senate race in Iowa?",
-      "dem_base": null,
+      "dem_base": 0.41,
       "pm": null,
       "kalshi": "SENATEIA-26-D",
       "rcp": "polls/senate/general/2026/iowa",
@@ -4615,7 +4615,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 41
         }
       ],
       "note": null
@@ -4626,7 +4626,7 @@
       "state": "ID",
       "district": null,
       "description": "Will Democratics win the Senate race in Idaho?",
-      "dem_base": null,
+      "dem_base": 0.04,
       "pm": null,
       "kalshi": "SENATEID-26-D",
       "rcp": "polls/senate/general/2026/idaho",
@@ -4665,7 +4665,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 4
         }
       ],
       "note": null
@@ -4676,7 +4676,7 @@
       "state": "IL",
       "district": null,
       "description": "Will Republicans win the Senate race in Illinois?",
-      "dem_base": null,
+      "dem_base": 0.95,
       "pm": null,
       "kalshi": "SENATEIL-26-D",
       "rcp": "polls/senate/general/2026/illinois",
@@ -4715,7 +4715,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 95
         }
       ],
       "note": null
@@ -4740,7 +4740,7 @@
       "state": "IN",
       "district": null,
       "description": "Will Republicans win the Senate race in Indiana?",
-      "dem_base": null,
+      "dem_base": 0.115,
       "pm": null,
       "kalshi": "SENATEIN-28-D",
       "rcp": "polls/senate/general/2026/indiana",
@@ -4779,7 +4779,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 12
         }
       ],
       "note": null
@@ -4790,7 +4790,7 @@
       "state": "KS",
       "district": null,
       "description": "Will Republicans win the Senate race in Kansas?",
-      "dem_base": null,
+      "dem_base": 0.145,
       "pm": null,
       "kalshi": "SENATEKS-26-D",
       "rcp": "polls/senate/general/2026/kansas",
@@ -4829,7 +4829,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 15
         }
       ],
       "note": null
@@ -4854,7 +4854,7 @@
       "state": "LA",
       "district": null,
       "description": "Will Democratics win the Senate race in Louisiana?",
-      "dem_base": null,
+      "dem_base": 0.07,
       "pm": null,
       "kalshi": "SENATELA-26-D",
       "rcp": "polls/senate/general/2026/louisiana",
@@ -4893,7 +4893,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 7
         }
       ],
       "note": null
@@ -4904,7 +4904,7 @@
       "state": "MA",
       "district": null,
       "description": "Will Republicans win the Senate race in Massachusetts?",
-      "dem_base": null,
+      "dem_base": 0.965,
       "pm": null,
       "kalshi": "SENATEMA-26-D",
       "rcp": "polls/senate/general/2026/massachusetts",
@@ -5007,7 +5007,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         }
       ],
       "note": null
@@ -5018,7 +5018,7 @@
       "state": "MD",
       "district": null,
       "description": "Will Republicans win the Senate race in Maryland?",
-      "dem_base": null,
+      "dem_base": 0.905,
       "pm": null,
       "kalshi": "SENATEMD-28-D",
       "rcp": "polls/senate/general/2026/maryland",
@@ -5057,7 +5057,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -5068,7 +5068,7 @@
       "state": "ME",
       "district": null,
       "description": "Will the Democrats win the Maine Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.705,
       "pm": "maine-democratic-senate-primary-winner",
       "kalshi": "SENATEME-26-D",
       "rcp": "polls/senate/general/2026/maine",
@@ -5171,7 +5171,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 70
         }
       ],
       "note": null
@@ -5196,7 +5196,7 @@
       "state": "MI",
       "district": null,
       "description": "Will the Republicans win the Michigan Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.795,
       "pm": "michigan-democratic-senate-primary-winner",
       "kalshi": "SENATEMI-26-D",
       "rcp": "polls/senate/general/2026/michigan",
@@ -5299,7 +5299,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         }
       ],
       "note": null
@@ -5324,7 +5324,7 @@
       "state": "MN",
       "district": null,
       "description": "Will Republicans win the Senate race in Minnesota?",
-      "dem_base": null,
+      "dem_base": 0.885,
       "pm": null,
       "kalshi": "SENATEMN-26-D",
       "rcp": "polls/senate/general/2026/minnesota",
@@ -5427,7 +5427,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 88
         }
       ],
       "note": null
@@ -5438,7 +5438,7 @@
       "state": "MO",
       "district": null,
       "description": "Will Republicans win the Senate race in Missouri?",
-      "dem_base": null,
+      "dem_base": 0.115,
       "pm": null,
       "kalshi": "SENATEMO-28-D",
       "rcp": "polls/senate/general/2026/missouri",
@@ -5477,7 +5477,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 12
         }
       ],
       "note": null
@@ -5488,7 +5488,7 @@
       "state": "MS",
       "district": null,
       "description": "Will Republicans win the Senate race in Mississippi?",
-      "dem_base": null,
+      "dem_base": 0.075,
       "pm": null,
       "kalshi": "SENATEMS-26-D",
       "rcp": "polls/senate/general/2026/mississippi",
@@ -5527,7 +5527,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 8
         }
       ],
       "note": null
@@ -5538,7 +5538,7 @@
       "state": "MT",
       "district": null,
       "description": "Will Independents win the Senate race in Montana?",
-      "dem_base": null,
+      "dem_base": 0.065,
       "pm": null,
       "kalshi": "SENATEMT-26-D",
       "rcp": "polls/senate/general/2026/montana",
@@ -5577,7 +5577,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 6
         }
       ],
       "note": null
@@ -5588,7 +5588,7 @@
       "state": "NC",
       "district": null,
       "description": "Will the Democrats win the North Carolina Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.805,
       "pm": "north-carolina-senate-election-winner",
       "kalshi": "SENATENC-26-D",
       "rcp": "polls/senate/general/2026/north-carolina",
@@ -5691,7 +5691,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 80
         }
       ],
       "note": null
@@ -5702,7 +5702,7 @@
       "state": "ND",
       "district": null,
       "description": "Will Democratics win the Senate race in North Dakota?",
-      "dem_base": null,
+      "dem_base": 0.14,
       "pm": null,
       "kalshi": "SENATEND-28-R",
       "rcp": "polls/senate/general/2026/north-dakota",
@@ -5711,12 +5711,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 16
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 16
         },
         {
           "date": "3/13",
@@ -5741,7 +5741,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 14
         }
       ],
       "note": null
@@ -5752,7 +5752,7 @@
       "state": "NE",
       "district": null,
       "description": "Will the Democrats win the Nebraska Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.01,
       "pm": "nebraska-senate-election-winner",
       "kalshi": "SENATENE-26-D",
       "rcp": "polls/senate/general/2026/nebraska",
@@ -5791,7 +5791,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 1
         }
       ],
       "note": null
@@ -5802,7 +5802,7 @@
       "state": "NH",
       "district": null,
       "description": "Will the Democrats win the New Hampshire Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.845,
       "pm": "new-hampshire-senate-election-winner",
       "kalshi": "SENATENH-26-D",
       "rcp": "polls/senate/general/2026/new-hampshire",
@@ -5905,7 +5905,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 84
         }
       ],
       "note": null
@@ -5916,7 +5916,7 @@
       "state": "NJ",
       "district": null,
       "description": "Will Democratics win the Senate race in New Jersey?",
-      "dem_base": null,
+      "dem_base": 0.935,
       "pm": null,
       "kalshi": "SENATENJ-26-R",
       "rcp": "polls/senate/general/2026/new-jersey",
@@ -5925,12 +5925,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 94
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 94
         },
         {
           "date": "3/13",
@@ -5955,7 +5955,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 94
         }
       ],
       "note": null
@@ -5966,7 +5966,7 @@
       "state": "NM",
       "district": null,
       "description": "Will Republicans win the Senate race in New Mexico?",
-      "dem_base": null,
+      "dem_base": 0.96,
       "pm": null,
       "kalshi": "SENATENM-26-D",
       "rcp": "polls/senate/general/2026/new-mexico",
@@ -6005,7 +6005,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         }
       ],
       "note": null
@@ -6016,7 +6016,7 @@
       "state": "NV",
       "district": null,
       "description": "Will Republicans win the Senate race in Nevada?",
-      "dem_base": null,
+      "dem_base": 0.595,
       "pm": null,
       "kalshi": "SENATENV-28-D",
       "rcp": "polls/senate/general/2026/nevada",
@@ -6055,7 +6055,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 60
         }
       ],
       "note": null
@@ -6066,7 +6066,7 @@
       "state": "NY",
       "district": null,
       "description": "Will Republicans win the Senate race in New York?",
-      "dem_base": null,
+      "dem_base": 0.905,
       "pm": null,
       "kalshi": "SENATENY-28-D",
       "rcp": "polls/senate/general/2026/new-york",
@@ -6105,7 +6105,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 90
         }
       ],
       "note": null
@@ -6116,7 +6116,7 @@
       "state": "OH",
       "district": null,
       "description": "Will Republicans win the Senate race in Ohio?",
-      "dem_base": null,
+      "dem_base": 0.345,
       "pm": null,
       "kalshi": "SENATEOH-28-D",
       "rcp": "polls/senate/general/2026/ohio",
@@ -6165,7 +6165,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 34
         }
       ],
       "note": null
@@ -6176,7 +6176,7 @@
       "state": "OK",
       "district": null,
       "description": "Will Republicans win the Senate race in Oklahoma?",
-      "dem_base": null,
+      "dem_base": 0.03,
       "pm": null,
       "kalshi": "SENATEOK-26-R",
       "rcp": "polls/senate/general/2026/oklahoma",
@@ -6185,12 +6185,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 4
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 4
         },
         {
           "date": "3/13",
@@ -6215,7 +6215,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 3
         }
       ],
       "note": null
@@ -6226,7 +6226,7 @@
       "state": "OR",
       "district": null,
       "description": "Will Republicans win the Senate race in Oregon?",
-      "dem_base": null,
+      "dem_base": 0.955,
       "pm": null,
       "kalshi": "SENATEOR-26-D",
       "rcp": "polls/senate/general/2026/oregon",
@@ -6265,7 +6265,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         }
       ],
       "note": null
@@ -6276,7 +6276,7 @@
       "state": "PA",
       "district": null,
       "description": "Will Republicans win the Senate race in Pennsylvania?",
-      "dem_base": null,
+      "dem_base": 0.69,
       "pm": null,
       "kalshi": "SENATEPA-28-D",
       "rcp": "polls/senate/general/2026/pennsylvania",
@@ -6315,7 +6315,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 69
         }
       ],
       "note": null
@@ -6326,7 +6326,7 @@
       "state": "RI",
       "district": null,
       "description": "Will Democratics win the Senate race in Rhode Island?",
-      "dem_base": null,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "SENATERI-26-R",
       "rcp": "polls/senate/general/2026/rhode-island",
@@ -6335,12 +6335,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         },
         {
           "date": "3/13",
@@ -6365,7 +6365,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 94
         }
       ],
       "note": null
@@ -6376,7 +6376,7 @@
       "state": "SC",
       "district": null,
       "description": "Will Democratics win the Senate race in South Carolina?",
-      "dem_base": null,
+      "dem_base": 0.15,
       "pm": null,
       "kalshi": "SENATESC-26-D",
       "rcp": "polls/senate/general/2026/south-carolina",
@@ -6415,7 +6415,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 15
         }
       ],
       "note": null
@@ -6426,7 +6426,7 @@
       "state": "SD",
       "district": null,
       "description": "Will Democratics win the Senate race in South Dakota?",
-      "dem_base": null,
+      "dem_base": 0.035,
       "pm": null,
       "kalshi": "SENATESD-26-D",
       "rcp": "polls/senate/general/2026/south-dakota",
@@ -6465,7 +6465,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 3
         }
       ],
       "note": null
@@ -6476,7 +6476,7 @@
       "state": "TN",
       "district": null,
       "description": "Will Republicans win the Senate race in Tennessee?",
-      "dem_base": null,
+      "dem_base": 0.04,
       "pm": null,
       "kalshi": "SENATETN-26-D",
       "rcp": "polls/senate/general/2026/tennessee",
@@ -6515,7 +6515,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 4
         }
       ],
       "note": null
@@ -6526,7 +6526,7 @@
       "state": "TX",
       "district": null,
       "description": "Will Person K win the 2026 Republican Primary?",
-      "dem_base": null,
+      "dem_base": 0.43,
       "pm": "texas-senate-election-winner",
       "kalshi": "SENATETX-26-R",
       "rcp": "polls/senate/general/2026/texas",
@@ -6599,12 +6599,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 38
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 38
         },
         {
           "date": "3/13",
@@ -6629,7 +6629,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 43
         }
       ],
       "note": null
@@ -6654,7 +6654,7 @@
       "state": "US",
       "district": null,
       "description": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
-      "dem_base": 0.71,
+      "dem_base": 0.603,
       "pm": "will-democrats-win-all-core-four-senate-races",
       "kalshi": "CONTROLS-2026-D",
       "rcp": null,
@@ -6693,7 +6693,7 @@
         {
           "date": "3/17",
           "polymarket": 71,
-          "kalshi": null
+          "kalshi": 50
         }
       ],
       "note": null
@@ -6732,7 +6732,7 @@
       "state": "UT",
       "district": null,
       "description": "Will Republicans win the Senate race in Utah?",
-      "dem_base": null,
+      "dem_base": 0.165,
       "pm": null,
       "kalshi": "SENATEUT-28-D",
       "rcp": "polls/senate/general/2026/utah",
@@ -6771,7 +6771,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 16
         }
       ],
       "note": null
@@ -6782,7 +6782,7 @@
       "state": "VA",
       "district": null,
       "description": "Will Person A win the West Virginia Senate race in 2026?",
-      "dem_base": null,
+      "dem_base": 0.94,
       "pm": "west-virginia-senate-election-winner",
       "kalshi": "SENATEVA-26-R",
       "rcp": "polls/senate/general/2026/virginia",
@@ -6791,12 +6791,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 96
         },
         {
           "date": "3/13",
@@ -6821,7 +6821,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 94
         }
       ],
       "note": null
@@ -6832,7 +6832,7 @@
       "state": "VT",
       "district": null,
       "description": "Will Republicans win the Senate race in Vermont?",
-      "dem_base": null,
+      "dem_base": 0.935,
       "pm": null,
       "kalshi": "SENATEVT-28-D",
       "rcp": "polls/senate/general/2026/vermont",
@@ -6871,7 +6871,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 94
         }
       ],
       "note": null
@@ -6882,7 +6882,7 @@
       "state": "WA",
       "district": null,
       "description": "Will Republicans win the Senate race in Washington?",
-      "dem_base": null,
+      "dem_base": 0.915,
       "pm": null,
       "kalshi": "SENATEWA-28-D",
       "rcp": "polls/senate/general/2026/washington",
@@ -6921,7 +6921,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 92
         }
       ],
       "note": null
@@ -6932,7 +6932,7 @@
       "state": "WI",
       "district": null,
       "description": "Will Republicans win the Senate race in Wisconsin?",
-      "dem_base": null,
+      "dem_base": 0.52,
       "pm": null,
       "kalshi": "SENATEWI-28-D",
       "rcp": "polls/senate/general/2026/wisconsin",
@@ -6971,7 +6971,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 52
         }
       ],
       "note": null
@@ -6982,7 +6982,7 @@
       "state": "WV",
       "district": null,
       "description": "Will Republicans win the Senate race in West Virginia?",
-      "dem_base": null,
+      "dem_base": 0.025,
       "pm": "west-virginia-senate-election-winner",
       "kalshi": "SENATEWV-26-D",
       "rcp": "polls/senate/general/2026/west-virginia",
@@ -7021,7 +7021,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 2
         }
       ],
       "note": null
@@ -7032,7 +7032,7 @@
       "state": "WY",
       "district": null,
       "description": "Will Democratics win the Senate race in Wyoming?",
-      "dem_base": null,
+      "dem_base": 0.025,
       "pm": null,
       "kalshi": "SENATEWY-26-R",
       "rcp": "polls/senate/general/2026/wyoming",
@@ -7041,12 +7041,12 @@
         {
           "date": "3/10",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 4
         },
         {
           "date": "3/11",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 4
         },
         {
           "date": "3/13",
@@ -7071,7 +7071,7 @@
         {
           "date": "3/17",
           "polymarket": null,
-          "kalshi": null
+          "kalshi": 2
         }
       ],
       "note": null

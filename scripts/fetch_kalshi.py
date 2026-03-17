@@ -92,6 +92,25 @@ def fetch_markets_for_series(series_ticker, status="open"):
     return all_markets
 
 
+def _parse_price(market, cent_key, dollar_key):
+    """
+    Read a price field that Kalshi has served in two formats:
+      - Legacy (pre-Mar 2026): integer cents, e.g. yes_bid=17
+      - Current:               dollar string,  e.g. yes_bid_dollars="0.1700"
+    Returns a float in [0, 1] or None.
+    """
+    val = market.get(cent_key)
+    if val is not None:
+        return val / 100.0
+    raw = market.get(dollar_key)
+    if raw is not None:
+        try:
+            return float(raw)
+        except (ValueError, TypeError):
+            pass
+    return None
+
+
 def parse_kalshi_market(market):
     """Convert a Kalshi market object to a standardized record."""
     ticker = market.get("ticker", "")
@@ -99,14 +118,14 @@ def parse_kalshi_market(market):
     title = market.get("title", "")
     subtitle = market.get("subtitle", "")
 
-    last_price = market.get("last_price")
-    yes_bid = market.get("yes_bid")
-    yes_ask = market.get("yes_ask")
+    yes_bid  = _parse_price(market, "yes_bid",  "yes_bid_dollars")
+    yes_ask  = _parse_price(market, "yes_ask",  "yes_ask_dollars")
+    last_prc = _parse_price(market, "last_price", "last_price_dollars")
 
     if yes_bid is not None and yes_ask is not None:
-        midpoint = (yes_bid + yes_ask) / 2.0 / 100.0
-    elif last_price is not None:
-        midpoint = last_price / 100.0
+        midpoint = (yes_bid + yes_ask) / 2.0
+    elif last_prc is not None:
+        midpoint = last_prc
     else:
         midpoint = None
 
@@ -119,6 +138,13 @@ def parse_kalshi_market(market):
 
     race_id = infer_kalshi_race_id(ticker, event_ticker, title)
 
+    # volume: field was volume_24h (int) in legacy, volume_24h_fp (str) in current
+    vol_raw = market.get("volume_24h") or market.get("volume_24h_fp", 0)
+    try:
+        volume_24h = float(vol_raw)
+    except (ValueError, TypeError):
+        volume_24h = 0
+
     return {
         "race_id": race_id,
         "ticker": ticker,
@@ -128,12 +154,9 @@ def parse_kalshi_market(market):
         "dem_price": dem_price,
         "rep_price": rep_price,
         "yes_price": midpoint,
-        "last_price_cents": last_price,
-        "yes_bid_cents": yes_bid,
-        "yes_ask_cents": yes_ask,
-        "volume_24h": market.get("volume_24h", 0),
-        "volume_total": market.get("volume", 0),
-        "open_interest": market.get("open_interest", 0),
+        "volume_24h": volume_24h,
+        "volume_total": market.get("volume") or market.get("volume_fp", 0),
+        "open_interest": market.get("open_interest") or market.get("open_interest_fp", 0),
         "status": market.get("status", ""),
         "close_time": market.get("close_time", ""),
     }

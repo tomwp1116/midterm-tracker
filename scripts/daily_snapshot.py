@@ -159,10 +159,17 @@ def save_market_snapshots(conn, pm_records, k_records, snapshot_date):
         rid = r["race_id"]
         if rid not in snapshots:
             snapshots[rid] = {}
-        snapshots[rid]["k_dem_price"] = r.get("dem_price")
-        snapshots[rid]["k_rep_price"] = r.get("rep_price")
-        snapshots[rid]["k_volume_24h"] = r.get("volume_24h")
-        snapshots[rid]["k_ticker"] = r.get("ticker")
+        # Multiple markets per race (e.g. -D and -R variants): keep first non-None value
+        if r.get("dem_price") is not None:
+            snapshots[rid]["k_dem_price"] = r["dem_price"]
+        elif "k_dem_price" not in snapshots[rid]:
+            snapshots[rid]["k_dem_price"] = None
+        if r.get("rep_price") is not None:
+            snapshots[rid]["k_rep_price"] = r["rep_price"]
+        elif "k_rep_price" not in snapshots[rid]:
+            snapshots[rid]["k_rep_price"] = None
+        snapshots[rid]["k_volume_24h"] = snapshots[rid].get("k_volume_24h", 0) + (r.get("volume_24h") or 0)
+        snapshots[rid]["k_ticker"] = r.get("ticker") or snapshots[rid].get("k_ticker")
     
     saved = 0
     for rid, data in snapshots.items():
@@ -399,13 +406,22 @@ def export_dashboard_json(conn, output_path):
         """, (rid,))
         snap = c.fetchone()
         
-        # Compute dem_base from latest snapshot
+        # Compute dem_base from latest snapshot; derive dem from rep if needed
+        def dem_from_snap(dem, rep):
+            if dem is not None:
+                return dem
+            if rep is not None:
+                return round(1 - rep, 3)
+            return None
+
         dem_base = None
         if snap:
-            prices = [p for p in [snap[0], snap[2]] if p is not None]
+            pm_dem = dem_from_snap(snap[0], snap[1])
+            k_dem  = dem_from_snap(snap[2], snap[3])
+            prices = [p for p in [pm_dem, k_dem] if p is not None]
             if prices:
                 dem_base = round(sum(prices) / len(prices), 3)
-        
+
         # Get 30 days of time series
         c.execute("""
             SELECT snapshot_date, pm_dem_price, pm_rep_price,
@@ -417,14 +433,14 @@ def export_dashboard_json(conn, output_path):
         ts_rows = list(reversed(c.fetchall()))
         time_series = []
         for ts in ts_rows:
-            pm_d = round(ts[1] * 100) if ts[1] else None
-            k_d = round(ts[3] * 100) if ts[3] else None
+            pm_d = dem_from_snap(ts[1], ts[2])
+            k_d  = dem_from_snap(ts[3], ts[4])
             parts = ts[0].split("-")
             date_str = f"{int(parts[1])}/{int(parts[2])}"
             time_series.append({
                 "date": date_str,
-                "polymarket": pm_d,
-                "kalshi": k_d,
+                "polymarket": round(pm_d * 100) if pm_d is not None else None,
+                "kalshi":     round(k_d  * 100) if k_d  is not None else None,
             })
         
         # Get polls for this race
