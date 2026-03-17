@@ -84,7 +84,7 @@ conn.commit()
 print(f"Added {len(house_races)} House district races")
 
 # ── Now export the full dashboard JSON ──────────────
-c.execute("SELECT race_id, chamber, state, district, description, polymarket_slug, kalshi_ticker FROM races ORDER BY chamber, state, district")
+c.execute("SELECT race_id, chamber, state, district, description, polymarket_slug, kalshi_ticker, kalshi_url FROM races ORDER BY chamber, state, district")
 all_races = c.fetchall()
 
 state_names = {
@@ -101,7 +101,7 @@ state_names = {
 }
 
 races_out = []
-for rid, chamber, state, district, desc, pm_slug, k_ticker in all_races:
+for rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_path in all_races:
     # Time series
     c.execute("""
         SELECT snapshot_date,
@@ -172,6 +172,7 @@ for rid, chamber, state, district, desc, pm_slug, k_ticker in all_races:
         "dem_base": dem_base,
         "pm": pm_slug,
         "kalshi": k_ticker.lower() if k_ticker else None,
+        "kalshi_url": f"https://kalshi.com/markets/{k_url_path}" if k_url_path else None,
         "rcp": rcp,
         "note": None,
         "polls": polls if polls else None,

@@ -397,14 +397,14 @@ def export_dashboard_json(conn, output_path):
     # ── Fetch all races ──
     c.execute("""
         SELECT race_id, chamber, state, district, description,
-               polymarket_slug, kalshi_ticker
+               polymarket_slug, kalshi_ticker, kalshi_url
         FROM races ORDER BY chamber, state
     """)
     race_rows = c.fetchall()
     
     races_out = []
     for row in race_rows:
-        rid, chamber, state, district, desc, pm_slug, k_ticker = row
+        rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_path = row
         
         # Get latest market snapshot
         c.execute("""
@@ -477,11 +477,6 @@ def export_dashboard_json(conn, output_path):
         
         # Build external links
         pm_url = f"https://polymarket.com/event/{pm_slug}" if pm_slug else None
-        k_url = None
-        if k_ticker:
-            # Kalshi URL pattern: /markets/{series}/{event}/{ticker}
-            # Simplified: just use the ticker as path
-            k_url = f"https://kalshi.com/markets/{k_ticker.lower()}"
         rcp = rcp_url_for(chamber, state)
         
         race_obj = {
@@ -493,6 +488,7 @@ def export_dashboard_json(conn, output_path):
             "dem_base": dem_base,
             "pm": pm_slug,
             "kalshi": k_ticker,
+            "kalshi_url": f"https://kalshi.com/markets/{k_url_path}" if k_url_path else None,
             "rcp": rcp,
             "polls": polls if polls else None,
             "time_series": time_series if time_series else None,
