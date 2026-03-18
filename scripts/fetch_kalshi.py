@@ -27,14 +27,17 @@ SERIES_URL = f"{KALSHI_BASE}/series"
 # Patterns that indicate an election series (matched against ticker)
 # These are tight: SENATE*, HOUSE*, GOV* + state code patterns
 ELECTION_TICKER_PATTERNS = [
-    r"^SENATE[A-Z]{2}$",    # SENATEGA, SENATEMI, etc.
-    r"^SEATE[A-Z]{2}$",     # SEATEAL (Alabama variant)
-    r"^HOUSE[A-Z]{2}\d+$",  # HOUSECA13, HOUSENY17, etc.
-    r"^GOV[A-Z]{2}$",       # GOVGA, GOVCA, etc.
-    r"^CONTROLH$",           # House control
-    r"^CONTROLS$",           # Senate control
-    r"^INPARTY",             # Balance of power
-    r"^KXMIDTERM",           # Midterm-specific
+    r"^SENATE[A-Z]{2}$",        # SENATEGA, SENATEMI, etc.
+    r"^SENATEPARTY[A-Z]{2}",    # SENATEPARTYGA, SENATEPARTY-MI, etc.
+    r"^SEATE[A-Z]{2}$",         # SEATEAL (Alabama variant)
+    r"^HOUSE[A-Z]{2}\d+$",      # HOUSECA13, HOUSENY17, etc.
+    r"^GOV[A-Z]{2}$",           # GOVGA, GOVCA (legacy)
+    r"^GOVPARTY[A-Z]{2}$",      # GOVPARTYAK, GOVPARTYMI, etc. (current format)
+    r"^GOVPARTY-[A-Z]{2}$",     # GOVPARTY-NH variant
+    r"^CONTROLH$",               # House control
+    r"^CONTROLS$",               # Senate control
+    r"^INPARTY",                 # Balance of power
+    r"^KXMIDTERM",               # Midterm-specific
 ]
 
 
@@ -209,10 +212,20 @@ def infer_kalshi_race_id(ticker, event_ticker, title):
         chamber = "congress"
 
     state_code = None
-    for code in state_codes:
-        if f"-{code}-" in combined or combined.endswith(f"-{code}") or f"{code}" in combined[5:9]:
-            state_code = code
-            break
+    # Special-case: GOVPARTY{STATE} or GOVPARTY-{STATE} tickers
+    gp_match = re.match(r"^GOVPARTY-?([A-Z]{2})", ticker.upper())
+    if gp_match:
+        state_code = gp_match.group(1)
+    # Also handle SENATEPARTY{STATE} or SENATEPARTY-{STATE}
+    sp_match = re.match(r"^SENATEPARTY-?([A-Z]{2})", ticker.upper())
+    if sp_match:
+        state_code = sp_match.group(1)
+
+    if not state_code:
+        for code in state_codes:
+            if f"-{code}-" in combined or combined.endswith(f"-{code}") or f"{code}" in combined[5:9]:
+                state_code = code
+                break
 
     if not state_code:
         state_names = {

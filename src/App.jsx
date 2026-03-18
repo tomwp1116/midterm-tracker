@@ -642,9 +642,11 @@ export default function App(){
       if(filter==="primaries")return isPrimary(r);
       return true;
     });
-    if(comp==="tossup")f=f.filter(r=>r.dem_base>=.40&&r.dem_base<=.60);
-    if(comp==="lean")f=f.filter(r=>(r.dem_base>.15&&r.dem_base<.40)||(r.dem_base>.60&&r.dem_base<.85));
-    if(comp==="safe")f=f.filter(r=>r.dem_base<=.15||r.dem_base>=.85);
+    if(filter!=="primaries"){
+      if(comp==="tossup")f=f.filter(r=>r.dem_base>=.40&&r.dem_base<=.60);
+      if(comp==="lean")f=f.filter(r=>(r.dem_base>.15&&r.dem_base<.40)||(r.dem_base>.60&&r.dem_base<.85));
+      if(comp==="safe")f=f.filter(r=>r.dem_base<=.15||r.dem_base>=.85);
+    }
     if(sort==="competitiveness")f.sort((a,b)=>Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5));
     else if(sort==="state")f.sort((a,b)=>(a.state+(a.district||"")).localeCompare(b.state+(b.district||"")));
     else if(sort==="polymarket"||sort==="kalshi")f.sort((a,b)=>(b.dem_base||0)-(a.dem_base||0));
