@@ -42,10 +42,18 @@ FTE_SENATE_CSV = f"{FTE_BASE}/senate_polls.csv"
 FTE_HOUSE_CSV = f"{FTE_BASE}/house_polls.csv"
 FTE_GOVERNOR_CSV = f"{FTE_BASE}/governor_polls.csv"
 
+# ── Wikipedia Polling Data ─────────────────────────────
+WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
+# Wikipedia bot policy requires a descriptive User-Agent with contact info
+WIKIPEDIA_USER_AGENT = (
+    "MidtermTracker/1.0 (https://tomwp1116.github.io/midterm-tracker/) "
+    "python-requests/2.x"
+)
+
 # ── General Settings ───────────────────────────────────
 USER_AGENT = (
-    "MidtermTracker/1.0 (Journalism Research Project; "
-    "contact: your-email@example.com)"
+    "MidtermTracker/1.0 (https://tomwp1116.github.io/midterm-tracker/) "
+    "python-requests/2.x"
 )
 REQUEST_DELAY_SECONDS = 1.5  # Polite delay between API calls
 MAX_RETRIES = 3
@@ -58,6 +66,14 @@ SENATE_STATES_2026 = [
     "KY", "LA", "MA", "ME", "MI", "MN", "MS", "MT", "NC", "NE",
     "NH", "NJ", "NM", "OK", "OR", "RI", "SC", "SD", "TN", "TX",
     "VA", "WV", "WY"
+]
+
+# States with gubernatorial races in 2026
+GOVERNOR_STATES_2026 = [
+    "AL", "AK", "AZ", "CA", "CO", "CT", "FL", "GA", "HI", "ID",
+    "IL", "IA", "KS", "ME", "MA", "MI", "MN", "NE", "NH", "NJ",
+    "NM", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN",
+    "TX", "VT", "WI", "WY"
 ]
 
 # ── Primary Market Races (curated list with verified Kalshi/Polymarket sources) ─

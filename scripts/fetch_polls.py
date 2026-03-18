@@ -1,250 +1,425 @@
 """
-Fetch 2026 midterm polls from FiveThirtyEight's public CSV data.
+Fetch 2026 midterm election polling data from Wikipedia articles.
 
-FiveThirtyEight publishes continuously-updated CSV files (no auth required):
-  Senate:   https://projects.fivethirtyeight.com/polls-page/data/senate_polls.csv
-  House:    https://projects.fivethirtyeight.com/polls-page/data/house_polls.csv
-  Governor: https://projects.fivethirtyeight.com/polls-page/data/governor_polls.csv
+Wikipedia hosts polling tables for major election races. We use the
+MediaWiki API to fetch article HTML and parse wikitables.
 
-Each CSV has one row per candidate per poll. We group by poll_id, filter for
-cycle==2026, and pivot into our canonical poll record format.
+API: https://en.wikipedia.org/w/api.php
+Bot policy: https://en.wikipedia.org/wiki/Wikipedia:Bot_policy
+User-Agent: per Wikimedia policy, must identify project + contact URL.
 
-Extra fields provided by 538 that RCP did not have:
-  - sample_size: number of respondents
-  - fte_grade: pollster quality grade (A+, A, B, etc.)
-  - population: lv (likely voters), rv (registered voters), a (all adults)
-  - stage: 'general' or 'primary' — drives race_id suffix for primaries
+STRATEGY:
+  1. For each tracked Senate/Governor race, compute the expected Wikipedia
+     article title (e.g. "2026 United States Senate election in Georgia")
+  2. Fetch parsed HTML via the MediaWiki action=parse API
+  3. Find wikitables whose headers look like polling tables
+  4. Identify D/R columns by background-color CSS on header cells (most
+     reliable signal) with a text-label fallback
+  5. Parse each data row into a canonical poll record
 """
-import csv
-import io
+import re
+import sys
 import time
 import requests
-from datetime import datetime, date
-from config import USER_AGENT, REQUEST_DELAY_SECONDS, REQUEST_TIMEOUT
+from datetime import datetime
+from pathlib import Path
+from bs4 import BeautifulSoup
 
-HEADERS = {"User-Agent": USER_AGENT}
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from config import (
+    WIKIPEDIA_API, WIKIPEDIA_USER_AGENT,
+    SENATE_STATES_2026, GOVERNOR_STATES_2026,
+    REQUEST_TIMEOUT,
+)
 
-FTE_BASE = "https://projects.fivethirtyeight.com/polls-page/data"
-FTE_URLS = {
-    "senate":   f"{FTE_BASE}/senate_polls.csv",
-    "house":    f"{FTE_BASE}/house_polls.csv",
-    "governor": f"{FTE_BASE}/governor_polls.csv",
+HEADERS = {"User-Agent": WIKIPEDIA_USER_AGENT}
+
+STATE_NAMES = {
+    "AL": "Alabama",       "AK": "Alaska",        "AZ": "Arizona",
+    "AR": "Arkansas",      "CA": "California",    "CO": "Colorado",
+    "CT": "Connecticut",   "DE": "Delaware",      "FL": "Florida",
+    "GA": "Georgia",       "HI": "Hawaii",        "ID": "Idaho",
+    "IL": "Illinois",      "IN": "Indiana",       "IA": "Iowa",
+    "KS": "Kansas",        "KY": "Kentucky",      "LA": "Louisiana",
+    "ME": "Maine",         "MD": "Maryland",      "MA": "Massachusetts",
+    "MI": "Michigan",      "MN": "Minnesota",     "MS": "Mississippi",
+    "MO": "Missouri",      "MT": "Montana",       "NE": "Nebraska",
+    "NV": "Nevada",        "NH": "New Hampshire", "NJ": "New Jersey",
+    "NM": "New Mexico",    "NY": "New York",      "NC": "North Carolina",
+    "ND": "North Dakota",  "OH": "Ohio",          "OK": "Oklahoma",
+    "OR": "Oregon",        "PA": "Pennsylvania",  "RI": "Rhode Island",
+    "SC": "South Carolina","SD": "South Dakota",  "TN": "Tennessee",
+    "TX": "Texas",         "UT": "Utah",          "VT": "Vermont",
+    "VA": "Virginia",      "WA": "Washington",    "WV": "West Virginia",
+    "WI": "Wisconsin",     "WY": "Wyoming",
+}
+
+# Wikipedia background colors that indicate party columns.
+# Sorted by specificity — hex codes first, named colors last.
+_DEM_COLORS = {
+    "#3333ff", "#0000ff", "#003399", "#0047ab", "#0000cd", "#0000dc",
+    "#00008b", "#3030ff", "#3366cc", "#6699ff", "#99b3ff", "#5555ff",
+    "#4169e1", "#0d3b7d", "#1b3a8c", "blue",
+}
+_REP_COLORS = {
+    "#ff0000", "#cc0000", "#ff3333", "#dd0000", "#cc3333", "#b22222",
+    "#8b0000", "#dc143c", "#ff6666", "#e81b23", "#c0392b", "#e74c3c",
+    "#bf0a30", "red",
 }
 
 
-def parse_fte_date(date_str):
-    """Convert 538 date format (MM/DD/YY or MM/DD/YYYY) to YYYY-MM-DD."""
-    if not date_str:
+# ── Article title helpers ──────────────────────────────────────────────────────
+
+def _article_info(race_id):
+    """
+    Return (wikipedia_title, article_url) for a race_id, or None if unmappable.
+    Handles senate-{STATE}-2026 and governor-{STATE}-2026.
+    """
+    parts = race_id.split("-")
+    chamber = parts[0]
+    state = parts[1] if len(parts) > 1 else None
+    if not state or state not in STATE_NAMES:
         return None
-    date_str = date_str.strip()
-    for fmt in ("%m/%d/%y", "%m/%d/%Y"):
-        try:
-            return datetime.strptime(date_str, fmt).strftime("%Y-%m-%d")
-        except ValueError:
-            continue
+    name = STATE_NAMES[state]
+
+    if chamber == "senate":
+        title = f"2026 United States Senate election in {name}"
+    elif chamber == "governor":
+        title = f"2026 {name} gubernatorial election"
+    else:
+        return None
+
+    url = "https://en.wikipedia.org/wiki/" + title.replace(" ", "_")
+    return title, url
+
+
+# ── Wikipedia API fetch ────────────────────────────────────────────────────────
+
+def _fetch_html(title):
+    """
+    Fetch parsed HTML for a Wikipedia article via the MediaWiki action=parse
+    endpoint. Returns HTML string or None (404 / missing article / network err).
+    """
+    params = {
+        "action": "parse",
+        "page": title,
+        "prop": "text",
+        "format": "json",
+        "disableeditsection": "1",
+        "redirects": "1",
+    }
+    try:
+        resp = requests.get(
+            WIKIPEDIA_API, params=params, headers=HEADERS, timeout=REQUEST_TIMEOUT
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        if "error" in data:
+            return None   # article doesn't exist yet
+        return data["parse"]["text"]["*"]
+    except Exception as e:
+        print(f"  [Wiki] Error fetching '{title}': {e}")
+        return None
+
+
+# ── Column-party detection ─────────────────────────────────────────────────────
+
+def _col_party(th_tag, header_text):
+    """
+    Return 'D', 'R', or None for a <th> cell.
+    Primary signal: background-color CSS value.
+    Fallback: party keywords in the header text.
+    """
+    style = (th_tag.get("style") or "").lower()
+    bg_match = re.search(r"background(?:-color)?:\s*([#\w]+)", style)
+    if bg_match:
+        color = bg_match.group(1).lower()
+        if color in _DEM_COLORS:
+            return "D"
+        if color in _REP_COLORS:
+            return "R"
+
+    t = header_text.lower()
+    if any(kw in t for kw in ("democrat", "(d)", " dem", "dem.")):
+        return "D"
+    if any(kw in t for kw in ("republican", "(r)", " rep", "rep.", "gop")):
+        return "R"
     return None
 
 
-def build_race_id(chamber, state, seat_number, stage, parties):
+# ── Date / number parsers ──────────────────────────────────────────────────────
+
+def _parse_date(s):
     """
-    Build canonical race_id from 538 fields.
-
-    For general elections: {chamber}-{STATE}-{year} or {chamber}-{STATE}-{district}-{year}
-    For primaries:         primary-{STATE}-{chamber}-{party}-{year}
-                           or primary-{STATE}-{chamber}-{district}-{party}-{year} (House)
-
-    chamber:     'senate', 'house', or 'governor'
-    state:       two-letter state code (already uppercase from 538)
-    seat_number: congressional district number for House; None otherwise
-    stage:       'general' or 'primary'
-    parties:     set of candidate party codes in this poll (e.g. {'DEM', 'REP'})
+    Parse Wikipedia date strings to YYYY-MM-DD (end date of ranges).
+    Handles: "January 5–10, 2026", "Jan 5–10, 2026", "January 5, 2026",
+             "2026-01-05", "March 1–5, 2026", etc.
+    Returns None on failure.
     """
-    state = state.upper()
+    if not s:
+        return None
+    s = re.sub(r"\[.*?\]", "", s).strip()   # strip citation markers
+    s = re.sub(r"\s+", " ", s)
 
-    if stage and stage.lower() == "primary":
-        has_dem = bool(parties & {"DEM", "D", "DEMOCRATIC"})
-        has_rep = bool(parties & {"REP", "R", "REPUBLICAN"})
-        if has_dem and not has_rep:
-            party_suffix = "D"
-        elif has_rep and not has_dem:
-            party_suffix = "R"
-        else:
-            # Mixed-party primary poll — treat as general
-            party_suffix = None
+    if re.match(r"\d{4}-\d{2}-\d{2}", s):
+        return s[:10]
 
-        if party_suffix:
-            if chamber == "house" and seat_number:
-                return f"primary-{state}-{chamber}-{seat_number}-{party_suffix}-2026"
-            return f"primary-{state}-{chamber}-{party_suffix}-2026"
+    year_m = re.search(r"\b(202\d)\b", s)
+    year = year_m.group(1) if year_m else "2026"
 
-    # General election
-    if chamber == "house" and seat_number:
-        return f"house-{state}-{seat_number}-2026"
-    return f"{chamber}-{state}-2026"
+    # End of range (e.g. "5–10" → 10) or single day
+    end_day_m = re.search(r"[–\-]\s*(\d{1,2})\s*,?\s*" + year, s)
+    if end_day_m:
+        day = end_day_m.group(1).zfill(2)
+    else:
+        day_m = re.search(r"(\d{1,2})\s*,?\s*" + year, s)
+        day = day_m.group(1).zfill(2) if day_m else None
+
+    if not day:
+        return None
+
+    months = {
+        "jan": "01", "feb": "02", "mar": "03", "apr": "04",
+        "may": "05", "jun": "06", "jul": "07", "aug": "08",
+        "sep": "09", "oct": "10", "nov": "11", "dec": "12",
+    }
+    month = next(
+        (num for abbr, num in months.items() if re.search(abbr, s, re.I)),
+        None
+    )
+    if not month:
+        return None
+
+    return f"{year}-{month}-{day}"
 
 
-def fetch_csv(url):
-    """Download a 538 CSV and return as a list of dicts."""
+def _parse_sample(s):
+    """'800 LV', '1,200', 'N/A' → int or None."""
+    if not s:
+        return None
+    m = re.search(r"\d[\d,]*", s.replace(",", ""))
+    if m:
+        n = int(m.group().replace(",", ""))
+        return n if n > 0 else None
+    return None
+
+
+def _parse_pct(s):
+    """'52.3', '52.3%', '–', 'N/A' → float or None."""
+    if not s:
+        return None
+    s = s.strip().replace("%", "")
+    if s in ("–", "-", "N/A", "na", "n/a", "*", ""):
+        return None
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
-        resp.raise_for_status()
-        reader = csv.DictReader(io.StringIO(resp.text))
-        return list(reader)
-    except Exception as e:
-        print(f"  [538] Error fetching {url}: {e}")
+        return float(s)
+    except ValueError:
+        return None
+
+
+def _cell_text(cells, idx):
+    if idx is None or idx >= len(cells):
+        return ""
+    raw = cells[idx].get_text(" ", strip=True)
+    # Strip Wikipedia citation/footnote markers: [1], [A], [note 2], etc.
+    raw = re.sub(r"\s*\[[^\]]{1,10}\]", "", raw).strip()
+    return raw
+
+
+# ── Table parser ───────────────────────────────────────────────────────────────
+
+def _parse_table(table, race_id, article_url):
+    """
+    Parse one wikitable. Returns list of poll record dicts, or [] if the
+    table doesn't look like a polling table or lacks D/R columns.
+    """
+    rows = table.find_all("tr")
+    if not rows:
         return []
 
+    # Collect header rows (rows where ≥ half the cells are <th>)
+    header_rows = []
+    for row in rows[:4]:
+        ths = row.find_all("th")
+        tds = row.find_all("td")
+        if ths and len(ths) >= len(tds):
+            header_rows.append(ths)
 
-def rows_to_polls(rows, chamber):
-    """
-    Convert 538 CSV rows (one row per candidate) into poll records
-    (one record per poll), pivoting candidates into candidate_1/2/3 fields.
+    if not header_rows:
+        return []
 
-    Only includes polls where cycle == 2026.
-    Candidates are ordered: DEM first, then REP, then others (by pct desc within group).
-    """
-    # Group rows by poll_id
-    by_poll = {}
-    for row in rows:
-        if row.get("cycle", "").strip() != "2026":
-            continue
-        pid = row.get("poll_id", "").strip()
-        if not pid:
-            continue
-        if pid not in by_poll:
-            by_poll[pid] = {"meta": row, "candidates": []}
+    # Use the last header row for column mapping (handles multi-row headers)
+    col_ths = header_rows[-1]
+    col_texts = [
+        re.sub(r"\s*\[[^\]]{1,10}\]", "", th.get_text(" ", strip=True)).strip()
+        for th in col_ths
+    ]
 
-        party = row.get("candidate_party", "").strip().upper()
-        name = row.get("candidate_name", "").strip()
-        pct_str = row.get("pct", "").strip()
-        try:
-            pct = float(pct_str) if pct_str else None
-        except ValueError:
-            pct = None
+    # Must look like a polling table
+    lower_texts = [t.lower() for t in col_texts]
+    if not any(kw in t for t in lower_texts for kw in ("poll", "firm", "source", "survey")):
+        if not any(kw in t for t in lower_texts for kw in ("date", "field", "conduct")):
+            return []
 
-        if name or pct is not None:
-            by_poll[pid]["candidates"].append({"name": name, "party": party, "pct": pct})
+    # --- Map column indices ---
+    pollster_col = date_col = sample_col = dem_col = rep_col = None
 
+    for i, (th, text) in enumerate(zip(col_ths, col_texts)):
+        t = text.lower()
+        party = _col_party(th, text)
+
+        if party == "D" and dem_col is None:
+            dem_col = i
+        elif party == "R" and rep_col is None:
+            rep_col = i
+        elif pollster_col is None and any(
+            kw in t for kw in ("poll", "firm", "source", "survey", "organization")
+        ):
+            pollster_col = i
+        elif date_col is None and any(
+            kw in t for kw in ("date", "field", "conduct", "period")
+        ):
+            date_col = i
+        elif sample_col is None and any(
+            kw in t for kw in ("sample", "size", "n=", "respondent")
+        ):
+            sample_col = i
+
+    # Text-based party fallback (if color detection missed)
+    if dem_col is None or rep_col is None:
+        for i, text in enumerate(col_texts):
+            t = text.lower()
+            if dem_col is None and any(kw in t for kw in ("dem", "democratic", "(d)")):
+                dem_col = i
+            if rep_col is None and any(kw in t for kw in ("rep", "republican", "(r)", "gop")):
+                rep_col = i
+
+    if dem_col is None and rep_col is None:
+        return []
+
+    dem_name = col_texts[dem_col] if dem_col is not None else "Democratic"
+    rep_name = col_texts[rep_col] if rep_col is not None else "Republican"
+
+    # --- Parse data rows ---
     polls = []
-    for pid, data in by_poll.items():
-        meta = data["meta"]
-        candidates = data["candidates"]
-
-        state = meta.get("state", "").strip().upper()
-        if not state or state == "US":
+    for row in rows:
+        cells = row.find_all(["td", "th"])
+        # Skip pure header rows
+        if not row.find("td"):
             continue
 
-        seat_number = meta.get("seat_number", "").strip() or None
-        stage = meta.get("stage", "general").strip().lower()
-        parties = {c["party"] for c in candidates}
-
-        race_id = build_race_id(chamber, state, seat_number, stage, parties)
-
-        poll_date = parse_fte_date(meta.get("end_date"))
-        if not poll_date:
+        n_cols = max(filter(None, [pollster_col, date_col, sample_col, dem_col, rep_col, 0]))
+        if len(cells) <= n_cols:
             continue
 
-        # Sort: DEM first, REP second, others by pct desc
-        def sort_key(c):
-            order = {"DEM": 0, "REP": 1}.get(c["party"], 2)
-            return (order, -(c["pct"] or 0))
+        pollster  = _cell_text(cells, pollster_col) or "Unknown"
+        poll_date = _parse_date(_cell_text(cells, date_col))
+        sample    = _parse_sample(_cell_text(cells, sample_col)) if sample_col is not None else None
+        dem_pct   = _parse_pct(_cell_text(cells, dem_col)) if dem_col is not None else None
+        rep_pct   = _parse_pct(_cell_text(cells, rep_col)) if rep_col is not None else None
 
-        candidates_sorted = sorted(candidates, key=sort_key)
+        if dem_pct is None and rep_pct is None:
+            continue
 
-        # Deduplicate by name (538 sometimes repeats candidates across sub-questions)
-        seen_names = set()
-        unique_candidates = []
-        for c in candidates_sorted:
-            if c["name"] not in seen_names:
-                seen_names.add(c["name"])
-                unique_candidates.append(c)
+        # Skip aggregate/average rows Wikipedia sometimes includes
+        if re.search(r"\baverage\b|\baggregate\b", pollster.lower()):
+            continue
 
-        c1 = unique_candidates[0] if len(unique_candidates) > 0 else {}
-        c2 = unique_candidates[1] if len(unique_candidates) > 1 else {}
-        c3 = unique_candidates[2] if len(unique_candidates) > 2 else {}
-
-        spread = None
-        spread_label = None
-        if c1.get("pct") is not None and c2.get("pct") is not None:
-            spread = round(c1["pct"] - c2["pct"], 1)
-            winner = c1 if spread >= 0 else c2
-            loser_pct = abs(spread)
-            last_name = winner.get("name", "").split()[-1] if winner.get("name") else ""
-            spread_label = f"{last_name} +{loser_pct}" if last_name else None
-
-        sample_size = None
-        try:
-            ss = meta.get("sample_size", "").strip()
-            if ss:
-                sample_size = int(float(ss))
-        except (ValueError, TypeError):
-            pass
+        spread = round(dem_pct - rep_pct, 1) if (dem_pct is not None and rep_pct is not None) else None
+        if spread is not None:
+            lead = dem_name.split()[-1] if spread >= 0 else rep_name.split()[-1]
+            spread_label = f"{lead} +{abs(spread)}"
+        else:
+            spread_label = None
 
         polls.append({
-            "race_id": race_id,
-            "poll_date": poll_date,
-            "pollster": meta.get("pollster", "Unknown").strip(),
-            "sample_size": sample_size,
-            "candidate_1": c1.get("name"),
-            "candidate_1_pct": c1.get("pct"),
-            "candidate_2": c2.get("name"),
-            "candidate_2_pct": c2.get("pct"),
-            "candidate_3": c3.get("name"),
-            "candidate_3_pct": c3.get("pct"),
-            "spread": spread,
-            "spread_label": spread_label,
-            "source_url": meta.get("url", "").strip() or None,
-            "rcp_url": None,  # no longer sourced from RCP
-            "fte_grade": meta.get("fte_grade", "").strip() or None,
-            "population": meta.get("population", "").strip() or None,
-            "stage": stage,
+            "race_id":          race_id,
+            "poll_date":        poll_date,
+            "pollster":         pollster,
+            "sample_size":      sample,
+            "candidate_1":      dem_name,
+            "candidate_1_pct":  dem_pct,
+            "candidate_2":      rep_name,
+            "candidate_2_pct":  rep_pct,
+            "candidate_3":      None,
+            "candidate_3_pct":  None,
+            "spread":           spread,
+            "spread_label":     spread_label,
+            "source_url":       article_url,
+            "rcp_url":          None,
+            "fte_grade":        None,
+            "population":       None,
+            "stage":            "general",
         })
 
     return polls
 
 
-def fetch_all_polls():
-    """
-    Main entry point: fetch all 2026 polls from FiveThirtyEight CSVs.
-    Returns (polls_list, raw_rows_for_archive).
-    """
-    print("[FiveThirtyEight] Fetching 2026 election polls...")
-    all_polls = []
-    all_raw_rows = []
+# ── Per-race fetcher ───────────────────────────────────────────────────────────
 
-    for chamber, url in FTE_URLS.items():
-        print(f"  Fetching {chamber} polls from {url}...")
-        rows = fetch_csv(url)
-        if rows:
-            rows_2026 = [r for r in rows if r.get("cycle", "").strip() == "2026"]
-            all_raw_rows.extend(rows_2026)
-            polls = rows_to_polls(rows, chamber)
-            all_polls.extend(polls)
-            print(f"    Found {len(polls)} polls ({len(rows_2026)} raw 2026 rows)")
-        time.sleep(REQUEST_DELAY_SECONDS)
+def fetch_polls_for_race(race_id):
+    """Fetch and parse all polling tables for one race. Returns list of polls."""
+    info = _article_info(race_id)
+    if info is None:
+        return []
+    title, url = info
 
-    # Deduplicate by (race_id, pollster, poll_date)
-    seen = set()
-    unique_polls = []
-    for p in all_polls:
-        key = (p["race_id"], p["pollster"], p["poll_date"])
+    html = _fetch_html(title)
+    if html is None:
+        return []
+
+    soup = BeautifulSoup(html, "lxml")
+    tables = soup.find_all("table", class_=re.compile(r"wikitable"))
+
+    polls = []
+    for table in tables:
+        polls.extend(_parse_table(table, race_id, url))
+
+    # Deduplicate by (pollster, poll_date)
+    seen, unique = set(), []
+    for p in polls:
+        key = (p["pollster"], p["poll_date"])
         if key not in seen:
             seen.add(key)
-            unique_polls.append(p)
+            unique.append(p)
 
-    print(f"  Total unique polls: {len(unique_polls)}")
-    return unique_polls, all_raw_rows
+    return unique
+
+
+# ── Main entry point ───────────────────────────────────────────────────────────
+
+def fetch_all_polls():
+    """
+    Main entry point — same API as the old FiveThirtyEight fetcher.
+    Returns (polls_list, raw_rows) where raw_rows is [] (no separate archive).
+    """
+    print("[Wikipedia] Fetching 2026 election polls...")
+
+    race_ids = (
+        [f"senate-{s}-2026"   for s in SENATE_STATES_2026] +
+        [f"governor-{s}-2026" for s in GOVERNOR_STATES_2026]
+    )
+
+    all_polls = []
+    found = 0
+    for race_id in race_ids:
+        polls = fetch_polls_for_race(race_id)
+        if polls:
+            all_polls.extend(polls)
+            found += 1
+            print(f"  {race_id}: {len(polls)} polls")
+        time.sleep(0.5)   # polite delay between API calls
+
+    print(f"  Done: {len(all_polls)} polls from {found}/{len(race_ids)} races")
+    return all_polls, []
 
 
 if __name__ == "__main__":
-    polls, raw = fetch_all_polls()
-    for p in polls[:10]:
-        grade = f"[{p['fte_grade']}]" if p.get("fte_grade") else ""
-        pop = p.get("population", "")
-        n = f"n={p['sample_size']}" if p.get("sample_size") else ""
+    polls, _ = fetch_all_polls()
+    for p in polls[:20]:
         print(
             f"  {p['poll_date']}  {p['race_id']:32s}  {p['pollster']:25s}  "
-            f"{p.get('candidate_1','?')} {p.get('candidate_1_pct','')} vs "
-            f"{p.get('candidate_2','?')} {p.get('candidate_2_pct','')}  "
-            f"{grade} {pop} {n}".strip()
+            f"D:{p['candidate_1_pct']}  R:{p['candidate_2_pct']}  "
+            f"n={p['sample_size']}"
         )
+    print(f"\nTotal: {len(polls)} polls")
