@@ -290,10 +290,20 @@ def fetch_all_election_markets():
 
     print(f"  Done: {len(all_markets)} raw markets from {len(series_info)} series")
 
-    # Only keep markets that parsed to a real race ID; attach correct Kalshi URL
+    # Only keep markets that parsed to a real race ID; attach correct Kalshi URL.
+    # Also drop any market whose ticker or event_ticker contains a non-2026 year
+    # segment (e.g. "-28-" = 2028) — Kalshi series span multiple election cycles.
     valid_prefixes = ("senate-", "house-", "governor-", "congress-")
     records = []
     for m in all_markets:
+        ticker = m.get("ticker", "")
+        event_ticker = m.get("event_ticker", "")
+        combined = f"{ticker}-{event_ticker}".upper()
+        # Accept only explicit 2026 markets or markets with no year segment at all.
+        # Reject any ticker that contains a year other than 26 (e.g. -28-, -24-).
+        if re.search(r"-\d{2}-", combined):
+            if "-26-" not in combined:
+                continue
         r = parse_kalshi_market(m)
         if r["race_id"].startswith(valid_prefixes):
             r["kalshi_url"] = _kalshi_url(r["ticker"], series_info)

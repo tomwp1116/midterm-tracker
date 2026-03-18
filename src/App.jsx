@@ -601,8 +601,8 @@ function CompletedDetail({race, onClose}) {
 // ══════════════════════════════════════════════
 export default function App(){
   const[data,setData]=useState(FALLBACK);
-  const[filter,setF]=useState("senate");
-  const[comp,setC]=useState("tossup");
+  const[filter,setF]=useState("all");
+  const[comp,setC]=useState("all");
   const[sel,setS]=useState(null);
   const[sort,setO]=useState("competitiveness");
   const toggle=useCallback(id=>setS(p=>p===id?null:id),[]);
@@ -647,16 +647,18 @@ export default function App(){
       if(comp==="lean")f=f.filter(r=>(r.dem_base>.15&&r.dem_base<.40)||(r.dem_base>.60&&r.dem_base<.85));
       if(comp==="safe")f=f.filter(r=>r.dem_base<=.15||r.dem_base>=.85);
     }
-    if(sort==="competitiveness")f.sort((a,b)=>Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5));
+    if(sort==="competitiveness"){const co={senate:0,governor:1,house:2};f.sort((a,b)=>{const cd=(co[a.chamber]??3)-(co[b.chamber]??3);return cd!==0?cd:Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5);});}
     else if(sort==="state")f.sort((a,b)=>(a.state+(a.district||"")).localeCompare(b.state+(b.district||"")));
-    else if(sort==="polymarket"||sort==="kalshi")f.sort((a,b)=>(b.dem_base||0)-(a.dem_base||0));
+    else if(sort==="polymarket"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].polymarket!=null)return ts[i].polymarket;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
+    else if(sort==="kalshi"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].kalshi!=null)return ts[i].kalshi;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
     else if(sort==="gap")f.sort((a,b)=>Math.abs(raceGap(b)??0)-Math.abs(raceGap(a)??0));
+    else if(sort==="latestpoll"){const ld=r=>(r.polls||[]).map(p=>p.date||"").filter(Boolean).sort().pop()||"0";f.sort((a,b)=>ld(b).localeCompare(ld(a)));}
     return f;},[activeRaces,filter,comp,sort]);
 
   const pill=(act,fn,ch)=>(<button onClick={fn} style={{padding:"4px 12px",borderRadius:3,fontSize:13,fontWeight:act?600:400,border:act?"1px solid #333":"1px solid #ccc",cursor:"pointer",background:act?"#333":"#fff",color:act?"#fff":"#666",fontFamily:S}}>{ch}</button>);
 
-  const senFav = (st.senate_rep_pct||66) > 50;
-  const houFav = (st.house_dem_pct||78) > 50;
+  const senFav = st.senate_rep_pct != null ? st.senate_rep_pct > 50 : null;
+  const houFav = st.house_dem_pct != null ? st.house_dem_pct > 50 : null;
 
   return(
     <div style={{background:"#fff",minHeight:"100vh",color:"#222",fontFamily:"Georgia,'Times New Roman',serif"}}>
@@ -671,19 +673,19 @@ export default function App(){
         <div style={{display:"flex",alignItems:"baseline",gap:0,marginBottom:20,paddingBottom:16,borderBottom:"1px solid #ddd",flexWrap:"wrap"}}>
           <div style={{display:"flex",alignItems:"baseline",gap:8,marginRight:36}}>
             <span style={{fontSize:12,color:"#999",textTransform:"uppercase",letterSpacing:".06em",fontFamily:S}}>Senate</span>
-            <span style={{fontSize:32,fontWeight:700,color:senFav?REP:DEM,letterSpacing:"-.02em"}}>{senFav?(st.senate_rep_pct||66):(st.senate_dem_pct||35)}%</span>
-            <span style={{fontSize:14,color:senFav?REP:DEM,fontFamily:S}}>{senFav?"Rep.":"Dem."}</span>
+            <span style={{fontSize:32,fontWeight:700,color:senFav==null?"#999":senFav?REP:DEM,letterSpacing:"-.02em"}}>{senFav==null?"—":senFav?st.senate_rep_pct:st.senate_dem_pct}%</span>
+            <span style={{fontSize:14,color:senFav==null?"#999":senFav?REP:DEM,fontFamily:S}}>{senFav==null?"":senFav?"Rep.":"Dem."}</span>
           </div>
           <div style={{display:"flex",alignItems:"baseline",gap:8,marginRight:40}}>
             <span style={{fontSize:12,color:"#999",textTransform:"uppercase",letterSpacing:".06em",fontFamily:S}}>House</span>
-            <span style={{fontSize:32,fontWeight:700,color:houFav?DEM:REP,letterSpacing:"-.02em"}}>{houFav?(st.house_dem_pct||78):(st.house_rep_pct||23)}%</span>
-            <span style={{fontSize:14,color:houFav?DEM:REP,fontFamily:S}}>{houFav?"Dem.":"Rep."}</span>
+            <span style={{fontSize:32,fontWeight:700,color:houFav==null?"#999":houFav?DEM:REP,letterSpacing:"-.02em"}}>{houFav==null?"—":houFav?st.house_dem_pct:st.house_rep_pct}%</span>
+            <span style={{fontSize:14,color:houFav==null?"#999":houFav?DEM:REP,fontFamily:S}}>{houFav==null?"":houFav?"Dem.":"Rep."}</span>
           </div>
           <div style={{width:1,height:22,background:"#ddd",marginRight:24,alignSelf:"center"}}/>
           <div style={{display:"flex",gap:18,alignItems:"baseline",flexWrap:"wrap",fontFamily:S,fontSize:13,color:"#888"}}>
-            <span><strong style={{color:"#555"}}>{st.battleground_senate||4}</strong> battleground Senate</span>
-            <span><strong style={{color:"#555"}}>{st.house_districts_tracked||34}</strong> House districts</span>
-            <span><strong style={{color:"#555"}}>{st.polls_tracked||16}</strong> polls</span>
+            <span><strong style={{color:"#555"}}>{st.battleground_senate??'—'}</strong> battleground Senate</span>
+            <span><strong style={{color:"#555"}}>{st.house_districts_tracked??'—'}</strong> House districts</span>
+            <span><strong style={{color:"#555"}}>{st.polls_tracked??'—'}</strong> polls</span>
           </div>
         </div>
         {/* Filters */}
@@ -700,7 +702,7 @@ export default function App(){
         {/* Table */}
         <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
           <thead><tr style={{borderBottom:"2px solid #222"}}>
-            {[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:null,label:"Latest Poll"},{key:"gap",label:"Mkt vs. Poll",title:"Difference between market win probability (%) and 30-day poll average (Dem vote share %). Sorted by largest divergence."},{key:null,label:"Trend"}].map(col=>(
+            {[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:"gap",label:"Mkt vs. Poll",title:"Difference between market win probability (%) and 30-day poll average (Dem vote share %). Sorted by largest divergence."},{key:null,label:"Trend"}].map(col=>(
               <th key={col.label} onClick={col.key?()=>setO(col.key):undefined} title={col.title||""} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:sort===col.key?"#222":"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600,cursor:col.key?"pointer":"default",userSelect:"none",whiteSpace:"nowrap"}}>
                 {col.label}{sort===col.key&&<span style={{marginLeft:4,fontSize:9}}>{sort==="state"?"A→Z":"↕"}</span>}
               </th>))}

@@ -162,7 +162,26 @@ def save_races(conn, pm_records, k_records):
             if not _is_placeholder(desc):
                 races[rid]["description"] = desc
 
+    # Only allow specific state=US (control) races.
+    ALLOWED_CONTROL = {"senate-control-2026", "house-control-2026"}
+
+    # States that actually have elections in 2026 — reject any race outside these.
+    SENATE_STATES  = {"AL","AK","AR","CO","DE","GA","IA","ID","IL","KS","KY","LA",
+                      "MA","ME","MI","MN","MS","MT","NC","NE","NH","NJ","NM","OK",
+                      "OR","RI","SC","SD","TN","TX","VA","WV","WY"}
+    GOVERNOR_STATES = {"AL","AK","AZ","CA","CO","CT","FL","GA","HI","ID","IL","IA",
+                       "KS","ME","MA","MI","MN","NE","NH","NJ","NM","NY","OH","OK",
+                       "OR","PA","RI","SC","SD","TN","TX","VT","WI","WY"}
+
     for rid, info in races.items():
+        chamber = info.get("chamber", "")
+        state   = info.get("state", "")
+        if chamber == "senate" and state not in SENATE_STATES and not rid.startswith("primary-"):
+            continue
+        if chamber == "governor" and state not in GOVERNOR_STATES and not rid.startswith("primary-"):
+            continue
+        if info.get("state") == "US" and rid not in ALLOWED_CONTROL:
+            continue
         c.execute("""
             INSERT INTO races (race_id, chamber, state, district, description,
                              polymarket_slug, kalshi_ticker, kalshi_url)
@@ -679,9 +698,13 @@ def export_dashboard_json(conn, output_path):
                         if r["chamber"] == "senate" and r["state"] != "US"
                         and r["dem_base"] is not None
                         and 0.40 <= r["dem_base"] <= 0.60)
-    
+
+    house_districts = sum(1 for r in races_out
+                          if r["chamber"] == "house" and r["state"] != "US"
+                          and not r["race_id"].startswith("primary-"))
+
     total_polls = sum(len(r["polls"]) for r in races_out if r["polls"])
-    
+
     output = {
         "updated": today,
         "stats": {
@@ -690,6 +713,7 @@ def export_dashboard_json(conn, output_path):
             "house_dem_pct": round(house_control["dem_base"] * 100) if house_control and house_control["dem_base"] else None,
             "house_rep_pct": round((1 - house_control["dem_base"]) * 100) if house_control and house_control["dem_base"] else None,
             "battleground_senate": tossup_senate,
+            "house_districts_tracked": house_districts,
             "seats_up": 35,
             "polls_tracked": total_polls,
         },
