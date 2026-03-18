@@ -14,7 +14,12 @@ const PRIMARY_PALETTE = {
   I: ["#374151", "#4b5563", "#6b7280"],
 };
 
-const isD = s => s && /^(D |Ossoff|Peters|Platner|Mills|Brown|Talarico|Peltola|Generic D|Dem|Craig|Caraveo|Wild|Cartwright|Salinas|Vasquez|Gray)/.test(s);
+const isD = s => s && /^(\(D\)|D |Ossoff|Peters|Platner|Mills|Brown|Talarico|Peltola|Generic D|Dem|Craig|Caraveo|Wild|Cartwright|Salinas|Vasquez|Gray)/.test(s);
+const spreadColor = (d, r, spread) => {
+  if (d != null && r != null) return d > r ? DEM : d < r ? REP : "#888";
+  if (!spread) return "#888";
+  return isD(spread) ? DEM : /^\(R\)/.test(spread) ? REP : "#888";
+};
 
 // Race type helpers
 const isPrimary = race => race.race_type === "primary" || race.race_id?.includes("primary");
@@ -130,10 +135,10 @@ function enrichTimeSeries(race) {
       cutoff.setDate(cutoff.getDate() - 30);
       const recent = race.polls.filter(p => {
         const pd = parseToDate(p.date);
-        return pd && pd >= cutoff && pd <= ptDate && p.d != null;
+        return pd && pd >= cutoff && pd <= ptDate && p.d != null && p.r != null;
       });
       if (recent.length > 0)
-        pt.pollAvgDem = Math.round(recent.reduce((s, p) => s + p.d, 0) / recent.length);
+        pt.pollAvgDem = Math.round(recent.reduce((s, p) => s + (p.d - p.r), 0) / recent.length);
     });
   }
 }
@@ -258,7 +263,7 @@ function Tip({active,payload}){if(!active||!payload?.length)return null;const pt
       <div style={{fontWeight:700,fontSize:11,textTransform:"uppercase",letterSpacing:".04em",color:"#999",marginBottom:4}}>Poll released</div>
       <div style={{fontWeight:500}}>{pt.pollster}</div>
       {pt.pollMatchup&&<div style={{fontSize:12,color:"#888"}}>{pt.pollMatchup}</div>}
-      <div style={{display:"flex",gap:14,marginTop:3}}><span style={{color:DEM,fontWeight:600}}>Dem {pt.pollDem}%</span><span style={{color:REP,fontWeight:600}}>Rep {pt.pollRep}%</span><span style={{marginLeft:"auto",fontWeight:700,color:isD(pt.pollSpread)?DEM:REP}}>{pt.pollSpread}</span></div>
+      <div style={{display:"flex",gap:14,marginTop:3}}><span style={{color:DEM,fontWeight:600}}>Dem {pt.pollDem}%</span><span style={{color:REP,fontWeight:600}}>Rep {pt.pollRep}%</span><span style={{marginLeft:"auto",fontWeight:700,color:spreadColor(pt.pollDem,pt.pollRep,pt.pollSpread)}}>{pt.pollSpread}</span></div>
       {pt.pollExtra?.map((pe,i)=>(<div key={i} style={{marginTop:6,paddingTop:6,borderTop:"1px dashed #e5e5e5"}}><div style={{fontWeight:500}}>{pe.pollster}</div>{pe.matchup&&<div style={{fontSize:12,color:"#888"}}>{pe.matchup}</div>}<div style={{display:"flex",gap:14,marginTop:2}}><span style={{color:DEM}}>Dem {pe.d}%</span><span style={{color:REP}}>Rep {pe.r}%</span></div></div>))}
     </div>)}</div>);}
 
@@ -293,7 +298,7 @@ function GeneralChart({data, race}) {
     ...pt,
     polymarket: pt.polymarket!=null ? 2*pt.polymarket-100 : null,
     kalshi:     pt.kalshi    !=null ? 2*pt.kalshi    -100 : null,
-    pollAvgDem: pt.pollAvgDem!=null ? 2*pt.pollAvgDem-100 : null,
+    pollAvgDem: pt.pollAvgDem!=null ? pt.pollAvgDem : null,
   }));
   const hasPM=data.some(d=>d.polymarket!=null),hasK=data.some(d=>d.kalshi!=null);
   const hasPollAvg=data.some(d=>d.pollAvgDem!=null);
@@ -452,7 +457,7 @@ function Detail({race,onClose}){const data=race.time_series||[];return(
               {p.d!=null&&<span style={{fontSize:14,fontWeight:700,color:pColors[0]}}>{c1Label} {p.d}%</span>}
               {p.r!=null&&<><span style={{color:"#ccc"}}>–</span><span style={{fontSize:14,fontWeight:700,color:pColors[1]}}>{c2Label} {p.r}%</span></>}
               {p.c3&&p.c3pct!=null&&<><span style={{color:"#ccc"}}>–</span><span style={{fontSize:14,fontWeight:700,color:pColors[2]||"#555"}}>{p.c3} {p.c3pct}%</span></>}
-              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:isD(p.spread)?DEM:REP}}>{p.spread}</span>
+              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:spreadColor(p.d,p.r,p.spread)}}>{p.spread}</span>
             </div>
             {p.matchup&&<div style={{fontSize:12,color:"#999",marginTop:2,paddingLeft:56}}>{p.matchup}</div>}
           </div>);
@@ -529,7 +534,7 @@ function CompletedDetail({race, onClose}) {
               <span style={{fontSize:14,fontWeight:700,color:DEM}}>Dem {p.d}%</span>
               <span style={{color:"#ccc"}}>–</span>
               <span style={{fontSize:14,fontWeight:700,color:REP}}>Rep {p.r}%</span>
-              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:p.d!=null&&p.r!=null?(p.d>p.r?DEM:p.d<p.r?REP:"#888"):(isD(p.spread)?DEM:REP)}}>{p.spread}</span>
+              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:spreadColor(p.d,p.r,p.spread)}}>{p.spread}</span>
             </div>
             {p.matchup&&<div style={{fontSize:12,color:"#999",marginTop:2,paddingLeft:56}}>{p.matchup}</div>}
           </div>))}
@@ -691,7 +696,7 @@ export default function App(){
                           {lp.c2&&lp.r!=null&&<div style={{fontSize:13,fontWeight:500,color:primaryColors(race)[1]}}>{lp.c2} {lp.r}%</div>}
                           <div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div>
                         </div>)
-                      :(<div><div style={{fontSize:13,fontWeight:600,color:lp.d!=null&&lp.r!=null?(lp.d>lp.r?DEM:lp.d<lp.r?REP:"#888"):(isD(lp.spread)?DEM:REP)}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>)
+                      :(<div><div style={{fontSize:13,fontWeight:600,color:spreadColor(lp.d,lp.r,lp.spread)}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>)
                     ):<span style={{color:"#ddd"}}>—</span>}
                   </td>
                   <td style={{padding:"10px"}}><Spark data={ts} id={race.race_id}/></td>
