@@ -12,6 +12,86 @@
   },
   "races": [
     {
+      "race_id": "balance-of-power-2026",
+      "chamber": "congress",
+      "state": "US",
+      "district": null,
+      "description": "Balance of Power: 2026 Midterms (Dem Sweep 35%, R Senate D House 2%, D Senate R House -, R Sweep -)",
+      "dem_base": null,
+      "pm": "balance-of-power-2026-midterms",
+      "kalshi": null,
+      "kalshi_url": null,
+      "rcp": null,
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
+      "note": null
+    },
+    {
+      "race_id": "blue-wave-2026",
+      "chamber": "congress",
+      "state": "US",
+      "district": null,
+      "description": "Blue wave in 2026?",
+      "dem_base": null,
+      "pm": "blue-wave-in-2026",
+      "kalshi": null,
+      "kalshi_url": null,
+      "rcp": null,
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
+      "note": null
+    },
+    {
+      "race_id": "gop-trifecta-supermajority-2026",
+      "chamber": "congress",
+      "state": "US",
+      "district": null,
+      "description": "Republicans win Trifecta with Senate Supermajority?",
+      "dem_base": null,
+      "pm": "republican-trifecta-with-supermajority-in-the-senate",
+      "kalshi": null,
+      "kalshi_url": null,
+      "rcp": null,
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
+      "note": null
+    },
+    {
+      "race_id": "midterms-happen-scheduled-2026",
+      "chamber": "congress",
+      "state": "US",
+      "district": null,
+      "description": "Will the 2026 Midterm Elections happen as scheduled?",
+      "dem_base": null,
+      "pm": "will-the-2026-midterm-elections-happen-as-scheduled",
+      "kalshi": null,
+      "kalshi_url": null,
+      "rcp": null,
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
+      "note": null
+    },
+    {
       "race_id": "congress-control-2026",
       "chamber": "congress",
       "state": "control",
@@ -237,13 +317,13 @@
       "state": "AZ",
       "district": null,
       "description": "Will the Democratic party win the governorship in Arizona",
-      "dem_base": 0.715,
+      "dem_base": 0.71,
       "pm": null,
       "kalshi": "GOVPARTYAZ-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyaz/arizona-governor/govpartyaz-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/arizona/",
       "poll_avg_dem": 42.0,
-      "market_gap": 29.5,
+      "market_gap": 29.0,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -414,7 +494,7 @@
         {
           "date": "3/18",
           "polymarket": null,
-          "kalshi": 72
+          "kalshi": 71
         }
       ],
       "note": null
@@ -1052,7 +1132,7 @@
           "date": "3/18",
           "Ken Salazar": 0.5,
           "Michael Bennet": 80.5,
-          "Phil Weiser": 17.5
+          "Phil Weiser": 19.5
         }
       ],
       "note": null
@@ -1088,7 +1168,7 @@
         },
         {
           "date": "3/18",
-          "Barbara Kirkmeyer": 39.0,
+          "Barbara Kirkmeyer": 39.5,
           "Greg Lopez": 0.5,
           "Jason Mikesell": 0.5,
           "Jason Ray Clark": 0.5,
@@ -1499,7 +1579,7 @@
           "Geoff Duncan": 9.0,
           "Jason Carter": 1.0,
           "Jason Esteves": 15.5,
-          "Keisha Lance Bottoms": 78.5,
+          "Keisha Lance Bottoms": 78.0,
           "Lucy McBath": 1.0,
           "Michael Thurmond": 1.0,
           "Olujimi Brown": 1.0,
@@ -1881,7 +1961,7 @@
           "Kenneth Forrest Pinet": 0.5,
           "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
-          "Shenna Bellows": 16.0,
+          "Shenna Bellows": 15.0,
           "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.0
         }
@@ -1953,13 +2033,13 @@
       "state": "MI",
       "district": null,
       "description": "Will the Democratic party win the governorship in Michigan",
-      "dem_base": 0.535,
+      "dem_base": 0.53,
       "pm": null,
       "kalshi": "GOVPARTYMI-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartymi/michigan-governor/govpartymi-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/michigan/",
       "poll_avg_dem": 35.8,
-      "market_gap": 17.8,
+      "market_gap": 17.2,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -2156,7 +2236,7 @@
         {
           "date": "3/18",
           "polymarket": null,
-          "kalshi": 54
+          "kalshi": 53
         }
       ],
       "note": null
@@ -2196,7 +2276,7 @@
           "Chris Swanson": 3.5,
           "Dan Kildee": 0.5,
           "Garlin Gilchrist": 0.5,
-          "Jocelyn Benson": 92.0,
+          "Jocelyn Benson": 91.5,
           "Joe Tate": 0.5,
           "Mallory McMorrow": 0.5,
           "Mark Hackel": 0.5,
@@ -2630,7 +2710,7 @@
       "state": "NM",
       "district": null,
       "description": "Will the Democratic party win the governorship in New Mexico",
-      "dem_base": 0.897,
+      "dem_base": 0.895,
       "pm": "new-mexico-governor-winner-2026",
       "kalshi": "GOVPARTYNM-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartynm/new-mexico-governor/govpartynm-26",
@@ -3925,13 +4005,13 @@
       "state": "TX",
       "district": null,
       "description": "Will the Democratic party win the governorship in Texas",
-      "dem_base": 0.175,
+      "dem_base": 0.18,
       "pm": null,
       "kalshi": "GOVPARTYTX-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartytx/texas-governor/govpartytx-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/texas/",
       "poll_avg_dem": 41.0,
-      "market_gap": -23.5,
+      "market_gap": -23.0,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -17736,6 +17816,26 @@
       "note": null
     },
     {
+      "race_id": "gop-house-retirements-2026",
+      "chamber": "house",
+      "state": "US",
+      "district": null,
+      "description": "How many Republican House members not running in 2026?",
+      "dem_base": null,
+      "pm": "how-many-republican-house-members-not-running-in-2026",
+      "kalshi": null,
+      "kalshi_url": null,
+      "rcp": null,
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
+      "note": null
+    },
+    {
       "race_id": "house-VA-1-2026",
       "chamber": "house",
       "state": "VA",
@@ -20070,7 +20170,7 @@
       "state": "CO",
       "district": null,
       "description": "Will Republicans win the Senate race in Colorado?",
-      "dem_base": 0.95,
+      "dem_base": 0.955,
       "pm": null,
       "kalshi": "SENATECO-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateco/colorado-senate-race/senateco-26",
@@ -20230,7 +20330,7 @@
         {
           "date": "3/18",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 96
         }
       ],
       "note": null
@@ -20267,7 +20367,7 @@
           "George Washington Markert": 7.0,
           "Heidi Ganahl": 6.0,
           "Janak Joshi": 17.0,
-          "Mark Baisley": 45.0
+          "Mark Baisley": 44.5
         }
       ],
       "note": null
@@ -20569,12 +20669,32 @@
       "note": null
     },
     {
+      "race_id": "senate-FL-2026",
+      "chamber": "senate",
+      "state": "FL",
+      "district": null,
+      "description": "Florida Senate \u2014 Special election (open)",
+      "dem_base": null,
+      "pm": null,
+      "kalshi": "SENATEFL-26",
+      "kalshi_url": null,
+      "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/florida/",
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
+      "note": null
+    },
+    {
       "race_id": "senate-GA-2026",
       "chamber": "senate",
       "state": "GA",
       "district": null,
       "description": "Will Republicans win the Senate race in Georgia?",
-      "dem_base": 0.802,
+      "dem_base": 0.805,
       "pm": "georgia-senate-election-winner",
       "kalshi": "SENATEGA-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatega/georgia-senate-race/senatega-26",
@@ -20942,7 +21062,7 @@
         },
         {
           "date": "3/18",
-          "polymarket": 81,
+          "polymarket": 82,
           "kalshi": 80
         }
       ],
@@ -20989,7 +21109,7 @@
           "Brian Kemp": 0.5,
           "Buddy Carter": 1.5,
           "Christina Loren Clement": 0.2,
-          "Christoph La'Flare Chapman": 1.1,
+          "Christoph La'Flare Chapman": 1.0,
           "Derek Dooley": 8.5,
           "John King": 0.5,
           "Jonathan McColumn": 0.2,
@@ -25260,7 +25380,7 @@
         },
         {
           "date": "3/18",
-          "Alex Zdan": 38.0,
+          "Alex Zdan": 38.5,
           "Alina Habba": 7.5,
           "Justin Murphy": 7.0,
           "Mike Testa": 2.0,
@@ -25440,6 +25560,26 @@
           "kalshi": 96
         }
       ],
+      "note": null
+    },
+    {
+      "race_id": "senate-OH-2026",
+      "chamber": "senate",
+      "state": "OH",
+      "district": null,
+      "description": "Ohio Senate \u2014 Brown (D) vs. Husted (R-appointed)",
+      "dem_base": null,
+      "pm": null,
+      "kalshi": "SENATEOH-26",
+      "kalshi_url": null,
+      "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/ohio/",
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
       "note": null
     },
     {
@@ -26651,13 +26791,13 @@
       "state": "TX",
       "district": null,
       "description": "Will Republicans win the Senate race in Texas?",
-      "dem_base": 0.427,
+      "dem_base": 0.422,
       "pm": "texas-senate-election-winner",
       "kalshi": "SENATETX-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatetx/texas-senate-race/senatetx-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/texas/",
       "poll_avg_dem": 44.0,
-      "market_gap": -1.2,
+      "market_gap": -1.8,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -26981,7 +27121,7 @@
         {
           "date": "3/18",
           "polymarket": 42,
-          "kalshi": 44
+          "kalshi": 42
         }
       ],
       "note": null
@@ -27012,7 +27152,7 @@
         {
           "date": "3/18",
           "John Cornyn": 59.5,
-          "Ken Paxton": 40.5
+          "Ken Paxton": 41.0
         }
       ],
       "note": null
@@ -27049,10 +27189,10 @@
       "chamber": "senate",
       "state": "US",
       "district": null,
-      "description": "Will Democrats win the U.S. Senate in 2026?",
+      "description": "Which party will win the Senate in 2026?",
       "dem_base": 0.6,
-      "pm": "will-democrats-win-all-core-four-senate-races",
-      "kalshi": "CONTROLS-2026-D",
+      "pm": "which-party-will-win-the-senate-in-2026",
+      "kalshi": "CONTROLS-SENATE-26",
       "kalshi_url": "https://kalshi.com/markets/controls/senate-winner/controls-2026",
       "rcp": null,
       "poll_avg_dem": null,
@@ -27213,6 +27353,46 @@
           "kalshi": 50
         }
       ],
+      "note": null
+    },
+    {
+      "race_id": "senate-seats-R-2026",
+      "chamber": "senate",
+      "state": "US",
+      "district": null,
+      "description": "Republican Senate seats after 2026 midterms (11 outcomes: \u226447 through \u226553)",
+      "dem_base": null,
+      "pm": "republican-senate-seats-after-the-2026-midterm-elections-927",
+      "kalshi": null,
+      "kalshi_url": null,
+      "rcp": null,
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
+      "note": null
+    },
+    {
+      "race_id": "core-four-dem-sweep-2026",
+      "chamber": "senate",
+      "state": "US",
+      "district": null,
+      "description": "Will Democrats win all 'core four' senate races? (GA, MI, NC, ME)",
+      "dem_base": null,
+      "pm": "will-democrats-win-all-core-four-senate-races",
+      "kalshi": null,
+      "kalshi_url": null,
+      "rcp": null,
+      "poll_avg_dem": null,
+      "market_gap": null,
+      "race_type": "general",
+      "primary_party": null,
+      "result": null,
+      "polls": null,
+      "time_series": null,
       "note": null
     },
     {
@@ -27433,9 +27613,9 @@
           "Aldous Mina": 5.5,
           "Bryce Reeves": 0.5,
           "Chuck Smith": 29.0,
-          "David Williams": 18.0,
+          "David Williams": 19.0,
           "Jason Miyares": 0.5,
-          "Kim Farington": 8.0,
+          "Kim Farington": 6.0,
           "Winsome Earle-Sears": 3.5
         }
       ],
@@ -27467,7 +27647,7 @@
         },
         {
           "date": "3/18",
-          "Jason Reynolds": 1.5,
+          "Jason Reynolds": 2.0,
           "Mark Moran": 4.5,
           "Mark Warner": 92.5
         }
@@ -27712,7 +27892,7 @@
           "date": "3/18",
           "Jeff Kessler": 69.0,
           "Rachel Fetty Anderson": 2.5,
-          "Rio Phillips": 4.5,
+          "Rio Phillips": 3.5,
           "Thornton Cooper": 3.0,
           "Zach Shrewsbury": 22.5
         }
