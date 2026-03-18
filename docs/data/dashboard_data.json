@@ -5,7 +5,7 @@
     "senate_rep_pct": 40,
     "house_dem_pct": 85,
     "house_rep_pct": 15,
-    "battleground_senate": 6,
+    "battleground_senate": 5,
     "seats_up": 35,
     "polls_tracked": 0
   },
@@ -26078,8 +26078,8 @@
       "state": "VA",
       "district": null,
       "description": "Will Republicans win the Senate race in Virginia?",
-      "dem_base": 0.505,
-      "pm": "west-virginia-senate-election-winner",
+      "dem_base": 0.94,
+      "pm": "virginia-senate-election-winner",
       "kalshi": "SENATEVA-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateva/virginia-senate-race/senateva-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/virginia/",
@@ -26237,7 +26237,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": 7,
+          "polymarket": null,
           "kalshi": 94
         }
       ],
@@ -26820,7 +26820,7 @@
       "state": "WV",
       "district": null,
       "description": "Will Democratics win the Senate race in West Virginia?",
-      "dem_base": 0.025,
+      "dem_base": 0.048,
       "pm": "west-virginia-senate-election-winner",
       "kalshi": "SENATEWV-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatewv/west-virginia-senate-race/senatewv-26",
@@ -26979,7 +26979,7 @@
         },
         {
           "date": "3/17",
-          "polymarket": null,
+          "polymarket": 7,
           "kalshi": 2
         }
       ],

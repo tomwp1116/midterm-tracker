@@ -199,9 +199,10 @@ def infer_race_id(text, slug):
     elif "balance of power" in t or "trifecta" in t or "sweep" in t:
         chamber = "congress"
 
-    # Find state
+    # Find state — sort longest-first so "west virginia" matches before "virginia",
+    # "north carolina" before "carolina", "new mexico" before "mexico", etc.
     state_code = None
-    for name, code in STATE_MAP.items():
+    for name, code in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
         if name in t:
             state_code = code
             break
