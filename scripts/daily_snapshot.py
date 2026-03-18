@@ -231,8 +231,36 @@ def save_market_snapshots(conn, pm_records, k_records, snapshot_date):
         snapshots[rid]["k_volume_24h"] = snapshots[rid].get("k_volume_24h", 0) + (r.get("volume_24h") or 0)
         snapshots[rid]["k_ticker"] = r.get("ticker") or snapshots[rid].get("k_ticker")
     
+    # Pre-load recent 7-day k_dem averages for outlier detection
+    recent_k_dem = {}
+    c.execute("""
+        SELECT race_id, AVG(k_dem_price)
+        FROM market_snapshots
+        WHERE k_dem_price IS NOT NULL
+          AND snapshot_date >= date(?, '-7 days')
+          AND snapshot_date < ?
+        GROUP BY race_id
+    """, (today, today))
+    for row in c.fetchall():
+        recent_k_dem[row[0]] = row[1]
+
     saved = 0
+    flagged = 0
     for rid, data in snapshots.items():
+        k_dem = data.get("k_dem_price")
+        k_rep = data.get("k_rep_price")
+
+        # Data quality guard: if k_dem deviates >15 points from recent 7-day avg,
+        # it's likely a stale/thin market price (zero-spread placeholder).
+        # In that case, null k_dem and derive Dem probability from k_rep instead.
+        if k_dem is not None and rid in recent_k_dem:
+            baseline = recent_k_dem[rid]
+            if abs(k_dem - baseline) > 0.15:
+                print(f"  [QA] {rid}: k_dem={k_dem:.3f} deviates from 7d avg {baseline:.3f} — dropping k_dem")
+                k_dem = None
+                data["k_dem_price"] = None
+                flagged += 1
+
         try:
             c.execute("""
                 INSERT INTO market_snapshots
@@ -252,12 +280,14 @@ def save_market_snapshots(conn, pm_records, k_records, snapshot_date):
                 rid, today,
                 data.get("pm_dem_price"), data.get("pm_rep_price"),
                 data.get("pm_volume_24h"), data.get("pm_event_slug"),
-                data.get("k_dem_price"), data.get("k_rep_price"),
+                k_dem, k_rep,
                 data.get("k_volume_24h"), data.get("k_ticker"),
             ))
             saved += 1
         except Exception as e:
             print(f"  [DB] Error saving snapshot for {rid}: {e}")
+    if flagged:
+        print(f"  [QA] Flagged and dropped {flagged} suspect k_dem values")
     
     conn.commit()
     return saved
