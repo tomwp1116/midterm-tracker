@@ -3,9 +3,140 @@ import { XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceLine, ReferenceAre
 
 const DEM = "#4c72b0";
 const REP = "#c44e52";
+const POLL_AVG = "#6b91c1";
 const S = "'Source Sans 3',Arial,sans-serif";
 
+// Color palettes for primaries — all blues/teals for D, all reds/ambers for R.
+// Never show red in a D primary or blue in an R primary.
+const PRIMARY_PALETTE = {
+  D: ["#1d4ed8", "#0891b2", "#7c3aed", "#0f766e", "#0e4ea3"],
+  R: ["#b91c1c", "#c2410c", "#d97706", "#92400e", "#7c3aed"],
+  I: ["#374151", "#4b5563", "#6b7280"],
+};
+
 const isD = s => s && /^(D |Ossoff|Peters|Platner|Mills|Brown|Talarico|Peltola|Generic D|Dem|Craig|Caraveo|Wild|Cartwright|Salinas|Vasquez|Gray)/.test(s);
+
+// Race type helpers
+const isPrimary = race => race.race_type === "primary" || race.race_id?.includes("primary");
+const primaryParty = race => race.primary_party
+  || (race.race_id?.toUpperCase().includes("-D-") ? "D" : race.race_id?.toUpperCase().includes("-R-") ? "R" : null);
+const primaryColors = race => PRIMARY_PALETTE[primaryParty(race)] || PRIMARY_PALETTE.D;
+
+// Extract unique candidate names from polls in order of first appearance.
+function pollCandidates(race) {
+  const seen = new Map();
+  (race.polls || []).forEach(p => {
+    if (p.c1 && !seen.has(p.c1)) seen.set(p.c1, primaryParty(race) || "D");
+    if (p.c2 && !seen.has(p.c2)) seen.set(p.c2, primaryParty(race) || "D");
+    if (p.c3 && !seen.has(p.c3)) seen.set(p.c3, primaryParty(race) || "D");
+  });
+  return [...seen.keys()];
+}
+
+// Build a time series aligned to market snapshot dates, with one key per candidate.
+// Uses candidate-keyed market data from time_series if available; overlays poll data on top.
+function buildPrimaryTimeSeries(race) {
+  const ts = race.time_series || [];
+
+  // Discover candidate names from time_series keys (candidate-keyed market data)
+  const mktCandidates = ts.length > 0
+    ? Object.keys(ts[0]).filter(k => k !== "date" && k !== "isPollDate" && k !== "pollster")
+    : [];
+
+  // Also collect from polls
+  const pollCands = pollCandidates(race);
+  const candidates = mktCandidates.length > 0
+    ? mktCandidates
+    : pollCands;
+
+  // Index polls by chart-date key ("M/D")
+  const pollByDate = {};
+  (race.polls || []).forEach(p => {
+    const d = parseToDate(p.date);
+    if (!d) return;
+    const k = `${d.getMonth()+1}/${d.getDate()}`;
+    if (!pollByDate[k]) pollByDate[k] = { pollster: p.pollster };
+    if (p.c1 && p.d    != null) pollByDate[k][p.c1]  = p.d;
+    if (p.c2 && p.r    != null) pollByDate[k][p.c2]  = p.r;
+    if (p.c3 && p.c3pct != null) pollByDate[k][p.c3] = p.c3pct;
+  });
+
+  const series = ts.map(pt => {
+    const enhanced = { ...pt };
+    if (pollByDate[pt.date]) {
+      // Poll data overwrites market data at poll dates (polls win on specific date)
+      Object.assign(enhanced, pollByDate[pt.date]);
+      enhanced.isPollDate = true;
+    }
+    return enhanced;
+  });
+
+  return { series, candidates };
+}
+
+// Parse a date string in any of our formats to a Date object (year assumed 2026)
+function parseToDate(s) {
+  if (!s) return null;
+  s = String(s).trim();
+  // YYYY-MM-DD (from DB / 538 export)
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) {
+    const [y, m, d] = s.split("-").map(Number);
+    return new Date(y, m - 1, d);
+  }
+  // "Mar 5" or "Mar 05" (display / fallback format)
+  const MO = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
+  const parts = s.split(/\s+/);
+  if (parts.length === 2) {
+    const mon = MO[parts[0].toLowerCase().slice(0, 3)];
+    const day = parseInt(parts[1]);
+    if (mon && day) return new Date(2026, mon - 1, day);
+  }
+  // "3/5" (chart time-series key format)
+  if (/^\d{1,2}\/\d{1,2}$/.test(s)) {
+    const [m, d] = s.split("/").map(Number);
+    return new Date(2026, m - 1, d);
+  }
+  return null;
+}
+
+// Attach polls to time_series points and compute a rolling 30-day poll average.
+// Mutates the race object in place — call after time_series is populated.
+function enrichTimeSeries(race) {
+  if (!race.time_series) return;
+  if (race.polls?.length) {
+    // Step 1: attach individual polls to the time-series point on their date
+    const lk = {};
+    race.polls.forEach(p => {
+      const d = parseToDate(p.date);
+      if (!d) return;
+      const k = `${d.getMonth()+1}/${d.getDate()}`;
+      if (!lk[k]) lk[k] = [];
+      lk[k].push(p);
+    });
+    race.time_series.forEach(pt => {
+      const mp = lk[pt.date];
+      if (mp) {
+        pt.pollDem = mp[0].d; pt.pollRep = mp[0].r;
+        pt.pollster = mp[0].pollster; pt.pollSpread = mp[0].spread;
+        pt.pollMatchup = mp[0].matchup;
+        if (mp.length > 1) pt.pollExtra = mp.slice(1);
+      }
+    });
+    // Step 2: rolling 30-day poll average (Dem %) for every time-series point
+    race.time_series.forEach(pt => {
+      const ptDate = parseToDate(pt.date);
+      if (!ptDate) return;
+      const cutoff = new Date(ptDate);
+      cutoff.setDate(cutoff.getDate() - 30);
+      const recent = race.polls.filter(p => {
+        const pd = parseToDate(p.date);
+        return pd && pd >= cutoff && pd <= ptDate && p.d != null;
+      });
+      if (recent.length > 0)
+        pt.pollAvgDem = Math.round(recent.reduce((s, p) => s + p.d, 0) / recent.length);
+    });
+  }
+}
 
 /*
  * ── DATA LOADING ──
@@ -27,7 +158,7 @@ function buildFallbackData() {
   const senate = [
     { race_id:"senate-control-2026", chamber:"senate", state:"US", description:"Senate Control", dem_base:0.47, pm:"which-party-will-win-the-senate-in-2026", kalshi:"controls/senate-winner", rcp:"polls/state-of-the-union/generic-congressional-vote", note:"Rep 54%, Dem 47%." },
     { race_id:"senate-GA-2026", chamber:"senate", state:"GA", description:"Georgia — Ossoff (D-inc) vs. TBD (R)", dem_base:0.81, pm:"georgia-senate-election-winner", kalshi:"senatega/georgia-senate-race/senatega-26", rcp:"polls/senate/general/2026/georgia", note:"Dem 81% Polymarket / 80% Kalshi. R primary May 19.",
-      polls:[{date:"Mar 5",pollster:"Emerson",d:48,r:43,spread:"Ossoff +5",matchup:"Ossoff vs. Collins (general)",url:"https://emersoncollegepolling.com/georgia-2026-poll-senator-ossoff-starts-re-election-near-50-and-outpaces-gop-field/"},{date:"Mar 5",pollster:"Emerson",d:47,r:44,spread:"Ossoff +3",matchup:"Ossoff vs. Carter (general)"},{date:"Feb 18",pollster:"Quinnipiac",d:50,r:42,spread:"Ossoff +8",matchup:"Ossoff vs. Collins (general)"}] },
+      polls:[{date:"Mar 5",pollster:"Emerson",c1:"Ossoff",d:48,c2:"Collins",r:43,spread:"Ossoff +5",matchup:"Ossoff vs. Collins (general)",url:"https://emersoncollegepolling.com/georgia-2026-poll-senator-ossoff-starts-re-election-near-50-and-outpaces-gop-field/"},{date:"Mar 5",pollster:"Emerson",c1:"Ossoff",d:47,c2:"Carter",r:44,spread:"Ossoff +3",matchup:"Ossoff vs. Carter (general)"},{date:"Feb 18",pollster:"Quinnipiac",c1:"Ossoff",d:50,c2:"Collins",r:42,spread:"Ossoff +8",matchup:"Ossoff vs. Collins (general)"}] },
     { race_id:"senate-NC-2026", chamber:"senate", state:"NC", description:"North Carolina — Tillis (R-inc) vs. TBD (D)", dem_base:0.72, pm:"north-carolina-senate-election-winner", kalshi:"senatenc/north-carolina-senate-race/senatenc-26", rcp:"polls/senate/general/2026/north-carolina", note:"Dem ~72%. Competitive D primary.",
       polls:[{date:"Mar 2",pollster:"SurveyUSA",d:46,r:45,spread:"D +1",matchup:"Generic D vs. Tillis"},{date:"Feb 25",pollster:"PPP",d:44,r:47,spread:"Tillis +3",matchup:"Generic D vs. Tillis"}] },
     { race_id:"senate-MI-2026", chamber:"senate", state:"MI", description:"Michigan — Open (Peters D-retiring)", dem_base:0.77, pm:"michigan-senate-election-winner", kalshi:"senatemi/michigan-senate-race/senatemi-26", rcp:"polls/senate/general/2026/michigan",
@@ -41,13 +172,14 @@ function buildFallbackData() {
       polls:[{date:"Feb 15",pollster:"Emerson",d:42,r:48,spread:"R +6",matchup:"Brown vs. Husted"}] },
     { race_id:"senate-TX-2026", chamber:"senate", state:"TX", description:"Texas — Cornyn/Paxton (R) vs. Talarico (D)", dem_base:0.28, pm:"texas-senate-election-winner", kalshi:"senatetx/texas-senate-race/senatetx-26", rcp:"polls/senate/general/2026/texas",
       polls:[{date:"Mar 1",pollster:"Emerson",d:38,r:52,spread:"Cornyn +14",matchup:"Generic D vs. Cornyn (pre-primary)"}] },
-    { race_id:"primary-TX-senate-D-2026", chamber:"senate", state:"TX", description:"Texas Senate — Democratic Primary", dem_base:0.62,
+    { race_id:"primary-TX-senate-D-2026", chamber:"senate", state:"TX", description:"Texas Senate — Democratic Primary", dem_base:0.62, race_type:"primary", primary_party:"D",
       pm:"texas-senate-democratic-primary", kalshi:"senatetx-d-26", note:"Resolved March 3. $4.8M Kalshi volume.",
       result:{ winner:"James Talarico", party:"D", date:"Mar 3", pct:58.2, runner_up:"Jasmine Crockett", runner_up_pct:41.8 },
-      polls:[{date:"Feb 28",pollster:"UT-Tyler",d:52,r:41,spread:"Talarico +11",matchup:"Talarico vs. Crockett (D primary)"}] },
-    { race_id:"primary-TX-senate-R-2026", chamber:"senate", state:"TX", description:"Texas Senate — Republican Primary", dem_base:0.45,
+      polls:[{date:"Feb 28",pollster:"UT-Tyler",c1:"Talarico",d:52,c2:"Crockett",r:41,spread:"Talarico +11",matchup:"Talarico vs. Crockett (D primary)"}] },
+    { race_id:"primary-TX-senate-R-2026", chamber:"senate", state:"TX", description:"Texas Senate — Republican Primary", dem_base:0.45, race_type:"primary", primary_party:"R",
       kalshi:"senatetx-r-26", note:"Headed to runoff. No candidate reached 50%.",
-      result:{ winner:"Runoff: Cornyn vs. Paxton", party:"R", date:"Mar 3", pct:null, runner_up:null, runner_up_pct:null, note:"Cornyn 38%, Paxton 32%. Runoff TBD." } },
+      result:{ winner:"Runoff: Cornyn vs. Paxton", party:"R", date:"Mar 3", pct:null, runner_up:null, runner_up_pct:null, note:"Cornyn 38%, Paxton 32%. Runoff TBD." },
+      polls:[{date:"Feb 10",pollster:"UT-Tyler",c1:"Cornyn",d:38,c2:"Paxton",r:32,c3:"Abbott",c3pct:18,spread:"Cornyn +6",matchup:"Cornyn vs. Paxton vs. Abbott (R primary)"}] },
     { race_id:"senate-IA-2026", chamber:"senate", state:"IA", description:"Iowa — Grassley (R-retiring)", dem_base:0.42, kalshi:"senateia/iowa-senate-race/senateia-26", note:"Could be competitive in blue wave." },
     { race_id:"senate-IL-2026", chamber:"senate", state:"IL", description:"Illinois — Durbin (D-retiring)", dem_base:0.82, kalshi:"senateil/illinois-senate-race/senateil-26", rcp:"polls/senate/general/2026/illinois",
       polls:[{date:"Mar 1",pollster:"Victory",d:55,r:32,spread:"D +23",matchup:"Generic D vs. generic R"}] },
@@ -98,17 +230,8 @@ function buildFallbackData() {
     }
   });
 
-  // Merge polls into time series
-  allRaces.forEach(r => {
-    if (!r.polls || !r.time_series) return;
-    const MO = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
-    const lookup = {};
-    r.polls.forEach(p => { const [m,d] = p.date.trim().split(/\s+/); const k = MO[m] ? `${MO[m]}/${parseInt(d)}` : null; if (k) { if(!lookup[k]) lookup[k]=[]; lookup[k].push(p); } });
-    r.time_series.forEach(pt => {
-      const mp = lookup[pt.date];
-      if (mp) { pt.pollDem = mp[0].d; pt.pollRep = mp[0].r; pt.pollster = mp[0].pollster; pt.pollSpread = mp[0].spread; pt.pollMatchup = mp[0].matchup; if (mp.length > 1) pt.pollExtra = mp.slice(1); }
-    });
-  });
+  // Enrich time series: attach polls + compute rolling averages
+  allRaces.forEach(r => enrichTimeSeries(r));
 
   const nSen = allRaces.filter(r => r.chamber === "senate" && r.state !== "US").length;
   const nHouse = allRaces.filter(r => r.chamber === "house" && r.state !== "US").length;
@@ -122,14 +245,12 @@ function buildFallbackData() {
 // ── Chart components ──
 function Spark({data,id}){return(<ResponsiveContainer width={86} height={24}><AreaChart data={data} margin={{top:2,right:0,bottom:2,left:0}}><Area type="monotone" dataKey={data.some(d=>d.polymarket)?"polymarket":"kalshi"} stroke="#888" fill="none" strokeWidth={1.2} dot={false}/><ReferenceLine y={50} stroke="#ddd" strokeWidth={.5}/></AreaChart></ResponsiveContainer>);}
 
-function DDot({cx,cy,payload}){if(!payload?.pollDem||!cx||!cy)return null;return(<g><line x1={cx} y1={8} x2={cx} y2={212} stroke={DEM} strokeWidth={.7} strokeDasharray="3 3" opacity={.25}/><circle cx={cx} cy={cy} r={5} fill={DEM} stroke="#fff" strokeWidth={1.5}/><text x={cx} y={cy-10} textAnchor="middle" fill={DEM} fontSize={9} fontWeight={600}>{payload.pollDem}</text></g>);}
-function RDot({cx,cy,payload}){if(!payload?.pollRep||!cx||!cy)return null;return(<g><circle cx={cx} cy={cy} r={4} fill={REP} stroke="#fff" strokeWidth={1.5}/><text x={cx} y={cy+14} textAnchor="middle" fill={REP} fontSize={9} fontWeight={600}>{payload.pollRep}</text></g>);}
-
 function Tip({active,payload}){if(!active||!payload?.length)return null;const pt=payload[0]?.payload;if(!pt)return null;const hp=pt.pollDem!=null;
   return(<div style={{background:"#fff",border:"1px solid #ddd",padding:"10px 14px",fontSize:13,color:"#222",boxShadow:"0 2px 8px rgba(0,0,0,.08)",maxWidth:280,lineHeight:1.5,fontFamily:S}}>
     <div style={{fontWeight:600,marginBottom:4,color:"#999",fontSize:12}}>{pt.date}</div>
     {pt.polymarket!=null&&<div style={{display:"flex",justifyContent:"space-between"}}><span>Polymarket</span><strong>{pt.polymarket}%</strong></div>}
     {pt.kalshi!=null&&<div style={{display:"flex",justifyContent:"space-between"}}><span>Kalshi</span><strong>{pt.kalshi}%</strong></div>}
+    {pt.pollAvgDem!=null&&<div style={{display:"flex",justifyContent:"space-between",color:POLL_AVG}}><span>Poll avg. (30d)</span><strong>{pt.pollAvgDem}%</strong></div>}
     {hp&&(<div style={{borderTop:"1px solid #eee",marginTop:8,paddingTop:8}}>
       <div style={{fontWeight:700,fontSize:11,textTransform:"uppercase",letterSpacing:".04em",color:"#999",marginBottom:4}}>Poll released</div>
       <div style={{fontWeight:500}}>{pt.pollster}</div>
@@ -138,38 +259,225 @@ function Tip({active,payload}){if(!active||!payload?.length)return null;const pt
       {pt.pollExtra?.map((pe,i)=>(<div key={i} style={{marginTop:6,paddingTop:6,borderTop:"1px dashed #e5e5e5"}}><div style={{fontWeight:500}}>{pe.pollster}</div>{pe.matchup&&<div style={{fontSize:12,color:"#888"}}>{pe.matchup}</div>}<div style={{display:"flex",gap:14,marginTop:2}}><span style={{color:DEM}}>Dem {pe.d}%</span><span style={{color:REP}}>Rep {pe.r}%</span></div></div>))}
     </div>)}</div>);}
 
-function Chart({data}){const vs=data.flatMap(d=>[d.polymarket,d.kalshi,d.pollDem,d.pollRep].filter(v=>v!=null));if(!vs.length)return null;const lo=Math.min(...vs),hi=Math.max(...vs);const yMin=Math.max(0,Math.floor((lo-8)/5)*5),yMax=Math.min(100,Math.ceil((hi+8)/5)*5);
+// Label rendered at the top of each poll release reference line.
+// Shows first word of pollster name + spread so the mark is identifiable at a glance.
+function PollLineLabel({ viewBox, pollster, spread, isDem }) {
+  if (!viewBox) return null;
+  const { x, y } = viewBox;
+  const color = isDem ? DEM : REP;
+  const name = (pollster || "Poll").split(/\s+/)[0];
+  const txt = spread ? `${name}: ${spread}` : name;
+  return (
+    <g>
+      <circle cx={x} cy={y + 4} r={2} fill={color} opacity={0.55} />
+      <text
+        x={x + 3} y={y + 4}
+        fontSize={8.5} fill={color} opacity={0.8}
+        fontFamily="Arial,sans-serif"
+        transform={`rotate(-90, ${x + 3}, ${y + 4})`}
+        textAnchor="start"
+      >{txt}</text>
+    </g>
+  );
+}
+
+// ── General election chart (binary D vs. R market odds + poll average + markers) ──
+function GeneralChart({data, race}) {
+  const vs=data.flatMap(d=>[d.polymarket,d.kalshi,d.pollAvgDem].filter(v=>v!=null));
+  if(!vs.length)return null;
+  const lo=Math.min(...vs),hi=Math.max(...vs);
+  const yMin=Math.max(0,Math.floor((lo-8)/5)*5),yMax=Math.min(100,Math.ceil((hi+8)/5)*5);
   const hasPM=data.some(d=>d.polymarket!=null),hasK=data.some(d=>d.kalshi!=null);
-  // Custom label component for the 50% line
-  const show50 = yMin < 50 && yMax > 50;
-  return(<ResponsiveContainer width="100%" height={230}><ComposedChart data={data} margin={{top:20,right:12,bottom:8,left:0}}>
-    <defs>
-      <linearGradient id="demZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={DEM} stopOpacity={0.06}/><stop offset="100%" stopColor={DEM} stopOpacity={0.02}/></linearGradient>
-      <linearGradient id="repZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={REP} stopOpacity={0.02}/><stop offset="100%" stopColor={REP} stopOpacity={0.06}/></linearGradient>
-    </defs>
-    <XAxis dataKey="date" tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={{stroke:"#ddd"}} interval={4}/>
-    <YAxis domain={[yMin,yMax]} tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`} width={34}/>
-    <Tooltip content={<Tip/>}/>
-    {/* Tinted zones above and below 50% */}
-    {show50&&<><ReferenceArea y1={50} y2={yMax} fill="url(#demZone)" /><ReferenceArea y1={yMin} y2={50} fill="url(#repZone)" /></>}
-    {/* 50% divider with party labels */}
-    {show50&&<ReferenceLine y={50} stroke="#ccc" strokeDasharray="4 4">
-      <label value="" />
-    </ReferenceLine>}
-    {/* Zone labels rendered via customized ReferenceLine labels */}
-    {show50&&<ReferenceLine y={yMax - 1} stroke="none" label={{value:"← Dem. favored",position:"insideTopLeft",fill:DEM,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
-    {show50&&<ReferenceLine y={yMin + 1} stroke="none" label={{value:"← Rep. favored",position:"insideBottomLeft",fill:REP,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
-    {hasPM&&<Line type="monotone" dataKey="polymarket" stroke="#222" strokeWidth={2} dot={false} connectNulls={true}/>}
-    {hasK&&<Line type="monotone" dataKey="kalshi" stroke={hasPM?"#aaa":"#222"} strokeWidth={hasPM?1.5:2} dot={false} strokeDasharray={hasPM?"5 3":"0"} connectNulls={true}/>}
-    <Line dataKey="pollDem" stroke="none" connectNulls={false} isAnimationActive={false} dot={<DDot/>} activeDot={false}/>
-    <Line dataKey="pollRep" stroke="none" connectNulls={false} isAnimationActive={false} dot={<RDot/>} activeDot={false}/>
-  </ComposedChart></ResponsiveContainer>);}
+  const hasPollAvg=data.some(d=>d.pollAvgDem!=null);
+  const show50=yMin<50&&yMax>50;
+  const pollPoints=data.filter(d=>d.pollDem!=null);
+  // Candidate names for legend (from most recent poll with names, or generic)
+  const demName = race?.polls?.find(p=>p.c1)?.c1 || "Dem.";
+  const repName = race?.polls?.find(p=>p.c2)?.c2 || "Rep.";
+  return(<>
+    <ResponsiveContainer width="100%" height={230}><ComposedChart data={data} margin={{top:20,right:12,bottom:8,left:0}}>
+      <defs>
+        <linearGradient id="demZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={DEM} stopOpacity={0.06}/><stop offset="100%" stopColor={DEM} stopOpacity={0.02}/></linearGradient>
+        <linearGradient id="repZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={REP} stopOpacity={0.02}/><stop offset="100%" stopColor={REP} stopOpacity={0.06}/></linearGradient>
+      </defs>
+      <XAxis dataKey="date" tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={{stroke:"#ddd"}} interval={4}/>
+      <YAxis domain={[yMin,yMax]} tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`} width={34}/>
+      <Tooltip content={<Tip/>}/>
+      {show50&&<><ReferenceArea y1={50} y2={yMax} fill="url(#demZone)"/><ReferenceArea y1={yMin} y2={50} fill="url(#repZone)"/></>}
+      {show50&&<ReferenceLine y={50} stroke="#ccc" strokeDasharray="4 4"/>}
+      {show50&&<ReferenceLine y={yMax-1} stroke="none" label={{value:`← ${demName} favored`,position:"insideTopLeft",fill:DEM,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
+      {show50&&<ReferenceLine y={yMin+1} stroke="none" label={{value:`← ${repName} favored`,position:"insideBottomLeft",fill:REP,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
+      {pollPoints.map(pt=>(
+        <ReferenceLine key={`poll-${pt.date}`} x={pt.date} stroke="#c8c8c8" strokeWidth={1} strokeDasharray="3 3"
+          label={<PollLineLabel pollster={pt.pollster} spread={pt.pollSpread} isDem={isD(pt.pollSpread)}/>}/>
+      ))}
+      {hasPM&&<Line type="monotone" dataKey="polymarket" stroke="#222" strokeWidth={2} dot={false} connectNulls={true}/>}
+      {hasK&&<Line type="monotone" dataKey="kalshi" stroke={hasPM?"#aaa":"#222"} strokeWidth={hasPM?1.5:2} dot={false} strokeDasharray={hasPM?"5 3":"0"} connectNulls={true}/>}
+      {hasPollAvg&&<Line type="monotone" dataKey="pollAvgDem" stroke={POLL_AVG} strokeWidth={1.5} dot={false} strokeDasharray="6 3" connectNulls={true}/>}
+    </ComposedChart></ResponsiveContainer>
+    {/* Legend */}
+    <div style={{display:"flex",gap:18,marginTop:6,marginBottom:16,fontSize:12,color:"#888",flexWrap:"wrap",fontFamily:S}}>
+      {hasPM&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,height:2,background:"#222",display:"inline-block"}}/>Polymarket</span>}
+      {hasK&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,borderTop:`2px ${hasPM?"dashed":"solid"} ${hasPM?"#aaa":"#222"}`,display:"inline-block"}}/>Kalshi</span>}
+      {hasPollAvg&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,borderTop:`2px dashed ${POLL_AVG}`,display:"inline-block"}}/>Poll avg. (30d)</span>}
+      {pollPoints.length>0&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{display:"inline-block",width:1,height:13,borderLeft:"1px dashed #bbb",marginRight:1}}/>Poll release</span>}
+      <span style={{marginLeft:"auto",color:"#bbb",fontSize:11}}>Y-axis = Dem win probability %</span>
+    </div>
+  </>);}
+
+// ── Primary election chart (per-candidate poll support lines, multi-color) ──
+function PrimaryTip({active, payload, candidates, colors}) {
+  if(!active||!payload?.length)return null;
+  const pt=payload[0]?.payload;
+  if(!pt)return null;
+  return(
+    <div style={{background:"#fff",border:"1px solid #ddd",padding:"10px 14px",fontSize:13,color:"#222",boxShadow:"0 2px 8px rgba(0,0,0,.08)",maxWidth:260,lineHeight:1.6,fontFamily:S}}>
+      <div style={{fontWeight:600,marginBottom:6,color:"#999",fontSize:12}}>{pt.date}</div>
+      {candidates.map((c,i)=>pt[c]!=null&&(
+        <div key={c} style={{display:"flex",justifyContent:"space-between",gap:20}}>
+          <span style={{color:colors[i%colors.length],fontWeight:500}}>{c}</span>
+          <strong style={{color:colors[i%colors.length]}}>{pt[c]}%</strong>
+        </div>
+      ))}
+      {pt.isPollDate&&<div style={{borderTop:"1px solid #eee",marginTop:6,paddingTop:5,fontSize:11,color:"#aaa"}}>
+        {pt.pollster}
+      </div>}
+    </div>
+  );
+}
+
+function PrimaryChart({race}) {
+  const party = primaryParty(race) || "D";
+  const colors = PRIMARY_PALETTE[party];
+  const {series, candidates} = buildPrimaryTimeSeries(race);
+
+  // Latest market probability (for badge)
+  const latestTs = (race.time_series||[]).at(-1);
+  const marketPct = latestTs?.polymarket ?? latestTs?.kalshi;
+
+  // Determine y-axis range from poll values
+  const allVals = series.flatMap(pt=>candidates.map(c=>pt[c]).filter(v=>v!=null));
+  if(!allVals.length) return(
+    <div style={{padding:"20px 0",color:"#aaa",fontSize:13,fontStyle:"italic",fontFamily:S}}>
+      No poll data for this primary yet.{" "}
+      {marketPct!=null&&<span>Market has the leader at <strong style={{color:colors[0]}}>{marketPct}%</strong> to win.</span>}
+    </div>
+  );
+
+  const lo=Math.min(...allVals),hi=Math.max(...allVals);
+  const yMin=Math.max(0,Math.floor((lo-8)/5)*5),yMax=Math.min(100,Math.ceil((hi+8)/5)*5);
+  const pollDates = series.filter(pt=>pt.isPollDate);
+  const bg = party==="D" ? "#eff6ff" : "#fff5f5";
+  const borderClr = colors[0]+"33";
+
+  return(<>
+    {/* Market probability badge */}
+    {marketPct!=null&&(
+      <div style={{display:"inline-flex",alignItems:"center",gap:10,background:bg,border:`1px solid ${borderClr}`,borderRadius:4,padding:"7px 14px",marginBottom:14,fontSize:13,fontFamily:S}}>
+        <span style={{color:"#888"}}>Market — leader win probability:</span>
+        <strong style={{color:colors[0],fontSize:15}}>{marketPct}%</strong>
+      </div>
+    )}
+    <ResponsiveContainer width="100%" height={230}><ComposedChart data={series} margin={{top:8,right:12,bottom:8,left:0}}>
+      <XAxis dataKey="date" tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={{stroke:"#ddd"}} interval={4}/>
+      <YAxis domain={[yMin,yMax]} tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`} width={34}/>
+      <Tooltip content={<PrimaryTip candidates={candidates} colors={colors}/>}/>
+      {/* Vertical markers at each poll date */}
+      {pollDates.map(pt=>(
+        <ReferenceLine key={`pp-${pt.date}`} x={pt.date} stroke="#ddd" strokeWidth={1} strokeDasharray="3 3"/>
+      ))}
+      {/* One line per candidate */}
+      {candidates.map((c,i)=>(
+        <Line key={c} type="linear" dataKey={c}
+          stroke={colors[i%colors.length]} strokeWidth={2.5}
+          dot={{r:5,fill:colors[i%colors.length],stroke:"#fff",strokeWidth:2}}
+          activeDot={{r:6}} connectNulls={false} isAnimationActive={false}/>
+      ))}
+    </ComposedChart></ResponsiveContainer>
+    {/* Candidate color legend */}
+    <div style={{display:"flex",gap:18,marginTop:6,marginBottom:16,fontSize:12,flexWrap:"wrap",fontFamily:S}}>
+      {candidates.map((c,i)=>(
+        <span key={c} style={{display:"flex",alignItems:"center",gap:6}}>
+          <span style={{width:14,height:14,borderRadius:"50%",background:colors[i%colors.length],display:"inline-block",flexShrink:0}}/>
+          <span style={{color:colors[i%colors.length],fontWeight:600}}>{c}</span>
+        </span>
+      ))}
+      <span style={{marginLeft:"auto",color:"#bbb",fontSize:11}}>Y-axis = poll support %</span>
+    </div>
+  </>);}
+
+// ── Dispatcher: picks the right chart based on race type ──
+function RaceChart({race}) {
+  const data = race.time_series || [];
+  if(isPrimary(race)) return <PrimaryChart race={race}/>;
+  return <GeneralChart data={data} race={race}/>;
+}
 
 function rat(d){if(d>=.85)return{l:"Safe D.",c:DEM};if(d>=.60)return{l:"Lean D.",c:DEM};if(d>=.40)return{l:"Toss-up",c:"#7c3aed"};if(d>=.15)return{l:"Lean R.",c:REP};return{l:"Safe R.",c:REP};}
 
+// Returns the market-vs-poll gap (market Dem probability % minus 30d poll avg Dem share %).
+// Positive = markets more bullish on Dem than polls. Uses stored value from JSON when available,
+// otherwise derives it from dem_base and the most recent pollAvgDem in the time series.
+function raceGap(race) {
+  if (race.market_gap != null) return race.market_gap;
+  if (race.dem_base == null) return null;
+  const ts = race.time_series || [];
+  const lastAvg = [...ts].reverse().find(pt => pt.pollAvgDem != null)?.pollAvgDem;
+  if (lastAvg == null) return null;
+  return Math.round(race.dem_base * 100 - lastAvg);
+}
+
+// Gap callout shown inside the Detail panel.
+function GapCallout({race}) {
+  const gap = raceGap(race);
+  if (gap == null) return null;
+  const marketPct = Math.round((race.dem_base || 0) * 100);
+  const ts = race.time_series || [];
+  const pollAvg = race.poll_avg_dem
+    ?? [...ts].reverse().find(pt => pt.pollAvgDem != null)?.pollAvgDem;
+  if (pollAvg == null) return null;
+
+  const gapColor = gap > 0 ? DEM : REP;
+  const absGap = Math.abs(gap);
+  const side = gap > 0 ? "Dem" : "Rep";
+  let interp;
+  if (absGap >= 20)
+    interp = `Large divergence — markets are ${absGap} pts more bullish on ${side} than polling suggests.`;
+  else if (absGap >= 8)
+    interp = `Moderate divergence — markets are ${absGap} pts more bullish on ${side} than polling suggests.`;
+  else
+    interp = `Markets and polls are roughly aligned (within ${absGap} pts).`;
+
+  return (
+    <div style={{background:"#f8f8f8",border:"1px solid #e8e8e8",borderLeft:`3px solid ${gapColor}`,borderRadius:2,padding:"14px 18px",marginBottom:18,fontFamily:S}}>
+      <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:".06em",color:"#999",marginBottom:12}}>Markets vs. Polls</div>
+      <div style={{display:"flex",gap:24,marginBottom:10,flexWrap:"wrap"}}>
+        <div>
+          <div style={{fontSize:11,color:"#aaa",marginBottom:3}}>Market (Dem win prob.)</div>
+          <div style={{fontSize:24,fontWeight:700,letterSpacing:"-.01em",color:marketPct>=50?DEM:REP}}>{marketPct}%</div>
+        </div>
+        <div style={{width:1,background:"#e5e5e5",alignSelf:"stretch"}}/>
+        <div>
+          <div style={{fontSize:11,color:"#aaa",marginBottom:3}}>Poll avg. (30d, Dem share)</div>
+          <div style={{fontSize:24,fontWeight:700,letterSpacing:"-.01em",color:"#555"}}>{pollAvg}%</div>
+        </div>
+        <div style={{width:1,background:"#e5e5e5",alignSelf:"stretch"}}/>
+        <div>
+          <div style={{fontSize:11,color:"#aaa",marginBottom:3}}>Gap</div>
+          <div style={{fontSize:24,fontWeight:700,letterSpacing:"-.01em",color:gapColor}}>{gap>0?"+":""}{gap}</div>
+        </div>
+      </div>
+      <div style={{fontSize:12,color:"#666",lineHeight:1.6}}>
+        {interp}{" "}
+        <span style={{color:"#aaa"}}>Market % = probability Dem wins; poll avg = Dem vote share — different scales, but a large divergence is signal.</span>
+      </div>
+    </div>
+  );
+}
+
 // ── Detail panel ──
 function Detail({race,onClose}){const data=race.time_series||[];return(
-  <tr><td colSpan={6} style={{padding:0,borderBottom:"1px solid #ddd"}}>
+  <tr><td colSpan={7} style={{padding:0,borderBottom:"1px solid #ddd"}}>
     <div style={{borderTop:"2px solid #222",padding:"20px 16px 24px",background:"#fafafa",animation:"so .25s ease"}}>
       <style>{`@keyframes so{from{max-height:0;opacity:0}to{max-height:900px;opacity:1}}`}</style>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:14}}>
@@ -179,33 +487,33 @@ function Detail({race,onClose}){const data=race.time_series||[];return(
         </div>
         <button onClick={e=>{e.stopPropagation();onClose();}} style={{background:"none",border:"1px solid #ccc",color:"#666",borderRadius:3,padding:"4px 12px",cursor:"pointer",fontSize:12,fontFamily:S}}>Close</button>
       </div>
-      {data.length>0&&<Chart data={data}/>}
-      <div style={{display:"flex",gap:18,marginTop:6,marginBottom:16,fontSize:12,color:"#888",flexWrap:"wrap",fontFamily:S}}>
-        {race.pm&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,height:2,background:"#222",display:"inline-block"}}/>Polymarket</span>}
-        <span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,borderTop:`2px ${race.pm?"dashed":"solid"} ${race.pm?"#aaa":"#222"}`,display:"inline-block"}}/>Kalshi</span>
-        <span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:9,height:9,borderRadius:"50%",background:DEM,display:"inline-block"}}/>Poll (Dem.)</span>
-        <span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:8,height:8,borderRadius:"50%",background:REP,display:"inline-block"}}/>Poll (Rep.)</span>
-      </div>
+      {!isPrimary(race)&&<GapCallout race={race}/>}
+      <RaceChart race={race}/>
       {/* Links */}
       <div style={{display:"flex",gap:16,marginBottom:20,fontSize:13,fontFamily:S,flexWrap:"wrap"}}>
         {race.pm&&<a href={`https://polymarket.com/event/${race.pm}`} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>Polymarket ↗</a>}
         {race.kalshi&&<a href={race.kalshi_url||`https://kalshi.com/markets/${race.kalshi}`} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>Kalshi ↗</a>}
-        {race.rcp&&<a href={`https://www.realclearpolling.com/${race.rcp}`} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>RealClearPolling ↗</a>}
+        {race.rcp&&<a href={race.rcp} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>FiveThirtyEight ↗</a>}
       </div>
       {/* Polls */}
       {race.polls?.length>0&&(<div style={{fontFamily:S}}>
         <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:".06em",color:"#999",marginBottom:8}}>Polls</div>
-        {race.polls.map((p,i)=>(<div key={i} style={{padding:"8px 0",borderTop:i?"1px solid #e8e8e8":"none"}}>
-          <div style={{display:"flex",alignItems:"baseline",gap:10,flexWrap:"wrap"}}>
-            <span style={{fontSize:13,color:"#999",width:46}}>{p.date}</span>
-            {p.url?<a href={p.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()} style={{fontSize:13,fontWeight:600,color:"#333",textDecoration:"none",borderBottom:"1px solid #ccc"}}>{p.pollster}</a>:<span style={{fontSize:13,fontWeight:600,color:"#333"}}>{p.pollster}</span>}
-            <span style={{fontSize:14,fontWeight:700,color:DEM}}>Dem {p.d}%</span>
-            <span style={{color:"#ccc"}}>–</span>
-            <span style={{fontSize:14,fontWeight:700,color:REP}}>Rep {p.r}%</span>
-            <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:isD(p.spread)?DEM:REP}}>{p.spread}</span>
-          </div>
-          {p.matchup&&<div style={{fontSize:12,color:"#999",marginTop:2,paddingLeft:56}}>{p.matchup}</div>}
-        </div>))}
+        {race.polls.map((p,i)=>{
+          const pColors = isPrimary(race) ? primaryColors(race) : [DEM, REP];
+          const c1Label = p.c1 || (isPrimary(race) ? "Cand. 1" : "Dem");
+          const c2Label = p.c2 || (isPrimary(race) ? "Cand. 2" : "Rep");
+          return(<div key={i} style={{padding:"8px 0",borderTop:i?"1px solid #e8e8e8":"none"}}>
+            <div style={{display:"flex",alignItems:"baseline",gap:10,flexWrap:"wrap"}}>
+              <span style={{fontSize:13,color:"#999",width:46}}>{p.date}</span>
+              {p.url?<a href={p.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()} style={{fontSize:13,fontWeight:600,color:"#333",textDecoration:"none",borderBottom:"1px solid #ccc"}}>{p.pollster}</a>:<span style={{fontSize:13,fontWeight:600,color:"#333"}}>{p.pollster}</span>}
+              {p.d!=null&&<span style={{fontSize:14,fontWeight:700,color:pColors[0]}}>{c1Label} {p.d}%</span>}
+              {p.r!=null&&<><span style={{color:"#ccc"}}>–</span><span style={{fontSize:14,fontWeight:700,color:pColors[1]}}>{c2Label} {p.r}%</span></>}
+              {p.c3&&p.c3pct!=null&&<><span style={{color:"#ccc"}}>–</span><span style={{fontSize:14,fontWeight:700,color:pColors[2]||"#555"}}>{p.c3} {p.c3pct}%</span></>}
+              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:isD(p.spread)?DEM:REP}}>{p.spread}</span>
+            </div>
+            {p.matchup&&<div style={{fontSize:12,color:"#999",marginTop:2,paddingLeft:56}}>{p.matchup}</div>}
+          </div>);
+        })}
       </div>)}
       {!race.polls?.length&&<p style={{fontSize:13,color:"#aaa",fontStyle:"italic",fontFamily:S}}>No polls have been released for this race yet.</p>}
     </div>
@@ -260,11 +568,7 @@ function CompletedDetail({race, onClose}) {
 
         {/* Historical chart */}
         <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".06em",color:"#999",fontFamily:S,marginBottom:6}}>Market odds leading up to the result</div>
-        {data.length > 0 && <Chart data={data} />}
-        <div style={{display:"flex",gap:18,marginTop:6,marginBottom:16,fontSize:12,color:"#888",flexWrap:"wrap",fontFamily:S}}>
-          {race.pm&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,height:2,background:"#222",display:"inline-block"}}/>Polymarket</span>}
-          <span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,borderTop:`2px ${race.pm?"dashed":"solid"} ${race.pm?"#aaa":"#222"}`,display:"inline-block"}}/>Kalshi</span>
-        </div>
+        {data.length > 0 && <RaceChart race={race}/>}
 
         {/* Links */}
         <div style={{display:"flex",gap:16,marginBottom:16,fontSize:13,fontFamily:S,flexWrap:"wrap"}}>
@@ -314,14 +618,8 @@ export default function App(){
           if (!r.ok) continue;
           const d = await r.json();
           if (d?.races?.length) {
-        // Merge polls into time_series for chart rendering
-        d.races.forEach(r=>{
-          if(!r.polls||!r.time_series)return;
-          const MO={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
-          const lk={};
-          r.polls.forEach(p=>{const pts=p.date.trim().split(/\s+/);const k=MO[pts[0]]?`${MO[pts[0]]}/${parseInt(pts[1])}`:null;if(k){if(!lk[k])lk[k]=[];lk[k].push(p);}});
-          r.time_series.forEach(pt=>{const mp=lk[pt.date];if(mp){pt.pollDem=mp[0].d;pt.pollRep=mp[0].r;pt.pollster=mp[0].pollster;pt.pollSpread=mp[0].spread;pt.pollMatchup=mp[0].matchup;if(mp.length>1)pt.pollExtra=mp.slice(1);}});
-        });
+        // Enrich time series: attach polls + compute rolling averages
+        d.races.forEach(r => enrichTimeSeries(r));
         setData(d);
             return; // Found valid data, stop trying other paths
           }
@@ -337,10 +635,11 @@ export default function App(){
 
   const races=useMemo(()=>{
     let f=activeRaces.filter(r=>{
-      if(filter==="senate")return r.chamber==="senate"&&r.state!=="US";
-      if(filter==="house")return r.chamber==="house"&&r.state!=="US";
-      if(filter==="governor")return r.chamber==="governor";
+      if(filter==="senate")return r.chamber==="senate"&&r.state!=="US"&&!isPrimary(r);
+      if(filter==="house")return r.chamber==="house"&&r.state!=="US"&&!isPrimary(r);
+      if(filter==="governor")return r.chamber==="governor"&&!isPrimary(r);
       if(filter==="control")return r.state==="US";
+      if(filter==="primaries")return isPrimary(r);
       return true;
     });
     if(comp==="tossup")f=f.filter(r=>r.dem_base>=.40&&r.dem_base<=.60);
@@ -349,6 +648,7 @@ export default function App(){
     if(sort==="competitiveness")f.sort((a,b)=>Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5));
     else if(sort==="state")f.sort((a,b)=>(a.state+(a.district||"")).localeCompare(b.state+(b.district||"")));
     else if(sort==="polymarket"||sort==="kalshi")f.sort((a,b)=>(b.dem_base||0)-(a.dem_base||0));
+    else if(sort==="gap")f.sort((a,b)=>Math.abs(raceGap(b)??0)-Math.abs(raceGap(a)??0));
     return f;},[activeRaces,filter,comp,sort]);
 
   const pill=(act,fn,ch)=>(<button onClick={fn} style={{padding:"4px 12px",borderRadius:3,fontSize:13,fontWeight:act?600:400,border:act?"1px solid #333":"1px solid #ccc",cursor:"pointer",background:act?"#333":"#fff",color:act?"#fff":"#666",fontFamily:S}}>{ch}</button>);
@@ -388,7 +688,7 @@ export default function App(){
         <div style={{marginBottom:18,fontFamily:S}}>
           <div style={{display:"flex",gap:6,marginBottom:8,flexWrap:"wrap",alignItems:"center"}}>
             <span style={{fontSize:12,color:"#999",marginRight:2}}>Show:</span>
-            {[["senate","Senate"],["house","House"],["governor","Governor"],["control","Control"],["all","All"]].map(([v,l])=><span key={v}>{pill(filter===v,()=>setF(v),l)}</span>)}
+            {[["senate","Senate"],["house","House"],["governor","Governor"],["control","Control"],["primaries","Primaries"],["all","All"]].map(([v,l])=><span key={v}>{pill(filter===v,()=>setF(v),l)}</span>)}
           </div>
           <div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}>
             <span style={{fontSize:12,color:"#999",marginRight:2}}>Rating:</span>
@@ -398,29 +698,55 @@ export default function App(){
         {/* Table */}
         <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
           <thead><tr style={{borderBottom:"2px solid #222"}}>
-            {[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:null,label:"Latest Poll"},{key:null,label:"Trend"}].map(col=>(
-              <th key={col.label} onClick={col.key?()=>setO(col.key):undefined} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:sort===col.key?"#222":"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600,cursor:col.key?"pointer":"default",userSelect:"none"}}>
+            {[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:null,label:"Latest Poll"},{key:"gap",label:"Mkt vs. Poll",title:"Difference between market win probability (%) and 30-day poll average (Dem vote share %). Sorted by largest divergence."},{key:null,label:"Trend"}].map(col=>(
+              <th key={col.label} onClick={col.key?()=>setO(col.key):undefined} title={col.title||""} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:sort===col.key?"#222":"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600,cursor:col.key?"pointer":"default",userSelect:"none",whiteSpace:"nowrap"}}>
                 {col.label}{sort===col.key&&<span style={{marginLeft:4,fontSize:9}}>{sort==="state"?"A→Z":"↕"}</span>}
               </th>))}
           </tr></thead>
           <tbody>
             {races.map(race=>{const ts=race.time_series||[];const latest=ts[ts.length-1]||{};const r=rat(race.dem_base||0.5);const lp=race.polls?.[0];const open=sel===race.race_id;
-              const pmVal = latest.polymarket; const kVal = latest.kalshi;
+              const pmVal = latest.polymarket; const kVal = latest.kalshi; const gap=raceGap(race);
               return[
                 <tr key={race.race_id} onClick={()=>toggle(race.race_id)} style={{borderBottom:open?"none":"1px solid #e8e8e8",cursor:"pointer",background:open?"#fafafa":"transparent",transition:"background .1s"}} onMouseEnter={e=>{if(!open)e.currentTarget.style.background="#fafafa";}} onMouseLeave={e=>{e.currentTarget.style.background=open?"#fafafa":"transparent";}}>
                   <td style={{padding:"10px"}}>
                     <div style={{display:"flex",alignItems:"center",gap:7}}>
                       <span style={{fontSize:9,color:open?"#333":"#ccc",transition:"transform .2s",transform:open?"rotate(90deg)":"rotate(0)"}}>▶</span>
                       <div>
-                        <div style={{fontSize:14,fontWeight:600,color:"#222"}}>{race.state==="US"?race.description: race.district ? `${race.state}-${race.district}` : race.state}</div>
+                        <div style={{display:"flex",alignItems:"center",gap:7}}>
+                          <span style={{fontSize:14,fontWeight:600,color:"#222"}}>{race.state==="US"?race.description: race.district ? `${race.state}-${race.district}` : race.state}</span>
+                          {isPrimary(race)&&(()=>{const pp=primaryParty(race);const bg=pp==="D"?"#dbeafe":pp==="R"?"#fee2e2":"#f3f4f6";const fg=pp==="D"?"#1d4ed8":pp==="R"?"#b91c1c":"#374151";return(<span style={{fontSize:10,fontWeight:700,background:bg,color:fg,padding:"2px 6px",borderRadius:3,letterSpacing:".03em",whiteSpace:"nowrap"}}>{pp||""}  Primary</span>);})()}
+                        </div>
                         <div style={{fontSize:12,color:"#888",marginTop:1}}>{race.state==="US"?"":race.description}</div>
                       </div>
                     </div>
                   </td>
-                  <td style={{padding:"10px"}}><span style={{fontSize:12,fontWeight:600,color:r.c}}>{r.l}</span></td>
-                  <td style={{padding:"10px"}}>{pmVal!=null?<span style={{fontSize:15,fontWeight:700,color:pmVal>=50?DEM:REP}}>{pmVal}%</span>:<span style={{color:"#ddd"}}>—</span>}</td>
-                  <td style={{padding:"10px"}}>{kVal!=null?<span style={{fontSize:15,fontWeight:700,color:kVal>=50?DEM:REP}}>{kVal}%</span>:<span style={{color:"#ddd"}}>—</span>}</td>
-                  <td style={{padding:"10px"}}>{lp?(<div><div style={{fontSize:13,fontWeight:600,color:isD(lp.spread)?DEM:REP}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>):<span style={{color:"#ddd"}}>—</span>}</td>
+                  <td style={{padding:"10px"}}>
+                    {isPrimary(race)
+                      ?(()=>{const pp=primaryParty(race);const c=pp==="D"?PRIMARY_PALETTE.D[0]:pp==="R"?PRIMARY_PALETTE.R[0]:"#555";return(<span style={{fontSize:12,fontWeight:600,color:c}}>{pp==="D"?"Dem. Primary":pp==="R"?"Rep. Primary":"Primary"}</span>);})()
+                      :<span style={{fontSize:12,fontWeight:600,color:r.c}}>{r.l}</span>}
+                  </td>
+                  <td style={{padding:"10px"}}>{pmVal!=null?<span style={{fontSize:15,fontWeight:700,color:isPrimary(race)?primaryColors(race)[0]:pmVal>=50?DEM:REP}}>{pmVal}%</span>:<span style={{color:"#ddd"}}>—</span>}</td>
+                  <td style={{padding:"10px"}}>{kVal!=null?<span style={{fontSize:15,fontWeight:700,color:isPrimary(race)?primaryColors(race)[0]:kVal>=50?DEM:REP}}>{kVal}%</span>:<span style={{color:"#ddd"}}>—</span>}</td>
+                  <td style={{padding:"10px"}}>
+                    {lp?(isPrimary(race)
+                      ?(<div>
+                          {lp.c1&&lp.d!=null&&<div style={{fontSize:13,fontWeight:600,color:primaryColors(race)[0]}}>{lp.c1} {lp.d}%</div>}
+                          {lp.c2&&lp.r!=null&&<div style={{fontSize:13,fontWeight:500,color:primaryColors(race)[1]}}>{lp.c2} {lp.r}%</div>}
+                          <div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div>
+                        </div>)
+                      :(<div><div style={{fontSize:13,fontWeight:600,color:isD(lp.spread)?DEM:REP}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>)
+                    ):<span style={{color:"#ddd"}}>—</span>}
+                  </td>
+                  <td style={{padding:"10px"}}>
+                    {isPrimary(race)
+                      ?<span style={{color:"#ddd",fontSize:12}}>—</span>
+                      :gap!=null
+                        ?(<div title="Market Dem win probability minus 30-day poll average (Dem vote share). Positive = markets more bullish on Dem than polls.">
+                            <div style={{fontSize:14,fontWeight:700,color:gap>0?DEM:REP,letterSpacing:"-.01em"}}>{gap>0?"+":""}{gap}</div>
+                            <div style={{fontSize:10,color:"#bbb",marginTop:1}}>{sort==="gap"?"sorted ↑":""}</div>
+                          </div>)
+                        :<span style={{color:"#ddd"}}>—</span>}
+                  </td>
                   <td style={{padding:"10px"}}><Spark data={ts} id={race.race_id}/></td>
                 </tr>,
                 open&&<Detail key={`${race.race_id}-d`} race={race} onClose={()=>setS(null)}/>,
@@ -477,7 +803,7 @@ export default function App(){
         </div>)}
 
         <div style={{marginTop:28,paddingTop:16,borderTop:"1px solid #ddd",fontSize:12,color:"#999",lineHeight:1.7,fontFamily:S}}>
-          <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded daily. Kalshi covers all 35 Senate seats and {st.house_districts_tracked||34} competitive House districts; Polymarket covers major races. Polls from RealClearPolling. <span style={{color:DEM,fontWeight:600}}>Blue dots</span> = Dem poll result, <span style={{color:REP,fontWeight:600}}>red dots</span> = Rep result. Solid line = Polymarket, dashed = Kalshi. House districts show Kalshi odds only (Polymarket tracks House control, not individual seats). Data loads from <code style={{background:"#f5f5f5",padding:"1px 4px",borderRadius:2}}>dashboard_data.json</code>, exported daily by the snapshot script.
+          <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded daily. Polls from FiveThirtyEight. General election charts show market win probability (%) with a <span style={{color:POLL_AVG,fontWeight:600}}>muted blue dashed line</span> for the 30-day poll average; vertical markers flag poll release dates. Primary charts show per-candidate poll support (%) as multi-colored lines — blues for Dem primaries, reds/oranges for Rep primaries. Use the <strong>Primaries</strong> filter to see all tracked primaries. Data from <code style={{background:"#f5f5f5",padding:"1px 4px",borderRadius:2}}>dashboard_data.json</code>, exported daily.
         </div>
       </div>
     </div>);

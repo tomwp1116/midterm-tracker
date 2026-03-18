@@ -36,12 +36,11 @@ KALSHI_ELECTION_SERIES = [
 # Search terms to find election markets
 KALSHI_SEARCH_TERMS = ["senate", "house", "midterm", "2026"]
 
-# ── RealClearPolling ───────────────────────────────────
-RCP_BASE = "https://www.realclearpolling.com"
-RCP_LATEST_2026 = f"{RCP_BASE}/latest-polls/2026"
-RCP_SENATE_POLLS = f"{RCP_BASE}/latest-polls/senate"
-RCP_HOUSE_POLLS = f"{RCP_BASE}/latest-polls/house"
-RCP_GOVERNOR_POLLS = f"{RCP_BASE}/latest-polls/governor"
+# ── FiveThirtyEight Polling Data (public CSVs, no auth) ───────────────
+FTE_BASE = "https://projects.fivethirtyeight.com/polls-page/data"
+FTE_SENATE_CSV = f"{FTE_BASE}/senate_polls.csv"
+FTE_HOUSE_CSV = f"{FTE_BASE}/house_polls.csv"
+FTE_GOVERNOR_CSV = f"{FTE_BASE}/governor_polls.csv"
 
 # ── General Settings ───────────────────────────────────
 USER_AGENT = (
@@ -60,3 +59,92 @@ SENATE_STATES_2026 = [
     "NH", "NJ", "NM", "OK", "OR", "RI", "SC", "SD", "TN", "TX",
     "VA", "WV", "WY"
 ]
+
+# ── Primary Market Races (curated list with verified Kalshi/Polymarket sources) ─
+# Maps race_id → metadata. Add new races here when discovered.
+PRIMARY_RACES = {
+    # ── Senate Republican primaries / runoffs ──────────────────────────
+    "primary-TX-senate-R-2026": {
+        "state": "TX", "chamber": "senate", "party": "R",
+        "description": "Texas Senate Republican Primary Runoff",
+        "kalshi_series": "KXSENATETXR",
+        "pm_slug": None,
+        "primary_date": "2026-05-27",
+    },
+    "primary-GA-senate-R-2026": {
+        "state": "GA", "chamber": "senate", "party": "R",
+        "description": "Georgia Senate Republican Primary",
+        "kalshi_series": "KXSENATEGAR",
+        "pm_slug": "georgia-republican-senate-primary-winner",
+        "primary_date": "2026-05-19",
+    },
+    "primary-NJ-senate-R-2026": {
+        "state": "NJ", "chamber": "senate", "party": "R",
+        "description": "New Jersey Senate Republican Primary",
+        "kalshi_series": "KXSENATENJR",
+        "pm_slug": None,
+        "primary_date": "2026-06-02",
+    },
+    "primary-NH-senate-R-2026": {
+        "state": "NH", "chamber": "senate", "party": "R",
+        "description": "New Hampshire Senate Republican Primary",
+        "kalshi_series": "KXSENATENHR",
+        "pm_slug": None,
+        "primary_date": "2026-09-08",
+    },
+    "primary-NC-senate-R-2026": {
+        "state": "NC", "chamber": "senate", "party": "R",
+        "description": "North Carolina Senate Republican Primary",
+        "kalshi_series": "KXSENATENCR",
+        "pm_slug": None,
+        "primary_date": "2026-05-19",
+    },
+    # ── Senate Democratic primaries ────────────────────────────────────
+    "primary-IL-senate-D-2026": {
+        "state": "IL", "chamber": "senate", "party": "D",
+        "description": "Illinois Senate Democratic Primary",
+        "kalshi_series": "KXSENATEILD",
+        "pm_slug": None,
+        "primary_date": "2026-03-17",
+    },
+    "primary-ME-senate-D-2026": {
+        "state": "ME", "chamber": "senate", "party": "D",
+        "description": "Maine Senate Democratic Primary",
+        "kalshi_series": "KXSENATEMED",
+        "pm_slug": "maine-democratic-senate-primary-winner",
+        "primary_date": "2026-06-09",
+    },
+    "primary-MI-senate-D-2026": {
+        "state": "MI", "chamber": "senate", "party": "D",
+        "description": "Michigan Senate Democratic Primary",
+        "kalshi_series": "KXSENATEMID",
+        "pm_slug": "michigan-democratic-senate-primary-winner",
+        "primary_date": "2026-08-04",
+    },
+    "primary-NH-senate-D-2026": {
+        "state": "NH", "chamber": "senate", "party": "D",
+        "description": "New Hampshire Senate Democratic Primary",
+        "kalshi_series": "KXSENATENHD",
+        "pm_slug": None,
+        "primary_date": "2026-09-08",
+    },
+    "primary-NC-senate-D-2026": {
+        "state": "NC", "chamber": "senate", "party": "D",
+        "description": "North Carolina Senate Democratic Primary",
+        "kalshi_series": "KXSENATENCD",
+        "pm_slug": None,
+        "primary_date": "2026-05-19",
+    },
+    "primary-TX-senate-D-2026": {
+        "state": "TX", "chamber": "senate", "party": "D",
+        "description": "Texas Senate Democratic Primary",
+        "kalshi_series": "KXSENATETXD",
+        "pm_slug": None,
+        "primary_date": "2026-03-03",
+        # Resolved — Talarico won the March 3 primary
+        "result": {
+            "winner": "James Talarico", "party": "D", "date": "Mar 3",
+            "pct": 58.2, "runner_up": "Jasmine Crockett", "runner_up_pct": 41.8,
+        },
+    },
+}

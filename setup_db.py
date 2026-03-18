@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS races (
     description     TEXT,               -- human-readable label
     polymarket_slug TEXT,               -- slug/event ID on Polymarket
     kalshi_ticker   TEXT,               -- market ticker on Kalshi
+    kalshi_url      TEXT,               -- full deep-link URL on Kalshi
     created_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
 """)
@@ -117,6 +118,21 @@ CREATE TABLE IF NOT EXISTS scrape_log (
 )
 """)
 
+# ── 6. Primary Candidate Snapshots: per-candidate daily probabilities ──
+c.execute("""
+CREATE TABLE IF NOT EXISTS primary_candidate_snapshots (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    race_id        TEXT NOT NULL,
+    snapshot_date  DATE NOT NULL,
+    candidate_name TEXT NOT NULL,
+    party          TEXT,
+    k_price        REAL,
+    pm_price       REAL,
+    UNIQUE(race_id, snapshot_date, candidate_name),
+    FOREIGN KEY (race_id) REFERENCES races(race_id)
+)
+""")
+
 # ── Indexes ────────────────────────────────────────────
 c.execute("CREATE INDEX IF NOT EXISTS idx_snapshots_date ON market_snapshots(snapshot_date)")
 c.execute("CREATE INDEX IF NOT EXISTS idx_snapshots_race ON market_snapshots(race_id)")
@@ -124,9 +140,11 @@ c.execute("CREATE INDEX IF NOT EXISTS idx_polls_race ON polls(race_id)")
 c.execute("CREATE INDEX IF NOT EXISTS idx_polls_date ON polls(poll_date)")
 c.execute("CREATE INDEX IF NOT EXISTS idx_summary_race ON daily_summary(race_id)")
 c.execute("CREATE INDEX IF NOT EXISTS idx_summary_date ON daily_summary(summary_date)")
+c.execute("CREATE INDEX IF NOT EXISTS idx_primary_cand_race ON primary_candidate_snapshots(race_id)")
+c.execute("CREATE INDEX IF NOT EXISTS idx_primary_cand_date ON primary_candidate_snapshots(snapshot_date)")
 
 conn.commit()
 conn.close()
 
 print(f"Database initialized at: {DB_PATH}")
-print("Tables created: races, market_snapshots, polls, daily_summary, scrape_log")
+print("Tables created: races, market_snapshots, polls, daily_summary, scrape_log, primary_candidate_snapshots")

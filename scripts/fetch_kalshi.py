@@ -49,21 +49,45 @@ def fetch_series_list():
         return []
 
 
+def _slugify(title):
+    """'Alaska Senate race' → 'alaska-senate-race'"""
+    slug = title.lower().strip()
+    slug = re.sub(r"[^a-z0-9\s-]", "", slug)
+    slug = re.sub(r"\s+", "-", slug)
+    return slug.strip("-")
+
+
 def discover_election_series(all_series):
     """From the full series list, identify 2026 midterm election series ONLY.
-    Uses strict ticker pattern matching. No tag/category fallbacks —
-    those match too broadly (2028 races, attorney generals, mayors, etc.)."""
-    tickers = set()
+    Returns a dict {series_ticker: title_slug} for URL construction.
+    Uses strict ticker pattern matching — no tag/category fallbacks."""
+    series_info = {}
     for s in all_series:
         ticker = s.get("ticker", "")
-
-        # Only match by ticker pattern — these are unambiguous
         for pattern in ELECTION_TICKER_PATTERNS:
             if re.match(pattern, ticker, re.IGNORECASE):
-                tickers.add(ticker)
+                title = s.get("title", "") or ticker
+                series_info[ticker] = _slugify(title)
                 break
+    return series_info
 
-    return tickers
+
+def _kalshi_url(market_ticker, series_info):
+    """
+    Build a correct Kalshi deep-link from a market ticker.
+    Format: https://kalshi.com/markets/{series}/{title-slug}/{event-ticker}
+    e.g.   SENATEAK-26-R  →  https://kalshi.com/markets/senateak/alaska-senate-race/senateak-26
+    """
+    if not market_ticker:
+        return None
+    # event_ticker = strip last segment (party/variant code)
+    event_ticker = market_ticker.rsplit("-", 1)[0]        # SENATEAK-26-R → SENATEAK-26
+    series_ticker = event_ticker.rsplit("-", 1)[0]        # SENATEAK-26   → SENATEAK
+    title_slug = series_info.get(series_ticker, series_ticker.lower())
+    return (
+        f"https://kalshi.com/markets/{series_ticker.lower()}"
+        f"/{title_slug}/{event_ticker.lower()}"
+    )
 
 
 def fetch_markets_for_series(series_ticker, status="open"):
@@ -232,16 +256,16 @@ def fetch_all_election_markets():
     """
     print("[Kalshi] Fetching 2026 election markets...")
 
-    # Step 1: Discover election series
+    # Step 1: Discover election series (returns {ticker: title_slug})
     print("  Step 1: Fetching series list...")
     all_series = fetch_series_list()
-    election_series = discover_election_series(all_series)
-    print(f"  Found {len(election_series)} election-related series")
+    series_info = discover_election_series(all_series)
+    print(f"  Found {len(series_info)} election-related series")
 
     # Step 2: Fetch markets for each series
-    print(f"  Step 2: Fetching markets for {len(election_series)} series...")
+    print(f"  Step 2: Fetching markets for {len(series_info)} series...")
     all_markets = []
-    sorted_series = sorted(election_series)
+    sorted_series = sorted(series_info)
     for i, series_ticker in enumerate(sorted_series):
         markets = fetch_markets_for_series(series_ticker)
         if markets:
@@ -251,14 +275,15 @@ def fetch_all_election_markets():
                   f"{len(all_markets)} markets so far")
         time.sleep(0.3)  # Light delay — each call returns 1-5 markets
 
-    print(f"  Done: {len(all_markets)} raw markets from {len(election_series)} series")
+    print(f"  Done: {len(all_markets)} raw markets from {len(series_info)} series")
 
-    # Only keep markets that parsed to a real race ID
+    # Only keep markets that parsed to a real race ID; attach correct Kalshi URL
     valid_prefixes = ("senate-", "house-", "governor-", "congress-")
     records = []
     for m in all_markets:
         r = parse_kalshi_market(m)
         if r["race_id"].startswith(valid_prefixes):
+            r["kalshi_url"] = _kalshi_url(r["ticker"], series_info)
             records.append(r)
 
     print(f"  Kept {len(records)} with valid race IDs (filtered {len(all_markets) - len(records)})")

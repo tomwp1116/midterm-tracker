@@ -28,6 +28,7 @@ from config import DB_PATH, ARCHIVE_DIR, DATA_DIR, DASHBOARD_JSON
 from fetch_polymarket import fetch_all_midterm_markets
 from fetch_kalshi import fetch_all_election_markets
 from fetch_polls import fetch_all_polls
+from fetch_primary_markets import fetch_all_primary_markets
 
 
 def ensure_dirs():
@@ -64,7 +65,7 @@ def archive_raw_data(archive_dir, polymarket_raw, kalshi_raw, polls_raw):
     with open(polls_path, "w") as f:
         json.dump({
             "captured_at": timestamp,
-            "source": "RealClearPolling",
+            "source": "FiveThirtyEight",
             "poll_count": len(polls_raw) if isinstance(polls_raw, list) else "N/A",
             "data": polls_raw
         }, f, indent=2, default=str)
@@ -73,63 +74,112 @@ def archive_raw_data(archive_dir, polymarket_raw, kalshi_raw, polls_raw):
     return pm_path, k_path, polls_path
 
 
+_PLACEHOLDER_TOKENS = ("person a", "person b", "person c", "option a", "option b")
+
+def _is_placeholder(desc):
+    """Return True if a description uses Kalshi/Polymarket placeholder names."""
+    if not desc:
+        return True
+    low = desc.lower()
+    return any(tok in low for tok in _PLACEHOLDER_TOKENS)
+
+_STATE_NAMES = {
+    "AK":"Alaska","AL":"Alabama","AR":"Arkansas","AZ":"Arizona","CA":"California",
+    "CO":"Colorado","CT":"Connecticut","DE":"Delaware","FL":"Florida","GA":"Georgia",
+    "HI":"Hawaii","IA":"Iowa","ID":"Idaho","IL":"Illinois","IN":"Indiana",
+    "KS":"Kansas","KY":"Kentucky","LA":"Louisiana","MA":"Massachusetts","MD":"Maryland",
+    "ME":"Maine","MI":"Michigan","MN":"Minnesota","MO":"Missouri","MS":"Mississippi",
+    "MT":"Montana","NC":"North Carolina","ND":"North Dakota","NE":"Nebraska",
+    "NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NV":"Nevada",
+    "NY":"New York","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PA":"Pennsylvania",
+    "RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee",
+    "TX":"Texas","UT":"Utah","VA":"Virginia","VT":"Vermont","WA":"Washington",
+    "WI":"Wisconsin","WV":"West Virginia","WY":"Wyoming",
+}
+
+def _fallback_description(race_id):
+    """Generate a readable description from a race_id when API returns a placeholder."""
+    parts = race_id.split("-")
+    chamber = parts[0].title() if parts else "Race"
+    state_code = parts[1].upper() if len(parts) > 1 else ""
+    state_name = _STATE_NAMES.get(state_code, state_code)
+    if "primary" in race_id.lower():
+        party = "D" if "-D-" in race_id else ("R" if "-R-" in race_id else "")
+        party_label = {"D": "Democratic", "R": "Republican"}.get(party, "")
+        return f"{state_name} {chamber} {party_label} Primary 2026".strip()
+    return f"{state_name} {chamber} — General Election 2026"
+
+
 def save_races(conn, pm_records, k_records):
     """Upsert race records into the races table."""
     c = conn.cursor()
-    
+
     # Collect all unique race_ids with metadata
     races = {}
-    
+
     for r in pm_records:
         rid = r["race_id"]
+        raw_desc = r.get("question", "")
+        desc = raw_desc if not _is_placeholder(raw_desc) else _fallback_description(rid)
         if rid not in races:
-            # Parse chamber and state from race_id
             parts = rid.split("-")
             chamber = parts[0] if len(parts) > 0 else "unknown"
             state = parts[1] if len(parts) > 1 else "??"
             district = parts[2] if len(parts) > 3 and parts[2].isdigit() else None
-            
             races[rid] = {
                 "chamber": chamber,
                 "state": state,
                 "district": district,
-                "description": r.get("question", ""),
+                "description": desc,
                 "polymarket_slug": r.get("slug"),
             }
         else:
             races[rid]["polymarket_slug"] = r.get("slug")
-    
+            if not _is_placeholder(desc):
+                races[rid]["description"] = desc
+
     for r in k_records:
         rid = r["race_id"]
+        raw_desc = r.get("title", "")
+        desc = raw_desc if not _is_placeholder(raw_desc) else _fallback_description(rid)
         if rid not in races:
             parts = rid.split("-")
             chamber = parts[0] if len(parts) > 0 else "unknown"
             state = parts[1] if len(parts) > 1 else "??"
             district = parts[2] if len(parts) > 3 and parts[2].isdigit() else None
-            
             races[rid] = {
                 "chamber": chamber,
                 "state": state,
                 "district": district,
-                "description": r.get("title", ""),
+                "description": desc,
                 "kalshi_ticker": r.get("ticker"),
+                "kalshi_url": r.get("kalshi_url"),
             }
         else:
             races[rid]["kalshi_ticker"] = r.get("ticker")
-    
+            if r.get("kalshi_url"):
+                races[rid]["kalshi_url"] = r.get("kalshi_url")
+            if not _is_placeholder(desc):
+                races[rid]["description"] = desc
+
     for rid, info in races.items():
         c.execute("""
             INSERT INTO races (race_id, chamber, state, district, description,
-                             polymarket_slug, kalshi_ticker)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+                             polymarket_slug, kalshi_ticker, kalshi_url)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(race_id) DO UPDATE SET
-                description = COALESCE(excluded.description, description),
+                description = CASE
+                    WHEN excluded.description IS NOT NULL AND excluded.description != ''
+                    THEN excluded.description
+                    ELSE description
+                END,
                 polymarket_slug = COALESCE(excluded.polymarket_slug, polymarket_slug),
-                kalshi_ticker = COALESCE(excluded.kalshi_ticker, kalshi_ticker)
+                kalshi_ticker = COALESCE(excluded.kalshi_ticker, kalshi_ticker),
+                kalshi_url = COALESCE(excluded.kalshi_url, kalshi_url)
         """, (
             rid, info["chamber"], info["state"], info.get("district"),
             info["description"], info.get("polymarket_slug"),
-            info.get("kalshi_ticker")
+            info.get("kalshi_ticker"), info.get("kalshi_url")
         ))
     
     conn.commit()
@@ -222,13 +272,15 @@ def save_polls(conn, poll_records):
         try:
             c.execute("""
                 INSERT INTO polls
-                    (race_id, poll_date, pollster, candidate_1, candidate_1_pct,
+                    (race_id, poll_date, pollster, sample_size,
+                     candidate_1, candidate_1_pct,
                      candidate_2, candidate_2_pct, candidate_3, candidate_3_pct,
                      spread, spread_label, source_url, rcp_url, detected_date)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(race_id, poll_date, pollster) DO NOTHING
             """, (
                 p["race_id"], p["poll_date"], p["pollster"],
+                p.get("sample_size"),
                 p.get("candidate_1"), p.get("candidate_1_pct"),
                 p.get("candidate_2"), p.get("candidate_2_pct"),
                 p.get("candidate_3"), p.get("candidate_3_pct"),
@@ -241,6 +293,32 @@ def save_polls(conn, poll_records):
         except Exception as e:
             print(f"  [DB] Error saving poll: {e}")
     
+    conn.commit()
+    return saved
+
+
+def save_primary_candidate_snapshots(conn, records, snapshot_date):
+    """Save per-candidate primary probability snapshots."""
+    c = conn.cursor()
+    saved = 0
+    for r in records:
+        try:
+            c.execute("""
+                INSERT INTO primary_candidate_snapshots
+                    (race_id, snapshot_date, candidate_name, party, k_price, pm_price)
+                VALUES (?, ?, ?, ?, ?, ?)
+                ON CONFLICT(race_id, snapshot_date, candidate_name) DO UPDATE SET
+                    k_price  = COALESCE(excluded.k_price,  k_price),
+                    pm_price = COALESCE(excluded.pm_price, pm_price)
+            """, (
+                r["race_id"], snapshot_date,
+                r["candidate_name"], r.get("party"),
+                r.get("k_price"), r.get("pm_price"),
+            ))
+            if c.rowcount > 0:
+                saved += 1
+        except Exception as e:
+            print(f"  [DB] Error saving primary snapshot: {e}")
     conn.commit()
     return saved
 
@@ -364,10 +442,10 @@ def export_dashboard_json(conn, output_path):
     # ── Build URL helpers ──
     # Polymarket: slug → https://polymarket.com/event/{slug}
     # Kalshi: ticker → https://kalshi.com/markets/{series}/{slug}/{ticker}
-    # RCP: varies by chamber+state
+    # Polls: FiveThirtyEight pages by chamber+state
     
-    def rcp_url_for(chamber, state):
-        """Generate RCP polling page URL for a race."""
+    def fte_url_for(chamber, state):
+        """Generate FiveThirtyEight polling page URL for a race."""
         state_names = {
             "AL":"alabama","AK":"alaska","AZ":"arizona","AR":"arkansas",
             "CA":"california","CO":"colorado","CT":"connecticut","DE":"delaware",
@@ -387,11 +465,11 @@ def export_dashboard_json(conn, output_path):
         if not sn or state == "US":
             return None
         if chamber == "senate":
-            return f"polls/senate/general/2026/{sn}"
+            return f"https://projects.fivethirtyeight.com/polls/senate/2026/{sn}/"
         elif chamber == "governor":
-            return f"polls/governor/general/2026/{sn}"
+            return f"https://projects.fivethirtyeight.com/polls/governor/2026/{sn}/"
         elif chamber == "house":
-            return f"latest-polls/house"
+            return "https://projects.fivethirtyeight.com/polls/house/2026/"
         return None
     
     # ── Fetch all races ──
@@ -401,10 +479,10 @@ def export_dashboard_json(conn, output_path):
         FROM races ORDER BY chamber, state
     """)
     race_rows = c.fetchall()
-    
+
     races_out = []
     for row in race_rows:
-        rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_path = row
+        rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_stored = row
         
         # Get latest market snapshot
         c.execute("""
@@ -432,6 +510,9 @@ def export_dashboard_json(conn, output_path):
             if prices:
                 dem_base = round(sum(prices) / len(prices), 3)
 
+        # Determine if this is a primary race
+        is_primary_race = rid.startswith("primary-")
+
         # Get 30 days of time series
         c.execute("""
             SELECT snapshot_date, pm_dem_price, pm_rep_price,
@@ -452,12 +533,61 @@ def export_dashboard_json(conn, output_path):
                 "polymarket": round(pm_d * 100) if pm_d is not None else None,
                 "kalshi":     round(k_d  * 100) if k_d  is not None else None,
             })
-        
+
+        time_series_out = time_series if time_series else None
+
+        # For primary races, build candidate-keyed time series
+        if is_primary_race:
+            c.execute("""
+                SELECT snapshot_date, candidate_name,
+                       COALESCE(k_price, pm_price) as price
+                FROM primary_candidate_snapshots
+                WHERE race_id = ?
+                ORDER BY snapshot_date
+            """, (rid,))
+            cand_rows = c.fetchall()
+            # Build {date: {cand: price}} mapping
+            by_date = {}
+            for snap_date, cand_name, price in cand_rows:
+                d = datetime.strptime(snap_date, "%Y-%m-%d")
+                key = f"{d.month}/{d.day}"
+                if key not in by_date:
+                    by_date[key] = {"date": key}
+                if price is not None:
+                    by_date[key][cand_name] = round(price * 100, 1)
+            primary_ts = list(by_date.values())
+            time_series_out = primary_ts if primary_ts else None
+
+        # Extract primary_party from race_id
+        race_type = "primary" if is_primary_race else "general"
+        primary_party = None
+        primary_result = None
+        if is_primary_race:
+            parts_id = rid.split("-")
+            for i, p in enumerate(parts_id):
+                if p in ("D", "R") and i == len(parts_id) - 2:
+                    primary_party = p
+                    break
+            # Pull result from PRIMARY_RACES config if the race has resolved
+            from config import PRIMARY_RACES as _PR
+            primary_result = _PR.get(rid, {}).get("result")
+
+        # Get latest poll average and market-poll gap from daily_summary
+        c.execute("""
+            SELECT poll_avg_dem, market_poll_gap
+            FROM daily_summary
+            WHERE race_id = ?
+            ORDER BY summary_date DESC LIMIT 1
+        """, (rid,))
+        ds = c.fetchone()
+        poll_avg_dem = round(ds[0], 1) if ds and ds[0] is not None else None
+        market_gap   = round(ds[1], 1) if ds and ds[1] is not None else None
+
         # Get polls for this race
         c.execute("""
             SELECT poll_date, pollster, candidate_1, candidate_1_pct,
                    candidate_2, candidate_2_pct, spread, spread_label,
-                   source_url, rcp_url
+                   source_url, rcp_url, candidate_3, candidate_3_pct
             FROM polls
             WHERE race_id = ?
             ORDER BY poll_date DESC
@@ -468,8 +598,12 @@ def export_dashboard_json(conn, output_path):
             polls.append({
                 "date": pr[0],
                 "pollster": pr[1],
-                "d": pr[3],
-                "r": pr[5],
+                "c1": pr[2],   # candidate_1 name
+                "d":  pr[3],   # candidate_1 pct
+                "c2": pr[4],   # candidate_2 name
+                "r":  pr[5],   # candidate_2 pct
+                "c3": pr[10],  # candidate_3 name (for primaries)
+                "c3pct": pr[11],
                 "spread": pr[7] or f"{pr[2]} +{abs(int(pr[6]))}" if pr[6] else "",
                 "matchup": f"{pr[2]} vs. {pr[4]}" if pr[2] and pr[4] else None,
                 "url": pr[8],
@@ -477,7 +611,7 @@ def export_dashboard_json(conn, output_path):
         
         # Build external links
         pm_url = f"https://polymarket.com/event/{pm_slug}" if pm_slug else None
-        rcp = rcp_url_for(chamber, state)
+        rcp = fte_url_for(chamber, state)
         
         race_obj = {
             "race_id": rid,
@@ -488,10 +622,15 @@ def export_dashboard_json(conn, output_path):
             "dem_base": dem_base,
             "pm": pm_slug,
             "kalshi": k_ticker,
-            "kalshi_url": f"https://kalshi.com/markets/{k_url_path}" if k_url_path else None,
+            "kalshi_url": k_url_stored,
             "rcp": rcp,
+            "poll_avg_dem": poll_avg_dem,
+            "market_gap": market_gap,
+            "race_type": race_type,
+            "primary_party": primary_party,
+            "result": primary_result,
             "polls": polls if polls else None,
-            "time_series": time_series if time_series else None,
+            "time_series": time_series_out,
             "note": None,
         }
         races_out.append(race_obj)
@@ -608,7 +747,7 @@ def main():
         poll_records, polls_raw = [], {}
         poll_status = "error"
         poll_error = str(e)
-        print(f"  [ERROR] RCP fetch failed: {e}")
+        print(f"  [ERROR] 538 polls fetch failed: {e}")
     poll_duration = time.time() - t0
     
     # ── 4. Archive raw data ────────────────────────────
@@ -623,7 +762,30 @@ def main():
     
     # ── 5. Save to database ────────────────────────────
     conn = sqlite3.connect(DB_PATH)
-    
+
+    # Ensure primary_candidate_snapshots table exists (idempotent)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS primary_candidate_snapshots (
+            id             INTEGER PRIMARY KEY AUTOINCREMENT,
+            race_id        TEXT NOT NULL,
+            snapshot_date  DATE NOT NULL,
+            candidate_name TEXT NOT NULL,
+            party          TEXT,
+            k_price        REAL,
+            pm_price       REAL,
+            UNIQUE(race_id, snapshot_date, candidate_name),
+            FOREIGN KEY (race_id) REFERENCES races(race_id)
+        )
+    """)
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_primary_cand_race ON primary_candidate_snapshots(race_id)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_primary_cand_date ON primary_candidate_snapshots(snapshot_date)")
+    # Migrate: add kalshi_url column if it doesn't exist yet
+    try:
+        conn.execute("ALTER TABLE races ADD COLUMN kalshi_url TEXT")
+    except Exception:
+        pass  # column already exists
+    conn.commit()
+
     # Races
     n_races = save_races(conn, pm_records, k_records)
     print(f"\n[DB] Upserted {n_races} races")
@@ -635,7 +797,33 @@ def main():
     # Polls
     n_polls = save_polls(conn, poll_records)
     print(f"[DB] Saved {n_polls} new polls")
-    
+
+    print("\n[Primary Markets] Fetching primary candidate data...")
+    primary_records = fetch_all_primary_markets()
+
+    # Upsert primary race records from PRIMARY_RACES config
+    from config import PRIMARY_RACES as PRIMARY_RACES_CONFIG
+    c_tmp = conn.cursor()
+    for rid, info in PRIMARY_RACES_CONFIG.items():
+        c_tmp.execute("""
+            INSERT INTO races (race_id, chamber, state, description, polymarket_slug, kalshi_ticker)
+            VALUES (?, ?, ?, ?, ?, ?)
+            ON CONFLICT(race_id) DO UPDATE SET
+                description = CASE
+                    WHEN excluded.description IS NOT NULL AND excluded.description != ''
+                    THEN excluded.description ELSE description END,
+                polymarket_slug = COALESCE(excluded.polymarket_slug, polymarket_slug),
+                kalshi_ticker   = COALESCE(excluded.kalshi_ticker,   kalshi_ticker)
+        """, (
+            rid, info["chamber"], info["state"],
+            info.get("description", ""),
+            info.get("pm_slug"), info.get("kalshi_series"),
+        ))
+    conn.commit()
+
+    primary_saved = save_primary_candidate_snapshots(conn, primary_records, today)
+    print(f"[DB] Saved {primary_saved} primary candidate snapshots")
+
     # Daily summary
     n_summary = compute_daily_summary(conn, today)
     print(f"[DB] Computed {n_summary} daily summaries")
@@ -645,7 +833,7 @@ def main():
                n_snapshots, pm_error, pm_duration)
     log_scrape(conn, "kalshi", k_status, len(k_records),
                n_snapshots, k_error, k_duration)
-    log_scrape(conn, "rcp", poll_status, len(poll_records),
+    log_scrape(conn, "fivethirtyeight", poll_status, len(poll_records),
                n_polls, poll_error, poll_duration)
     
     # Export CSV if requested
