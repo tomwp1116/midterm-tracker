@@ -48,7 +48,6 @@ KNOWN_SLUGS = [
     "new-mexico-governor-winner-2026",
     "alaska-governor-election-winner",
     "rhode-island-governor-winner-2026",
-    "will-democrats-win-all-core-four-senate-races",
     "blue-wave-in-2026",
     "georgia-republican-senate-primary-winner",
     "maine-democratic-senate-primary-winner",
@@ -186,6 +185,24 @@ def extract_markets_from_event(event):
 
 def infer_race_id(text, slug):
     """Infer a canonical race_id from combined event/market text."""
+    # Explicit slug overrides — prevents compound/unrelated markets from
+    # hijacking control race IDs via the generic inference logic below.
+    SLUG_OVERRIDES = {
+        "which-party-will-win-the-senate-in-2026": "senate-control-2026",
+        "which-party-will-win-the-house-in-2026":  "house-control-2026",
+    }
+    if slug in SLUG_OVERRIDES:
+        return SLUG_OVERRIDES[slug]
+
+    # Reject compound/multi-race markets that would otherwise map to control IDs
+    SLUG_BLOCKLIST = {
+        "will-democrats-win-all-core-four-senate-races",
+        "balance-of-power-2026-midterms",
+        "blue-wave-in-2026",
+    }
+    if slug in SLUG_BLOCKLIST:
+        return f"pm-blocked-{slug[:40]}"
+
     t = text.lower()
 
     # Find chamber

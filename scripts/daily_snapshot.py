@@ -76,6 +76,12 @@ def archive_raw_data(archive_dir, polymarket_raw, kalshi_raw, polls_raw):
 
 _PLACEHOLDER_TOKENS = ("person a", "person b", "person c", "option a", "option b")
 
+def _normalize_description(desc):
+    """Fix known typos/errors in API-sourced descriptions."""
+    if not desc:
+        return desc
+    return desc.replace("Democratics", "Democrats").replace("democratics", "democrats")
+
 def _is_placeholder(desc):
     """Return True if a description uses Kalshi/Polymarket placeholder names."""
     if not desc:
@@ -120,7 +126,7 @@ def save_races(conn, pm_records, k_records):
     for r in pm_records:
         rid = r["race_id"]
         raw_desc = r.get("question", "")
-        desc = raw_desc if not _is_placeholder(raw_desc) else _fallback_description(rid)
+        desc = _normalize_description(raw_desc if not _is_placeholder(raw_desc) else _fallback_description(rid))
         if rid not in races:
             parts = rid.split("-")
             chamber = parts[0] if len(parts) > 0 else "unknown"
@@ -141,7 +147,7 @@ def save_races(conn, pm_records, k_records):
     for r in k_records:
         rid = r["race_id"]
         raw_desc = r.get("title", "")
-        desc = raw_desc if not _is_placeholder(raw_desc) else _fallback_description(rid)
+        desc = _normalize_description(raw_desc if not _is_placeholder(raw_desc) else _fallback_description(rid))
         if rid not in races:
             parts = rid.split("-")
             chamber = parts[0] if len(parts) > 0 else "unknown"
@@ -531,7 +537,10 @@ def export_dashboard_json(conn, output_path):
     c.execute("""
         SELECT race_id, chamber, state, district, description,
                polymarket_slug, kalshi_ticker, kalshi_url
-        FROM races ORDER BY chamber, state
+        FROM races
+        WHERE state != 'US'
+           OR race_id IN ('senate-control-2026', 'house-control-2026')
+        ORDER BY chamber, state
     """)
     race_rows = c.fetchall()
 
@@ -645,6 +654,7 @@ def export_dashboard_json(conn, output_path):
                    source_url, rcp_url, candidate_3, candidate_3_pct
             FROM polls
             WHERE race_id = ?
+              AND poll_date >= '2025-10-01'
             ORDER BY poll_date DESC
         """, (rid,))
         poll_rows = c.fetchall()

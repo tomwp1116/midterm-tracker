@@ -245,12 +245,15 @@ function buildFallbackData() {
 // ── Chart components ──
 function Spark({data,id}){return(<ResponsiveContainer width={86} height={24}><AreaChart data={data} margin={{top:2,right:0,bottom:2,left:0}}><Area type="monotone" dataKey={data.some(d=>d.polymarket)?"polymarket":"kalshi"} stroke="#888" fill="none" strokeWidth={1.2} dot={false}/><ReferenceLine y={50} stroke="#ddd" strokeWidth={.5}/></AreaChart></ResponsiveContainer>);}
 
+function fmtMargin(v){if(v==null)return null;const r=Math.round(v);if(r===0)return{label:"Even",color:"#555"};if(r>0)return{label:`D +${r}`,color:DEM};return{label:`R +${Math.abs(r)}`,color:REP};}
+
 function Tip({active,payload}){if(!active||!payload?.length)return null;const pt=payload[0]?.payload;if(!pt)return null;const hp=pt.pollDem!=null;
+  const pm=fmtMargin(pt.polymarket),km=fmtMargin(pt.kalshi),pa=fmtMargin(pt.pollAvgDem);
   return(<div style={{background:"#fff",border:"1px solid #ddd",padding:"10px 14px",fontSize:13,color:"#222",boxShadow:"0 2px 8px rgba(0,0,0,.08)",maxWidth:280,lineHeight:1.5,fontFamily:S}}>
     <div style={{fontWeight:600,marginBottom:4,color:"#999",fontSize:12}}>{pt.date}</div>
-    {pt.polymarket!=null&&<div style={{display:"flex",justifyContent:"space-between"}}><span>Polymarket</span><strong>{pt.polymarket}%</strong></div>}
-    {pt.kalshi!=null&&<div style={{display:"flex",justifyContent:"space-between"}}><span>Kalshi</span><strong>{pt.kalshi}%</strong></div>}
-    {pt.pollAvgDem!=null&&<div style={{display:"flex",justifyContent:"space-between",color:POLL_AVG}}><span>Poll avg. (30d)</span><strong>{pt.pollAvgDem}%</strong></div>}
+    {pm&&<div style={{display:"flex",justifyContent:"space-between",gap:16}}><span>Polymarket</span><strong style={{color:pm.color}}>{pm.label}</strong></div>}
+    {km&&<div style={{display:"flex",justifyContent:"space-between",gap:16}}><span>Kalshi</span><strong style={{color:km.color}}>{km.label}</strong></div>}
+    {pa&&<div style={{display:"flex",justifyContent:"space-between",gap:16,color:POLL_AVG}}><span>Poll avg. (30d)</span><strong style={{color:pa.color}}>{pa.label}</strong></div>}
     {hp&&(<div style={{borderTop:"1px solid #eee",marginTop:8,paddingTop:8}}>
       <div style={{fontWeight:700,fontSize:11,textTransform:"uppercase",letterSpacing:".04em",color:"#999",marginBottom:4}}>Poll released</div>
       <div style={{fontWeight:500}}>{pt.pollster}</div>
@@ -261,15 +264,17 @@ function Tip({active,payload}){if(!active||!payload?.length)return null;const pt
 
 // Label rendered at the top of each poll release reference line.
 // Shows first word of pollster name + spread so the mark is identifiable at a glance.
-function PollLineLabel({ viewBox, pollster, spread, isDem }) {
+function PollLineLabel({ viewBox, pollster, spread, value }) {
   if (!viewBox) return null;
-  const { x, y } = viewBox;
-  const color = isDem ? DEM : REP;
+  const { x, y, height } = viewBox;
+  const color = value == null ? "#aaa" : value > 0 ? DEM : value < 0 ? REP : "#888";
   const name = (pollster || "Poll").split(/\s+/)[0];
   const txt = spread ? `${name}: ${spread}` : name;
+  // Place dot at the poll margin's position on the -100→+100 scale
+  const dotY = value != null ? y + height * (100 - value) / 200 : null;
   return (
     <g>
-      <circle cx={x} cy={y + 4} r={2} fill={color} opacity={0.55} />
+      {dotY != null && <circle cx={x} cy={dotY} r={3.5} fill={color} opacity={0.75} stroke="#fff" strokeWidth={1}/>}
       <text
         x={x + 3} y={y + 4}
         fontSize={8.5} fill={color} opacity={0.8}
@@ -281,35 +286,35 @@ function PollLineLabel({ viewBox, pollster, spread, isDem }) {
   );
 }
 
-// ── General election chart (binary D vs. R market odds + poll average + markers) ──
+// ── General election chart (D/R advantage margin, full -100 to +100 scale) ──
 function GeneralChart({data, race}) {
-  const vs=data.flatMap(d=>[d.polymarket,d.kalshi,d.pollAvgDem].filter(v=>v!=null));
-  if(!vs.length)return null;
-  const lo=Math.min(...vs),hi=Math.max(...vs);
-  const yMin=Math.max(0,Math.floor((lo-8)/5)*5),yMax=Math.min(100,Math.ceil((hi+8)/5)*5);
+  // Convert Dem win-probability (0–100) → partisan margin (-100 to +100)
+  const chartData = data.map(pt=>({
+    ...pt,
+    polymarket: pt.polymarket!=null ? 2*pt.polymarket-100 : null,
+    kalshi:     pt.kalshi    !=null ? 2*pt.kalshi    -100 : null,
+    pollAvgDem: pt.pollAvgDem!=null ? 2*pt.pollAvgDem-100 : null,
+  }));
   const hasPM=data.some(d=>d.polymarket!=null),hasK=data.some(d=>d.kalshi!=null);
   const hasPollAvg=data.some(d=>d.pollAvgDem!=null);
-  const show50=yMin<50&&yMax>50;
-  const pollPoints=data.filter(d=>d.pollDem!=null);
-  // Candidate names for legend (from most recent poll with names, or generic)
-  const demName = race?.polls?.find(p=>p.c1)?.c1 || "Dem.";
-  const repName = race?.polls?.find(p=>p.c2)?.c2 || "Rep.";
+  if(!hasPM&&!hasK&&!hasPollAvg)return null;
+  const pollPoints=chartData.filter(d=>d.pollDem!=null);
+  const fmtY=v=>v===0?"Even":v>0?`D+${v}`:`R+${Math.abs(v)}`;
   return(<>
-    <ResponsiveContainer width="100%" height={230}><ComposedChart data={data} margin={{top:20,right:12,bottom:8,left:0}}>
+    <ResponsiveContainer width="100%" height={300}><ComposedChart data={chartData} margin={{top:16,right:12,bottom:8,left:0}}>
       <defs>
-        <linearGradient id="demZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={DEM} stopOpacity={0.06}/><stop offset="100%" stopColor={DEM} stopOpacity={0.02}/></linearGradient>
-        <linearGradient id="repZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={REP} stopOpacity={0.02}/><stop offset="100%" stopColor={REP} stopOpacity={0.06}/></linearGradient>
+        <linearGradient id="demZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={DEM} stopOpacity={0.10}/><stop offset="100%" stopColor={DEM} stopOpacity={0.02}/></linearGradient>
+        <linearGradient id="repZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={REP} stopOpacity={0.02}/><stop offset="100%" stopColor={REP} stopOpacity={0.10}/></linearGradient>
       </defs>
       <XAxis dataKey="date" tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={{stroke:"#ddd"}} interval={4}/>
-      <YAxis domain={[yMin,yMax]} tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`} width={34}/>
+      <YAxis domain={[-100,100]} ticks={[-100,-50,0,50,100]} tick={{fontSize:10,fill:"#999"}} tickLine={false} axisLine={false} tickFormatter={fmtY} width={46}/>
       <Tooltip content={<Tip/>}/>
-      {show50&&<><ReferenceArea y1={50} y2={yMax} fill="url(#demZone)"/><ReferenceArea y1={yMin} y2={50} fill="url(#repZone)"/></>}
-      {show50&&<ReferenceLine y={50} stroke="#ccc" strokeDasharray="4 4"/>}
-      {show50&&<ReferenceLine y={yMax-1} stroke="none" label={{value:`← ${demName} favored`,position:"insideTopLeft",fill:DEM,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
-      {show50&&<ReferenceLine y={yMin+1} stroke="none" label={{value:`← ${repName} favored`,position:"insideBottomLeft",fill:REP,fontSize:11,fontWeight:600,fontFamily:S,offset:4}}/>}
+      <ReferenceArea y1={0} y2={100} fill="url(#demZone)"/>
+      <ReferenceArea y1={-100} y2={0} fill="url(#repZone)"/>
+      <ReferenceLine y={0} stroke="#bbb" strokeWidth={1.5}/>
       {pollPoints.map(pt=>(
         <ReferenceLine key={`poll-${pt.date}`} x={pt.date} stroke="#c8c8c8" strokeWidth={1} strokeDasharray="3 3"
-          label={<PollLineLabel pollster={pt.pollster} spread={pt.pollSpread} isDem={isD(pt.pollSpread)}/>}/>
+          label={<PollLineLabel pollster={pt.pollster} spread={pt.pollSpread} value={pt.pollDem!=null&&pt.pollRep!=null?pt.pollDem-pt.pollRep:null}/>}/>
       ))}
       {hasPM&&<Line type="monotone" dataKey="polymarket" stroke="#222" strokeWidth={2} dot={false} connectNulls={true}/>}
       {hasK&&<Line type="monotone" dataKey="kalshi" stroke={hasPM?"#aaa":"#222"} strokeWidth={hasPM?1.5:2} dot={false} strokeDasharray={hasPM?"5 3":"0"} connectNulls={true}/>}
@@ -321,7 +326,7 @@ function GeneralChart({data, race}) {
       {hasK&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,borderTop:`2px ${hasPM?"dashed":"solid"} ${hasPM?"#aaa":"#222"}`,display:"inline-block"}}/>Kalshi</span>}
       {hasPollAvg&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{width:16,borderTop:`2px dashed ${POLL_AVG}`,display:"inline-block"}}/>Poll avg. (30d)</span>}
       {pollPoints.length>0&&<span style={{display:"flex",alignItems:"center",gap:5}}><span style={{display:"inline-block",width:1,height:13,borderLeft:"1px dashed #bbb",marginRight:1}}/>Poll release</span>}
-      <span style={{marginLeft:"auto",color:"#bbb",fontSize:11}}>Y-axis = Dem win probability %</span>
+      <span style={{marginLeft:"auto",color:"#bbb",fontSize:11}}>Y-axis = D/R margin (pts)</span>
     </div>
   </>);}
 
@@ -415,66 +420,6 @@ function RaceChart({race}) {
 
 function rat(d){if(d>=.85)return{l:"Safe D.",c:DEM};if(d>=.60)return{l:"Lean D.",c:DEM};if(d>=.40)return{l:"Toss-up",c:"#7c3aed"};if(d>=.15)return{l:"Lean R.",c:REP};return{l:"Safe R.",c:REP};}
 
-// Returns the market-vs-poll gap (market Dem probability % minus 30d poll avg Dem share %).
-// Positive = markets more bullish on Dem than polls. Uses stored value from JSON when available,
-// otherwise derives it from dem_base and the most recent pollAvgDem in the time series.
-function raceGap(race) {
-  if (race.market_gap != null) return race.market_gap;
-  if (race.dem_base == null) return null;
-  const ts = race.time_series || [];
-  const lastAvg = [...ts].reverse().find(pt => pt.pollAvgDem != null)?.pollAvgDem;
-  if (lastAvg == null) return null;
-  return Math.round(race.dem_base * 100 - lastAvg);
-}
-
-// Gap callout shown inside the Detail panel.
-function GapCallout({race}) {
-  const gap = raceGap(race);
-  if (gap == null) return null;
-  const marketPct = Math.round((race.dem_base || 0) * 100);
-  const ts = race.time_series || [];
-  const pollAvg = race.poll_avg_dem
-    ?? [...ts].reverse().find(pt => pt.pollAvgDem != null)?.pollAvgDem;
-  if (pollAvg == null) return null;
-
-  const gapColor = gap > 0 ? DEM : REP;
-  const absGap = Math.abs(gap);
-  const side = gap > 0 ? "Dem" : "Rep";
-  let interp;
-  if (absGap >= 20)
-    interp = `Large divergence — markets are ${absGap} pts more bullish on ${side} than polling suggests.`;
-  else if (absGap >= 8)
-    interp = `Moderate divergence — markets are ${absGap} pts more bullish on ${side} than polling suggests.`;
-  else
-    interp = `Markets and polls are roughly aligned (within ${absGap} pts).`;
-
-  return (
-    <div style={{background:"#f8f8f8",border:"1px solid #e8e8e8",borderLeft:`3px solid ${gapColor}`,borderRadius:2,padding:"14px 18px",marginBottom:18,fontFamily:S}}>
-      <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:".06em",color:"#999",marginBottom:12}}>Markets vs. Polls</div>
-      <div style={{display:"flex",gap:24,marginBottom:10,flexWrap:"wrap"}}>
-        <div>
-          <div style={{fontSize:11,color:"#aaa",marginBottom:3}}>Market (Dem win prob.)</div>
-          <div style={{fontSize:24,fontWeight:700,letterSpacing:"-.01em",color:marketPct>=50?DEM:REP}}>{marketPct}%</div>
-        </div>
-        <div style={{width:1,background:"#e5e5e5",alignSelf:"stretch"}}/>
-        <div>
-          <div style={{fontSize:11,color:"#aaa",marginBottom:3}}>Poll avg. (30d, Dem share)</div>
-          <div style={{fontSize:24,fontWeight:700,letterSpacing:"-.01em",color:"#555"}}>{pollAvg}%</div>
-        </div>
-        <div style={{width:1,background:"#e5e5e5",alignSelf:"stretch"}}/>
-        <div>
-          <div style={{fontSize:11,color:"#aaa",marginBottom:3}}>Gap</div>
-          <div style={{fontSize:24,fontWeight:700,letterSpacing:"-.01em",color:gapColor}}>{gap>0?"+":""}{gap}</div>
-        </div>
-      </div>
-      <div style={{fontSize:12,color:"#666",lineHeight:1.6}}>
-        {interp}{" "}
-        <span style={{color:"#aaa"}}>Market % = probability Dem wins; poll avg = Dem vote share — different scales, but a large divergence is signal.</span>
-      </div>
-    </div>
-  );
-}
-
 // ── Detail panel ──
 function Detail({race,onClose}){const data=race.time_series||[];return(
   <tr><td colSpan={7} style={{padding:0,borderBottom:"1px solid #ddd"}}>
@@ -487,7 +432,6 @@ function Detail({race,onClose}){const data=race.time_series||[];return(
         </div>
         <button onClick={e=>{e.stopPropagation();onClose();}} style={{background:"none",border:"1px solid #ccc",color:"#666",borderRadius:3,padding:"4px 12px",cursor:"pointer",fontSize:12,fontFamily:S}}>Close</button>
       </div>
-      {!isPrimary(race)&&<GapCallout race={race}/>}
       <RaceChart race={race}/>
       {/* Links */}
       <div style={{display:"flex",gap:16,marginBottom:20,fontSize:13,fontFamily:S,flexWrap:"wrap"}}>
@@ -586,7 +530,7 @@ function CompletedDetail({race, onClose}) {
               <span style={{fontSize:14,fontWeight:700,color:DEM}}>Dem {p.d}%</span>
               <span style={{color:"#ccc"}}>–</span>
               <span style={{fontSize:14,fontWeight:700,color:REP}}>Rep {p.r}%</span>
-              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:isD(p.spread)?DEM:REP}}>{p.spread}</span>
+              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:p.d!=null&&p.r!=null?(p.d>p.r?DEM:p.d<p.r?REP:"#888"):(isD(p.spread)?DEM:REP)}}>{p.spread}</span>
             </div>
             {p.matchup&&<div style={{fontSize:12,color:"#999",marginTop:2,paddingLeft:56}}>{p.matchup}</div>}
           </div>))}
@@ -597,6 +541,15 @@ function CompletedDetail({race, onClose}) {
 }
 
 // ══════════════════════════════════════════════
+// Convert a 0–100 Dem win-probability to a partisan margin display.
+// e.g. 55 → {label:"D +10", color:DEM}   25 → {label:"R +50", color:REP}   50 → {label:"Even", color:"#555"}
+function mktMargin(val) {
+  const margin = Math.round(2 * val - 100);
+  if (margin === 0) return { label: "Even", color: "#555" };
+  if (margin > 0)   return { label: `D +${margin}`, color: DEM };
+  return               { label: `R +${Math.abs(margin)}`, color: REP };
+}
+
 // MAIN APP
 // ══════════════════════════════════════════════
 export default function App(){
@@ -640,7 +593,7 @@ export default function App(){
       if(filter==="governor")return r.chamber==="governor"&&!isPrimary(r);
       if(filter==="control")return r.state==="US";
       if(filter==="primaries")return isPrimary(r);
-      return true;
+      return !isPrimary(r);
     });
     if(filter!=="primaries"){
       if(comp==="tossup")f=f.filter(r=>r.dem_base>=.40&&r.dem_base<=.60);
@@ -651,7 +604,6 @@ export default function App(){
     else if(sort==="state")f.sort((a,b)=>(a.state+(a.district||"")).localeCompare(b.state+(b.district||"")));
     else if(sort==="polymarket"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].polymarket!=null)return ts[i].polymarket;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
     else if(sort==="kalshi"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].kalshi!=null)return ts[i].kalshi;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
-    else if(sort==="gap")f.sort((a,b)=>Math.abs(raceGap(b)??0)-Math.abs(raceGap(a)??0));
     else if(sort==="latestpoll"){const ld=r=>(r.polls||[]).map(p=>p.date||"").filter(Boolean).sort().pop()||"0";f.sort((a,b)=>ld(b).localeCompare(ld(a)));}
     return f;},[activeRaces,filter,comp,sort]);
 
@@ -692,7 +644,9 @@ export default function App(){
         <div style={{marginBottom:18,fontFamily:S}}>
           <div style={{display:"flex",gap:6,marginBottom:8,flexWrap:"wrap",alignItems:"center"}}>
             <span style={{fontSize:12,color:"#999",marginRight:2}}>Show:</span>
-            {[["senate","Senate"],["house","House"],["governor","Governor"],["control","Control"],["primaries","Primaries"],["all","All"]].map(([v,l])=><span key={v}>{pill(filter===v,()=>setF(v),l)}</span>)}
+            {[["senate","Senate"],["house","House"],["governor","Governor"],["control","Control"],["all","All"]].map(([v,l])=><span key={v}>{pill(filter===v,()=>setF(v),l)}</span>)}
+            <span style={{color:"#ccc",padding:"0 4px",fontSize:14,userSelect:"none"}}>|</span>
+            {pill(filter==="primaries",()=>setF("primaries"),"Primaries")}
           </div>
           <div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}>
             <span style={{fontSize:12,color:"#999",marginRight:2}}>Rating:</span>
@@ -702,14 +656,14 @@ export default function App(){
         {/* Table */}
         <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
           <thead><tr style={{borderBottom:"2px solid #222"}}>
-            {[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:"gap",label:"Mkt vs. Poll",title:"Difference between market win probability (%) and 30-day poll average (Dem vote share %). Sorted by largest divergence."},{key:null,label:"Trend"}].map(col=>(
+            {[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:null,label:"Trend"}].map(col=>(
               <th key={col.label} onClick={col.key?()=>setO(col.key):undefined} title={col.title||""} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:sort===col.key?"#222":"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600,cursor:col.key?"pointer":"default",userSelect:"none",whiteSpace:"nowrap"}}>
                 {col.label}{sort===col.key&&<span style={{marginLeft:4,fontSize:9}}>{sort==="state"?"A→Z":"↕"}</span>}
               </th>))}
           </tr></thead>
           <tbody>
             {races.map(race=>{const ts=race.time_series||[];const latest=ts[ts.length-1]||{};const r=rat(race.dem_base||0.5);const lp=race.polls?.[0];const open=sel===race.race_id;
-              const pmVal = latest.polymarket; const kVal = latest.kalshi; const gap=raceGap(race);
+              const pmVal = latest.polymarket; const kVal = latest.kalshi;
               return[
                 <tr key={race.race_id} onClick={()=>toggle(race.race_id)} style={{borderBottom:open?"none":"1px solid #e8e8e8",cursor:"pointer",background:open?"#fafafa":"transparent",transition:"background .1s"}} onMouseEnter={e=>{if(!open)e.currentTarget.style.background="#fafafa";}} onMouseLeave={e=>{e.currentTarget.style.background=open?"#fafafa":"transparent";}}>
                   <td style={{padding:"10px"}}>
@@ -729,8 +683,8 @@ export default function App(){
                       ?(()=>{const pp=primaryParty(race);const c=pp==="D"?PRIMARY_PALETTE.D[0]:pp==="R"?PRIMARY_PALETTE.R[0]:"#555";return(<span style={{fontSize:12,fontWeight:600,color:c}}>{pp==="D"?"Dem. Primary":pp==="R"?"Rep. Primary":"Primary"}</span>);})()
                       :<span style={{fontSize:12,fontWeight:600,color:r.c}}>{r.l}</span>}
                   </td>
-                  <td style={{padding:"10px"}}>{pmVal!=null?<span style={{fontSize:15,fontWeight:700,color:isPrimary(race)?primaryColors(race)[0]:pmVal>=50?DEM:REP}}>{pmVal}%</span>:<span style={{color:"#ddd"}}>—</span>}</td>
-                  <td style={{padding:"10px"}}>{kVal!=null?<span style={{fontSize:15,fontWeight:700,color:isPrimary(race)?primaryColors(race)[0]:kVal>=50?DEM:REP}}>{kVal}%</span>:<span style={{color:"#ddd"}}>—</span>}</td>
+                  <td style={{padding:"10px"}}>{pmVal!=null?isPrimary(race)?<span style={{fontSize:15,fontWeight:700,color:primaryColors(race)[0]}}>{pmVal}%</span>:(()=>{const m=mktMargin(pmVal);return<span style={{fontSize:15,fontWeight:700,color:m.color}}>{m.label}</span>;})():<span style={{color:"#ddd"}}>—</span>}</td>
+                  <td style={{padding:"10px"}}>{kVal!=null?isPrimary(race)?<span style={{fontSize:15,fontWeight:700,color:primaryColors(race)[0]}}>{kVal}%</span>:(()=>{const m=mktMargin(kVal);return<span style={{fontSize:15,fontWeight:700,color:m.color}}>{m.label}</span>;})():<span style={{color:"#ddd"}}>—</span>}</td>
                   <td style={{padding:"10px"}}>
                     {lp?(isPrimary(race)
                       ?(<div>
@@ -738,18 +692,8 @@ export default function App(){
                           {lp.c2&&lp.r!=null&&<div style={{fontSize:13,fontWeight:500,color:primaryColors(race)[1]}}>{lp.c2} {lp.r}%</div>}
                           <div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div>
                         </div>)
-                      :(<div><div style={{fontSize:13,fontWeight:600,color:isD(lp.spread)?DEM:REP}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>)
+                      :(<div><div style={{fontSize:13,fontWeight:600,color:lp.d!=null&&lp.r!=null?(lp.d>lp.r?DEM:lp.d<lp.r?REP:"#888"):(isD(lp.spread)?DEM:REP)}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>)
                     ):<span style={{color:"#ddd"}}>—</span>}
-                  </td>
-                  <td style={{padding:"10px"}}>
-                    {isPrimary(race)
-                      ?<span style={{color:"#ddd",fontSize:12}}>—</span>
-                      :gap!=null
-                        ?(<div title="Market Dem win probability minus 30-day poll average (Dem vote share). Positive = markets more bullish on Dem than polls.">
-                            <div style={{fontSize:14,fontWeight:700,color:gap>0?DEM:REP,letterSpacing:"-.01em"}}>{gap>0?"+":""}{gap}</div>
-                            <div style={{fontSize:10,color:"#bbb",marginTop:1}}>{sort==="gap"?"sorted ↑":""}</div>
-                          </div>)
-                        :<span style={{color:"#ddd"}}>—</span>}
                   </td>
                   <td style={{padding:"10px"}}><Spark data={ts} id={race.race_id}/></td>
                 </tr>,
@@ -807,7 +751,7 @@ export default function App(){
         </div>)}
 
         <div style={{marginTop:28,paddingTop:16,borderTop:"1px solid #ddd",fontSize:12,color:"#999",lineHeight:1.7,fontFamily:S}}>
-          <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded daily. Polls from FiveThirtyEight. General election charts show market win probability (%) with a <span style={{color:POLL_AVG,fontWeight:600}}>muted blue dashed line</span> for the 30-day poll average; vertical markers flag poll release dates. Primary charts show per-candidate poll support (%) as multi-colored lines — blues for Dem primaries, reds/oranges for Rep primaries. Use the <strong>Primaries</strong> filter to see all tracked primaries. Data from <code style={{background:"#f5f5f5",padding:"1px 4px",borderRadius:2}}>dashboard_data.json</code>, exported daily.
+          <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded four times a day. Polls sourced from Wikipedia. General election charts show the leading candidate's prediction market advantage, with a <span style={{color:POLL_AVG,fontWeight:600}}>muted blue dashed line</span> for the 30-day poll average; vertical markers flag poll release dates. Primary charts show per-candidate poll support (%) as multi-colored lines — blues for Dem primaries, reds/oranges for Rep primaries. Use the <strong>Primaries</strong> filter to see all tracked primaries. Created by <a href="mailto:tom.wrightpiersanti@gmail.com" style={{color:"#999",textDecoration:"underline"}}>Tom Wright-Piersanti</a>, built with Claude Code.
         </div>
       </div>
     </div>);
