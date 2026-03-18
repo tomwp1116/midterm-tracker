@@ -250,13 +250,19 @@ def save_market_snapshots(conn, pm_records, k_records, snapshot_date):
         k_dem = data.get("k_dem_price")
         k_rep = data.get("k_rep_price")
 
-        # Data quality guard: if k_dem deviates >15 points from recent 7-day avg,
-        # it's likely a stale/thin market price (zero-spread placeholder).
-        # In that case, null k_dem and derive Dem probability from k_rep instead.
-        if k_dem is not None and rid in recent_k_dem:
+        # Data quality guard: drop k_dem only when it shows a large swing AND
+        # the market has zero bid-ask spread (k_dem + k_rep == 1.000 exactly).
+        # Zero spread means the API returned a stale/untraded placeholder price —
+        # real active markets always have some spread, so their sum lands ~0.97-1.03.
+        # A genuine political swing (scandal, dropout, major news) will produce a
+        # large move WITH a real spread, so it passes through unaffected.
+        if k_dem is not None and k_rep is not None and rid in recent_k_dem:
             baseline = recent_k_dem[rid]
-            if abs(k_dem - baseline) > 0.15:
-                print(f"  [QA] {rid}: k_dem={k_dem:.3f} deviates from 7d avg {baseline:.3f} — dropping k_dem")
+            large_swing = abs(k_dem - baseline) > 0.15
+            zero_spread = abs(k_dem + k_rep - 1.0) < 0.003
+            if large_swing and zero_spread:
+                print(f"  [QA] {rid}: k_dem={k_dem:.3f} vs 7d avg {baseline:.3f} "
+                      f"(+{k_dem-baseline:+.3f}) with zero spread — dropping k_dem")
                 k_dem = None
                 data["k_dem_price"] = None
                 flagged += 1
