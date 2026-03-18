@@ -306,7 +306,7 @@ function GeneralChart({data, race}) {
         <linearGradient id="demZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={DEM} stopOpacity={0.10}/><stop offset="100%" stopColor={DEM} stopOpacity={0.02}/></linearGradient>
         <linearGradient id="repZone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={REP} stopOpacity={0.02}/><stop offset="100%" stopColor={REP} stopOpacity={0.10}/></linearGradient>
       </defs>
-      <XAxis dataKey="date" tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={{stroke:"#ddd"}} interval={4}/>
+      <XAxis dataKey="date" tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={{stroke:"#ddd"}} interval="preserveStartEnd"/>
       <YAxis domain={[-100,100]} ticks={[-100,-50,0,50,100]} tick={{fontSize:10,fill:"#999"}} tickLine={false} axisLine={false} tickFormatter={fmtY} width={46}/>
       <Tooltip content={<Tip/>}/>
       <ReferenceArea y1={0} y2={100} fill="url(#demZone)"/>

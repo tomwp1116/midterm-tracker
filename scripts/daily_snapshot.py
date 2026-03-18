@@ -583,7 +583,7 @@ def export_dashboard_json(conn, output_path):
                    k_dem_price, k_rep_price
             FROM market_snapshots
             WHERE race_id = ?
-            ORDER BY snapshot_date DESC LIMIT 30
+            ORDER BY snapshot_date DESC LIMIT 200
         """, (rid,))
         ts_rows = list(reversed(c.fetchall()))
         time_series = []
