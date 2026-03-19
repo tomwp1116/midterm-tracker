@@ -8,7 +8,7 @@
     "battleground_senate": 3,
     "house_districts_tracked": 88,
     "seats_up": 35,
-    "polls_tracked": 138
+    "polls_tracked": 139
   },
   "races": [
     {
@@ -858,13 +858,13 @@
       "state": "AZ",
       "district": null,
       "description": "Will the Democratic party win the governorship in Arizona",
-      "dem_base": 0.715,
+      "dem_base": 0.71,
       "pm": null,
       "kalshi": "GOVPARTYAZ-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyaz/arizona-governor/govpartyaz-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/arizona/",
       "poll_avg_dem": 42.0,
-      "market_gap": 29.5,
+      "market_gap": 29.0,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -1609,7 +1609,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 72
+          "kalshi": 71
         }
       ],
       "note": null
@@ -1685,8 +1685,8 @@
       "kalshi": "GOVPARTYCA-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyca/california-governor/govpartyca-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/california/",
-      "poll_avg_dem": 7.7,
-      "market_gap": 76.8,
+      "poll_avg_dem": 7.2,
+      "market_gap": 77.3,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -1706,6 +1706,19 @@
         },
         {
           "date": "2026-03-15",
+          "pollster": "Berkeley IGS",
+          "c1": "Xavier Becerra (D)",
+          "d": 5.0,
+          "c2": "Chad Bianco (R)",
+          "r": 16.0,
+          "c3": null,
+          "c3pct": null,
+          "spread": "(R) +11.0",
+          "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
+        {
+          "date": "2026-03-14",
           "pollster": "Berkeley IGS",
           "c1": "Xavier Becerra (D)",
           "d": 5.0,
@@ -3507,8 +3520,8 @@
         {
           "date": "3/19",
           "Ken Salazar": 0.5,
-          "Michael Bennet": 80.5,
-          "Phil Weiser": 20.0
+          "Michael Bennet": 80.0,
+          "Phil Weiser": 19.5
         }
       ],
       "note": null
@@ -3555,13 +3568,13 @@
         },
         {
           "date": "3/19",
-          "Barbara Kirkmeyer": 39.5,
+          "Barbara Kirkmeyer": 39.0,
           "Greg Lopez": 0.5,
           "Jason Mikesell": 0.5,
           "Jason Ray Clark": 0.5,
           "Joshua Griffin": 0.5,
           "Mark Baisley": 0.5,
-          "Scott Bottoms": 4.5,
+          "Scott Bottoms": 4.0,
           "Victor Marx": 54.5
         }
       ],
@@ -4209,13 +4222,13 @@
       "state": "FL",
       "district": null,
       "description": "Will the Democratic party win the governorship in Florida",
-      "dem_base": 0.165,
+      "dem_base": 0.16,
       "pm": null,
       "kalshi": "GOVPARTYFL-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyfl/florida-governor/govpartyfl-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/florida/",
       "poll_avg_dem": 19.5,
-      "market_gap": -3.0,
+      "market_gap": -3.5,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -5837,7 +5850,7 @@
         },
         {
           "date": "3/19",
-          "Geoff Duncan": 8.5,
+          "Geoff Duncan": 8.0,
           "Jason Carter": 1.0,
           "Jason Esteves": 8.5,
           "Keisha Lance Bottoms": 81.5,
@@ -5888,8 +5901,8 @@
         },
         {
           "date": "3/19",
-          "Brad Raffensperger": 11.0,
-          "Burt Jones": 32.5,
+          "Brad Raffensperger": 10.5,
+          "Burt Jones": 33.0,
           "Chris Carr": 1.0,
           "Clark Dean": 0.5,
           "Ken Yasger": 0.5,
@@ -10778,7 +10791,7 @@
           "Garrett Mason": 7.5,
           "James Libby": 0.5,
           "Jason Levesque": 0.5,
-          "Jonathan Bush": 7.0,
+          "Jonathan Bush": 8.5,
           "Laurel Libby": 2.0,
           "Mikek Soboleski": 0.5,
           "Owen McCarthy": 1.5,
@@ -10799,13 +10812,13 @@
       "state": "MI",
       "district": null,
       "description": "Will the Democratic party win the governorship in Michigan",
-      "dem_base": 0.565,
+      "dem_base": 0.55,
       "pm": null,
       "kalshi": "GOVPARTYMI-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartymi/michigan-governor/govpartymi-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/michigan/",
       "poll_avg_dem": 32.5,
-      "market_gap": 24.0,
+      "market_gap": 22.5,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -11597,7 +11610,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 56
+          "kalshi": 55
         }
       ],
       "note": null
@@ -11653,7 +11666,7 @@
           "Joe Tate": 0.5,
           "Mallory McMorrow": 0.5,
           "Mark Hackel": 0.5,
-          "Pete Buttigieg": 1.0,
+          "Pete Buttigieg": 1.5,
           "Winnie Brinks": 0.5
         }
       ],
@@ -11715,7 +11728,7 @@
         },
         {
           "date": "3/19",
-          "Aric Nesbitt": 4.5,
+          "Aric Nesbitt": 5.0,
           "Candice Miller": 0.5,
           "Dick DeVos": 0.5,
           "Garrett Soldano": 0.5,
@@ -11725,7 +11738,7 @@
           "Lisa McClain": 0.5,
           "Mike Cox": 2.5,
           "Mike Rogers": 1.0,
-          "Perry Johnson": 42.0,
+          "Perry Johnson": 40.0,
           "Pete Hoekstra": 0.5,
           "Peter Meijer": 1.0,
           "Tom Leonard": 1.0,
@@ -12588,7 +12601,7 @@
           "Brad Kohler": 0.5,
           "Chris Madel": 0.5,
           "Jim Schultz": 1.0,
-          "Kendall Qualls": 25.5,
+          "Kendall Qualls": 24.5,
           "Kristin Robbins": 0.5,
           "Lisa Demuth": 62.5,
           "Mike Lindell": 15.5,
@@ -13990,7 +14003,7 @@
         },
         {
           "date": "3/19",
-          "Cinde Warmington": 78.5,
+          "Cinde Warmington": 78.0,
           "Deaglan McEachern": 3.5,
           "Donovan Fenton": 1.0,
           "Jon Kiper": 7.0,
@@ -14821,7 +14834,7 @@
         {
           "date": "3/19",
           "Brian Cillessen": 0.5,
-          "Duke Rodriguez": 46.0,
+          "Duke Rodriguez": 46.5,
           "Gregg Hull": 50.5,
           "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
@@ -15754,13 +15767,13 @@
       "state": "OH",
       "district": null,
       "description": "Will the Democratic party win the governorship in Ohio",
-      "dem_base": 0.55,
+      "dem_base": 0.555,
       "pm": null,
       "kalshi": "GOVPARTYOH-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyoh/ohio-governor/govpartyoh-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/ohio/",
       "poll_avg_dem": 49.5,
-      "market_gap": 5.5,
+      "market_gap": 6.0,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -16505,7 +16518,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 55
+          "kalshi": 56
         }
       ],
       "note": null
@@ -16602,7 +16615,7 @@
         },
         {
           "date": "3/19",
-          "Casey Putsch": 4.5,
+          "Casey Putsch": 5.0,
           "Dave Yost": 0.5,
           "Heather Hill": 0.5,
           "Jim Tressell": 0.5,
@@ -19434,7 +19447,7 @@
         },
         {
           "date": "3/19",
-          "polymarket": 95,
+          "polymarket": 96,
           "kalshi": 91
         }
       ],
@@ -19446,7 +19459,7 @@
       "state": "SC",
       "district": null,
       "description": "Will the Democratic party win the governorship in South Carolina",
-      "dem_base": 0.075,
+      "dem_base": 0.065,
       "pm": null,
       "kalshi": "GOVPARTYSC-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartysc/south-carolina-governor/govpartysc-26",
@@ -20076,7 +20089,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 8
+          "kalshi": 6
         }
       ],
       "note": null
@@ -23419,13 +23432,13 @@
           "Ben Wikler": 0.5,
           "Brett Hulsey": 0.5,
           "David Crowley": 5.0,
-          "Francesca Hong": 17.0,
+          "Francesca Hong": 17.5,
           "Joel Brennan": 1.5,
           "Josh Kaul": 0.5,
           "Kelda Roys": 1.5,
           "Mandela Barnes": 37.0,
           "Missy Hughes": 0.5,
-          "Sara Rodriguez": 34.0,
+          "Sara Rodriguez": 34.5,
           "Tony Evers": 0.5
         }
       ],
@@ -24154,7 +24167,7 @@
       "state": "AZ",
       "district": "1",
       "description": "Will Democratic win the House race for AZ-1?",
-      "dem_base": 0.735,
+      "dem_base": 0.705,
       "pm": null,
       "kalshi": "HOUSEAZ1-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseaz1/house-arizona-1st/houseaz1-26",
@@ -24774,7 +24787,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 74
+          "kalshi": 70
         }
       ],
       "note": null
@@ -40693,7 +40706,7 @@
       "state": "ME",
       "district": "2",
       "description": "Will Democratic win the House race for ME-2?",
-      "dem_base": 0.49,
+      "dem_base": 0.485,
       "pm": null,
       "kalshi": "HOUSEME2-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseme2/house-maine-2nd/houseme2-26",
@@ -41368,7 +41381,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 49
+          "kalshi": 48
         }
       ],
       "note": null
@@ -56788,7 +56801,7 @@
       "state": "NY",
       "district": "18",
       "description": "Will a Democrat win the House race for NY-18?",
-      "dem_base": 0.92,
+      "dem_base": 0.91,
       "pm": null,
       "kalshi": "HOUSENY18-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny18/house-nys-18th/houseny18-26",
@@ -57473,7 +57486,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 92
+          "kalshi": 91
         }
       ],
       "note": null
@@ -62438,7 +62451,7 @@
       "state": "PA",
       "district": "7",
       "description": "Will Democratic win the House race for PA-7?",
-      "dem_base": 0.735,
+      "dem_base": 0.73,
       "pm": null,
       "kalshi": "HOUSEPA7-26-D",
       "kalshi_url": "https://kalshi.com/markets/housepa7/house-pennsylvania-7th/housepa7-26",
@@ -63123,7 +63136,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 74
+          "kalshi": 73
         }
       ],
       "note": null
@@ -75218,7 +75231,7 @@
           "George Washington Markert": 8.0,
           "Heidi Ganahl": 6.0,
           "Janak Joshi": 17.0,
-          "Mark Baisley": 44.5
+          "Mark Baisley": 45.0
         }
       ],
       "note": null
@@ -75257,8 +75270,8 @@
         },
         {
           "date": "3/19",
-          "John Hickenlooper": 66.5,
-          "Julie Gonzales": 32.5,
+          "John Hickenlooper": 68.0,
+          "Julie Gonzales": 32.0,
           "Karen Breslin": 1.0,
           "Nichole Miner": 1.0
         }
@@ -75998,7 +76011,7 @@
         },
         {
           "date": "3/19",
-          "Alexander Vindman": 87.5,
+          "Alexander Vindman": 89.0,
           "Angie Nixon": 1.5,
           "Charlie Crist": 1.0,
           "Hector Mujica": 1.5,
@@ -76798,7 +76811,7 @@
           "Brian Kemp": 0.5,
           "Buddy Carter": 1.5,
           "Christina Loren Clement": 0.2,
-          "Christoph La'Flare Chapman": 0.8,
+          "Christoph La'Flare Chapman": 1.1,
           "Derek Dooley": 8.5,
           "John King": 0.5,
           "Jonathan McColumn": 0.4,
@@ -79035,7 +79048,7 @@
       "state": "KS",
       "district": null,
       "description": "Will Democrats win the Senate race in Kansas?",
-      "dem_base": 0.15,
+      "dem_base": 0.155,
       "pm": null,
       "kalshi": "SENATEKS-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateks/kansas-senate-race/senateks-26",
@@ -79710,7 +79723,7 @@
         {
           "date": "3/19",
           "polymarket": null,
-          "kalshi": 15
+          "kalshi": 16
         }
       ],
       "note": null
@@ -79792,7 +79805,7 @@
           "Andy Barr": 50.5,
           "Daniel Cameron": 12.5,
           "Kelly Craft": 0.5,
-          "Nate Morris": 39.5,
+          "Nate Morris": 40.5,
           "Robert Stivers": 0.5,
           "Ryan Quarles": 0.5,
           "Scott Jennings": 0.5
@@ -81295,8 +81308,8 @@
           "date": "3/19",
           "Alexander Rikleen": 0.5,
           "Ayanna Pressley": 0.5,
-          "Ed Markey": 79.0,
-          "Seth Moulton": 19.5
+          "Ed Markey": 77.0,
+          "Seth Moulton": 20.0
         }
       ],
       "note": null
@@ -82221,13 +82234,13 @@
       "state": "MI",
       "district": null,
       "description": "Will Democrats win the Senate race in Michigan?",
-      "dem_base": 0.802,
+      "dem_base": 0.805,
       "pm": "michigan-senate-election-winner",
       "kalshi": "SENATEMI-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatemi/michigan-senate-race/senatemi-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/michigan/",
       "poll_avg_dem": 44.9,
-      "market_gap": 35.4,
+      "market_gap": 35.6,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -83059,9 +83072,9 @@
           "Abdul El-Sayed": 20.5,
           "Andy Levin": 0.5,
           "Dana Nessel": 0.5,
-          "Haley Stevens": 19.5,
+          "Haley Stevens": 17.5,
           "Kristen McDonald Rivet": 0.5,
-          "Mallory McMorrow": 65.0,
+          "Mallory McMorrow": 66.5,
           "Matt Sahr": 0.5,
           "Rashida Tlaib": 1.0,
           "Sarah Anthony": 0.5
@@ -83875,7 +83888,7 @@
           "Kristin Robbins": 0.5,
           "Mark York": 1.0,
           "Michele Tafoya": 79.0,
-          "Royce White": 4.0,
+          "Royce White": 3.0,
           "Tom Weiler": 1.0
         }
       ],
@@ -83947,7 +83960,7 @@
       "state": "MS",
       "district": null,
       "description": "Will Democrats win the Senate race in Mississippi?",
-      "dem_base": 0.08,
+      "dem_base": 0.075,
       "pm": null,
       "kalshi": "SENATEMS-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatems/mississippi-senate-race/senatems-26",
@@ -86910,7 +86923,7 @@
       "state": "NH",
       "district": null,
       "description": "Will Democrats win the Senate race in New Hampshire?",
-      "dem_base": 0.863,
+      "dem_base": 0.865,
       "pm": "new-hampshire-senate-election-winner",
       "kalshi": "SENATENH-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatenh/new-hampshire-senate-race/senatenh-26",
@@ -88485,13 +88498,13 @@
         },
         {
           "date": "3/19",
-          "Alex Zdan": 35.0,
+          "Alex Zdan": 35.5,
           "Alina Habba": 7.5,
           "Justin Murphy": 7.0,
           "Mike Testa": 2.0,
           "Natalie Rivera": 2.5,
           "Richard Tabor": 37.0,
-          "Vinnie Brand": 7.5
+          "Vinnie Brand": 8.0
         }
       ],
       "note": null
@@ -93228,13 +93241,13 @@
       "state": "TX",
       "district": null,
       "description": "Will Republicans win the Senate race in Texas?",
-      "dem_base": 0.417,
+      "dem_base": 0.42,
       "pm": "texas-senate-election-winner",
       "kalshi": "SENATETX-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatetx/texas-senate-race/senatetx-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/texas/",
       "poll_avg_dem": 44.0,
-      "market_gap": -2.2,
+      "market_gap": -2.0,
       "race_type": "general",
       "primary_party": null,
       "result": null,
@@ -93991,7 +94004,7 @@
         },
         {
           "date": "3/19",
-          "polymarket": 41,
+          "polymarket": 42,
           "kalshi": 42
         }
       ],
@@ -94027,8 +94040,8 @@
         },
         {
           "date": "3/19",
-          "John Cornyn": 56.5,
-          "Ken Paxton": 42.0
+          "John Cornyn": 57.5,
+          "Ken Paxton": 41.5
         }
       ],
       "note": null
@@ -95427,13 +95440,13 @@
         },
         {
           "date": "3/19",
-          "Aldous Mina": 6.5,
+          "Aldous Mina": 11.0,
           "Bryce Reeves": 0.5,
-          "Chuck Smith": 30.0,
-          "David Williams": 18.5,
+          "Chuck Smith": 31.0,
+          "David Williams": 19.5,
           "Jason Miyares": 0.5,
-          "Kim Farington": 5.5,
-          "Winsome Earle-Sears": 3.5
+          "Kim Farington": 9.5,
+          "Winsome Earle-Sears": 5.5
         }
       ],
       "note": null
@@ -96219,9 +96232,9 @@
         },
         {
           "date": "3/19",
-          "Jeff Kessler": 68.5,
+          "Jeff Kessler": 69.0,
           "Rachel Fetty Anderson": 2.5,
-          "Rio Phillips": 3.5,
+          "Rio Phillips": 4.5,
           "Thornton Cooper": 3.0,
           "Zach Shrewsbury": 22.5
         }
