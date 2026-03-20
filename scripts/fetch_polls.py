@@ -355,10 +355,164 @@ def _parse_table(table, race_id, article_url):
     return polls
 
 
+# ── Primary section detection ──────────────────────────────────────────────────
+
+# Column header patterns that are NOT candidate names
+_NON_CAND_RE = re.compile(
+    r"^(poll|firm|source|survey|organ|date|field|conduct|period|"
+    r"sample|size|margin|error|moe|±|other|undecided|tbd|total|"
+    r"lead|spread|n\s*=|%\s*$)",
+    re.IGNORECASE,
+)
+
+
+def _nearest_primary_context(table):
+    """
+    Walk backwards through headings to determine if this table is inside a
+    Democratic or Republican primary section.  Returns 'D', 'R', or None.
+    Stops at the first h2 boundary (top-level section change).
+    """
+    for heading in table.find_all_previous(["h2", "h3", "h4"]):
+        text = re.sub(r"\[.*?\]", "", heading.get_text()).lower().strip()
+        if "primary" in text or "caucus" in text:
+            if any(w in text for w in ("democrat", "democratic")):
+                return "D"
+            if any(w in text for w in ("republican", "gop")):
+                return "R"
+        # Any h2 without "primary" is a different top-level section — stop
+        if heading.name == "h2":
+            return None
+    return None
+
+
+def _parse_primary_table(table, race_id, article_url):
+    """
+    Parse a primary polling table where columns are candidate names
+    (no D/R background colors).  Returns list of poll dicts.
+    """
+    rows = table.find_all("tr")
+    if not rows:
+        return []
+
+    # Find the last header row
+    header_rows = []
+    for row in rows[:4]:
+        ths = row.find_all("th")
+        tds = row.find_all("td")
+        if ths and len(ths) >= len(tds):
+            header_rows.append(ths)
+    if not header_rows:
+        return []
+
+    col_ths = header_rows[-1]
+    col_texts = [
+        re.sub(r"\s*\[[^\]]{1,10}\]", "", th.get_text(" ", strip=True)).strip()
+        for th in col_ths
+    ]
+    lower_texts = [t.lower() for t in col_texts]
+
+    # Must look like a polling table
+    if not any(kw in t for t in lower_texts for kw in ("poll", "source", "date", "conduct", "survey")):
+        return []
+
+    pollster_col = date_col = sample_col = None
+    candidate_cols = []  # [(col_idx, clean_name)]
+
+    for i, text in enumerate(col_texts):
+        t = text.lower()
+        if pollster_col is None and any(kw in t for kw in ("poll", "firm", "source", "survey", "organization")):
+            pollster_col = i
+        elif date_col is None and any(kw in t for kw in ("date", "field", "conduct", "period")):
+            date_col = i
+        elif sample_col is None and any(kw in t for kw in ("sample", "size", "n=")):
+            sample_col = i
+        elif not _NON_CAND_RE.match(text) and len(text) > 2:
+            # Looks like a candidate name — strip trailing party suffix e.g. "(D)"
+            clean = re.sub(r"\s*\([DR]\)\s*$", "", text, flags=re.IGNORECASE).strip()
+            if len(clean) > 2:
+                candidate_cols.append((i, clean))
+
+    # Need at least 2 identifiable candidates
+    if len(candidate_cols) < 2:
+        return []
+
+    candidate_cols = candidate_cols[:3]   # cap at 3
+    cnames = [cn for _, cn in candidate_cols]
+
+    polls = []
+    for row in rows:
+        cells = row.find_all(["td", "th"])
+        if not row.find("td"):
+            continue
+
+        max_idx = max(
+            [pollster_col or 0, date_col or 0, sample_col or 0]
+            + [ci for ci, _ in candidate_cols]
+        )
+        if len(cells) <= max_idx:
+            continue
+
+        pollster  = _cell_text(cells, pollster_col) or "Unknown"
+        poll_date = _parse_date(_cell_text(cells, date_col))
+        sample    = _parse_sample(_cell_text(cells, sample_col)) if sample_col is not None else None
+
+        # Skip aggregator/average rows
+        if re.search(r"\baverage\b|\baggregate\b", pollster.lower()):
+            continue
+
+        cand_pcts = {cn: _parse_pct(_cell_text(cells, ci)) for ci, cn in candidate_cols}
+
+        if all(v is None for v in cand_pcts.values()):
+            continue
+
+        c1, c2 = cnames[0], cnames[1]
+        c3 = cnames[2] if len(cnames) > 2 else None
+        c1_pct = cand_pcts.get(c1)
+        c2_pct = cand_pcts.get(c2)
+        c3_pct = cand_pcts.get(c3) if c3 else None
+
+        if c1_pct is None and c2_pct is None:
+            continue
+
+        if c1_pct is not None and c2_pct is not None:
+            spread       = round(c1_pct - c2_pct, 1)
+            leader       = c1.split()[-1] if spread >= 0 else c2.split()[-1]
+            spread_label = f"{leader} +{abs(spread)}"
+        else:
+            spread = spread_label = None
+
+        polls.append({
+            "race_id":         race_id,
+            "poll_date":       poll_date,
+            "pollster":        pollster,
+            "sample_size":     sample,
+            "candidate_1":     c1,
+            "candidate_1_pct": c1_pct,
+            "candidate_2":     c2,
+            "candidate_2_pct": c2_pct,
+            "candidate_3":     c3,
+            "candidate_3_pct": c3_pct,
+            "spread":          spread,
+            "spread_label":    spread_label,
+            "source_url":      article_url,
+            "rcp_url":         None,
+            "fte_grade":       None,
+            "population":      None,
+            "stage":           "primary",
+        })
+
+    return polls
+
+
 # ── Per-race fetcher ───────────────────────────────────────────────────────────
 
 def fetch_polls_for_race(race_id):
-    """Fetch and parse all polling tables for one race. Returns list of polls."""
+    """
+    Fetch and parse all polling tables for one race.
+    Also detects primary polling sections (candidate-name column headers) and
+    stores those under the appropriate primary race_id.
+    Returns list of polls (may include polls for related primary race_ids).
+    """
     info = _article_info(race_id)
     if info is None:
         return []
@@ -371,19 +525,37 @@ def fetch_polls_for_race(race_id):
     soup = BeautifulSoup(html, "lxml")
     tables = soup.find_all("table", class_=re.compile(r"wikitable"))
 
-    polls = []
+    parts   = race_id.split("-")
+    chamber = parts[0]           # "senate" or "governor"
+    state   = parts[1] if len(parts) > 1 else None
+
+    seen   = set()   # (race_id, pollster, poll_date)
+    polls  = []
+
     for table in tables:
-        polls.extend(_parse_table(table, race_id, url))
+        # Try general election parse first (D/R color-coded columns)
+        gp = _parse_table(table, race_id, url)
+        if gp:
+            for p in gp:
+                key = (p["race_id"], p["pollster"], p["poll_date"])
+                if key not in seen:
+                    seen.add(key)
+                    polls.append(p)
+            continue   # don't also attempt primary parse on the same table
 
-    # Deduplicate by (pollster, poll_date)
-    seen, unique = set(), []
-    for p in polls:
-        key = (p["pollster"], p["poll_date"])
-        if key not in seen:
-            seen.add(key)
-            unique.append(p)
+        # Try primary parse (candidate-name columns inside a primary section)
+        if state:
+            party = _nearest_primary_context(table)
+            if party:
+                prim_rid = f"primary-{state}-{chamber}-{party}-2026"
+                pp = _parse_primary_table(table, prim_rid, url)
+                for p in pp:
+                    key = (p["race_id"], p["pollster"], p["poll_date"])
+                    if key not in seen:
+                        seen.add(key)
+                        polls.append(p)
 
-    return unique
+    return polls
 
 
 # ── Main entry point ───────────────────────────────────────────────────────────

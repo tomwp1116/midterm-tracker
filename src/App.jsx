@@ -27,6 +27,25 @@ const primaryParty = race => race.primary_party
   || (race.race_id?.toUpperCase().includes("-D-") ? "D" : race.race_id?.toUpperCase().includes("-R-") ? "R" : null);
 const primaryColors = race => PRIMARY_PALETTE[primaryParty(race)] || PRIMARY_PALETTE.D;
 
+function formatPrimaryDate(d) {
+  if (!d) return "—";
+  const [, m, day] = d.split("-");
+  const months = ["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `${months[+m]} ${+day}`;
+}
+
+function primaryKalshiLeader(race) {
+  const ts = race.time_series || [];
+  if (!ts.length) return null;
+  const lastPt = ts[ts.length - 1];
+  let best = null, bestVal = -1;
+  for (const [k, v] of Object.entries(lastPt)) {
+    if (k === "date" || k === "isPollDate" || k === "pollster") continue;
+    if (v != null && v > bestVal) { best = k; bestVal = v; }
+  }
+  return best ? { name: best, pct: bestVal } : null;
+}
+
 // Extract unique candidate names from polls in order of first appearance.
 function pollCandidates(race) {
   const seen = new Map();
@@ -45,7 +64,7 @@ function buildPrimaryTimeSeries(race) {
 
   // Discover candidate names from time_series keys (candidate-keyed market data)
   const mktCandidates = ts.length > 0
-    ? Object.keys(ts[0]).filter(k => k !== "date" && k !== "isPollDate" && k !== "pollster")
+    ? [...new Set(ts.flatMap(pt => Object.keys(pt).filter(k => k !== "date" && k !== "isPollDate" && k !== "pollster")))]
     : [];
 
   // Also collect from polls
@@ -66,15 +85,23 @@ function buildPrimaryTimeSeries(race) {
     if (p.c3 && p.c3pct != null) pollByDate[k][p.c3] = p.c3pct;
   });
 
-  const series = ts.map(pt => {
-    const enhanced = { ...pt };
-    if (pollByDate[pt.date]) {
-      // Poll data overwrites market data at poll dates (polls win on specific date)
-      Object.assign(enhanced, pollByDate[pt.date]);
-      enhanced.isPollDate = true;
-    }
-    return enhanced;
-  });
+  // For completed races, exclude election-day and later — market moves on live results
+  const electionDate = race.result ? parseToDate(race.result.date) : null;
+
+  const series = ts
+    .filter(pt => {
+      if (!electionDate) return true;
+      const d = parseToDate(pt.date);
+      return d == null || d < electionDate;
+    })
+    .map(pt => {
+      const enhanced = { ...pt };
+      if (pollByDate[pt.date]) {
+        Object.assign(enhanced, pollByDate[pt.date]);
+        enhanced.isPollDate = true;
+      }
+      return enhanced;
+    });
 
   return { series, candidates };
 }
@@ -108,6 +135,7 @@ function parseToDate(s) {
 // Mutates the race object in place — call after time_series is populated.
 function enrichTimeSeries(race) {
   if (!race.time_series) return;
+  if (isPrimary(race)) return; // primaries use buildPrimaryTimeSeries for poll overlay
   if (race.polls?.length) {
     // Step 1: attach individual polls to the time-series point on their date
     const lk = {};
@@ -336,17 +364,21 @@ function GeneralChart({data, race}) {
   </>);}
 
 // ── Primary election chart (per-candidate poll support lines, multi-color) ──
-function PrimaryTip({active, payload, candidates, colors}) {
+function PrimaryTip({active, payload, colorMap}) {
   if(!active||!payload?.length)return null;
   const pt=payload[0]?.payload;
   if(!pt)return null;
+  // Sort by current point value descending so leader is always on top
+  const sorted = Object.keys(colorMap)
+    .filter(c=>pt[c]!=null)
+    .sort((a,b)=>pt[b]-pt[a]);
   return(
     <div style={{background:"#fff",border:"1px solid #ddd",padding:"10px 14px",fontSize:13,color:"#222",boxShadow:"0 2px 8px rgba(0,0,0,.08)",maxWidth:260,lineHeight:1.6,fontFamily:S}}>
       <div style={{fontWeight:600,marginBottom:6,color:"#999",fontSize:12}}>{pt.date}</div>
-      {candidates.map((c,i)=>pt[c]!=null&&(
+      {sorted.map(c=>(
         <div key={c} style={{display:"flex",justifyContent:"space-between",gap:20}}>
-          <span style={{color:colors[i%colors.length],fontWeight:500}}>{c}</span>
-          <strong style={{color:colors[i%colors.length]}}>{pt[c]}%</strong>
+          <span style={{color:colorMap[c],fontWeight:500}}>{c}</span>
+          <strong style={{color:colorMap[c]}}>{pt[c]}%</strong>
         </div>
       ))}
       {pt.isPollDate&&<div style={{borderTop:"1px solid #eee",marginTop:6,paddingTop:5,fontSize:11,color:"#aaa"}}>
@@ -356,21 +388,43 @@ function PrimaryTip({active, payload, candidates, colors}) {
   );
 }
 
-function PrimaryChart({race}) {
+// Shared: compute a stable candidate→color map for a primary race.
+// Sorted by: winner first (if result exists), runner-up second, then by last known market price.
+function primaryColorMap(race) {
   const party = primaryParty(race) || "D";
   const colors = PRIMARY_PALETTE[party];
-  const {series, candidates} = buildPrimaryTimeSeries(race);
+  const ts = race.time_series || [];
+  const lastPt = ts[ts.length - 1] || {};
+  const res = race.result;
+  // Candidates from time series keys
+  const candidates = ts.length > 0
+    ? [...new Set(ts.flatMap(pt => Object.keys(pt).filter(k => k !== "date" && k !== "isPollDate" && k !== "pollster")))]
+    : pollCandidates(race);
+  const sorted = [...candidates].sort((a, b) => {
+    if (res) {
+      const ra = a === res.winner ? 0 : a === res.runner_up ? 1 : 2;
+      const rb = b === res.winner ? 0 : b === res.runner_up ? 1 : 2;
+      if (ra !== rb) return ra - rb;
+    }
+    return (lastPt[b] ?? -1) - (lastPt[a] ?? -1);
+  });
+  return Object.fromEntries(sorted.map((c, i) => [c, colors[i % colors.length]]));
+}
 
-  // Latest market probability (for badge)
-  const latestTs = (race.time_series||[]).at(-1);
-  const marketPct = latestTs?.polymarket ?? latestTs?.kalshi;
+function PrimaryChart({race}) {
+  const {series, candidates} = buildPrimaryTimeSeries(race);
+  const colorMap = primaryColorMap(race);
+  // Respect the colorMap's insertion order (already sorted)
+  const sortedCandidates = Object.keys(colorMap).filter(c => candidates.includes(c));
+
+  const party = primaryParty(race) || "D";
+  const colors = PRIMARY_PALETTE[party];
 
   // Determine y-axis range from poll values
-  const allVals = series.flatMap(pt=>candidates.map(c=>pt[c]).filter(v=>v!=null));
+  const allVals = series.flatMap(pt=>sortedCandidates.map(c=>pt[c]).filter(v=>v!=null));
   if(!allVals.length) return(
     <div style={{padding:"20px 0",color:"#aaa",fontSize:13,fontStyle:"italic",fontFamily:S}}>
-      No poll data for this primary yet.{" "}
-      {marketPct!=null&&<span>Market has the leader at <strong style={{color:colors[0]}}>{marketPct}%</strong> to win.</span>}
+      No market or poll data for this primary yet.
     </div>
   );
 
@@ -381,35 +435,27 @@ function PrimaryChart({race}) {
   const borderClr = colors[0]+"33";
 
   return(<>
-    {/* Market probability badge */}
-    {marketPct!=null&&(
-      <div style={{display:"inline-flex",alignItems:"center",gap:10,background:bg,border:`1px solid ${borderClr}`,borderRadius:4,padding:"7px 14px",marginBottom:14,fontSize:13,fontFamily:S}}>
-        <span style={{color:"#888"}}>Market — leader win probability:</span>
-        <strong style={{color:colors[0],fontSize:15}}>{marketPct}%</strong>
-      </div>
-    )}
     <ResponsiveContainer width="100%" height={230}><ComposedChart data={series} margin={{top:8,right:12,bottom:8,left:0}}>
       <XAxis dataKey="date" tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={{stroke:"#ddd"}} interval={4}/>
       <YAxis domain={[yMin,yMax]} tick={{fontSize:11,fill:"#999"}} tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`} width={34}/>
-      <Tooltip content={<PrimaryTip candidates={candidates} colors={colors}/>}/>
+      <Tooltip content={<PrimaryTip colorMap={colorMap}/>}/>
       {/* Vertical markers at each poll date */}
       {pollDates.map(pt=>(
         <ReferenceLine key={`pp-${pt.date}`} x={pt.date} stroke="#ddd" strokeWidth={1} strokeDasharray="3 3"/>
       ))}
       {/* One line per candidate */}
-      {candidates.map((c,i)=>(
+      {sortedCandidates.map(c=>(
         <Line key={c} type="linear" dataKey={c}
-          stroke={colors[i%colors.length]} strokeWidth={2.5}
-          dot={{r:5,fill:colors[i%colors.length],stroke:"#fff",strokeWidth:2}}
-          activeDot={{r:6}} connectNulls={false} isAnimationActive={false}/>
+          stroke={colorMap[c]} strokeWidth={2.5}
+          dot={false} activeDot={{r:5}} connectNulls={false} isAnimationActive={false}/>
       ))}
     </ComposedChart></ResponsiveContainer>
-    {/* Candidate color legend */}
+    {/* Candidate color legend — sorted by final result */}
     <div style={{display:"flex",gap:18,marginTop:6,marginBottom:16,fontSize:12,flexWrap:"wrap",fontFamily:S}}>
-      {candidates.map((c,i)=>(
+      {sortedCandidates.map(c=>(
         <span key={c} style={{display:"flex",alignItems:"center",gap:6}}>
-          <span style={{width:14,height:14,borderRadius:"50%",background:colors[i%colors.length],display:"inline-block",flexShrink:0}}/>
-          <span style={{color:colors[i%colors.length],fontWeight:600}}>{c}</span>
+          <span style={{width:14,height:14,borderRadius:"50%",background:colorMap[c],display:"inline-block",flexShrink:0}}/>
+          <span style={{color:colorMap[c],fontWeight:600}}>{c}</span>
         </span>
       ))}
       <span style={{marginLeft:"auto",color:"#bbb",fontSize:11}}>Y-axis = poll support %</span>
@@ -426,7 +472,42 @@ function RaceChart({race}) {
 function rat(d){if(d>=.85)return{l:"Safe D.",c:DEM};if(d>=.60)return{l:"Lean D.",c:DEM};if(d>=.40)return{l:"Toss-up",c:"#7c3aed"};if(d>=.15)return{l:"Lean R.",c:REP};return{l:"Safe R.",c:REP};}
 
 // ── Detail panel ──
-function Detail({race,onClose}){const data=race.time_series||[];return(
+function Detail({race,onClose}){
+  const data=race.time_series||[];
+  const primary=isPrimary(race);
+
+  // For primary races: compute market leader and latest poll leader from shared colorMap
+  const cmap = primary ? primaryColorMap(race) : null;
+  const sortedCands = cmap ? Object.keys(cmap) : [];
+
+  // Current market leader = candidate with highest value in last pre-election time series point
+  const lastPt = data[data.length-1] || {};
+  const mktLeader = sortedCands.length ? sortedCands.find(c => lastPt[c] != null) : null;
+  const mktLeaderPct = mktLeader ? lastPt[mktLeader] : null;
+
+  // Latest poll leader
+  const lp = race.polls?.[0];
+  let pollLeader = null, pollLeaderPct = null;
+  if (lp && primary && cmap) {
+    const pm = {};
+    if (lp.c1 && lp.d    != null) pm[lp.c1]  = lp.d;
+    if (lp.c2 && lp.r    != null) pm[lp.c2]  = lp.r;
+    if (lp.c3 && lp.c3pct!= null) pm[lp.c3]  = lp.c3pct;
+    pollLeader = Object.entries(pm).sort((a,b)=>b[1]-a[1])[0]?.[0] || null;
+    pollLeaderPct = pollLeader ? pm[pollLeader] : null;
+  }
+
+  // Unique poll candidates (sorted by market order for consistent columns)
+  const pollCandSet = new Set();
+  if (primary) (race.polls||[]).forEach(p=>{
+    if(p.c1)pollCandSet.add(p.c1);
+    if(p.c2)pollCandSet.add(p.c2);
+    if(p.c3)pollCandSet.add(p.c3);
+  });
+  const pollCols = [...sortedCands.filter(c=>pollCandSet.has(c)),
+                    ...[...pollCandSet].filter(c=>!sortedCands.includes(c))].slice(0,4);
+
+  return(
   <tr><td colSpan={7} style={{padding:0,borderBottom:"1px solid #ddd"}}>
     <div style={{borderTop:"2px solid #222",padding:"20px 16px 24px",background:"#fafafa",animation:"so .25s ease"}}>
       <style>{`@keyframes so{from{max-height:0;opacity:0}to{max-height:900px;opacity:1}}`}</style>
@@ -437,50 +518,169 @@ function Detail({race,onClose}){const data=race.time_series||[];return(
         </div>
         <button onClick={e=>{e.stopPropagation();onClose();}} style={{background:"none",border:"1px solid #ccc",color:"#666",borderRadius:3,padding:"4px 12px",cursor:"pointer",fontSize:12,fontFamily:S}}>Close</button>
       </div>
+
+      {/* Primary: market leader + latest poll panels */}
+      {primary && (mktLeader || lp) && (
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:16}}>
+          <div style={{background:"#fff",border:"1px solid #e5e5e5",borderRadius:4,padding:"16px"}}>
+            <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".08em",color:"#999",fontFamily:S,marginBottom:8}}>Market Leader</div>
+            {mktLeader ? (
+              <>
+                <div style={{fontSize:26,fontWeight:700,color:cmap[mktLeader],fontFamily:"Georgia,'Times New Roman',serif",marginBottom:4}}>{mktLeaderPct}%</div>
+                <div style={{fontSize:13,color:"#555",fontFamily:S}}>{mktLeader}</div>
+              </>
+            ) : <div style={{fontSize:13,color:"#aaa",fontFamily:S,fontStyle:"italic"}}>No market data yet</div>}
+            <div style={{display:"flex",gap:12,marginTop:10,flexWrap:"wrap"}}>
+              {race.pm&&<a href={`https://polymarket.com/event/${race.pm}`} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"#555",textDecoration:"none",borderBottom:"1px solid #ccc",fontFamily:S}} onClick={e=>e.stopPropagation()}>Polymarket ↗</a>}
+              {race.kalshi&&<a href={race.kalshi_url||`https://kalshi.com/markets/${race.kalshi}`} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"#555",textDecoration:"none",borderBottom:"1px solid #ccc",fontFamily:S}} onClick={e=>e.stopPropagation()}>Kalshi ↗</a>}
+            </div>
+          </div>
+          <div style={{background:"#fff",border:"1px solid #e5e5e5",borderRadius:4,padding:"16px"}}>
+            <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".08em",color:"#999",fontFamily:S,marginBottom:8}}>Latest Poll</div>
+            {lp && pollLeader ? (
+              <>
+                <div style={{fontSize:26,fontWeight:700,color:cmap[pollLeader]||"#333",fontFamily:"Georgia,'Times New Roman',serif",marginBottom:4}}>{pollLeaderPct}%</div>
+                <div style={{fontSize:13,color:"#555",fontFamily:S,marginBottom:4}}>{pollLeader}</div>
+                <div style={{fontSize:12,color:"#aaa",fontFamily:S}}>{lp.pollster}, {lp.date}</div>
+              </>
+            ) : <div style={{fontSize:13,color:"#aaa",fontFamily:S,fontStyle:"italic"}}>No polls yet</div>}
+          </div>
+        </div>
+      )}
+
       <RaceChart race={race}/>
-      {/* Links */}
-      <div style={{display:"flex",gap:16,marginBottom:20,fontSize:13,fontFamily:S,flexWrap:"wrap"}}>
+
+      {/* General race links */}
+      {!primary && <div style={{display:"flex",gap:16,marginBottom:20,fontSize:13,fontFamily:S,flexWrap:"wrap"}}>
         {race.pm&&<a href={`https://polymarket.com/event/${race.pm}`} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>Polymarket ↗</a>}
         {race.kalshi&&<a href={race.kalshi_url||`https://kalshi.com/markets/${race.kalshi}`} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>Kalshi ↗</a>}
-      </div>
-      {/* Polls */}
-      {race.polls?.length>0&&(<div style={{fontFamily:S}}>
+      </div>}
+
+      {/* Primary polls — structured table */}
+      {primary && race.polls?.length > 0 && (
+        <div style={{fontFamily:S}}>
+          <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:".06em",color:"#999",marginBottom:8}}>Polls</div>
+          <table style={{width:"100%",borderCollapse:"collapse",fontSize:13}}>
+            <thead>
+              <tr style={{borderBottom:"1px solid #e0e0e0"}}>
+                <th style={{padding:"4px 8px",textAlign:"left",color:"#aaa",fontWeight:600,fontSize:11}}>Pollster</th>
+                <th style={{padding:"4px 8px",textAlign:"left",color:"#aaa",fontWeight:600,fontSize:11}}>Date</th>
+                {pollCols.map(c=>(
+                  <th key={c} style={{padding:"4px 8px",textAlign:"right",color:cmap[c]||"#aaa",fontWeight:700,fontSize:11}}>{c.split(" ").pop()}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {race.polls.map((p,i)=>{
+                const pm={};
+                if(p.c1&&p.d    !=null)pm[p.c1]=p.d;
+                if(p.c2&&p.r    !=null)pm[p.c2]=p.r;
+                if(p.c3&&p.c3pct!=null)pm[p.c3]=p.c3pct;
+                return(
+                  <tr key={i} style={{borderBottom:"1px solid #f0f0f0"}}>
+                    <td style={{padding:"6px 8px"}}>
+                      {p.url?<a href={p.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()} style={{color:"#333",textDecoration:"none",borderBottom:"1px solid #ccc"}}>{p.pollster}</a>:<span style={{color:"#333"}}>{p.pollster}</span>}
+                    </td>
+                    <td style={{padding:"6px 8px",color:"#888"}}>{p.date}</td>
+                    {pollCols.map(c=>(
+                      <td key={c} style={{padding:"6px 8px",textAlign:"right",fontWeight:pm[c]!=null?700:400,color:pm[c]!=null?(cmap[c]||"#333"):"#ddd"}}>
+                        {pm[c]!=null?`${pm[c]}%`:"—"}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {primary && !race.polls?.length && <p style={{fontSize:13,color:"#aaa",fontStyle:"italic",fontFamily:S}}>No polls have been released for this race yet.</p>}
+
+      {/* General race polls — existing flat list */}
+      {!primary && race.polls?.length>0&&(<div style={{fontFamily:S}}>
         <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:".06em",color:"#999",marginBottom:8}}>Polls</div>
-        {race.polls.map((p,i)=>{
-          const pColors = isPrimary(race) ? primaryColors(race) : [DEM, REP];
-          const c1Label = p.c1 || (isPrimary(race) ? "Cand. 1" : "Dem");
-          const c2Label = p.c2 || (isPrimary(race) ? "Cand. 2" : "Rep");
-          return(<div key={i} style={{padding:"8px 0",borderTop:i?"1px solid #e8e8e8":"none"}}>
+        {race.polls.map((p,i)=>(
+          <div key={i} style={{padding:"8px 0",borderTop:i?"1px solid #e8e8e8":"none"}}>
             <div style={{display:"flex",alignItems:"baseline",gap:10,flexWrap:"wrap"}}>
               <span style={{fontSize:13,color:"#999",width:46}}>{p.date}</span>
               {p.url?<a href={p.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()} style={{fontSize:13,fontWeight:600,color:"#333",textDecoration:"none",borderBottom:"1px solid #ccc"}}>{p.pollster}</a>:<span style={{fontSize:13,fontWeight:600,color:"#333"}}>{p.pollster}</span>}
-              {p.d!=null&&<span style={{fontSize:14,fontWeight:700,color:pColors[0]}}>{c1Label} {p.d}%</span>}
-              {p.r!=null&&<><span style={{color:"#ccc"}}>–</span><span style={{fontSize:14,fontWeight:700,color:pColors[1]}}>{c2Label} {p.r}%</span></>}
-              {p.c3&&p.c3pct!=null&&<><span style={{color:"#ccc"}}>–</span><span style={{fontSize:14,fontWeight:700,color:pColors[2]||"#555"}}>{p.c3} {p.c3pct}%</span></>}
+              {p.d!=null&&<span style={{fontSize:14,fontWeight:700,color:DEM}}>Dem {p.d}%</span>}
+              {p.r!=null&&<><span style={{color:"#ccc"}}>–</span><span style={{fontSize:14,fontWeight:700,color:REP}}>Rep {p.r}%</span></>}
               <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:spreadColor(p.d,p.r,p.spread)}}>{p.spread}</span>
             </div>
             {p.matchup&&<div style={{fontSize:12,color:"#999",marginTop:2,paddingLeft:56}}>{p.matchup}</div>}
-          </div>);
-        })}
+          </div>
+        ))}
       </div>)}
-      {!race.polls?.length&&<p style={{fontSize:13,color:"#aaa",fontStyle:"italic",fontFamily:S}}>No polls have been released for this race yet.</p>}
+      {!primary&&!race.polls?.length&&<p style={{fontSize:13,color:"#aaa",fontStyle:"italic",fontFamily:S}}>No polls have been released for this race yet.</p>}
     </div>
   </td></tr>);}
 
-// ── Completed race detail with winner banner ──
+// ── Helpers for completed race accuracy analysis ──
+function winnerMarketProb(race) {
+  const ts = race.time_series || [];
+  const res = race.result;
+  if (!res || !ts.length) return null;
+  // Use last pre-election-day data point — election day itself is polluted by
+  // live result flow and settlement, making the midpoint meaningless.
+  const electionDate = parseToDate(res.date);
+  for (let i = ts.length - 1; i >= 0; i--) {
+    const pt = ts[i];
+    if (electionDate) {
+      const ptDate = parseToDate(pt.date);
+      if (ptDate && ptDate >= electionDate) continue;
+    }
+    if (isPrimary(race)) {
+      if (pt[res.winner] != null) return pt[res.winner];
+    } else {
+      const p = pt.polymarket ?? pt.kalshi;
+      if (p != null) return res.party === "D" ? p : Math.round(100 - p);
+    }
+  }
+  return null;
+}
+
+function pollVsResult(race) {
+  const polls = race.polls || [];
+  const res = race.result;
+  if (!polls.length || !res || res.pct == null || res.runner_up_pct == null) return null;
+  const lp = polls[0];
+  const actual = +(res.pct - res.runner_up_pct).toFixed(1);
+  let wPct, ruPct;
+  if (isPrimary(race)) {
+    // Build name→pct map covering all three candidate slots
+    const cm = {};
+    if (lp.c1 && lp.d    != null) cm[lp.c1]  = lp.d;
+    if (lp.c2 && lp.r    != null) cm[lp.c2]  = lp.r;
+    if (lp.c3 && lp.c3pct!= null) cm[lp.c3]  = lp.c3pct;
+    wPct  = cm[res.winner];
+    ruPct = cm[res.runner_up];
+  } else {
+    wPct  = res.party === "D" ? lp.d : lp.r;
+    ruPct = res.party === "D" ? lp.r : lp.d;
+  }
+  if (wPct == null) return null;
+  const predicted = +(wPct - (ruPct || 0)).toFixed(1);
+  const error = +(Math.abs(actual - predicted)).toFixed(1);
+  return { predicted, actual, error, correct: predicted > 0, pollster: lp.pollster, date: lp.date };
+}
+
+// ── Completed race detail ──
 function CompletedDetail({race, onClose}) {
   const data = race.time_series || [];
   const res = race.result;
   const winColor = res.party === "D" ? DEM : res.party === "R" ? REP : "#666";
-  const loseColor = res.party === "D" ? REP : res.party === "R" ? DEM : "#aaa";
   const totalPct = (res.pct || 0) + (res.runner_up_pct || 0);
   const winWidth = totalPct > 0 ? (res.pct / totalPct * 100) : 50;
+  const marketProb = winnerMarketProb(race);
+  const pollComp = pollVsResult(race);
 
   return (
-    <tr><td colSpan={4} style={{padding:0,borderBottom:"1px solid #ddd"}}>
+    <tr><td colSpan={5} style={{padding:0,borderBottom:"1px solid #ddd"}}>
       <div style={{borderTop:`3px solid ${winColor}`,padding:"20px 16px 24px",background:"#fafafa",animation:"so .25s ease"}}>
         <style>{`@keyframes so{from{max-height:0;opacity:0}to{max-height:900px;opacity:1}}`}</style>
 
+        {/* Header */}
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:16}}>
           <div>
             <h3 style={{fontSize:20,fontWeight:700,margin:0,fontFamily:"Georgia,'Times New Roman',serif"}}>{race.description}</h3>
@@ -489,56 +689,140 @@ function CompletedDetail({race, onClose}) {
           <button onClick={e=>{e.stopPropagation();onClose();}} style={{background:"none",border:"1px solid #ccc",color:"#666",borderRadius:3,padding:"4px 12px",cursor:"pointer",fontSize:12,fontFamily:S}}>Close</button>
         </div>
 
-        {/* Winner banner */}
-        <div style={{background:"#fff",border:"1px solid #e5e5e5",borderRadius:4,padding:"16px 20px",marginBottom:20}}>
+        {/* Election result */}
+        <div style={{background:"#fff",border:"1px solid #e5e5e5",borderRadius:4,padding:"16px 20px",marginBottom:16}}>
           <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".08em",color:"#999",fontFamily:S,marginBottom:8}}>Result — Called {res.date}</div>
-          <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:res.pct ? 12 : 0}}>
+          <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:res.pct != null ? 12 : 0}}>
             <span style={{fontSize:22,fontWeight:700,color:winColor,fontFamily:"Georgia,'Times New Roman',serif"}}>✓ {res.winner}</span>
-            {res.pct&&<span style={{fontSize:18,fontWeight:700,color:winColor}}>{res.pct}%</span>}
+            {res.pct != null && <span style={{fontSize:18,fontWeight:700,color:winColor}}>{res.pct}%</span>}
           </div>
-          {res.runner_up && res.runner_up_pct && (
+          {res.runner_up && res.runner_up_pct != null && (
             <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:12}}>
               <span style={{fontSize:16,color:"#888",fontFamily:S}}>{res.runner_up}</span>
               <span style={{fontSize:16,color:"#888"}}>{res.runner_up_pct}%</span>
             </div>
           )}
-          {/* Result bar */}
-          {res.pct && res.runner_up_pct && (
-            <div style={{display:"flex",height:8,borderRadius:4,overflow:"hidden",background:"#eee"}}>
-              <div style={{width:`${winWidth}%`,background:winColor,borderRadius:"4px 0 0 4px",transition:"width .5s"}} />
-              <div style={{flex:1,background:loseColor,opacity:0.4,borderRadius:"0 4px 4px 0"}} />
-            </div>
+          {res.pct != null && res.runner_up_pct != null && (
+            <>
+              <div style={{display:"flex",height:8,borderRadius:4,overflow:"hidden",background:"#eee",marginBottom:8}}>
+                <div style={{width:`${winWidth}%`,background:winColor,borderRadius:"4px 0 0 4px",transition:"width .5s"}} />
+                <div style={{flex:1,background:"#ddd",borderRadius:"0 4px 4px 0"}} />
+              </div>
+              <div style={{fontSize:13,color:"#555",fontFamily:S}}>Won by {+(res.pct - res.runner_up_pct).toFixed(1)} points</div>
+            </>
           )}
-          {res.note && !res.pct && (
+          {res.note && res.pct == null && (
             <div style={{fontSize:13,color:"#666",fontFamily:S,marginTop:4}}>{res.note}</div>
           )}
         </div>
 
-        {/* Historical chart */}
-        <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".06em",color:"#999",fontFamily:S,marginBottom:6}}>Market odds leading up to the result</div>
-        {data.length > 0 && <RaceChart race={race}/>}
+        {/* Market vs Poll accuracy panels */}
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:20}}>
+          {/* Markets */}
+          <div style={{background:"#fff",border:"1px solid #e5e5e5",borderRadius:4,padding:"16px"}}>
+            <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".08em",color:"#999",fontFamily:S,marginBottom:8}}>What Markets Said</div>
+            {marketProb != null ? (
+              <>
+                <div style={{fontSize:28,fontWeight:700,color:winColor,marginBottom:4,fontFamily:"Georgia,'Times New Roman',serif"}}>{marketProb}%</div>
+                <div style={{fontSize:13,color:"#555",fontFamily:S,marginBottom:10}}>
+                  Pre-election odds on {res.winner}
+                  <span style={{color:"#aaa",marginLeft:4}}>
+                    {marketProb >= 90 ? "— very confident" : marketProb >= 70 ? "— fairly confident" : marketProb >= 55 ? "— leaning" : "— uncertain"}
+                  </span>
+                </div>
+              </>
+            ) : (
+              <div style={{fontSize:13,color:"#aaa",fontFamily:S,fontStyle:"italic",marginBottom:10}}>Race called before tracking began — no market history available</div>
+            )}
+            <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
+              {race.pm&&<a href={`https://polymarket.com/event/${race.pm}`} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"#555",textDecoration:"none",borderBottom:"1px solid #ccc",fontFamily:S}} onClick={e=>e.stopPropagation()}>Polymarket ↗</a>}
+              {race.kalshi&&<a href={race.kalshi_url||`https://kalshi.com/markets/${race.kalshi}`} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"#555",textDecoration:"none",borderBottom:"1px solid #ccc",fontFamily:S}} onClick={e=>e.stopPropagation()}>Kalshi ↗</a>}
+            </div>
+          </div>
 
-        {/* Links */}
-        <div style={{display:"flex",gap:16,marginBottom:16,fontSize:13,fontFamily:S,flexWrap:"wrap"}}>
-          {race.pm&&<a href={`https://polymarket.com/event/${race.pm}`} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>Polymarket ↗</a>}
-          {race.kalshi&&<a href={race.kalshi_url||`https://kalshi.com/markets/${race.kalshi}`} target="_blank" rel="noopener noreferrer" style={{color:"#222",textDecoration:"none",borderBottom:"1px solid #ccc"}} onClick={e=>e.stopPropagation()}>Kalshi ↗</a>}
+          {/* Polls */}
+          <div style={{background:"#fff",border:"1px solid #e5e5e5",borderRadius:4,padding:"16px"}}>
+            <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".08em",color:"#999",fontFamily:S,marginBottom:8}}>What Polls Said</div>
+            {pollComp != null ? (
+              <>
+                <div style={{fontSize:12,color:"#888",fontFamily:S,marginBottom:10}}>{pollComp.pollster} ({pollComp.date})</div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:10}}>
+                  <div>
+                    <div style={{fontSize:11,color:"#aaa",fontFamily:S,marginBottom:2}}>Predicted margin</div>
+                    <div style={{fontSize:22,fontWeight:700,fontFamily:"Georgia,'Times New Roman',serif",color:pollComp.correct ? winColor : "#888"}}>
+                      {pollComp.predicted > 0 ? `+${pollComp.predicted}` : pollComp.predicted}
+                    </div>
+                  </div>
+                  <div>
+                    <div style={{fontSize:11,color:"#aaa",fontFamily:S,marginBottom:2}}>Actual margin</div>
+                    <div style={{fontSize:22,fontWeight:700,fontFamily:"Georgia,'Times New Roman',serif",color:winColor}}>+{pollComp.actual}</div>
+                  </div>
+                </div>
+                <div style={{fontSize:13,fontFamily:S,color:pollComp.error <= 3 ? "#16a34a" : pollComp.error <= 7 ? "#d97706" : "#dc2626"}}>
+                  Off by {pollComp.error} pt{pollComp.error !== 1 ? "s" : ""}
+                  {!pollComp.correct && <span style={{color:"#dc2626"}}> — called it wrong</span>}
+                </div>
+              </>
+            ) : (
+              <div style={{fontSize:13,color:"#aaa",fontFamily:S,fontStyle:"italic"}}>No polls available for this race</div>
+            )}
+          </div>
         </div>
 
-        {/* Poll history */}
-        {race.polls?.length>0&&(<div style={{fontFamily:S}}>
-          <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:".06em",color:"#999",marginBottom:8}}>Pre-election polls</div>
-          {race.polls.map((p,i)=>(<div key={i} style={{padding:"8px 0",borderTop:i?"1px solid #e8e8e8":"none"}}>
-            <div style={{display:"flex",alignItems:"baseline",gap:10,flexWrap:"wrap"}}>
-              <span style={{fontSize:13,color:"#999",width:46}}>{p.date}</span>
-              {p.url?<a href={p.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()} style={{fontSize:13,fontWeight:600,color:"#333",textDecoration:"none",borderBottom:"1px solid #ccc"}}>{p.pollster}</a>:<span style={{fontSize:13,fontWeight:600,color:"#333"}}>{p.pollster}</span>}
-              <span style={{fontSize:14,fontWeight:700,color:DEM}}>Dem {p.d}%</span>
-              <span style={{color:"#ccc"}}>–</span>
-              <span style={{fontSize:14,fontWeight:700,color:REP}}>Rep {p.r}%</span>
-              <span style={{fontSize:13,fontWeight:700,marginLeft:"auto",color:spreadColor(p.d,p.r,p.spread)}}>{p.spread}</span>
-            </div>
-            {p.matchup&&<div style={{fontSize:12,color:"#999",marginTop:2,paddingLeft:56}}>{p.matchup}</div>}
-          </div>))}
-        </div>)}
+        {/* Market history chart */}
+        {data.length > 0 && (
+          <div style={{marginBottom:20}}>
+            <div style={{fontSize:11,textTransform:"uppercase",letterSpacing:".06em",color:"#999",fontFamily:S,marginBottom:6}}>Market odds leading up to the result</div>
+            <RaceChart race={race}/>
+          </div>
+        )}
+
+        {/* Pre-election polls table */}
+        {race.polls?.length > 0 && (
+          <div style={{fontFamily:S}}>
+            <div style={{fontSize:11,fontWeight:700,textTransform:"uppercase",letterSpacing:".06em",color:"#999",marginBottom:8}}>Pre-election polls</div>
+            <table style={{width:"100%",borderCollapse:"collapse",fontSize:13}}>
+              <thead>
+                <tr style={{borderBottom:"1px solid #e0e0e0"}}>
+                  {["Pollster","Date","Predicted margin","Actual margin","Error"].map(h=>(
+                    <th key={h} style={{padding:"4px 8px",textAlign:h==="Pollster"||h==="Date"?"left":"right",color:"#aaa",fontWeight:600,fontSize:11,fontFamily:S}}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {race.polls.map((p, i) => {
+                  const actual = res.pct != null && res.runner_up_pct != null ? +(res.pct - res.runner_up_pct).toFixed(1) : null;
+                  let wPct, ruPct;
+                  if (isPrimary(race)) {
+                    const cm = {};
+                    if (p.c1 && p.d    != null) cm[p.c1]  = p.d;
+                    if (p.c2 && p.r    != null) cm[p.c2]  = p.r;
+                    if (p.c3 && p.c3pct!= null) cm[p.c3]  = p.c3pct;
+                    wPct  = cm[res.winner];
+                    ruPct = cm[res.runner_up];
+                  } else {
+                    wPct  = res.party === "D" ? p.d : p.r;
+                    ruPct = res.party === "D" ? p.r : p.d;
+                  }
+                  const predicted = wPct != null ? +(wPct - (ruPct || 0)).toFixed(1) : null;
+                  const error = predicted != null && actual != null ? +(Math.abs(actual - predicted)).toFixed(1) : null;
+                  const errColor = error == null ? "#aaa" : error <= 3 ? "#16a34a" : error <= 7 ? "#d97706" : "#dc2626";
+                  return (
+                    <tr key={i} style={{borderBottom:"1px solid #f0f0f0"}}>
+                      <td style={{padding:"6px 8px"}}>
+                        {p.url ? <a href={p.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()} style={{color:"#333",textDecoration:"none",borderBottom:"1px solid #ccc"}}>{p.pollster}</a> : <span style={{color:"#333"}}>{p.pollster}</span>}
+                      </td>
+                      <td style={{padding:"6px 8px",color:"#888"}}>{p.date}</td>
+                      <td style={{padding:"6px 8px",textAlign:"right",fontWeight:600,color:predicted != null && predicted > 0 ? winColor : "#888"}}>{predicted != null ? (predicted > 0 ? `+${predicted}` : predicted) : "—"}</td>
+                      <td style={{padding:"6px 8px",textAlign:"right",fontWeight:600,color:winColor}}>{actual != null ? `+${actual}` : "—"}</td>
+                      <td style={{padding:"6px 8px",textAlign:"right",color:errColor,fontWeight:600}}>{error != null ? `${error} pts` : "—"}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </td></tr>
   );
@@ -597,6 +881,7 @@ export default function App(){
       if(filter==="governor")return r.chamber==="governor"&&!isPrimary(r);
       if(filter==="control")return r.state==="US";
       if(filter==="primaries")return isPrimary(r);
+      if(filter==="watches")return r.race_to_watch;
       return !isPrimary(r);
     });
     if(filter!=="primaries"){
@@ -604,7 +889,8 @@ export default function App(){
       if(comp==="lean")f=f.filter(r=>(r.dem_base>.15&&r.dem_base<.40)||(r.dem_base>.60&&r.dem_base<.85));
       if(comp==="safe")f=f.filter(r=>r.dem_base<=.15||r.dem_base>=.85);
     }
-    if(sort==="competitiveness"){const co={senate:0,governor:1,house:2};f.sort((a,b)=>{const cd=(co[a.chamber]??3)-(co[b.chamber]??3);return cd!==0?cd:Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5);});}
+    if(filter==="primaries")f.sort((a,b)=>(a.primary_date||"9999-99-99").localeCompare(b.primary_date||"9999-99-99"));
+    else if(sort==="competitiveness"){const co={senate:0,governor:1,house:2};f.sort((a,b)=>{const cd=(co[a.chamber]??3)-(co[b.chamber]??3);return cd!==0?cd:Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5);});}
     else if(sort==="state")f.sort((a,b)=>(a.state+(a.district||"")).localeCompare(b.state+(b.district||"")));
     else if(sort==="polymarket"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].polymarket!=null)return ts[i].polymarket;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
     else if(sort==="kalshi"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].kalshi!=null)return ts[i].kalshi;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
@@ -651,16 +937,20 @@ export default function App(){
             {[["senate","Senate"],["house","House"],["governor","Governor"],["control","Control"],["all","All"]].map(([v,l])=><span key={v}>{pill(filter===v,()=>setF(v),l)}</span>)}
             <span style={{color:"#ccc",padding:"0 4px",fontSize:14,userSelect:"none"}}>|</span>
             {pill(filter==="primaries",()=>setF("primaries"),"Primaries")}
+            {pill(filter==="watches",()=>setF("watches"),"★ Races to Watch")}
           </div>
-          <div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}>
+          {filter!=="primaries"&&<div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}>
             <span style={{fontSize:12,color:"#999",marginRight:2}}>Rating:</span>
             {[["tossup","Toss-up"],["lean","Lean"],["safe","Safe"],["all","All"]].map(([v,l])=><span key={v}>{pill(comp===v,()=>setC(v),l)}</span>)}
-          </div>
+          </div>}
         </div>
         {/* Table */}
         <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
           <thead><tr style={{borderBottom:"2px solid #222"}}>
-            {[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:null,label:"Trend"}].map(col=>(
+            {(filter==="primaries"
+              ?[{key:"state",label:"Race"},{key:null,label:"Primary Date"},{key:null,label:"Kalshi Leader"},{key:"latestpoll",label:"Latest Poll"},{key:null,label:"Trend"}]
+              :[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:null,label:"Trend"}]
+            ).map(col=>(
               <th key={col.label} onClick={col.key?()=>setO(col.key):undefined} title={col.title||""} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:sort===col.key?"#222":"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600,cursor:col.key?"pointer":"default",userSelect:"none",whiteSpace:"nowrap"}}>
                 {col.label}{sort===col.key&&<span style={{marginLeft:4,fontSize:9}}>{sort==="state"?"A→Z":"↕"}</span>}
               </th>))}
@@ -677,25 +967,46 @@ export default function App(){
                         <div style={{display:"flex",alignItems:"center",gap:7}}>
                           <span style={{fontSize:14,fontWeight:600,color:"#222"}}>{race.state==="US"?race.description: race.district ? `${race.state}-${race.district}` : race.state}</span>
                           {isPrimary(race)&&(()=>{const pp=primaryParty(race);const bg=pp==="D"?"#dbeafe":pp==="R"?"#fee2e2":"#f3f4f6";const fg=pp==="D"?"#1d4ed8":pp==="R"?"#b91c1c":"#374151";return(<span style={{fontSize:10,fontWeight:700,background:bg,color:fg,padding:"2px 6px",borderRadius:3,letterSpacing:".03em",whiteSpace:"nowrap"}}>{pp||""}  Primary</span>);})()}
+                          {race.race_to_watch&&<span style={{fontSize:10,fontWeight:700,background:"#fef9c3",color:"#854d0e",padding:"2px 6px",borderRadius:3,letterSpacing:".03em",whiteSpace:"nowrap"}}>★ Watch</span>}
                         </div>
                         <div style={{fontSize:12,color:"#888",marginTop:1}}>{race.state==="US"?"":race.description}</div>
                       </div>
                     </div>
                   </td>
-                  <td style={{padding:"10px"}}>
-                    {isPrimary(race)
-                      ?(()=>{const pp=primaryParty(race);const c=pp==="D"?PRIMARY_PALETTE.D[0]:pp==="R"?PRIMARY_PALETTE.R[0]:"#555";return(<span style={{fontSize:12,fontWeight:600,color:c}}>{pp==="D"?"Dem. Primary":pp==="R"?"Rep. Primary":"Primary"}</span>);})()
-                      :<span style={{fontSize:12,fontWeight:600,color:r.c}}>{r.l}</span>}
-                  </td>
-                  <td style={{padding:"10px"}}>{pmVal!=null?isPrimary(race)?<span style={{fontSize:15,fontWeight:700,color:primaryColors(race)[0]}}>{pmVal}%</span>:(()=>{const m=mktMargin(pmVal);return<span style={{fontSize:15,fontWeight:700,color:m.color}}>{m.label}</span>;})():<span style={{color:"#ddd"}}>—</span>}</td>
-                  <td style={{padding:"10px"}}>{kVal!=null?isPrimary(race)?<span style={{fontSize:15,fontWeight:700,color:primaryColors(race)[0]}}>{kVal}%</span>:(()=>{const m=mktMargin(kVal);return<span style={{fontSize:15,fontWeight:700,color:m.color}}>{m.label}</span>;})():<span style={{color:"#ddd"}}>—</span>}</td>
+                  {filter==="primaries"
+                    ? <td style={{padding:"10px",whiteSpace:"nowrap"}}>
+                        <span style={{fontSize:13,color:"#444",fontFamily:S}}>{formatPrimaryDate(race.primary_date)}</span>
+                      </td>
+                    : <td style={{padding:"10px"}}>
+                        <span style={{fontSize:12,fontWeight:600,color:r.c}}>{r.l}</span>
+                      </td>
+                  }
+                  {filter==="primaries"
+                    ? (()=>{const leader=primaryKalshiLeader(race);const pp=primaryParty(race);const c=pp==="D"?PRIMARY_PALETTE.D[0]:pp==="R"?PRIMARY_PALETTE.R[0]:"#555";return(
+                        <td style={{padding:"10px"}}>
+                          {leader
+                            ?<div><div style={{fontSize:13,fontWeight:700,color:c}}>{leader.name}</div><div style={{fontSize:12,color:"#888"}}>{leader.pct}%</div></div>
+                            :<span style={{color:"#ddd"}}>—</span>}
+                        </td>);})()
+                    : <>
+                        <td style={{padding:"10px"}}>{pmVal!=null?(()=>{const m=mktMargin(pmVal);return<span style={{fontSize:15,fontWeight:700,color:m.color}}>{m.label}</span>;})():<span style={{color:"#ddd"}}>—</span>}</td>
+                        <td style={{padding:"10px"}}>{kVal!=null?(()=>{const m=mktMargin(kVal);return<span style={{fontSize:15,fontWeight:700,color:m.color}}>{m.label}</span>;})():<span style={{color:"#ddd"}}>—</span>}</td>
+                      </>
+                  }
                   <td style={{padding:"10px"}}>
                     {lp?(isPrimary(race)
-                      ?(<div>
-                          {lp.c1&&lp.d!=null&&<div style={{fontSize:13,fontWeight:600,color:primaryColors(race)[0]}}>{lp.c1} {lp.d}%</div>}
-                          {lp.c2&&lp.r!=null&&<div style={{fontSize:13,fontWeight:500,color:primaryColors(race)[1]}}>{lp.c2} {lp.r}%</div>}
-                          <div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div>
-                        </div>)
+                      ?(()=>{
+                          const pm=[];
+                          if(lp.c1&&lp.d!=null)pm.push({name:lp.c1,pct:lp.d});
+                          if(lp.c2&&lp.r!=null)pm.push({name:lp.c2,pct:lp.r});
+                          if(lp.c3&&lp.c3pct!=null)pm.push({name:lp.c3,pct:lp.c3pct});
+                          pm.sort((a,b)=>b.pct-a.pct);
+                          const colors=primaryColors(race);
+                          return(<div>
+                            {pm.slice(0,2).map((c,i)=><div key={c.name} style={{fontSize:13,fontWeight:i===0?600:500,color:colors[i]}}>{c.name} {c.pct}%</div>)}
+                            <div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div>
+                          </div>);
+                        })()
                       :(<div><div style={{fontSize:13,fontWeight:600,color:spreadColor(lp.d,lp.r,lp.spread)}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>)
                     ):<span style={{color:"#ddd"}}>—</span>}
                   </td>
@@ -712,10 +1023,9 @@ export default function App(){
           <p style={{fontSize:13,color:"#888",margin:"0 0 14px",fontFamily:S}}>Primaries and elections that have been called. Click to see the full history of market odds and polling.</p>
           <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
             <thead><tr style={{borderBottom:"2px solid #222"}}>
-              <th style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600}}>Race</th>
-              <th style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600}}>Winner</th>
-              <th style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600}}>Result</th>
-              <th style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600}}>Called</th>
+              {["Race","Winner","Result","Called","Markets / Polls"].map(h=>(
+                <th key={h} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600}}>{h}</th>
+              ))}
             </tr></thead>
             <tbody>
               {completedRaces.map(race => {
@@ -746,6 +1056,19 @@ export default function App(){
                       )}
                     </td>
                     <td style={{padding:"10px"}}><span style={{fontSize:13,color:"#888"}}>{res.date}</span></td>
+                    <td style={{padding:"10px"}}>
+                      {(()=>{
+                        const mp = winnerMarketProb(race);
+                        const pv = pollVsResult(race);
+                        if (mp == null && pv == null) return <span style={{color:"#ddd"}}>—</span>;
+                        return (
+                          <div style={{fontFamily:S}}>
+                            {mp != null && <div style={{fontSize:13,fontWeight:600,color:winColor}}>{mp}% mkt</div>}
+                            {pv != null && <div style={{fontSize:12,color:"#666"}}>{pv.predicted > 0 ? `+${pv.predicted}` : pv.predicted} poll</div>}
+                          </div>
+                        );
+                      })()}
+                    </td>
                   </tr>,
                   open && <CompletedDetail key={`${race.race_id}-cd`} race={race} onClose={() => setS(null)} />,
                 ];
@@ -756,6 +1079,7 @@ export default function App(){
 
         <div style={{marginTop:28,paddingTop:16,borderTop:"1px solid #ddd",fontSize:12,color:"#999",lineHeight:1.7,fontFamily:S}}>
           <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded four times a day. Polls sourced from Wikipedia. General election charts show the leading candidate's prediction market advantage, with a <span style={{color:POLL_AVG,fontWeight:600}}>muted blue dashed line</span> for the 30-day poll average; vertical markers flag poll release dates. Primary charts show per-candidate poll support (%) as multi-colored lines — blues for Dem primaries, reds/oranges for Rep primaries. Use the <strong>Primaries</strong> filter to see all tracked primaries. Created by <a href="mailto:tom.wrightpiersanti@gmail.com" style={{color:"#999",textDecoration:"underline"}}>Tom Wright-Piersanti</a>, built with Claude Code.
+          <div style={{marginTop:6}}><strong style={{color:"#666"}}>★ Races to Watch</strong> denotes a race highlighted as notable on NBC News' primary calendar.</div>
         </div>
       </div>
     </div>);

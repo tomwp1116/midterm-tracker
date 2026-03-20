@@ -11,6 +11,8 @@ ARCHIVE_DIR = BASE_DIR / "archive"
 DB_PATH = DATA_DIR / "midterms.db"
 # dashboard_data.json must live inside docs/ so GitHub Pages can serve it
 DASHBOARD_JSON = BASE_DIR / "docs" / "data" / "dashboard_data.json"
+# primary_results.json stores resolved primary outcomes (auto-detected + manually entered)
+PRIMARY_RESULTS_PATH = DATA_DIR / "primary_results.json"
 
 # ── Polymarket (Gamma API — no auth needed) ────────────
 POLYMARKET_GAMMA_BASE = "https://gamma-api.polymarket.com"
@@ -113,7 +115,7 @@ PRIMARY_RACES = {
         "description": "North Carolina Senate Republican Primary",
         "kalshi_series": "KXSENATENCR",
         "pm_slug": None,
-        "primary_date": "2026-05-19",
+        "primary_date": "2026-03-03",
     },
     # ── Senate Democratic primaries ────────────────────────────────────
     "primary-IL-senate-D-2026": {
@@ -149,7 +151,7 @@ PRIMARY_RACES = {
         "description": "North Carolina Senate Democratic Primary",
         "kalshi_series": "KXSENATENCD",
         "pm_slug": None,
-        "primary_date": "2026-05-19",
+        "primary_date": "2026-03-03",
     },
     "primary-TX-senate-D-2026": {
         "state": "TX", "chamber": "senate", "party": "D",
@@ -157,11 +159,70 @@ PRIMARY_RACES = {
         "kalshi_series": "KXSENATETXD",
         "pm_slug": None,
         "primary_date": "2026-03-03",
-        # Resolved — Talarico won the March 3 primary
-        "result": {
-            "winner": "James Talarico", "party": "D", "date": "Mar 3",
-            "pct": 58.2, "runner_up": "Jasmine Crockett", "runner_up_pct": 41.8,
-        },
+    },
+    "primary-AR-senate-R-2026": {
+        "state": "AR", "chamber": "senate", "party": "R",
+        "description": "Arkansas Senate Republican Primary",
+        "kalshi_series": None,
+        "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    "primary-AR-senate-D-2026": {
+        "state": "AR", "chamber": "senate", "party": "D",
+        "description": "Arkansas Senate Democratic Primary",
+        "kalshi_series": None,
+        "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    # ── Governor primaries (completed) ─────────────────────────────────────
+    "primary-TX-governor-R-2026": {
+        "state": "TX", "chamber": "governor", "party": "R",
+        "description": "Texas Governor Republican Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    "primary-TX-governor-D-2026": {
+        "state": "TX", "chamber": "governor", "party": "D",
+        "description": "Texas Governor Democratic Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    "primary-AR-governor-D-2026": {
+        "state": "AR", "chamber": "governor", "party": "D",
+        "description": "Arkansas Governor Democratic Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    "primary-IL-governor-R-2026": {
+        "state": "IL", "chamber": "governor", "party": "R",
+        "description": "Illinois Governor Republican Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-17",
+    },
+    # ── House primaries — NBC Races to Watch (completed) ──────────────────
+    "primary-house-NC-01-R-2026": {
+        "state": "NC", "chamber": "house", "party": "R", "district": "01",
+        "description": "NC-01 Republican Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    "primary-house-NC-04-D-2026": {
+        "state": "NC", "chamber": "house", "party": "D", "district": "04",
+        "description": "NC-04 Democratic Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    "primary-house-NC-11-R-2026": {
+        "state": "NC", "chamber": "house", "party": "R", "district": "11",
+        "description": "NC-11 Republican Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-03",
+    },
+    "primary-house-NC-11-D-2026": {
+        "state": "NC", "chamber": "house", "party": "D", "district": "11",
+        "description": "NC-11 Democratic Primary",
+        "kalshi_series": None, "pm_slug": None,
+        "primary_date": "2026-03-03",
     },
     # ── Additional Senate Republican primaries ─────────────────────────────
     "primary-CO-senate-R-2026": {
@@ -225,7 +286,7 @@ PRIMARY_RACES = {
         "description": "Mississippi Senate Republican Primary",
         "kalshi_series": "KXSENATEMSR",
         "pm_slug": None,
-        "primary_date": "2026-06-02",
+        "primary_date": "2026-03-10",
     },
     "primary-MT-senate-R-2026": {
         "state": "MT", "chamber": "senate", "party": "R",

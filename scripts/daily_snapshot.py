@@ -22,13 +22,14 @@ from pathlib import Path
 
 # Add parent dir to path so we can import config
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from config import DB_PATH, ARCHIVE_DIR, DATA_DIR, DASHBOARD_JSON
+from config import DB_PATH, ARCHIVE_DIR, DATA_DIR, DASHBOARD_JSON, PRIMARY_RESULTS_PATH
 
 # Import fetchers
 from fetch_polymarket import fetch_all_midterm_markets
 from fetch_kalshi import fetch_all_election_markets
 from fetch_polls import fetch_all_polls
 from fetch_primary_markets import fetch_all_primary_markets
+from fetch_nbc_calendar import fetch_nbc_races_to_watch
 
 
 def ensure_dirs():
@@ -486,6 +487,105 @@ def log_scrape(conn, source, status, markets_found, records_saved,
     conn.commit()
 
 
+def save_nbc_races_to_watch(conn, races_to_watch):
+    """
+    Update the race_to_watch flag in the races table.
+    Resets all flags first so removals from NBC's list are reflected.
+    Skips the reset entirely if the fetch returned nothing (network guard).
+    Returns the number of races flagged.
+    """
+    if not races_to_watch:
+        return 0
+    c = conn.cursor()
+    c.execute("UPDATE races SET race_to_watch = 0")
+    count = 0
+    for rid in races_to_watch:
+        c.execute("UPDATE races SET race_to_watch = 1 WHERE race_id = ?", (rid,))
+        if c.rowcount > 0:
+            count += 1
+    conn.commit()
+    return count
+
+
+def detect_and_save_primary_results(conn, today):
+    """
+    Auto-detect resolved primaries by checking whether any candidate's
+    Kalshi/Polymarket price has settled at >= 0.97 after the primary_date.
+
+    Writes new detections to data/primary_results.json alongside any manually
+    entered results. Already-recorded races are never overwritten.
+
+    Returns the number of newly detected results.
+    """
+    from config import PRIMARY_RACES
+
+    # Load existing results (manual + previously auto-detected)
+    results = {}
+    if PRIMARY_RESULTS_PATH.exists():
+        with open(PRIMARY_RESULTS_PATH) as f:
+            results = json.load(f)
+
+    c = conn.cursor()
+    new_detections = 0
+
+    for rid, info in PRIMARY_RACES.items():
+        primary_date = info.get("primary_date")
+        if not primary_date or primary_date > today:
+            continue
+        if rid in results:
+            continue  # already resolved — don't overwrite
+
+        # Find the most-recent candidate snapshot for this race
+        c.execute("""
+            SELECT candidate_name, COALESCE(k_price, pm_price) AS price
+            FROM primary_candidate_snapshots
+            WHERE race_id = ?
+              AND snapshot_date = (
+                  SELECT MAX(snapshot_date)
+                  FROM primary_candidate_snapshots
+                  WHERE race_id = ?
+              )
+            ORDER BY price DESC
+        """, (rid, rid))
+        rows = c.fetchall()
+
+        if not rows:
+            continue
+
+        top_name, top_price = rows[0]
+        if top_price is None or top_price < 0.97:
+            continue
+
+        # Winner detected — format the primary date for display
+        try:
+            from datetime import datetime as _dt
+            pdt = _dt.strptime(primary_date, "%Y-%m-%d")
+            date_str = pdt.strftime("%b %-d")
+        except Exception:
+            date_str = primary_date
+
+        runner_up_name = rows[1][0] if len(rows) > 1 else None
+        results[rid] = {
+            "winner": top_name,
+            "party": info.get("party", ""),
+            "date": date_str,
+            "pct": None,
+            "runner_up": runner_up_name,
+            "runner_up_pct": None,
+            "auto_detected": True,
+        }
+        new_detections += 1
+        print(f"[Results] Auto-detected winner: {rid} → {top_name} (price={top_price:.2f})")
+
+    if new_detections > 0:
+        PRIMARY_RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(PRIMARY_RESULTS_PATH, "w") as f:
+            json.dump(results, f, indent=2)
+        print(f"[Results] Saved {PRIMARY_RESULTS_PATH} ({len(results)} total results, {new_detections} new)")
+
+    return new_detections
+
+
 def export_dashboard_json(conn, output_path):
     """
     Export a single JSON file containing everything the dashboard needs:
@@ -499,7 +599,13 @@ def export_dashboard_json(conn, output_path):
     """
     c = conn.cursor()
     today = date.today().isoformat()
-    
+
+    # Load resolved primary results (auto-detected + manually entered)
+    _primary_results = {}
+    if PRIMARY_RESULTS_PATH.exists():
+        with open(PRIMARY_RESULTS_PATH) as f:
+            _primary_results = json.load(f)
+
     # ── Build URL helpers ──
     # Polymarket: slug → https://polymarket.com/event/{slug}
     # Kalshi: ticker → https://kalshi.com/markets/{series}/{slug}/{ticker}
@@ -536,7 +642,8 @@ def export_dashboard_json(conn, output_path):
     # ── Fetch all races ──
     c.execute("""
         SELECT race_id, chamber, state, district, description,
-               polymarket_slug, kalshi_ticker, kalshi_url
+               polymarket_slug, kalshi_ticker, kalshi_url,
+               COALESCE(race_to_watch, 0) as race_to_watch
         FROM races
         WHERE state != 'US'
            OR race_id IN ('senate-control-2026', 'house-control-2026')
@@ -546,7 +653,7 @@ def export_dashboard_json(conn, output_path):
 
     races_out = []
     for row in race_rows:
-        rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_stored = row
+        rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_stored, rtw = row
         
         # Get latest market snapshot
         c.execute("""
@@ -632,9 +739,8 @@ def export_dashboard_json(conn, output_path):
                 if p in ("D", "R") and i == len(parts_id) - 2:
                     primary_party = p
                     break
-            # Pull result from PRIMARY_RACES config if the race has resolved
-            from config import PRIMARY_RACES as _PR
-            primary_result = _PR.get(rid, {}).get("result")
+            # Pull result from primary_results.json (auto-detected or manually entered)
+            primary_result = _primary_results.get(rid)
 
         # Get latest poll average and market-poll gap from daily_summary
         c.execute("""
@@ -678,6 +784,12 @@ def export_dashboard_json(conn, output_path):
         pm_url = f"https://polymarket.com/event/{pm_slug}" if pm_slug else None
         rcp = fte_url_for(chamber, state)
         
+        # Include primary_date from config for upcoming primary races
+        primary_date = None
+        if is_primary_race:
+            from config import PRIMARY_RACES as _PR
+            primary_date = _PR.get(rid, {}).get("primary_date")
+
         race_obj = {
             "race_id": rid,
             "chamber": chamber,
@@ -693,7 +805,9 @@ def export_dashboard_json(conn, output_path):
             "market_gap": market_gap,
             "race_type": race_type,
             "primary_party": primary_party,
+            "primary_date": primary_date,
             "result": primary_result,
+            "race_to_watch": bool(rtw),
             "polls": polls if polls else None,
             "time_series": time_series_out,
             "note": None,
@@ -854,6 +968,11 @@ def main():
         conn.execute("ALTER TABLE races ADD COLUMN kalshi_url TEXT")
     except Exception:
         pass  # column already exists
+    # Migrate: add race_to_watch column if it doesn't exist yet
+    try:
+        conn.execute("ALTER TABLE races ADD COLUMN race_to_watch INTEGER DEFAULT 0")
+    except Exception:
+        pass  # column already exists
     conn.commit()
 
     # Races
@@ -876,9 +995,10 @@ def main():
     c_tmp = conn.cursor()
     for rid, info in PRIMARY_RACES_CONFIG.items():
         c_tmp.execute("""
-            INSERT INTO races (race_id, chamber, state, description, polymarket_slug, kalshi_ticker)
-            VALUES (?, ?, ?, ?, ?, ?)
+            INSERT INTO races (race_id, chamber, state, district, description, polymarket_slug, kalshi_ticker)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(race_id) DO UPDATE SET
+                district        = COALESCE(excluded.district, district),
                 description = CASE
                     WHEN excluded.description IS NOT NULL AND excluded.description != ''
                     THEN excluded.description ELSE description END,
@@ -886,6 +1006,7 @@ def main():
                 kalshi_ticker   = COALESCE(excluded.kalshi_ticker,   kalshi_ticker)
         """, (
             rid, info["chamber"], info["state"],
+            info.get("district"),
             info.get("description", ""),
             info.get("pm_slug"), info.get("kalshi_series"),
         ))
@@ -893,6 +1014,17 @@ def main():
 
     primary_saved = save_primary_candidate_snapshots(conn, primary_records, today)
     print(f"[DB] Saved {primary_saved} primary candidate snapshots")
+
+    # NBC "Race to Watch" flags
+    print("\n[NBC Calendar] Fetching Race to Watch flags...")
+    nbc_watches = fetch_nbc_races_to_watch()
+    n_watches = save_nbc_races_to_watch(conn, nbc_watches)
+    print(f"[NBC Calendar] Flagged {n_watches} races in database")
+
+    # Auto-detect resolved primaries from market settlement
+    n_detected = detect_and_save_primary_results(conn, today)
+    if n_detected == 0:
+        print("[Results] No new primary results detected")
 
     # Daily summary
     n_summary = compute_daily_summary(conn, today)
