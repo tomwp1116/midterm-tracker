@@ -56,11 +56,24 @@ def midpoint_from_candle(candle: dict):
     try:
         bid = float(candle["yes_bid"]["close_dollars"])
         ask = float(candle["yes_ask"]["close_dollars"])
-        return round((bid + ask) / 2, 4)
+        # Only use the midpoint when the spread is tight enough to be meaningful.
+        # A wide spread (e.g. bid=0.01, ask=0.99) means the book is empty and
+        # the midpoint (0.50) is a placeholder, not a real probability.
+        # Same issue for the leader in an illiquid period (bid=0.01, ask=0.66
+        # gives a misleading 0.335 instead of her real ~0.585 last-traded price).
+        if ask - bid <= 0.40:
+            return round((bid + ask) / 2, 4)
+    except (KeyError, TypeError, ValueError):
+        pass
+    # Fall back to the actual trade price.  Kalshi provides "close_dollars" on
+    # days where trading occurred, and "previous_dollars" (the prior close) on
+    # no-volume days.  Both are more reliable than a wide bid/ask midpoint.
+    try:
+        return float(candle["price"]["close_dollars"])
     except (KeyError, TypeError, ValueError):
         pass
     try:
-        return float(candle["price"]["close_dollars"])
+        return float(candle["price"]["previous_dollars"])
     except (KeyError, TypeError, ValueError):
         return None
 

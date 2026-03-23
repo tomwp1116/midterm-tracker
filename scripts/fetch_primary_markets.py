@@ -36,13 +36,21 @@ def extract_candidate_name(title):
 
 
 def _parse_kalshi_price(market):
-    """Return midpoint yes price (0-1 float) or None."""
+    """Return yes price (0-1 float) or None.
+
+    Prefers bid/ask midpoint only when the spread is tight (≤ 0.40).
+    A wide spread signals an empty order book — the midpoint (e.g. 0.50 from
+    bid=0.01/ask=0.99) is a placeholder, not a real probability.  Falls back
+    to last-traded price, which reflects actual market activity.
+    """
     yb = market.get("yes_bid_dollars")
     ya = market.get("yes_ask_dollars")
     lp = market.get("last_price_dollars")
     if yb is not None and ya is not None:
         try:
-            return (float(yb) + float(ya)) / 2.0
+            bid, ask = float(yb), float(ya)
+            if ask - bid <= 0.40:
+                return (bid + ask) / 2.0
         except (ValueError, TypeError):
             pass
     if lp is not None:
@@ -55,7 +63,9 @@ def _parse_kalshi_price(market):
     ya2 = market.get("yes_ask")
     lp2 = market.get("last_price")
     if yb2 is not None and ya2 is not None:
-        return (yb2 + ya2) / 200.0
+        bid2, ask2 = yb2 / 100.0, ya2 / 100.0
+        if ask2 - bid2 <= 0.40:
+            return (bid2 + ask2) / 2.0
     if lp2 is not None:
         return lp2 / 100.0
     return None

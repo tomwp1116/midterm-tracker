@@ -730,6 +730,14 @@ def export_dashboard_json(conn, output_path):
                     by_date[key] = {"date": key}
                 if price is not None:
                     by_date[key][cand_name] = round(price * 100, 1)
+            # Drop corrupted days: Kalshi returns ~50% placeholder prices for
+            # illiquid/untraded candidate contracts (bid=1¢, ask=99¢ → mid=50%).
+            # A real primary market sums to ~90-110%; anything above 130% means
+            # at least one candidate is showing a stale default price.
+            for key in list(by_date.keys()):
+                vals = [v for k, v in by_date[key].items() if k != "date"]
+                if sum(vals) > 130:
+                    del by_date[key]
             primary_ts = list(by_date.values())
             time_series_out = primary_ts if primary_ts else None
 
