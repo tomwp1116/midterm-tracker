@@ -8,7 +8,7 @@
     "battleground_senate": 3,
     "house_districts_tracked": 88,
     "seats_up": 35,
-    "polls_tracked": 360
+    "polls_tracked": 406
   },
   "races": [
     {
@@ -102,6 +102,7 @@
           "r": 6.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +16.0",
           "matchup": "Tom Begich (D) vs. Click Bishop (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election"
@@ -199,6 +200,7 @@
           "r": 53.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +19.0",
           "matchup": "Doug Jones (D) vs. Tommy Tuberville (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Alabama_gubernatorial_election"
@@ -945,6 +947,7 @@
           "r": 37.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +5.0",
           "matchup": "Katie Hobbs (D) vs. Andy Biggs (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -958,6 +961,7 @@
           "r": 41.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +9.0",
           "matchup": "Katie Hobbs (D) vs. Andy Biggs (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -971,6 +975,7 @@
           "r": 32.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +19.0",
           "matchup": "Katie Hobbs (D) vs. Andy Biggs (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -984,6 +989,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +1.0",
           "matchup": "Katie Hobbs (D) vs. Andy Biggs (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -997,6 +1003,7 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "Republican +4.0",
           "matchup": "Katie Hobbs (D) vs. Generic Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -1724,6 +1731,10 @@
           "r": 19.0,
           "c3": "Karrin Taylor Robson",
           "c3pct": null,
+          "candidates": {
+            "Andy Biggs": 40.0,
+            "David Schweikert": 19.0
+          },
           "spread": "Biggs +21.0",
           "matchup": "Andy Biggs vs. David Schweikert",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -1737,6 +1748,11 @@
           "r": 19.0,
           "c3": "David Schweikert",
           "c3pct": 12.0,
+          "candidates": {
+            "Andy Biggs": 28.0,
+            "Karrin Taylor Robson": 19.0,
+            "David Schweikert": 12.0
+          },
           "spread": "Biggs +9.0",
           "matchup": "Andy Biggs vs. Karrin Taylor Robson",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -1750,7 +1766,30 @@
           "r": 17.0,
           "c3": "David Schweikert",
           "c3pct": 8.0,
+          "candidates": {
+            "Andy Biggs": 50.0,
+            "Karrin Taylor Robson": 17.0,
+            "David Schweikert": 8.0
+          },
           "spread": "Biggs +33.0",
+          "matchup": "Andy Biggs vs. Karrin Taylor Robson",
+          "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
+        },
+        {
+          "date": "2025-11-10",
+          "pollster": "270toWin",
+          "c1": "Andy Biggs",
+          "d": 46.5,
+          "c2": "Karrin Taylor Robson",
+          "r": 18.0,
+          "c3": "David Schweikert",
+          "c3pct": 5.0,
+          "candidates": {
+            "Andy Biggs": 46.5,
+            "Karrin Taylor Robson": 18.0,
+            "David Schweikert": 5.0
+          },
+          "spread": "Biggs +28.5",
           "matchup": "Andy Biggs vs. Karrin Taylor Robson",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
         },
@@ -1763,6 +1802,11 @@
           "r": 19.0,
           "c3": "David Schweikert",
           "c3pct": 2.0,
+          "candidates": {
+            "Andy Biggs": 43.0,
+            "Karrin Taylor Robson": 19.0,
+            "David Schweikert": 2.0
+          },
           "spread": "Biggs +24.0",
           "matchup": "Andy Biggs vs. Karrin Taylor Robson",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -1776,6 +1820,7 @@
           "r": 18.0,
           "c3": "David Schweikert",
           "c3pct": 5.0,
+          "candidates": null,
           "spread": "Biggs +28.5",
           "matchup": "Andy Biggs vs. Karrin Taylor Robson",
           "url": "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election"
@@ -3386,14 +3431,42 @@
       "kalshi": "GOVPARTYCA-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyca/california-governor/govpartyca-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/california/",
-      "poll_avg_dem": 8.1,
-      "market_gap": 77.4,
+      "poll_avg_dem": 8.7,
+      "market_gap": 76.8,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
       "result": null,
       "race_to_watch": true,
       "polls": [
+        {
+          "date": "2026-03-18",
+          "pollster": "270toWin",
+          "c1": "Eric Swalwell (D)",
+          "d": 14.0,
+          "c2": "Chad Bianco (R)",
+          "r": 14.6,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +0.6",
+          "matchup": "Eric Swalwell (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
+        {
+          "date": "2026-03-15",
+          "pollster": "RealClearPolitics",
+          "c1": "Eric Swalwell (D)",
+          "d": 13.7,
+          "c2": "Chad Bianco (R)",
+          "r": 13.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(D) +0.7",
+          "matchup": "Eric Swalwell (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
         {
           "date": "2026-03-15",
           "pollster": "Race to the WH",
@@ -3403,6 +3476,7 @@
           "r": 14.9,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.2",
           "matchup": "Eric Swalwell (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3416,6 +3490,7 @@
           "r": 16.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +11.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3429,6 +3504,7 @@
           "r": 16.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +11.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3442,7 +3518,36 @@
           "r": 11.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +8.0",
+          "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
+        {
+          "date": "2026-03-03",
+          "pollster": "Politico / UC Berkeley / TrueDot",
+          "c1": "Xavier Becerra (D)",
+          "d": 5.0,
+          "c2": "Chad Bianco (R)",
+          "r": 11.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +6.0",
+          "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "Global Strategy Group (D)",
+          "c1": "Xavier Becerra (D)",
+          "d": 5.0,
+          "c2": "Chad Bianco (R)",
+          "r": 15.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +10.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
         },
@@ -3455,6 +3560,7 @@
           "r": 15.7,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +2.1",
           "matchup": "Eric Swalwell (D) vs. Steve Hilton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3468,6 +3574,7 @@
           "r": 23.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +20.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3481,6 +3588,7 @@
           "r": 14.6,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +0.6",
           "matchup": "Eric Swalwell (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3494,6 +3602,7 @@
           "r": 13.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +0.7",
           "matchup": "Eric Swalwell (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3507,6 +3616,7 @@
           "r": 14.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +10.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3520,6 +3630,7 @@
           "r": 12.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +7.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3533,6 +3644,7 @@
           "r": 15.3,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.0",
           "matchup": "Eric Swalwell (D) vs. Steve Hilton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3546,6 +3658,7 @@
           "r": 15.3,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +2.3",
           "matchup": "Eric Swalwell (D) vs. Steve Hilton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3559,6 +3672,7 @@
           "r": 15.3,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.0",
           "matchup": "Eric Swalwell (D) vs. Steve Hilton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3572,7 +3686,22 @@
           "r": 20.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +14.0",
+          "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
+        {
+          "date": "2026-02-04",
+          "pollster": "EMC Research (D)",
+          "c1": "Xavier Becerra (D)",
+          "d": 6.0,
+          "c2": "Chad Bianco (R)",
+          "r": 21.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +15.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
         },
@@ -3585,7 +3714,22 @@
           "r": 11.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +6.0",
+          "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
+        {
+          "date": "2026-02-03",
+          "pollster": "Global Strategy Group (D)",
+          "c1": "Xavier Becerra (D)",
+          "d": 4.0,
+          "c2": "Chad Bianco (R)",
+          "r": 18.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +14.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
         },
@@ -3598,6 +3742,7 @@
           "r": 15.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +10.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3611,6 +3756,7 @@
           "r": 15.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +11.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3624,6 +3770,7 @@
           "r": 15.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +10.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3637,6 +3784,7 @@
           "r": 18.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +12.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3650,6 +3798,7 @@
           "r": 17.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +12.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3663,6 +3812,7 @@
           "r": 21.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +15.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3676,6 +3826,7 @@
           "r": 18.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +14.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3689,7 +3840,22 @@
           "r": 14.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +13.0",
+          "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
+        },
+        {
+          "date": "2025-12-07",
+          "pollster": "FM3 Research (D)",
+          "c1": "Xavier Becerra (D)",
+          "d": 3.0,
+          "c2": "Chad Bianco (R)",
+          "r": 17.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +14.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
         },
@@ -3702,6 +3868,7 @@
           "r": 13.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +9.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3715,6 +3882,7 @@
           "r": 10.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +4.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3728,6 +3896,7 @@
           "r": 10.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +4.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3741,6 +3910,7 @@
           "r": 17.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +14.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3754,6 +3924,7 @@
           "r": 16.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +7.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3767,6 +3938,7 @@
           "r": 13.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +5.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3780,6 +3952,7 @@
           "r": 14.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +5.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3793,6 +3966,7 @@
           "r": 11.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +6.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -3806,6 +3980,7 @@
           "r": 14.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +6.0",
           "matchup": "Xavier Becerra (D) vs. Chad Bianco (R)",
           "url": "https://en.wikipedia.org/wiki/2026_California_gubernatorial_election"
@@ -4561,7 +4736,7 @@
       "state": "CO",
       "district": null,
       "description": "Will the Democratic party win the governorship in Colorado",
-      "dem_base": 0.905,
+      "dem_base": 0.915,
       "pm": null,
       "kalshi": "GOVPARTYCO-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyco/colorado-governor/govpartyco-26",
@@ -5253,7 +5428,7 @@
         {
           "date": "3/23",
           "polymarket": null,
-          "kalshi": 90
+          "kalshi": 92
         }
       ],
       "note": null
@@ -6998,7 +7173,7 @@
         },
         {
           "date": "3/23",
-          "Barbara Kirkmeyer": 37.0,
+          "Barbara Kirkmeyer": 36.5,
           "Greg Lopez": 0.5,
           "Jason Mikesell": 0.5,
           "Jason Ray Clark": 0.5,
@@ -7674,14 +7849,28 @@
       "kalshi": "GOVPARTYFL-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyfl/florida-governor/govpartyfl-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/florida/",
-      "poll_avg_dem": 23.0,
-      "market_gap": -7.0,
+      "poll_avg_dem": 29.5,
+      "market_gap": -13.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
       "result": null,
       "race_to_watch": true,
       "polls": [
+        {
+          "date": "2026-03-02",
+          "pollster": "University of North Florida",
+          "c1": "Jerry Demings (D)",
+          "d": 36.0,
+          "c2": "Byron Donalds (R)",
+          "r": 43.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +7.0",
+          "matchup": "Jerry Demings (D) vs. Byron Donalds (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
+        },
         {
           "date": "2026-02-22",
           "pollster": "Targoz Market Research",
@@ -7691,6 +7880,7 @@
           "r": null,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Jerry Demings vs. Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -7704,6 +7894,7 @@
           "r": null,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Jerry Demings vs. Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -7717,6 +7908,7 @@
           "r": 41.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +5.0",
           "matchup": "David Jolly (D) vs. Byron Donalds (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -7730,6 +7922,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +7.0",
           "matchup": "Jerry Demings (D) vs. Byron Donalds (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -7743,6 +7936,7 @@
           "r": null,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Jerry Demings vs. Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -7756,6 +7950,7 @@
           "r": null,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Jerry Demings vs. Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -7769,6 +7964,7 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +12.0",
           "matchup": "Jerry Demings (D) vs. Byron Donalds (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9858,6 +10054,12 @@
           "r": 5.0,
           "c3": "Jay Collins",
           "c3pct": 4.0,
+          "candidates": {
+            "Byron Donalds": 44.0,
+            "James Fishback": 5.0,
+            "Jay Collins": 4.0,
+            "Paul Renner": 2.0
+          },
           "spread": "Donalds +39.0",
           "matchup": "Byron Donalds vs. James Fishback",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9871,6 +10073,12 @@
           "r": 6.0,
           "c3": "Jay Collins",
           "c3pct": 4.0,
+          "candidates": {
+            "Byron Donalds": 31.0,
+            "James Fishback": 6.0,
+            "Jay Collins": 4.0,
+            "Paul Renner": 1.0
+          },
           "spread": "Donalds +25.0",
           "matchup": "Byron Donalds vs. James Fishback",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9884,6 +10092,12 @@
           "r": 12.0,
           "c3": "James Fishback",
           "c3pct": 8.0,
+          "candidates": {
+            "Byron Donalds": 30.0,
+            "Jay Collins": 12.0,
+            "James Fishback": 8.0,
+            "Paul Renner": 2.0
+          },
           "spread": "Donalds +18.0",
           "matchup": "Byron Donalds vs. Jay Collins",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9897,6 +10111,12 @@
           "r": 15.0,
           "c3": "Paul Renner",
           "c3pct": 9.0,
+          "candidates": {
+            "Byron Donalds": 33.0,
+            "Jay Collins": 15.0,
+            "Paul Renner": 9.0,
+            "James Fishback": 3.0
+          },
           "spread": "Donalds +18.0",
           "matchup": "Byron Donalds vs. Jay Collins",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9910,6 +10130,10 @@
           "r": 23.0,
           "c3": "Jay Collins",
           "c3pct": null,
+          "candidates": {
+            "Byron Donalds": 37.0,
+            "James Fishback": 23.0
+          },
           "spread": "Donalds +14.0",
           "matchup": "Byron Donalds vs. James Fishback",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9923,6 +10147,12 @@
           "r": 7.0,
           "c3": "Paul Renner",
           "c3pct": 4.0,
+          "candidates": {
+            "Byron Donalds": 37.0,
+            "Jay Collins": 7.0,
+            "Paul Renner": 4.0,
+            "James Fishback": 3.0
+          },
           "spread": "Donalds +30.0",
           "matchup": "Byron Donalds vs. Jay Collins",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9936,6 +10166,12 @@
           "r": 6.0,
           "c3": "James Fishback",
           "c3pct": 4.0,
+          "candidates": {
+            "Byron Donalds": 45.0,
+            "Jay Collins": 6.0,
+            "James Fishback": 4.0,
+            "Paul Renner": 3.0
+          },
           "spread": "Donalds +39.0",
           "matchup": "Byron Donalds vs. Jay Collins",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9949,6 +10185,10 @@
           "r": 13.0,
           "c3": "James Fishback",
           "c3pct": null,
+          "candidates": {
+            "Byron Donalds": 40.0,
+            "Jay Collins": 13.0
+          },
           "spread": "Donalds +27.0",
           "matchup": "Byron Donalds vs. Jay Collins",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9962,6 +10202,12 @@
           "r": 9.0,
           "c3": "James Fishback",
           "c3pct": 2.0,
+          "candidates": {
+            "Byron Donalds": 38.0,
+            "Jay Collins": 9.0,
+            "James Fishback": 2.0,
+            "Paul Renner": 1.0
+          },
           "spread": "Donalds +29.0",
           "matchup": "Byron Donalds vs. Jay Collins",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9975,6 +10221,12 @@
           "r": 2.0,
           "c3": "Jay Collins",
           "c3pct": 1.0,
+          "candidates": {
+            "Byron Donalds": 43.0,
+            "Paul Renner": 2.0,
+            "Jay Collins": 1.0,
+            "James Fishback": 0.0
+          },
           "spread": "Donalds +41.0",
           "matchup": "Byron Donalds vs. Paul Renner",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -9988,6 +10240,12 @@
           "r": 3.0,
           "c3": "Jay Collins",
           "c3pct": 1.0,
+          "candidates": {
+            "Byron Donalds": 45.0,
+            "Paul Renner": 3.0,
+            "Jay Collins": 1.0,
+            "James Fishback": 1.0
+          },
           "spread": "Donalds +42.0",
           "matchup": "Byron Donalds vs. Paul Renner",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -10001,6 +10259,11 @@
           "r": 4.0,
           "c3": "Paul Renner",
           "c3pct": 3.0,
+          "candidates": {
+            "Byron Donalds": 39.0,
+            "Jay Collins": 4.0,
+            "Paul Renner": 3.0
+          },
           "spread": "Donalds +35.0",
           "matchup": "Byron Donalds vs. Jay Collins",
           "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election"
@@ -12149,6 +12412,27 @@
       "race_to_watch": true,
       "polls": [
         {
+          "date": "2026-03-02",
+          "pollster": "Emerson College",
+          "c1": "Keisha Lance Bottoms",
+          "d": 35.0,
+          "c2": "Geoff Duncan",
+          "r": 13.0,
+          "c3": "Michael Thurmond",
+          "c3pct": 7.0,
+          "candidates": {
+            "Keisha Lance Bottoms": 35.0,
+            "Geoff Duncan": 13.0,
+            "Michael Thurmond": 7.0,
+            "Jason Esteves": 4.0,
+            "Derrick Jackson": 3.0,
+            "Olujimi Brown": 0.0
+          },
+          "spread": "Bottoms +22.0",
+          "matchup": "Keisha Lance Bottoms vs. Geoff Duncan",
+          "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
+        },
+        {
           "date": "2026-02-02",
           "pollster": "Emerson College",
           "c1": "Keisha Lance Bottoms",
@@ -12157,6 +12441,7 @@
           "r": 13.0,
           "c3": "Michael Thurmond",
           "c3pct": 7.0,
+          "candidates": null,
           "spread": "Bottoms +22.0",
           "matchup": "Keisha Lance Bottoms vs. Geoff Duncan",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -12170,6 +12455,13 @@
           "r": 11.0,
           "c3": "Geoff Duncan",
           "c3pct": 5.0,
+          "candidates": {
+            "Keisha Lance Bottoms": 40.0,
+            "Michael Thurmond": 11.0,
+            "Geoff Duncan": 5.0,
+            "Jason Esteves": 3.0,
+            "Derrick Jackson": 1.0
+          },
           "spread": "Bottoms +29.0",
           "matchup": "Keisha Lance Bottoms vs. Michael Thurmond",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13659,6 +13951,26 @@
       "race_to_watch": true,
       "polls": [
         {
+          "date": "2026-03-09",
+          "pollster": "270toWin",
+          "c1": "Rick Jackson",
+          "d": 26.0,
+          "c2": "Burt Jones",
+          "r": 19.6,
+          "c3": "Brad Raffensperger",
+          "c3pct": 9.8,
+          "candidates": {
+            "Rick Jackson": 26.0,
+            "Burt Jones": 19.6,
+            "Brad Raffensperger": 9.8,
+            "Chris Carr": 5.0,
+            "Clark Dean": 0.0
+          },
+          "spread": "Jackson +6.4",
+          "matchup": "Rick Jackson vs. Burt Jones",
+          "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
+        },
+        {
           "date": "2026-03-08",
           "pollster": "Race to the WH",
           "c1": "Rick Jackson",
@@ -13667,6 +13979,13 @@
           "r": 20.1,
           "c3": "Brad Raffensperger",
           "c3pct": 10.2,
+          "candidates": {
+            "Rick Jackson": 25.4,
+            "Burt Jones": 20.1,
+            "Brad Raffensperger": 10.2,
+            "Chris Carr": 5.2,
+            "Clark Dean": 0.7
+          },
           "spread": "Jackson +5.3",
           "matchup": "Rick Jackson vs. Burt Jones",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13680,8 +13999,53 @@
           "r": 22.0,
           "c3": "Brad Raffensperger",
           "c3pct": 11.0,
+          "candidates": {
+            "Rick Jackson": 37.0,
+            "Burt Jones": 22.0,
+            "Brad Raffensperger": 11.0,
+            "Chris Carr": 4.0
+          },
           "spread": "Jackson +15.0",
           "matchup": "Rick Jackson vs. Burt Jones",
+          "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "RealClearPolitics",
+          "c1": "Rick Jackson",
+          "d": 23.3,
+          "c2": "Burt Jones",
+          "r": 19.0,
+          "c3": "Brad Raffensperger",
+          "c3pct": 9.5,
+          "candidates": {
+            "Rick Jackson": 23.3,
+            "Burt Jones": 19.0,
+            "Brad Raffensperger": 9.5,
+            "Chris Carr": 5.3
+          },
+          "spread": "Jackson +4.3",
+          "matchup": "Rick Jackson vs. Burt Jones",
+          "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "Emerson College",
+          "c1": "Burt Jones",
+          "d": 21.0,
+          "c2": "Rick Jackson",
+          "r": 20.0,
+          "c3": "Brad Raffensperger",
+          "c3pct": 11.0,
+          "candidates": {
+            "Burt Jones": 21.0,
+            "Rick Jackson": 20.0,
+            "Brad Raffensperger": 11.0,
+            "Chris Carr": 6.0,
+            "Clark Dean": 0.0
+          },
+          "spread": "Jones +1.0",
+          "matchup": "Burt Jones vs. Rick Jackson",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
         },
         {
@@ -13693,6 +14057,12 @@
           "r": 17.0,
           "c3": "Brad Raffensperger",
           "c3pct": 8.0,
+          "candidates": {
+            "Rick Jackson": 33.0,
+            "Burt Jones": 17.0,
+            "Brad Raffensperger": 8.0,
+            "Chris Carr": 5.0
+          },
           "spread": "Jackson +16.0",
           "matchup": "Rick Jackson vs. Burt Jones",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13706,6 +14076,12 @@
           "r": 18.0,
           "c3": "Burt Jones",
           "c3pct": 16.0,
+          "candidates": {
+            "Rick Jackson": 22.0,
+            "Brad Raffensperger": 18.0,
+            "Burt Jones": 16.0,
+            "Chris Carr": 10.0
+          },
           "spread": "Jackson +4.0",
           "matchup": "Rick Jackson vs. Brad Raffensperger",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13719,6 +14095,13 @@
           "r": 16.0,
           "c3": "Brad Raffensperger",
           "c3pct": 9.0,
+          "candidates": {
+            "Rick Jackson": 24.0,
+            "Burt Jones": 16.0,
+            "Brad Raffensperger": 9.0,
+            "Chris Carr": 3.0,
+            "Clark Dean": 1.0
+          },
           "spread": "Jackson +8.0",
           "matchup": "Rick Jackson vs. Burt Jones",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13732,6 +14115,7 @@
           "r": 19.6,
           "c3": "Brad Raffensperger",
           "c3pct": 9.8,
+          "candidates": null,
           "spread": "Jackson +6.4",
           "matchup": "Rick Jackson vs. Burt Jones",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13745,6 +14129,12 @@
           "r": 16.0,
           "c3": "Brad Raffensperger",
           "c3pct": 10.0,
+          "candidates": {
+            "Burt Jones": 22.0,
+            "Rick Jackson": 16.0,
+            "Brad Raffensperger": 10.0,
+            "Chris Carr": 7.0
+          },
           "spread": "Jones +6.0",
           "matchup": "Burt Jones vs. Rick Jackson",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13758,6 +14148,7 @@
           "r": 19.0,
           "c3": "Brad Raffensperger",
           "c3pct": 9.5,
+          "candidates": null,
           "spread": "Jackson +4.3",
           "matchup": "Rick Jackson vs. Burt Jones",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13771,6 +14162,7 @@
           "r": 20.0,
           "c3": "Brad Raffensperger",
           "c3pct": 11.0,
+          "candidates": null,
           "spread": "Jones +1.0",
           "matchup": "Burt Jones vs. Rick Jackson",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13784,6 +14176,12 @@
           "r": 14.0,
           "c3": "Chris Carr",
           "c3pct": 9.0,
+          "candidates": {
+            "Burt Jones": 24.0,
+            "Brad Raffensperger": 14.0,
+            "Chris Carr": 9.0,
+            "Clark Dean": 4.0
+          },
           "spread": "Jones +10.0",
           "matchup": "Burt Jones vs. Brad Raffensperger",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13797,6 +14195,12 @@
           "r": 15.0,
           "c3": "Chris Carr",
           "c3pct": 7.0,
+          "candidates": {
+            "Burt Jones": 22.0,
+            "Brad Raffensperger": 15.0,
+            "Chris Carr": 7.0,
+            "Clark Dean": 1.0
+          },
           "spread": "Jones +7.0",
           "matchup": "Burt Jones vs. Brad Raffensperger",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -13810,6 +14214,12 @@
           "r": 15.0,
           "c3": "Chris Carr",
           "c3pct": 12.0,
+          "candidates": {
+            "Burt Jones": 32.0,
+            "Brad Raffensperger": 15.0,
+            "Chris Carr": 12.0,
+            "Clark Dean": 2.0
+          },
           "spread": "Jones +17.0",
           "matchup": "Burt Jones vs. Brad Raffensperger",
           "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election"
@@ -14756,7 +15166,7 @@
         },
         {
           "date": "3/23",
-          "Brad Raffensperger": 10.5,
+          "Brad Raffensperger": 11.0,
           "Burt Jones": 34.5,
           "Chris Carr": 1.0,
           "Clark Dean": 0.5,
@@ -15492,6 +15902,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "Rob Sand (D) vs. Randy Feenstra (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Iowa_gubernatorial_election"
@@ -16852,6 +17263,7 @@
           "r": 34.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +20.0",
           "matchup": "JB Pritzker (D) vs. Darren Bailey (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Illinois_gubernatorial_election"
@@ -17556,6 +17968,12 @@
           "r": 9.0,
           "c3": "Ted Dabrowski",
           "c3pct": 8.0,
+          "candidates": {
+            "Darren Bailey": 57.0,
+            "Rick Heidner": 9.0,
+            "Ted Dabrowski": 8.0,
+            "James Mendrick": 4.0
+          },
           "spread": "Bailey +48.0",
           "matchup": "Darren Bailey vs. Rick Heidner",
           "url": "https://en.wikipedia.org/wiki/2026_Illinois_gubernatorial_election"
@@ -17569,6 +17987,12 @@
           "r": 8.0,
           "c3": "James Mendrick",
           "c3pct": 5.0,
+          "candidates": {
+            "Darren Bailey": 34.0,
+            "Ted Dabrowski": 8.0,
+            "James Mendrick": 5.0,
+            "Rick Heidner": 1.0
+          },
           "spread": "Bailey +26.0",
           "matchup": "Darren Bailey vs. Ted Dabrowski",
           "url": "https://en.wikipedia.org/wiki/2026_Illinois_gubernatorial_election"
@@ -18288,6 +18712,7 @@
           "r": 28.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +27.0",
           "matchup": "Maura Healey (D) vs. Mike Kennealy (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Massachusetts_gubernatorial_election"
@@ -18301,6 +18726,7 @@
           "r": 27.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +22.0",
           "matchup": "Maura Healey (D) vs. Mike Kennealy (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Massachusetts_gubernatorial_election"
@@ -19703,6 +20129,26 @@
       "race_to_watch": false,
       "polls": [
         {
+          "date": "2026-03-02",
+          "pollster": "Pan Atlantic Research",
+          "c1": "Angus King III",
+          "d": 24.0,
+          "c2": "Nirav Shah",
+          "r": 24.0,
+          "c3": "Hannah Pingree",
+          "c3pct": 18.0,
+          "candidates": {
+            "Angus King III": 24.0,
+            "Nirav Shah": 24.0,
+            "Hannah Pingree": 18.0,
+            "Shenna Bellows": 16.0,
+            "Troy Jackson": 10.0
+          },
+          "spread": "",
+          "matchup": "Angus King III vs. Nirav Shah",
+          "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
+        },
+        {
           "date": "2026-02-16",
           "pollster": "University of New Hampshire",
           "c1": "Nirav Shah",
@@ -19711,21 +20157,15 @@
           "r": 19.0,
           "c3": "Troy Jackson",
           "c3pct": 16.0,
+          "candidates": {
+            "Nirav Shah": 25.0,
+            "Shenna Bellows": 19.0,
+            "Troy Jackson": 16.0,
+            "Hannah Pingree": 10.0,
+            "Angus King III": 5.0
+          },
           "spread": "Shah +6.0",
           "matchup": "Nirav Shah vs. Shenna Bellows",
-          "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
-        },
-        {
-          "date": "2026-02-02",
-          "pollster": "Pan Atlantic Research",
-          "c1": "Angus King III",
-          "d": 24.0,
-          "c2": "Nirav Shah",
-          "r": 24.0,
-          "c3": "Hannah Pingree",
-          "c3pct": 18.0,
-          "spread": "",
-          "matchup": "Angus King III vs. Nirav Shah",
           "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
         },
         {
@@ -19737,12 +20177,19 @@
           "r": 13.0,
           "c3": "Hannah Pingree",
           "c3pct": 13.0,
+          "candidates": {
+            "Nirav Shah": 35.0,
+            "Angus King III": 13.0,
+            "Hannah Pingree": 13.0,
+            "Shenna Bellows": 11.0,
+            "Troy Jackson": 9.0
+          },
           "spread": "Shah +22.0",
           "matchup": "Nirav Shah vs. Angus King III",
           "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
         },
         {
-          "date": "2025-11-07",
+          "date": "2025-12-07",
           "pollster": "Pan Atlantic Research",
           "c1": "Nirav Shah",
           "d": 24.0,
@@ -19750,6 +20197,13 @@
           "r": 19.0,
           "c3": "Hannah Pingree",
           "c3pct": 18.0,
+          "candidates": {
+            "Nirav Shah": 24.0,
+            "Angus King III": 19.0,
+            "Hannah Pingree": 18.0,
+            "Shenna Bellows": 16.0,
+            "Troy Jackson": 8.0
+          },
           "spread": "Shah +5.0",
           "matchup": "Nirav Shah vs. Angus King III",
           "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
@@ -21463,6 +21917,28 @@
       "race_to_watch": false,
       "polls": [
         {
+          "date": "2026-03-02",
+          "pollster": "Pan Atlantic Research",
+          "c1": "Robert Charles",
+          "d": 26.0,
+          "c2": "Garrett Mason",
+          "r": 11.0,
+          "c3": "James Libby",
+          "c3pct": 8.0,
+          "candidates": {
+            "Robert Charles": 26.0,
+            "Garrett Mason": 11.0,
+            "James Libby": 8.0,
+            "Owen McCarthy": 7.0,
+            "David Jones": 6.0,
+            "Jonathan Bush": 4.0,
+            "Ben Midgley": 4.0
+          },
+          "spread": "Charles +15.0",
+          "matchup": "Robert Charles vs. Garrett Mason",
+          "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
+        },
+        {
           "date": "2026-02-16",
           "pollster": "University of New Hampshire",
           "c1": "Robert Charles",
@@ -21471,6 +21947,16 @@
           "r": 12.0,
           "c3": "David Jones",
           "c3pct": 7.0,
+          "candidates": {
+            "Robert Charles": 28.0,
+            "Garrett Mason": 12.0,
+            "David Jones": 7.0,
+            "Ben Midgley": 6.0,
+            "Jonathan Bush": 5.0,
+            "Robert Wessels": 4.0,
+            "James Libby": 2.0,
+            "Owen McCarthy": 1.0
+          },
           "spread": "Charles +16.0",
           "matchup": "Robert Charles vs. Garrett Mason",
           "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
@@ -21484,8 +21970,29 @@
           "r": 11.0,
           "c3": "James Libby",
           "c3pct": 8.0,
+          "candidates": null,
           "spread": "Charles +15.0",
           "matchup": "Robert Charles vs. Garrett Mason",
+          "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
+        },
+        {
+          "date": "2025-12-07",
+          "pollster": "Pan Atlantic Research",
+          "c1": "Robert Charles",
+          "d": 16.0,
+          "c2": "David Jones",
+          "r": 6.0,
+          "c3": "Jonathan Bush",
+          "c3pct": 5.0,
+          "candidates": {
+            "Robert Charles": 16.0,
+            "David Jones": 6.0,
+            "Jonathan Bush": 5.0,
+            "James Libby": 3.0,
+            "Owen McCarthy": 2.0
+          },
+          "spread": "Charles +10.0",
+          "matchup": "Robert Charles vs. David Jones",
           "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
         },
         {
@@ -21497,6 +22004,7 @@
           "r": 6.0,
           "c3": "Jonathan Bush",
           "c3pct": 5.0,
+          "candidates": null,
           "spread": "Charles +10.0",
           "matchup": "Robert Charles vs. David Jones",
           "url": "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election"
@@ -23836,6 +24344,7 @@
           "r": 36.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +3.5",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -23849,7 +24358,22 @@
           "r": 36.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +3.0",
+          "matchup": "Jocelyn Benson (D) vs. John James (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
+        },
+        {
+          "date": "2026-02-02",
+          "pollster": "Glengariff Group",
+          "c1": "Jocelyn Benson (D)",
+          "d": 28.0,
+          "c2": "John James (R)",
+          "r": 29.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +1.0",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
         },
@@ -23862,6 +24386,7 @@
           "r": 34.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +2.0",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -23875,6 +24400,7 @@
           "r": 29.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.0",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -23888,6 +24414,7 @@
           "r": 37.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +6.0",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -23901,6 +24428,7 @@
           "r": 34.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.0",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -23914,6 +24442,7 @@
           "r": 39.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +5.0",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -23927,6 +24456,7 @@
           "r": 29.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +1.0",
           "matchup": "Jocelyn Benson (D) vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -23940,6 +24470,7 @@
           "r": 35.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +4.0",
           "matchup": "Generic Democrat vs. John James (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -24662,7 +25193,30 @@
           "r": 12.0,
           "c3": "Chris Swanson",
           "c3pct": 5.0,
+          "candidates": {
+            "Jocelyn Benson": 48.0,
+            "Garlin Gilchrist": 12.0,
+            "Chris Swanson": 5.0
+          },
           "spread": "Benson +36.0",
+          "matchup": "Jocelyn Benson vs. Garlin Gilchrist",
+          "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
+        },
+        {
+          "date": "2025-11-21",
+          "pollster": "270toWin",
+          "c1": "Jocelyn Benson",
+          "d": 53.0,
+          "c2": "Garlin Gilchrist",
+          "r": 13.5,
+          "c3": "Chris Swanson",
+          "c3pct": 5.5,
+          "candidates": {
+            "Jocelyn Benson": 53.0,
+            "Garlin Gilchrist": 13.5,
+            "Chris Swanson": 5.5
+          },
+          "spread": "Benson +39.5",
           "matchup": "Jocelyn Benson vs. Garlin Gilchrist",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
         },
@@ -24675,6 +25229,11 @@
           "r": 15.0,
           "c3": "Chris Swanson",
           "c3pct": 6.0,
+          "candidates": {
+            "Jocelyn Benson": 58.0,
+            "Garlin Gilchrist": 15.0,
+            "Chris Swanson": 6.0
+          },
           "spread": "Benson +43.0",
           "matchup": "Jocelyn Benson vs. Garlin Gilchrist",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -24688,7 +25247,26 @@
           "r": 13.5,
           "c3": "Chris Swanson",
           "c3pct": 5.5,
+          "candidates": null,
           "spread": "Benson +39.5",
+          "matchup": "Jocelyn Benson vs. Garlin Gilchrist",
+          "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
+        },
+        {
+          "date": "2025-10-06",
+          "pollster": "Impact Research (D)",
+          "c1": "Jocelyn Benson",
+          "d": 56.0,
+          "c2": "Garlin Gilchrist",
+          "r": 17.0,
+          "c3": "Chris Swanson",
+          "c3pct": 5.0,
+          "candidates": {
+            "Jocelyn Benson": 56.0,
+            "Garlin Gilchrist": 17.0,
+            "Chris Swanson": 5.0
+          },
+          "spread": "Benson +39.0",
           "matchup": "Jocelyn Benson vs. Garlin Gilchrist",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
         }
@@ -26188,7 +26766,32 @@
           "r": 11.0,
           "c3": "Tom Leonard",
           "c3pct": 5.0,
+          "candidates": {
+            "John James": 48.0,
+            "Mike Cox": 11.0,
+            "Tom Leonard": 5.0,
+            "Aric Nesbitt": 2.0
+          },
           "spread": "James +37.0",
+          "matchup": "John James vs. Mike Cox",
+          "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
+        },
+        {
+          "date": "2025-11-21",
+          "pollster": "270toWin",
+          "c1": "John James",
+          "d": 46.0,
+          "c2": "Mike Cox",
+          "r": 12.0,
+          "c3": "Tom Leonard",
+          "c3pct": 4.0,
+          "candidates": {
+            "John James": 46.0,
+            "Mike Cox": 12.0,
+            "Tom Leonard": 4.0,
+            "Aric Nesbitt": 4.0
+          },
+          "spread": "James +34.0",
           "matchup": "John James vs. Mike Cox",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
         },
@@ -26201,6 +26804,13 @@
           "r": 13.0,
           "c3": "Aric Nesbitt",
           "c3pct": 6.0,
+          "candidates": {
+            "John James": 44.0,
+            "Mike Cox": 13.0,
+            "Aric Nesbitt": 6.0,
+            "Perry Johnson": 4.0,
+            "Tom Leonard": 3.0
+          },
           "spread": "James +31.0",
           "matchup": "John James vs. Mike Cox",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -26214,6 +26824,7 @@
           "r": 12.0,
           "c3": "Tom Leonard",
           "c3pct": 4.0,
+          "candidates": null,
           "spread": "James +34.0",
           "matchup": "John James vs. Mike Cox",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -26227,6 +26838,10 @@
           "r": 7.0,
           "c3": "Perry Johnson",
           "c3pct": null,
+          "candidates": {
+            "John James": 41.0,
+            "Mike Cox": 7.0
+          },
           "spread": "James +34.0",
           "matchup": "John James vs. Mike Cox",
           "url": "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election"
@@ -28368,7 +28983,7 @@
         },
         {
           "date": "3/23",
-          "Aric Nesbitt": 13.0,
+          "Aric Nesbitt": 12.5,
           "Candice Miller": 0.5,
           "Dick DeVos": 0.5,
           "Garrett Soldano": 0.5,
@@ -28415,8 +29030,23 @@
           "r": 38.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Lisa Demuth (R) vs. Lisa Demuth (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election"
+        },
+        {
+          "date": "2026-02-01",
+          "pollster": "Peak Insights (R)",
+          "c1": "Lisa Demuth",
+          "d": 17.0,
+          "c2": "Republican",
+          "r": null,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "",
+          "matchup": "Lisa Demuth vs. Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election"
         },
         {
@@ -28428,6 +29058,7 @@
           "r": 30.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Democratic vs. Peggy Bennett (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election"
@@ -28441,6 +29072,7 @@
           "r": null,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Lisa Demuth vs. Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election"
@@ -28454,6 +29086,7 @@
           "r": 46.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Democratic vs. Generic Republican",
           "url": "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election"
@@ -32076,6 +32709,7 @@
           "r": 47.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +10.0",
           "matchup": "Jon Kiper (D) vs. Kelly Ayotte (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_Hampshire_gubernatorial_election"
@@ -32089,6 +32723,7 @@
           "r": 50.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +11.0",
           "matchup": "Jon Kiper (D) vs. Kelly Ayotte (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_Hampshire_gubernatorial_election"
@@ -32102,6 +32737,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +3.0",
           "matchup": "Generic Democrat vs. Kelly Ayotte (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_Hampshire_gubernatorial_election"
@@ -34342,6 +34978,10 @@
           "r": 25.0,
           "c3": "Ken Miyagishima",
           "c3pct": null,
+          "candidates": {
+            "Deb Haaland": 46.0,
+            "Sam Bregman": 25.0
+          },
           "spread": "Haaland +21.0",
           "matchup": "Deb Haaland vs. Sam Bregman",
           "url": "https://en.wikipedia.org/wiki/2026_New_Mexico_gubernatorial_election"
@@ -34355,6 +34995,10 @@
           "r": 26.0,
           "c3": "Ken Miyagishima",
           "c3pct": null,
+          "candidates": {
+            "Deb Haaland": 56.0,
+            "Sam Bregman": 26.0
+          },
           "spread": "Haaland +30.0",
           "matchup": "Deb Haaland vs. Sam Bregman",
           "url": "https://en.wikipedia.org/wiki/2026_New_Mexico_gubernatorial_election"
@@ -37143,7 +37787,7 @@
           "date": "3/23",
           "Brian Cillessen": 0.5,
           "Duke Rodriguez": 45.0,
-          "Gregg Hull": 52.0,
+          "Gregg Hull": 51.5,
           "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
@@ -37184,6 +37828,7 @@
           "r": 31.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +20.0",
           "matchup": "Kathy Hochul (D) vs. Bruce Blakeman (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37197,6 +37842,7 @@
           "r": 33.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +17.0",
           "matchup": "Kathy Hochul (D) vs. Bruce Blakeman (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37210,6 +37856,7 @@
           "r": 34.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +13.0",
           "matchup": "Kathy Hochul (D) vs. Bruce Blakeman (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37223,6 +37870,7 @@
           "r": 28.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +26.0",
           "matchup": "Kathy Hochul (D) vs. Bruce Blakeman (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37236,6 +37884,7 @@
           "r": 39.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +14.0",
           "matchup": "Kathy Hochul (D) vs. Bruce Blakeman (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37249,6 +37898,7 @@
           "r": 25.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +25.0",
           "matchup": "Kathy Hochul (D) vs. Bruce Blakeman (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37262,6 +37912,7 @@
           "r": 32.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +20.0",
           "matchup": "Kathy Hochul (D) vs. Elise Stefanik (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37275,6 +37926,7 @@
           "r": 36.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +11.0",
           "matchup": "Kathy Hochul (D) vs. Bruce Blakeman (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -37288,6 +37940,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.0",
           "matchup": "Kathy Hochul (D) vs. Elise Stefanik (R)",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -38015,6 +38668,10 @@
           "r": 11.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Kathy Hochul": 57.5,
+            "Antonio Delgado": 11.0
+          },
           "spread": "Hochul +46.5",
           "matchup": "Kathy Hochul vs. Antonio Delgado",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -38028,6 +38685,10 @@
           "r": 11.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Kathy Hochul": 64.0,
+            "Antonio Delgado": 11.0
+          },
           "spread": "Hochul +53.0",
           "matchup": "Kathy Hochul vs. Antonio Delgado",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -38041,6 +38702,10 @@
           "r": 12.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Kathy Hochul": 64.0,
+            "Antonio Delgado": 12.0
+          },
           "spread": "Hochul +52.0",
           "matchup": "Kathy Hochul vs. Antonio Delgado",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -38054,6 +38719,10 @@
           "r": 13.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Kathy Hochul": 56.0,
+            "Antonio Delgado": 13.0
+          },
           "spread": "Hochul +43.0",
           "matchup": "Kathy Hochul vs. Antonio Delgado",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -38067,6 +38736,10 @@
           "r": 16.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Kathy Hochul": 56.0,
+            "Antonio Delgado": 16.0
+          },
           "spread": "Hochul +40.0",
           "matchup": "Kathy Hochul vs. Antonio Delgado",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -39632,6 +40305,10 @@
           "r": 21.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Bruce Blakeman": 34.0,
+            "Another candidate": 21.0
+          },
           "spread": "Blakeman +13.0",
           "matchup": "Bruce Blakeman vs. Another candidate",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -39645,6 +40322,10 @@
           "r": 17.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Elise Stefanik": 48.0,
+            "Bruce Blakeman": 17.0
+          },
           "spread": "Stefanik +31.0",
           "matchup": "Elise Stefanik vs. Bruce Blakeman",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -39658,6 +40339,10 @@
           "r": 5.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Elise Stefanik": 74.0,
+            "Bruce Blakeman": 5.0
+          },
           "spread": "Stefanik +69.0",
           "matchup": "Elise Stefanik vs. Bruce Blakeman",
           "url": "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election"
@@ -40596,6 +41281,7 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +1.0",
           "matchup": "Amy Acton (D) vs. Vivek Ramaswamy (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election"
@@ -40609,6 +41295,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +10.0",
           "matchup": "Amy Acton (D) vs. Vivek Ramaswamy (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election"
@@ -40622,6 +41309,7 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +1.0",
           "matchup": "Amy Acton (D) vs. Vivek Ramaswamy (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election"
@@ -40635,6 +41323,7 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +2.0",
           "matchup": "Amy Acton (D) vs. Vivek Ramaswamy (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election"
@@ -40648,6 +41337,7 @@
           "r": 50.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +3.0",
           "matchup": "Amy Acton (D) vs. Vivek Ramaswamy (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election"
@@ -41375,6 +42065,10 @@
           "r": 41.0,
           "c3": "Sherrod Brown",
           "c3pct": null,
+          "candidates": {
+            "Amy Acton": 50.0,
+            "Tim Ryan": 41.0
+          },
           "spread": "Acton +9.0",
           "matchup": "Amy Acton vs. Tim Ryan",
           "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election"
@@ -42685,6 +43379,10 @@
           "r": 18.0,
           "c3": "Dave Yost",
           "c3pct": null,
+          "candidates": {
+            "Vivek Ramaswamy": 76.0,
+            "Heather Hill": 18.0
+          },
           "spread": "Ramaswamy +58.0",
           "matchup": "Vivek Ramaswamy vs. Heather Hill",
           "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election"
@@ -44515,14 +45213,28 @@
       "kalshi": "GOVPARTYOR-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyor/oregon-governor/govpartyor-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/oregon/",
-      "poll_avg_dem": null,
-      "market_gap": null,
+      "poll_avg_dem": 43.0,
+      "market_gap": 43.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
       "result": null,
       "race_to_watch": false,
       "polls": [
+        {
+          "date": "2026-02-28",
+          "pollster": "FM3 Research (D)",
+          "c1": "Tina Kotek (D)",
+          "d": 43.0,
+          "c2": "Ed Diehl (R)",
+          "r": 37.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(D) +6.0",
+          "matchup": "Tina Kotek (D) vs. Ed Diehl (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_Oregon_gubernatorial_election"
+        },
         {
           "date": "2026-01-28",
           "pollster": "FM3 Research (D)",
@@ -44532,6 +45244,7 @@
           "r": 37.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +6.0",
           "matchup": "Tina Kotek (D) vs. Ed Diehl (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Oregon_gubernatorial_election"
@@ -45242,14 +45955,28 @@
       "kalshi": "GOVPARTYPA-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartypa/pennsylvania-governor/govpartypa-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/pennsylvania/",
-      "poll_avg_dem": 55.0,
-      "market_gap": 40.0,
+      "poll_avg_dem": 51.5,
+      "market_gap": 43.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
       "result": null,
       "race_to_watch": false,
       "polls": [
+        {
+          "date": "2026-03-01",
+          "pollster": "Franklin & Marshall College",
+          "c1": "Josh Shapiro (D)",
+          "d": 48.0,
+          "c2": "Stacy Garrity (R)",
+          "r": 28.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(D) +20.0",
+          "matchup": "Josh Shapiro (D) vs. Stacy Garrity (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_Pennsylvania_gubernatorial_election"
+        },
         {
           "date": "2026-02-23",
           "pollster": "Quinnipiac University",
@@ -45259,6 +45986,7 @@
           "r": 37.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +18.0",
           "matchup": "Josh Shapiro (D) vs. Stacy Garrity (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Pennsylvania_gubernatorial_election"
@@ -45272,6 +46000,7 @@
           "r": 28.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +20.0",
           "matchup": "Josh Shapiro (D) vs. Stacy Garrity (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Pennsylvania_gubernatorial_election"
@@ -49050,7 +49779,7 @@
       "state": "TN",
       "district": null,
       "description": "Will the Democratic party win the governorship in Tennessee",
-      "dem_base": 0.035,
+      "dem_base": 0.03,
       "pm": null,
       "kalshi": "GOVPARTYTN-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartytn/tennessee-governor/govpartytn-26",
@@ -49657,7 +50386,7 @@
         {
           "date": "3/23",
           "polymarket": null,
-          "kalshi": 4
+          "kalshi": 3
         }
       ],
       "note": null
@@ -49690,7 +50419,22 @@
           "r": 49.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +8.0",
+          "matchup": "Gina Hinojosa (D) vs. Greg Abbott (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
+        },
+        {
+          "date": "2026-02-03",
+          "pollster": "GBAO (D)",
+          "c1": "Gina Hinojosa (D)",
+          "d": 43.0,
+          "c2": "Greg Abbott (R)",
+          "r": 46.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +3.0",
           "matchup": "Gina Hinojosa (D) vs. Greg Abbott (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
         },
@@ -49703,6 +50447,7 @@
           "r": 49.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +7.0",
           "matchup": "Gina Hinojosa (D) vs. Greg Abbott (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -49716,6 +50461,7 @@
           "r": 50.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +8.0",
           "matchup": "Gina Hinojosa (D) vs. Greg Abbott (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -49729,6 +50475,7 @@
           "r": 46.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +3.0",
           "matchup": "Gina Hinojosa (D) vs. Greg Abbott (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50455,6 +51202,26 @@
       "race_to_watch": false,
       "polls": [
         {
+          "date": "2026-03-02",
+          "pollster": "YouGov",
+          "c1": "Greg Abbott",
+          "d": 72.0,
+          "c2": "Pete Chambers",
+          "r": 11.0,
+          "c3": "Evelyn Brooks",
+          "c3pct": 2.0,
+          "candidates": {
+            "Greg Abbott": 72.0,
+            "Pete Chambers": 11.0,
+            "Evelyn Brooks": 2.0,
+            "Arturo Espinosa": 0.0,
+            "Mark V. Goloby": 0.0
+          },
+          "spread": "Abbott +61.0",
+          "matchup": "Greg Abbott vs. Pete Chambers",
+          "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
+        },
+        {
           "date": "2026-02-16",
           "pollster": "University of Texas / Texas Politics Project",
           "c1": "Greg Abbott",
@@ -50463,6 +51230,13 @@
           "r": 5.0,
           "c3": "Evelyn Brooks",
           "c3pct": 1.0,
+          "candidates": {
+            "Greg Abbott": 91.0,
+            "Pete Chambers": 5.0,
+            "Evelyn Brooks": 1.0,
+            "Arturo Espinosa": 1.0,
+            "Mark V. Goloby": 1.0
+          },
           "spread": "Abbott +86.0",
           "matchup": "Greg Abbott vs. Pete Chambers",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50476,6 +51250,7 @@
           "r": 11.0,
           "c3": "Evelyn Brooks",
           "c3pct": 2.0,
+          "candidates": null,
           "spread": "Abbott +61.0",
           "matchup": "Greg Abbott vs. Pete Chambers",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50511,6 +51286,25 @@
       "race_to_watch": false,
       "polls": [
         {
+          "date": "2026-03-02",
+          "pollster": "YouGov",
+          "c1": "Gina Hinojosa",
+          "d": 55.0,
+          "c2": "Bobby Cole",
+          "r": 5.0,
+          "c3": "Chris Bell",
+          "c3pct": 4.0,
+          "candidates": {
+            "Gina Hinojosa": 55.0,
+            "Bobby Cole": 5.0,
+            "Chris Bell": 4.0,
+            "Angela Villescaz": 2.0
+          },
+          "spread": "Hinojosa +50.0",
+          "matchup": "Gina Hinojosa vs. Bobby Cole",
+          "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
+        },
+        {
           "date": "2026-02-24",
           "pollster": "Blueprint Polling (D)",
           "c1": "Gina Hinojosa",
@@ -50519,6 +51313,13 @@
           "r": 4.0,
           "c3": "Bobby Cole",
           "c3pct": 3.0,
+          "candidates": {
+            "Gina Hinojosa": 61.0,
+            "Chris Bell": 4.0,
+            "Bobby Cole": 3.0,
+            "Angela Villescaz": 2.0,
+            "Andrew White": 1.0
+          },
           "spread": "Hinojosa +57.0",
           "matchup": "Gina Hinojosa vs. Chris Bell",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50532,6 +51333,10 @@
           "r": 25.0,
           "c3": "Bobby Cole",
           "c3pct": null,
+          "candidates": {
+            "Gina Hinojosa": 60.0,
+            "Chris Bell": 25.0
+          },
           "spread": "Hinojosa +35.0",
           "matchup": "Gina Hinojosa vs. Chris Bell",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50545,6 +51350,12 @@
           "r": 9.0,
           "c3": "Chris Bell",
           "c3pct": 4.0,
+          "candidates": {
+            "Gina Hinojosa": 76.0,
+            "Bobby Cole": 9.0,
+            "Chris Bell": 4.0,
+            "Angela Villescaz": 3.0
+          },
           "spread": "Hinojosa +67.0",
           "matchup": "Gina Hinojosa vs. Bobby Cole",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50558,6 +51369,7 @@
           "r": 5.0,
           "c3": "Chris Bell",
           "c3pct": 4.0,
+          "candidates": null,
           "spread": "Hinojosa +50.0",
           "matchup": "Gina Hinojosa vs. Bobby Cole",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50571,6 +51383,12 @@
           "r": 7.0,
           "c3": "Bobby Cole",
           "c3pct": 6.0,
+          "candidates": {
+            "Gina Hinojosa": 37.0,
+            "Chris Bell": 7.0,
+            "Bobby Cole": 6.0,
+            "Angela Villescaz": 4.0
+          },
           "spread": "Hinojosa +30.0",
           "matchup": "Gina Hinojosa vs. Chris Bell",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50584,6 +51402,11 @@
           "r": 4.0,
           "c3": "Bobby Cole",
           "c3pct": 3.0,
+          "candidates": {
+            "Gina Hinojosa": 29.0,
+            "Chris Bell": 4.0,
+            "Bobby Cole": 3.0
+          },
           "spread": "Hinojosa +25.0",
           "matchup": "Gina Hinojosa vs. Chris Bell",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -50597,6 +51420,13 @@
           "r": 6.0,
           "c3": "Chris Bell",
           "c3pct": 5.0,
+          "candidates": {
+            "Gina Hinojosa": 41.0,
+            "Andrew White": 6.0,
+            "Chris Bell": 5.0,
+            "Bobby Cole": 3.0,
+            "Angela Villescaz": 1.0
+          },
           "spread": "Hinojosa +35.0",
           "matchup": "Gina Hinojosa vs. Andrew White",
           "url": "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election"
@@ -51311,6 +52141,7 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +6.0",
           "matchup": "Mandela Barnes (D) vs. Tom Tiffany (R)",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -52033,6 +52864,14 @@
           "r": 10.0,
           "c3": "Sara Rodriguez",
           "c3pct": 6.0,
+          "candidates": {
+            "Francesca Hong": 11.0,
+            "Mandela Barnes": 10.0,
+            "Sara Rodriguez": 6.0,
+            "David Crowley": 3.0,
+            "Missy Hughes": 2.0,
+            "Kelda Roys": 1.0
+          },
           "spread": "Hong +1.0",
           "matchup": "Francesca Hong vs. Mandela Barnes",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -52046,6 +52885,14 @@
           "r": 20.0,
           "c3": "David Crowley",
           "c3pct": 7.0,
+          "candidates": {
+            "Mandela Barnes": 28.0,
+            "Sara Rodriguez": 20.0,
+            "David Crowley": 7.0,
+            "Francesca Hong": 5.0,
+            "Kelda Roys": 2.0,
+            "Missy Hughes": 1.0
+          },
           "spread": "Barnes +8.0",
           "matchup": "Mandela Barnes vs. Sara Rodriguez",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -52059,6 +52906,13 @@
           "r": 6.0,
           "c3": "Sara Rodriguez",
           "c3pct": 6.0,
+          "candidates": {
+            "Mandela Barnes": 21.0,
+            "David Crowley": 6.0,
+            "Sara Rodriguez": 6.0,
+            "Missy Hughes": 2.0,
+            "Kelda Roys": 1.0
+          },
           "spread": "Barnes +15.0",
           "matchup": "Mandela Barnes vs. David Crowley",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -52072,6 +52926,13 @@
           "r": 4.0,
           "c3": "David Crowley",
           "c3pct": 3.0,
+          "candidates": {
+            "Francesca Hong": 6.0,
+            "Sara Rodriguez": 4.0,
+            "David Crowley": 3.0,
+            "Kelda Roys": 3.0,
+            "Missy Hughes": 2.0
+          },
           "spread": "Hong +2.0",
           "matchup": "Francesca Hong vs. Sara Rodriguez",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -53793,7 +54654,7 @@
           "Kelda Roys": 1.5,
           "Mandela Barnes": 37.5,
           "Missy Hughes": 0.5,
-          "Sara Rodriguez": 34.0,
+          "Sara Rodriguez": 35.0,
           "Tony Evers": 0.5
         }
       ],
@@ -53827,6 +54688,10 @@
           "r": 2.0,
           "c3": "Bill Berrien",
           "c3pct": null,
+          "candidates": {
+            "Tom Tiffany": 35.0,
+            "Andy Manske": 2.0
+          },
           "spread": "Tiffany +33.0",
           "matchup": "Tom Tiffany vs. Andy Manske",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -53840,6 +54705,12 @@
           "r": 17.0,
           "c3": "Tim Michels",
           "c3pct": 12.0,
+          "candidates": {
+            "Eric Hovde": 25.0,
+            "Tom Tiffany": 17.0,
+            "Tim Michels": 12.0,
+            "Josh Schoemann": 5.0
+          },
           "spread": "Hovde +8.0",
           "matchup": "Eric Hovde vs. Tom Tiffany",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -53853,6 +54724,11 @@
           "r": 6.0,
           "c3": "Andy Manske",
           "c3pct": 0.0,
+          "candidates": {
+            "Tom Tiffany": 23.0,
+            "Josh Schoemann": 6.0,
+            "Andy Manske": 0.0
+          },
           "spread": "Tiffany +17.0",
           "matchup": "Tom Tiffany vs. Josh Schoemann",
           "url": "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election"
@@ -62069,7 +62945,7 @@
       "state": "CA",
       "district": "13",
       "description": "Will Democratic win the House race for CA-13?",
-      "dem_base": 0.76,
+      "dem_base": 0.755,
       "pm": null,
       "kalshi": "HOUSECA13-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca13/house-ca-13/houseca13-26",
@@ -105231,6 +106107,7 @@
           "r": 47.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "Mary Peltola (D) vs. Dan Sullivan (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska"
@@ -105244,6 +106121,7 @@
           "r": 46.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "Mary Peltola (D) vs. Dan Sullivan (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska"
@@ -105257,6 +106135,7 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +1.0",
           "matchup": "Mary Peltola (D) vs. Dan Sullivan (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska"
@@ -105270,6 +106149,7 @@
           "r": 46.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "Mary Peltola (D) vs. Dan Sullivan (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska"
@@ -106630,6 +107510,7 @@
           "r": 58.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +22.0",
           "matchup": "Hallie Shoffner (D) vs. Tom Cotton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Arkansas"
@@ -108816,6 +109697,10 @@
           "r": 13.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "John Hickenlooper": 45.0,
+            "Julie Gonzales": 13.0
+          },
           "spread": "Hickenlooper +32.0",
           "matchup": "John Hickenlooper vs. Julie Gonzales",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Colorado"
@@ -113050,14 +113935,28 @@
       "kalshi": "SENATEGA-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatega/georgia-senate-race/senatega-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/georgia/",
-      "poll_avg_dem": null,
-      "market_gap": null,
+      "poll_avg_dem": 47.0,
+      "market_gap": 34.0,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
       "result": null,
       "race_to_watch": true,
       "polls": [
+        {
+          "date": "2026-03-02",
+          "pollster": "Emerson College",
+          "c1": "Jon Ossoff (D)",
+          "d": 47.0,
+          "c2": "Buddy Carter (R)",
+          "r": 44.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(D) +3.0",
+          "matchup": "Jon Ossoff (D) vs. Buddy Carter (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
+        },
         {
           "date": "2026-02-02",
           "pollster": "Emerson College",
@@ -113067,6 +113966,7 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +3.0",
           "matchup": "Jon Ossoff (D) vs. Buddy Carter (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113794,6 +114694,11 @@
           "r": 13.0,
           "c3": "Buddy Carter",
           "c3pct": 11.0,
+          "candidates": {
+            "Mike Collins": 31.0,
+            "Derek Dooley": 13.0,
+            "Buddy Carter": 11.0
+          },
           "spread": "Collins +18.0",
           "matchup": "Mike Collins vs. Derek Dooley",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113807,7 +114712,30 @@
           "r": 16.8,
           "c3": "Derek Dooley",
           "c3pct": 10.8,
+          "candidates": {
+            "Mike Collins": 30.3,
+            "Buddy Carter": 16.8,
+            "Derek Dooley": 10.8
+          },
           "spread": "Collins +13.5",
+          "matchup": "Mike Collins vs. Buddy Carter",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "Emerson College",
+          "c1": "Mike Collins",
+          "d": 30.0,
+          "c2": "Buddy Carter",
+          "r": 16.0,
+          "c3": "Derek Dooley",
+          "c3pct": 10.0,
+          "candidates": {
+            "Mike Collins": 30.0,
+            "Buddy Carter": 16.0,
+            "Derek Dooley": 10.0
+          },
+          "spread": "Collins +14.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
         },
@@ -113820,6 +114748,11 @@
           "r": 11.0,
           "c3": "Derek Dooley",
           "c3pct": 9.0,
+          "candidates": {
+            "Mike Collins": 36.0,
+            "Buddy Carter": 11.0,
+            "Derek Dooley": 9.0
+          },
           "spread": "Collins +25.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113833,6 +114766,11 @@
           "r": 19.0,
           "c3": "Derek Dooley",
           "c3pct": 11.0,
+          "candidates": {
+            "Mike Collins": 34.0,
+            "Buddy Carter": 19.0,
+            "Derek Dooley": 11.0
+          },
           "spread": "Collins +15.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113846,6 +114784,7 @@
           "r": 16.0,
           "c3": "Derek Dooley",
           "c3pct": 10.0,
+          "candidates": null,
           "spread": "Collins +14.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113859,6 +114798,11 @@
           "r": 16.0,
           "c3": "Derek Dooley",
           "c3pct": 12.0,
+          "candidates": {
+            "Mike Collins": 32.0,
+            "Buddy Carter": 16.0,
+            "Derek Dooley": 12.0
+          },
           "spread": "Collins +16.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113872,6 +114816,11 @@
           "r": 20.0,
           "c3": "Derek Dooley",
           "c3pct": 12.0,
+          "candidates": {
+            "Mike Collins": 25.0,
+            "Buddy Carter": 20.0,
+            "Derek Dooley": 12.0
+          },
           "spread": "Collins +5.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113885,6 +114834,11 @@
           "r": 16.0,
           "c3": "Derek Dooley",
           "c3pct": 16.0,
+          "candidates": {
+            "Mike Collins": 28.0,
+            "Buddy Carter": 16.0,
+            "Derek Dooley": 16.0
+          },
           "spread": "Collins +12.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -113898,6 +114852,11 @@
           "r": 20.0,
           "c3": "Derek Dooley",
           "c3pct": 12.0,
+          "candidates": {
+            "Mike Collins": 30.0,
+            "Buddy Carter": 20.0,
+            "Derek Dooley": 12.0
+          },
           "spread": "Collins +10.0",
           "matchup": "Mike Collins vs. Buddy Carter",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia"
@@ -115428,17 +116387,17 @@
           "Brad Raffensperger": 0.5,
           "Brian Kemp": 0.5,
           "Buddy Carter": 2.5,
-          "Christina Loren Clement": 0.2,
-          "Christoph La'Flare Chapman": 0.9,
+          "Christina Loren Clement": 0.1,
+          "Christoph La'Flare Chapman": 0.4,
           "Derek Dooley": 7.5,
           "John King": 0.5,
           "Jonathan McColumn": 0.2,
           "Marjorie Taylor-Greene": 0.5,
-          "Mike Collins": 85.5,
+          "Mike Collins": 84.0,
           "Reagan Box": 0.5,
           "Rich McCormick": 0.5,
           "Rick Temple": 0.2,
-          "Vinson Watkins": 0.2
+          "Vinson Watkins": 0.1
         }
       ],
       "note": null
@@ -115493,6 +116452,7 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +3.0",
           "matchup": "Josh Turek (D) vs. Ashley Hinson (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Iowa"
@@ -117377,6 +118337,10 @@
           "r": 24.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Zach Wahls": 42.0,
+            "Josh Turek": 24.0
+          },
           "spread": "Wahls +18.0",
           "matchup": "Zach Wahls vs. Josh Turek",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Iowa"
@@ -117390,6 +118354,10 @@
           "r": 23.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Zach Wahls": 30.0,
+            "Josh Turek": 23.0
+          },
           "spread": "Wahls +7.0",
           "matchup": "Zach Wahls vs. Josh Turek",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Iowa"
@@ -118335,9 +119303,9 @@
         {
           "date": "3/23",
           "J.D. Scholten": 0.5,
-          "Josh Turek": 53.5,
+          "Josh Turek": 50.5,
           "Nathan Sage": 0.5,
-          "Zach Wahls": 44.5
+          "Zach Wahls": 51.0
         }
       ],
       "note": null
@@ -118370,6 +119338,7 @@
           "r": 48.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Democratic vs. Jim Risch (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Idaho"
@@ -119768,6 +120737,11 @@
           "r": 29.0,
           "c3": "Robin Kelly",
           "c3pct": 14.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 32.0,
+            "Juliana Stratton": 29.0,
+            "Robin Kelly": 14.0
+          },
           "spread": "Krishnamoorthi +3.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119781,6 +120755,11 @@
           "r": 33.0,
           "c3": "Robin Kelly",
           "c3pct": 18.0,
+          "candidates": {
+            "Juliana Stratton": 38.0,
+            "Raja Krishnamoorthi": 33.0,
+            "Robin Kelly": 18.0
+          },
           "spread": "Stratton +5.0",
           "matchup": "Juliana Stratton vs. Raja Krishnamoorthi",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119794,6 +120773,11 @@
           "r": 30.0,
           "c3": "Robin Kelly",
           "c3pct": 13.0,
+          "candidates": {
+            "Juliana Stratton": 32.0,
+            "Raja Krishnamoorthi": 30.0,
+            "Robin Kelly": 13.0
+          },
           "spread": "Stratton +2.0",
           "matchup": "Juliana Stratton vs. Raja Krishnamoorthi",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119807,6 +120791,11 @@
           "r": 28.0,
           "c3": "Robin Kelly",
           "c3pct": 12.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 39.0,
+            "Juliana Stratton": 28.0,
+            "Robin Kelly": 12.0
+          },
           "spread": "Krishnamoorthi +11.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119820,6 +120809,11 @@
           "r": 26.0,
           "c3": "Robin Kelly",
           "c3pct": 14.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 36.0,
+            "Juliana Stratton": 26.0,
+            "Robin Kelly": 14.0
+          },
           "spread": "Krishnamoorthi +10.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119833,6 +120827,11 @@
           "r": 30.0,
           "c3": "Robin Kelly",
           "c3pct": 11.0,
+          "candidates": {
+            "Juliana Stratton": 33.0,
+            "Raja Krishnamoorthi": 30.0,
+            "Robin Kelly": 11.0
+          },
           "spread": "Stratton +3.0",
           "matchup": "Juliana Stratton vs. Raja Krishnamoorthi",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119846,6 +120845,11 @@
           "r": 27.0,
           "c3": "Robin Kelly",
           "c3pct": 13.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 29.0,
+            "Juliana Stratton": 27.0,
+            "Robin Kelly": 13.0
+          },
           "spread": "Krishnamoorthi +2.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119859,6 +120863,11 @@
           "r": 26.0,
           "c3": "Robin Kelly",
           "c3pct": 10.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 42.0,
+            "Juliana Stratton": 26.0,
+            "Robin Kelly": 10.0
+          },
           "spread": "Krishnamoorthi +16.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119872,6 +120881,11 @@
           "r": 23.0,
           "c3": "Robin Kelly",
           "c3pct": 8.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 34.0,
+            "Juliana Stratton": 23.0,
+            "Robin Kelly": 8.0
+          },
           "spread": "Krishnamoorthi +11.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119885,6 +120899,11 @@
           "r": 17.0,
           "c3": "Robin Kelly",
           "c3pct": 13.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 43.0,
+            "Juliana Stratton": 17.0,
+            "Robin Kelly": 13.0
+          },
           "spread": "Krishnamoorthi +26.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119898,6 +120917,11 @@
           "r": 21.0,
           "c3": "Robin Kelly",
           "c3pct": 11.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 32.0,
+            "Juliana Stratton": 21.0,
+            "Robin Kelly": 11.0
+          },
           "spread": "Krishnamoorthi +11.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119911,6 +120935,11 @@
           "r": 16.0,
           "c3": "Robin Kelly",
           "c3pct": 15.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 41.0,
+            "Juliana Stratton": 16.0,
+            "Robin Kelly": 15.0
+          },
           "spread": "Krishnamoorthi +25.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119924,6 +120953,11 @@
           "r": 10.0,
           "c3": "Robin Kelly",
           "c3pct": 8.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 31.0,
+            "Juliana Stratton": 10.0,
+            "Robin Kelly": 8.0
+          },
           "spread": "Krishnamoorthi +21.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119937,6 +120971,11 @@
           "r": 20.0,
           "c3": "Robin Kelly",
           "c3pct": 9.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 32.0,
+            "Juliana Stratton": 20.0,
+            "Robin Kelly": 9.0
+          },
           "spread": "Krishnamoorthi +12.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119950,6 +120989,11 @@
           "r": 14.0,
           "c3": "Robin Kelly",
           "c3pct": 7.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 42.0,
+            "Juliana Stratton": 14.0,
+            "Robin Kelly": 7.0
+          },
           "spread": "Krishnamoorthi +28.0",
           "matchup": "Raja Krishnamoorthi vs. Juliana Stratton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -119963,6 +121007,11 @@
           "r": 22.0,
           "c3": "Juliana Stratton",
           "c3pct": 18.0,
+          "candidates": {
+            "Raja Krishnamoorthi": 29.0,
+            "Robin Kelly": 22.0,
+            "Juliana Stratton": 18.0
+          },
           "spread": "Krishnamoorthi +7.0",
           "matchup": "Raja Krishnamoorthi vs. Robin Kelly",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois"
@@ -122719,6 +123768,7 @@
           "r": 49.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +11.0",
           "matchup": "Charles Booker (D) vs. Andy Barr (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -122755,6 +123805,11 @@
           "r": 26.1,
           "c3": "Nate Morris",
           "c3pct": 14.5,
+          "candidates": {
+            "Daniel Cameron": 30.5,
+            "Andy Barr": 26.1,
+            "Nate Morris": 14.5
+          },
           "spread": "Cameron +4.4",
           "matchup": "Daniel Cameron vs. Andy Barr",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -122768,8 +123823,31 @@
           "r": 29.0,
           "c3": "Nate Morris",
           "c3pct": 13.0,
+          "candidates": {
+            "Daniel Cameron": 31.0,
+            "Andy Barr": 29.0,
+            "Nate Morris": 13.0
+          },
           "spread": "Cameron +2.0",
           "matchup": "Daniel Cameron vs. Andy Barr",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
+        },
+        {
+          "date": "2026-02-04",
+          "pollster": "RealClearPolitics",
+          "c1": "Andy Barr",
+          "d": 26.0,
+          "c2": "Daniel Cameron",
+          "r": 24.0,
+          "c3": "Nate Morris",
+          "c3pct": 15.5,
+          "candidates": {
+            "Andy Barr": 26.0,
+            "Daniel Cameron": 24.0,
+            "Nate Morris": 15.5
+          },
+          "spread": "Barr +2.0",
+          "matchup": "Andy Barr vs. Daniel Cameron",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
         },
         {
@@ -122781,7 +123859,30 @@
           "r": 27.0,
           "c3": "Nate Morris",
           "c3pct": 17.0,
+          "candidates": {
+            "Andy Barr": 28.0,
+            "Daniel Cameron": 27.0,
+            "Nate Morris": 17.0
+          },
           "spread": "Barr +1.0",
+          "matchup": "Andy Barr vs. Daniel Cameron",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
+        },
+        {
+          "date": "2026-02-02",
+          "pollster": "Emerson College",
+          "c1": "Andy Barr",
+          "d": 24.0,
+          "c2": "Daniel Cameron",
+          "r": 21.0,
+          "c3": "Nate Morris",
+          "c3pct": 14.0,
+          "candidates": {
+            "Andy Barr": 24.0,
+            "Daniel Cameron": 21.0,
+            "Nate Morris": 14.0
+          },
+          "spread": "Barr +3.0",
           "matchup": "Andy Barr vs. Daniel Cameron",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
         },
@@ -122794,6 +123895,11 @@
           "r": 21.0,
           "c3": "Nate Morris",
           "c3pct": 18.0,
+          "candidates": {
+            "Daniel Cameron": 29.0,
+            "Andy Barr": 21.0,
+            "Nate Morris": 18.0
+          },
           "spread": "Cameron +8.0",
           "matchup": "Daniel Cameron vs. Andy Barr",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -122807,6 +123913,11 @@
           "r": 25.0,
           "c3": "Nate Morris",
           "c3pct": 13.0,
+          "candidates": {
+            "Daniel Cameron": 40.0,
+            "Andy Barr": 25.0,
+            "Nate Morris": 13.0
+          },
           "spread": "Cameron +15.0",
           "matchup": "Daniel Cameron vs. Andy Barr",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -122820,6 +123931,7 @@
           "r": 24.0,
           "c3": "Nate Morris",
           "c3pct": 15.5,
+          "candidates": null,
           "spread": "Barr +2.0",
           "matchup": "Andy Barr vs. Daniel Cameron",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -122833,6 +123945,7 @@
           "r": 21.0,
           "c3": "Nate Morris",
           "c3pct": 14.0,
+          "candidates": null,
           "spread": "Barr +3.0",
           "matchup": "Andy Barr vs. Daniel Cameron",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -122846,6 +123959,11 @@
           "r": 25.0,
           "c3": "Nate Morris",
           "c3pct": 10.0,
+          "candidates": {
+            "Daniel Cameron": 42.0,
+            "Andy Barr": 25.0,
+            "Nate Morris": 10.0
+          },
           "spread": "Cameron +17.0",
           "matchup": "Daniel Cameron vs. Andy Barr",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -122859,6 +123977,11 @@
           "r": 22.0,
           "c3": "Nate Morris",
           "c3pct": 8.0,
+          "candidates": {
+            "Daniel Cameron": 39.0,
+            "Andy Barr": 22.0,
+            "Nate Morris": 8.0
+          },
           "spread": "Cameron +17.0",
           "matchup": "Daniel Cameron vs. Andy Barr",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky"
@@ -124091,7 +125214,7 @@
           "Andy Barr": 57.0,
           "Daniel Cameron": 14.5,
           "Kelly Craft": 0.5,
-          "Nate Morris": 29.0,
+          "Nate Morris": 29.5,
           "Robert Stivers": 0.5,
           "Ryan Quarles": 0.5,
           "Scott Jennings": 0.5
@@ -124840,6 +125963,7 @@
           "r": 27.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +29.0",
           "matchup": "Ed Markey (D) vs. John Deaton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -124853,6 +125977,7 @@
           "r": 30.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +24.0",
           "matchup": "Ed Markey (D) vs. John Deaton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -124866,6 +125991,7 @@
           "r": 31.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +23.0",
           "matchup": "Ed Markey (D) vs. John Deaton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -126191,6 +127317,11 @@
           "r": 23.0,
           "c3": "Alex Rikleen",
           "c3pct": 7.0,
+          "candidates": {
+            "Ed Markey": 35.0,
+            "Seth Moulton": 23.0,
+            "Alex Rikleen": 7.0
+          },
           "spread": "Markey +12.0",
           "matchup": "Ed Markey vs. Seth Moulton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -126204,6 +127335,11 @@
           "r": 24.3,
           "c3": "Alex Rikleen",
           "c3pct": 6.5,
+          "candidates": {
+            "Ed Markey": 38.8,
+            "Seth Moulton": 24.3,
+            "Alex Rikleen": 6.5
+          },
           "spread": "Markey +14.5",
           "matchup": "Ed Markey vs. Seth Moulton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -126217,6 +127353,10 @@
           "r": 22.0,
           "c3": "Alex Rikleen",
           "c3pct": null,
+          "candidates": {
+            "Ed Markey": 45.0,
+            "Seth Moulton": 22.0
+          },
           "spread": "Markey +23.0",
           "matchup": "Ed Markey vs. Seth Moulton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -126230,6 +127370,11 @@
           "r": 25.0,
           "c3": "Alex Rikleen",
           "c3pct": 2.0,
+          "candidates": {
+            "Ed Markey": 34.0,
+            "Seth Moulton": 25.0,
+            "Alex Rikleen": 2.0
+          },
           "spread": "Markey +9.0",
           "matchup": "Ed Markey vs. Seth Moulton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -126243,6 +127388,11 @@
           "r": 28.0,
           "c3": "Alex Rikleen",
           "c3pct": 6.0,
+          "candidates": {
+            "Ed Markey": 51.0,
+            "Seth Moulton": 28.0,
+            "Alex Rikleen": 6.0
+          },
           "spread": "Markey +23.0",
           "matchup": "Ed Markey vs. Seth Moulton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -126256,6 +127406,10 @@
           "r": 34.0,
           "c3": "Alex Rikleen",
           "c3pct": null,
+          "candidates": {
+            "Ed Markey": 53.0,
+            "Seth Moulton": 34.0
+          },
           "spread": "Markey +19.0",
           "matchup": "Ed Markey vs. Seth Moulton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Massachusetts"
@@ -127186,7 +128340,7 @@
           "date": "3/23",
           "Alexander Rikleen": 0.5,
           "Ayanna Pressley": 0.5,
-          "Ed Markey": 80.0,
+          "Ed Markey": 81.0,
           "Seth Moulton": 19.0
         }
       ],
@@ -127203,8 +128357,8 @@
       "kalshi": "SENATEME-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateme/maine-senate-race/senateme-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/maine/",
-      "poll_avg_dem": 42.5,
-      "market_gap": 29.5,
+      "poll_avg_dem": 43.0,
+      "market_gap": 29.0,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -127220,6 +128374,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -127233,7 +128388,22 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +2.0",
+          "matchup": "Janet Mills (D) vs. Susan Collins (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "Pan Atlantic Research",
+          "c1": "Janet Mills (D)",
+          "d": 44.0,
+          "c2": "Susan Collins (R)",
+          "r": 44.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
         },
@@ -127246,6 +128416,7 @@
           "r": 40.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +1.0",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -127259,6 +128430,7 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -127272,6 +128444,7 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.0",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -127285,7 +128458,22 @@
           "r": 51.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +2.0",
+          "matchup": "Janet Mills (D) vs. Susan Collins (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
+        },
+        {
+          "date": "2025-12-07",
+          "pollster": "Pan Atlantic Research",
+          "c1": "Janet Mills (D)",
+          "d": 43.0,
+          "c2": "Susan Collins (R)",
+          "r": 43.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
         },
@@ -127298,6 +128486,7 @@
           "r": 41.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "Democrat +8.0",
           "matchup": "Generic Democrat vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -127311,6 +128500,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -127324,6 +128514,7 @@
           "r": 46.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +4.0",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -127337,6 +128528,7 @@
           "r": 37.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +5.0",
           "matchup": "Janet Mills (D) vs. Susan Collins (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128064,7 +129256,29 @@
           "r": 38.0,
           "c3": "David Costello",
           "c3pct": null,
+          "candidates": {
+            "Graham Platner": 43.0,
+            "Janet Mills": 38.0
+          },
           "spread": "Platner +5.0",
+          "matchup": "Graham Platner vs. Janet Mills",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "Pan Atlantic Research",
+          "c1": "Graham Platner",
+          "d": 46.0,
+          "c2": "Janet Mills",
+          "r": 39.0,
+          "c3": "David Costello",
+          "c3pct": 4.0,
+          "candidates": {
+            "Graham Platner": 46.0,
+            "Janet Mills": 39.0,
+            "David Costello": 4.0
+          },
+          "spread": "Platner +7.0",
           "matchup": "Graham Platner vs. Janet Mills",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
         },
@@ -128077,6 +129291,11 @@
           "r": 26.0,
           "c3": "David Costello",
           "c3pct": 1.0,
+          "candidates": {
+            "Graham Platner": 64.0,
+            "Janet Mills": 26.0,
+            "David Costello": 1.0
+          },
           "spread": "Platner +38.0",
           "matchup": "Graham Platner vs. Janet Mills",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128090,6 +129309,7 @@
           "r": 39.0,
           "c3": "David Costello",
           "c3pct": 4.0,
+          "candidates": null,
           "spread": "Platner +7.0",
           "matchup": "Graham Platner vs. Janet Mills",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128103,8 +129323,30 @@
           "r": 40.0,
           "c3": "David Costello",
           "c3pct": null,
+          "candidates": {
+            "Graham Platner": 55.0,
+            "Janet Mills": 40.0
+          },
           "spread": "Platner +15.0",
           "matchup": "Graham Platner vs. Janet Mills",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
+        },
+        {
+          "date": "2025-12-07",
+          "pollster": "Pan Atlantic Research",
+          "c1": "Janet Mills",
+          "d": 47.0,
+          "c2": "Graham Platner",
+          "r": 37.0,
+          "c3": "David Costello",
+          "c3pct": 1.0,
+          "candidates": {
+            "Janet Mills": 47.0,
+            "Graham Platner": 37.0,
+            "David Costello": 1.0
+          },
+          "spread": "Mills +10.0",
+          "matchup": "Janet Mills vs. Graham Platner",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
         },
         {
@@ -128116,6 +129358,11 @@
           "r": 38.0,
           "c3": "David Costello",
           "c3pct": 0.0,
+          "candidates": {
+            "Graham Platner": 58.0,
+            "Janet Mills": 38.0,
+            "David Costello": 0.0
+          },
           "spread": "Platner +20.0",
           "matchup": "Graham Platner vs. Janet Mills",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128129,6 +129376,7 @@
           "r": 37.0,
           "c3": "David Costello",
           "c3pct": 1.0,
+          "candidates": null,
           "spread": "Mills +10.0",
           "matchup": "Janet Mills vs. Graham Platner",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128142,6 +129390,11 @@
           "r": 39.0,
           "c3": "Jordan Wood",
           "c3pct": 5.0,
+          "candidates": {
+            "Graham Platner": 41.0,
+            "Janet Mills": 39.0,
+            "Jordan Wood": 5.0
+          },
           "spread": "Platner +2.0",
           "matchup": "Graham Platner vs. Janet Mills",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128155,6 +129408,12 @@
           "r": 36.0,
           "c3": "Jordan Wood",
           "c3pct": 2.0,
+          "candidates": {
+            "Janet Mills": 41.0,
+            "Graham Platner": 36.0,
+            "Jordan Wood": 2.0,
+            "David Costello": 1.0
+          },
           "spread": "Mills +5.0",
           "matchup": "Janet Mills vs. Graham Platner",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128168,6 +129427,11 @@
           "r": 25.0,
           "c3": "Jordan Wood",
           "c3pct": 3.0,
+          "candidates": {
+            "Graham Platner": 46.0,
+            "Janet Mills": 25.0,
+            "Jordan Wood": 3.0
+          },
           "spread": "Platner +21.0",
           "matchup": "Graham Platner vs. Janet Mills",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -128181,6 +129445,12 @@
           "r": 24.0,
           "c3": "David Costello",
           "c3pct": 1.0,
+          "candidates": {
+            "Graham Platner": 58.0,
+            "Janet Mills": 24.0,
+            "David Costello": 1.0,
+            "Jordan Wood": 1.0
+          },
           "spread": "Platner +34.0",
           "matchup": "Graham Platner vs. Janet Mills",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -129569,6 +130839,11 @@
           "r": 6.0,
           "c3": "Carmen Calabrese",
           "c3pct": 1.0,
+          "candidates": {
+            "Susan Collins": 67.0,
+            "Dan Smeriglio": 6.0,
+            "Carmen Calabrese": 1.0
+          },
           "spread": "Collins +61.0",
           "matchup": "Susan Collins vs. Dan Smeriglio",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -129582,6 +130857,11 @@
           "r": 1.0,
           "c3": "Dan Smeriglio",
           "c3pct": 1.0,
+          "candidates": {
+            "Susan Collins": 66.0,
+            "Carmen Calabrese": 1.0,
+            "Dan Smeriglio": 1.0
+          },
           "spread": "Collins +65.0",
           "matchup": "Susan Collins vs. Carmen Calabrese",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine"
@@ -130299,6 +131579,7 @@
           "r": 42.9,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "Haley Stevens (D) vs. Mike Rogers (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -130312,6 +131593,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.5",
           "matchup": "Haley Stevens (D) vs. Mike Rogers (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -130325,6 +131607,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +5.0",
           "matchup": "Haley Stevens (D) vs. Mike Rogers (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -130338,6 +131621,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +5.0",
           "matchup": "Haley Stevens (D) vs. Mike Rogers (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -130351,6 +131635,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +2.0",
           "matchup": "Haley Stevens (D) vs. Mike Rogers (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -130364,6 +131649,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "Haley Stevens (D) vs. Mike Rogers (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -130377,6 +131663,7 @@
           "r": 47.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +7.0",
           "matchup": "Haley Stevens (D) vs. Mike Rogers (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -131096,6 +132383,24 @@
       "race_to_watch": true,
       "polls": [
         {
+          "date": "2026-03-02",
+          "pollster": "Upswing Research (D)",
+          "c1": "Haley Stevens",
+          "d": 27.0,
+          "c2": "Mallory McMorrow",
+          "r": 25.0,
+          "c3": "Abdul El-Sayed",
+          "c3pct": 23.0,
+          "candidates": {
+            "Haley Stevens": 27.0,
+            "Mallory McMorrow": 25.0,
+            "Abdul El-Sayed": 23.0
+          },
+          "spread": "Stevens +2.0",
+          "matchup": "Haley Stevens vs. Mallory McMorrow",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
+        },
+        {
           "date": "2026-02-02",
           "pollster": "Upswing Research (D)",
           "c1": "Haley Stevens",
@@ -131104,6 +132409,7 @@
           "r": 25.0,
           "c3": "Abdul El-Sayed",
           "c3pct": 23.0,
+          "candidates": null,
           "spread": "Stevens +2.0",
           "matchup": "Haley Stevens vs. Mallory McMorrow",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -131117,6 +132423,11 @@
           "r": 16.0,
           "c3": "Haley Stevens",
           "c3pct": 16.0,
+          "candidates": {
+            "Mallory McMorrow": 22.0,
+            "Abdul El-Sayed": 16.0,
+            "Haley Stevens": 16.0
+          },
           "spread": "McMorrow +6.0",
           "matchup": "Mallory McMorrow vs. Abdul El-Sayed",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -131130,6 +132441,11 @@
           "r": 24.0,
           "c3": "Abdul El-Sayed",
           "c3pct": 16.0,
+          "candidates": {
+            "Haley Stevens": 27.0,
+            "Mallory McMorrow": 24.0,
+            "Abdul El-Sayed": 16.0
+          },
           "spread": "Stevens +3.0",
           "matchup": "Haley Stevens vs. Mallory McMorrow",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -131143,6 +132459,11 @@
           "r": 25.0,
           "c3": "Abdul El-Sayed",
           "c3pct": 20.0,
+          "candidates": {
+            "Haley Stevens": 26.0,
+            "Mallory McMorrow": 25.0,
+            "Abdul El-Sayed": 20.0
+          },
           "spread": "Stevens +1.0",
           "matchup": "Haley Stevens vs. Mallory McMorrow",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan"
@@ -133784,6 +135105,7 @@
           "r": 40.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Democratic vs. Michele Tafoya (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Minnesota"
@@ -134503,6 +135825,25 @@
       "race_to_watch": true,
       "polls": [
         {
+          "date": "2026-02-01",
+          "pollster": "Peak Insights (R)",
+          "c1": "Michele Tafoya",
+          "d": 41.0,
+          "c2": "Royce White",
+          "r": 11.0,
+          "c3": "Adam Schwarze",
+          "c3pct": 4.0,
+          "candidates": {
+            "Michele Tafoya": 41.0,
+            "Royce White": 11.0,
+            "Adam Schwarze": 4.0,
+            "David Hann": 3.0
+          },
+          "spread": "Tafoya +30.0",
+          "matchup": "Michele Tafoya vs. Royce White",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Minnesota"
+        },
+        {
           "date": "2026-01-01",
           "pollster": "Peak Insights (R)",
           "c1": "Michele Tafoya",
@@ -134511,6 +135852,7 @@
           "r": 11.0,
           "c3": "Adam Schwarze",
           "c3pct": 4.0,
+          "candidates": null,
           "spread": "Tafoya +30.0",
           "matchup": "Michele Tafoya vs. Royce White",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Minnesota"
@@ -135691,6 +137033,10 @@
           "r": 36.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Peggy Flanagan": 49.0,
+            "Angie Craig": 36.0
+          },
           "spread": "Flanagan +13.0",
           "matchup": "Peggy Flanagan vs. Angie Craig",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Minnesota"
@@ -135704,6 +137050,10 @@
           "r": 28.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Peggy Flanagan": 40.0,
+            "Angie Craig": 28.0
+          },
           "spread": "Flanagan +12.0",
           "matchup": "Peggy Flanagan vs. Angie Craig",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Minnesota"
@@ -135717,6 +137067,10 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Peggy Flanagan": 45.0,
+            "Angie Craig": 42.0
+          },
           "spread": "Flanagan +3.0",
           "matchup": "Peggy Flanagan vs. Angie Craig",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Minnesota"
@@ -138456,6 +139810,7 @@
           "r": 52.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +27.0",
           "matchup": "Reilly Neill (D) vs. Steve Daines (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Montana"
@@ -138469,6 +139824,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +24.0",
           "matchup": "Reilly Neill (D) vs. Steve Daines (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Montana"
@@ -139277,7 +140633,22 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +3.0",
+          "matchup": "Roy Cooper (D) vs. Michael Whatley (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
+        },
+        {
+          "date": "2026-02-04",
+          "pollster": "Change Research (D)",
+          "c1": "Roy Cooper (D)",
+          "d": 50.0,
+          "c2": "Michael Whatley (R)",
+          "r": 40.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(D) +10.0",
           "matchup": "Roy Cooper (D) vs. Michael Whatley (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
         },
@@ -139290,6 +140661,7 @@
           "r": 24.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +24.0",
           "matchup": "Roy Cooper (D) vs. Michael Whatley (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -139303,6 +140675,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +5.0",
           "matchup": "Roy Cooper (D) vs. Michael Whatley (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -139316,6 +140689,7 @@
           "r": 40.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +10.0",
           "matchup": "Roy Cooper (D) vs. Michael Whatley (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -139329,6 +140703,7 @@
           "r": 39.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +8.0",
           "matchup": "Roy Cooper (D) vs. Michael Whatley (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -140063,6 +141438,11 @@
           "r": 8.0,
           "c3": "Michele Morrow",
           "c3pct": 2.0,
+          "candidates": {
+            "Michael Whatley": 38.0,
+            "Don Brown": 8.0,
+            "Michele Morrow": 2.0
+          },
           "spread": "Whatley +30.0",
           "matchup": "Michael Whatley vs. Don Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -140076,6 +141456,11 @@
           "r": 12.0,
           "c3": "Michele Morrow",
           "c3pct": 2.0,
+          "candidates": {
+            "Michael Whatley": 38.0,
+            "Don Brown": 12.0,
+            "Michele Morrow": 2.0
+          },
           "spread": "Whatley +26.0",
           "matchup": "Michael Whatley vs. Don Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -140089,6 +141474,11 @@
           "r": 6.0,
           "c3": "Michele Morrow",
           "c3pct": 4.0,
+          "candidates": {
+            "Michael Whatley": 36.0,
+            "Don Brown": 6.0,
+            "Michele Morrow": 4.0
+          },
           "spread": "Whatley +30.0",
           "matchup": "Michael Whatley vs. Don Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -141375,6 +142765,13 @@
           "r": 3.0,
           "c3": "Justin Dues",
           "c3pct": 3.0,
+          "candidates": {
+            "Roy Cooper": 78.0,
+            "Robert Colon": 3.0,
+            "Justin Dues": 3.0,
+            "Daryl Farrow": 2.0,
+            "Marcus Williams": 2.0
+          },
           "spread": "Cooper +75.0",
           "matchup": "Roy Cooper vs. Robert Colon",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina"
@@ -142143,6 +143540,7 @@
           "r": 48.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Democratic vs. Pete Ricketts (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Nebraska"
@@ -142156,6 +143554,7 @@
           "r": 48.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Democratic vs. Pete Ricketts (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Nebraska"
@@ -142883,6 +144282,7 @@
           "r": 41.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +4.0",
           "matchup": "Chris Pappas (D) vs. John E. Sununu (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -142896,6 +144296,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +10.0",
           "matchup": "Chris Pappas (D) vs. Scott Brown (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -142909,6 +144310,7 @@
           "r": 28.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +18.0",
           "matchup": "Chris Pappas (D) vs. Scott Brown (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -142922,6 +144324,7 @@
           "r": 38.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +11.0",
           "matchup": "Chris Pappas (D) vs. Scott Brown (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -142935,6 +144338,7 @@
           "r": 36.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +8.0",
           "matchup": "Chris Pappas (D) vs. Scott Brown (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -142948,6 +144352,7 @@
           "r": 39.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +10.0",
           "matchup": "Chris Pappas (D) vs. Scott Brown (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -143675,6 +145080,10 @@
           "r": 25.0,
           "c3": "Dan Innis",
           "c3pct": null,
+          "candidates": {
+            "John Sununu": 48.0,
+            "Scott Brown": 25.0
+          },
           "spread": "Sununu +23.0",
           "matchup": "John Sununu vs. Scott Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -143688,6 +145097,10 @@
           "r": 30.0,
           "c3": "Dan Innis",
           "c3pct": null,
+          "candidates": {
+            "John Sununu": 49.0,
+            "Scott Brown": 30.0
+          },
           "spread": "Sununu +19.0",
           "matchup": "John Sununu vs. Scott Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -143701,6 +145114,10 @@
           "r": 30.0,
           "c3": "Dan Innis",
           "c3pct": null,
+          "candidates": {
+            "John Sununu": 39.0,
+            "Scott Brown": 30.0
+          },
           "spread": "Sununu +9.0",
           "matchup": "John Sununu vs. Scott Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -143714,6 +145131,10 @@
           "r": 28.5,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "John Sununu": 39.5,
+            "Scott Brown": 28.5
+          },
           "spread": "Sununu +11.0",
           "matchup": "John Sununu vs. Scott Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -143727,6 +145148,10 @@
           "r": 27.0,
           "c3": "Dan Innis",
           "c3pct": null,
+          "candidates": {
+            "John Sununu": 40.0,
+            "Scott Brown": 27.0
+          },
           "spread": "Sununu +13.0",
           "matchup": "John Sununu vs. Scott Brown",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -144669,6 +146094,11 @@
           "r": 11.0,
           "c3": "Jared Sullivan",
           "c3pct": 2.0,
+          "candidates": {
+            "Chris Pappas": 65.0,
+            "Karishma Manzur": 11.0,
+            "Jared Sullivan": 2.0
+          },
           "spread": "Pappas +54.0",
           "matchup": "Chris Pappas vs. Karishma Manzur",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -144682,6 +146112,11 @@
           "r": 8.0,
           "c3": "Jared Sullivan",
           "c3pct": 2.0,
+          "candidates": {
+            "Chris Pappas": 64.0,
+            "Karishma Manzur": 8.0,
+            "Jared Sullivan": 2.0
+          },
           "spread": "Pappas +56.0",
           "matchup": "Chris Pappas vs. Karishma Manzur",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -144695,6 +146130,11 @@
           "r": 8.0,
           "c3": "Jared Sullivan",
           "c3pct": 3.5,
+          "candidates": {
+            "Chris Pappas": 60.5,
+            "Karishma Manzur": 8.0,
+            "Jared Sullivan": 3.5
+          },
           "spread": "Pappas +52.5",
           "matchup": "Chris Pappas vs. Karishma Manzur",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -144708,6 +146148,11 @@
           "r": 8.0,
           "c3": "Jared Sullivan",
           "c3pct": 5.0,
+          "candidates": {
+            "Chris Pappas": 57.0,
+            "Karishma Manzur": 8.0,
+            "Jared Sullivan": 5.0
+          },
           "spread": "Pappas +49.0",
           "matchup": "Chris Pappas vs. Karishma Manzur",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
@@ -150103,14 +151548,28 @@
       "kalshi": "SENATESC-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatesc/south-carolina-senate-race/senatesc-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/south-carolina/",
-      "poll_avg_dem": null,
-      "market_gap": null,
+      "poll_avg_dem": 42.0,
+      "market_gap": -27.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
       "result": null,
       "race_to_watch": false,
       "polls": [
+        {
+          "date": "2026-03-01",
+          "pollster": "Impact Research (D)",
+          "c1": "Annie Andrews (D)",
+          "d": 42.0,
+          "c2": "Lindsey Graham (R)",
+          "r": 47.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +5.0",
+          "matchup": "Annie Andrews (D) vs. Lindsey Graham (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Carolina"
+        },
         {
           "date": "2026-02-01",
           "pollster": "Impact Research (D)",
@@ -150120,6 +151579,7 @@
           "r": 47.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +5.0",
           "matchup": "Annie Andrews (D) vs. Lindsey Graham (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Carolina"
@@ -150133,6 +151593,7 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +6.0",
           "matchup": "Annie Andrews (D) vs. Lindsey Graham (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Carolina"
@@ -150860,6 +152321,11 @@
           "r": 15.0,
           "c3": "Paul Dans",
           "c3pct": 7.0,
+          "candidates": {
+            "Lindsey Graham": 58.0,
+            "Mark Lynch": 15.0,
+            "Paul Dans": 7.0
+          },
           "spread": "Graham +43.0",
           "matchup": "Lindsey Graham vs. Mark Lynch",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Carolina"
@@ -151820,7 +153286,7 @@
         },
         {
           "date": "3/23",
-          "Lindsey Graham": 84.0,
+          "Lindsey Graham": 84.5,
           "Mark Lynch": 9.0,
           "Paul Dans": 6.5,
           "Thomas Murphy": 0.5
@@ -152804,6 +154270,7 @@
           "r": 52.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +22.0",
           "matchup": "Julian Beaudion (D) vs. Mike Rounds (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Dakota"
@@ -154154,6 +155621,7 @@
           "r": 41.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "James Talarico (D) vs. John Cornyn (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154167,6 +155635,7 @@
           "r": 41.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +2.0",
           "matchup": "James Talarico (D) vs. John Cornyn (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154180,6 +155649,7 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +1.0",
           "matchup": "James Talarico (D) vs. John Cornyn (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154193,6 +155663,7 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(D) +4.0",
           "matchup": "Jasmine Crockett (D) vs. Ken Paxton (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154206,6 +155677,7 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +1.0",
           "matchup": "James Talarico (D) vs. John Cornyn (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154219,6 +155691,7 @@
           "r": 47.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +3.0",
           "matchup": "James Talarico (D) vs. John Cornyn (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154232,6 +155705,7 @@
           "r": 49.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +8.0",
           "matchup": "Jasmine Crockett (D) vs. John Cornyn (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154245,7 +155719,22 @@
           "r": 46.0,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "(R) +6.0",
+          "matchup": "James Talarico (D) vs. John Cornyn (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2025-10-01",
+          "pollster": "University of Houston / Texas Southern University",
+          "c1": "James Talarico (D)",
+          "d": 45.0,
+          "c2": "John Cornyn (R)",
+          "r": 48.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +3.0",
           "matchup": "James Talarico (D) vs. John Cornyn (R)",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
         }
@@ -154972,6 +156461,10 @@
           "r": 39.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 42.0,
+            "John Cornyn": 39.0
+          },
           "spread": "Paxton +3.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154985,6 +156478,10 @@
           "r": 37.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 53.0,
+            "John Cornyn": 37.0
+          },
           "spread": "Paxton +16.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -154998,6 +156495,10 @@
           "r": 45.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "John Cornyn": 45.0,
+            "Ken Paxton": 45.0
+          },
           "spread": "",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155011,6 +156512,10 @@
           "r": 41.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 49.0,
+            "John Cornyn": 41.0
+          },
           "spread": "Paxton +8.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155024,7 +156529,47 @@
           "r": 42.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 45.0,
+            "John Cornyn": 42.0
+          },
           "spread": "Paxton +3.0",
+          "matchup": "Ken Paxton vs. John Cornyn",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "YouGov",
+          "c1": "Ken Paxton",
+          "d": 36.0,
+          "c2": "John Cornyn",
+          "r": 32.0,
+          "c3": "Wesley Hunt",
+          "c3pct": 17.0,
+          "candidates": {
+            "Ken Paxton": 36.0,
+            "John Cornyn": 32.0,
+            "Wesley Hunt": 17.0
+          },
+          "spread": "Paxton +4.0",
+          "matchup": "Ken Paxton vs. John Cornyn",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2026-03-02",
+          "pollster": "270toWin",
+          "c1": "Ken Paxton",
+          "d": 38.7,
+          "c2": "John Cornyn",
+          "r": 35.2,
+          "c3": "Wesley Hunt",
+          "c3pct": 17.5,
+          "candidates": {
+            "Ken Paxton": 38.7,
+            "John Cornyn": 35.2,
+            "Wesley Hunt": 17.5
+          },
+          "spread": "Paxton +3.5",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
         },
@@ -155037,6 +156582,11 @@
           "r": 35.4,
           "c3": "Wesley Hunt",
           "c3pct": 15.8,
+          "candidates": {
+            "Ken Paxton": 39.2,
+            "John Cornyn": 35.4,
+            "Wesley Hunt": 15.8
+          },
           "spread": "Paxton +3.8",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155050,6 +156600,11 @@
           "r": 32.9,
           "c3": "Wesley Hunt",
           "c3pct": 17.4,
+          "candidates": {
+            "Ken Paxton": 37.2,
+            "John Cornyn": 32.9,
+            "Wesley Hunt": 17.4
+          },
           "spread": "Paxton +4.3",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155063,6 +156618,11 @@
           "r": 29.5,
           "c3": "Wesley Hunt",
           "c3pct": 21.2,
+          "candidates": {
+            "Ken Paxton": 35.6,
+            "John Cornyn": 29.5,
+            "Wesley Hunt": 21.2
+          },
           "spread": "Paxton +6.1",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155076,6 +156636,11 @@
           "r": 36.0,
           "c3": "Wesley Hunt",
           "c3pct": 17.0,
+          "candidates": {
+            "Ken Paxton": 40.0,
+            "John Cornyn": 36.0,
+            "Wesley Hunt": 17.0
+          },
           "spread": "Paxton +4.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155089,6 +156654,11 @@
           "r": 35.4,
           "c3": "Wesley Hunt",
           "c3pct": 16.5,
+          "candidates": {
+            "Ken Paxton": 38.9,
+            "John Cornyn": 35.4,
+            "Wesley Hunt": 16.5
+          },
           "spread": "Paxton +3.5",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155102,6 +156672,11 @@
           "r": 38.0,
           "c3": "Wesley Hunt",
           "c3pct": 16.0,
+          "candidates": {
+            "Ken Paxton": 43.0,
+            "John Cornyn": 38.0,
+            "Wesley Hunt": 16.0
+          },
           "spread": "Paxton +5.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155115,6 +156690,10 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 47.0,
+            "John Cornyn": 44.0
+          },
           "spread": "Paxton +3.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155128,6 +156707,11 @@
           "r": 30.0,
           "c3": "Wesley Hunt",
           "c3pct": 15.0,
+          "candidates": {
+            "Ken Paxton": 39.0,
+            "John Cornyn": 30.0,
+            "Wesley Hunt": 15.0
+          },
           "spread": "Paxton +9.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155141,6 +156725,10 @@
           "r": 44.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 46.0,
+            "John Cornyn": 44.0
+          },
           "spread": "Paxton +2.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155154,6 +156742,10 @@
           "r": 43.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 47.0,
+            "John Cornyn": 43.0
+          },
           "spread": "Paxton +4.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155167,6 +156759,11 @@
           "r": 30.0,
           "c3": "Wesley Hunt",
           "c3pct": 14.0,
+          "candidates": {
+            "Ken Paxton": 42.0,
+            "John Cornyn": 30.0,
+            "Wesley Hunt": 14.0
+          },
           "spread": "Paxton +12.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155180,6 +156777,11 @@
           "r": 36.0,
           "c3": "Wesley Hunt",
           "c3pct": 14.0,
+          "candidates": {
+            "John Cornyn": 36.0,
+            "Ken Paxton": 36.0,
+            "Wesley Hunt": 14.0
+          },
           "spread": "",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155193,6 +156795,11 @@
           "r": 35.0,
           "c3": "Wesley Hunt",
           "c3pct": 15.0,
+          "candidates": {
+            "John Cornyn": 41.0,
+            "Ken Paxton": 35.0,
+            "Wesley Hunt": 15.0
+          },
           "spread": "Cornyn +6.0",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155206,6 +156813,10 @@
           "r": 39.0,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "Ken Paxton": 50.0,
+            "John Cornyn": 39.0
+          },
           "spread": "Paxton +11.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155219,6 +156830,11 @@
           "r": 34.0,
           "c3": "Wesley Hunt",
           "c3pct": 26.0,
+          "candidates": {
+            "Ken Paxton": 36.0,
+            "John Cornyn": 34.0,
+            "Wesley Hunt": 26.0
+          },
           "spread": "Paxton +2.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155232,6 +156848,11 @@
           "r": 29.0,
           "c3": "Wesley Hunt",
           "c3pct": 26.0,
+          "candidates": {
+            "Ken Paxton": 36.0,
+            "John Cornyn": 29.0,
+            "Wesley Hunt": 26.0
+          },
           "spread": "Paxton +7.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155245,6 +156866,11 @@
           "r": 27.0,
           "c3": "Wesley Hunt",
           "c3pct": 15.0,
+          "candidates": {
+            "Ken Paxton": 36.0,
+            "John Cornyn": 27.0,
+            "Wesley Hunt": 15.0
+          },
           "spread": "Paxton +9.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155258,6 +156884,11 @@
           "r": 29.0,
           "c3": "Wesley Hunt",
           "c3pct": 25.0,
+          "candidates": {
+            "Ken Paxton": 31.0,
+            "John Cornyn": 29.0,
+            "Wesley Hunt": 25.0
+          },
           "spread": "Paxton +2.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155271,7 +156902,30 @@
           "r": 26.0,
           "c3": "Wesley Hunt",
           "c3pct": 18.0,
+          "candidates": {
+            "Ken Paxton": 34.0,
+            "John Cornyn": 26.0,
+            "Wesley Hunt": 18.0
+          },
           "spread": "Paxton +8.0",
+          "matchup": "Ken Paxton vs. John Cornyn",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2026-02-03",
+          "pollster": "J.L. Partners (R)",
+          "c1": "Ken Paxton",
+          "d": 27.0,
+          "c2": "John Cornyn",
+          "r": 26.0,
+          "c3": "Wesley Hunt",
+          "c3pct": 26.0,
+          "candidates": {
+            "Ken Paxton": 27.0,
+            "John Cornyn": 26.0,
+            "Wesley Hunt": 26.0
+          },
+          "spread": "Paxton +1.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
         },
@@ -155284,6 +156938,7 @@
           "r": 32.0,
           "c3": "Wesley Hunt",
           "c3pct": 17.0,
+          "candidates": null,
           "spread": "Paxton +4.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155297,8 +156952,27 @@
           "r": 35.2,
           "c3": "Wesley Hunt",
           "c3pct": 17.5,
+          "candidates": null,
           "spread": "Paxton +3.5",
           "matchup": "Ken Paxton vs. John Cornyn",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2026-02-01",
+          "pollster": "Ragnar Research Partners (R)",
+          "c1": "John Cornyn",
+          "d": 31.0,
+          "c2": "Ken Paxton",
+          "r": 29.0,
+          "c3": "Wesley Hunt",
+          "c3pct": 24.0,
+          "candidates": {
+            "John Cornyn": 31.0,
+            "Ken Paxton": 29.0,
+            "Wesley Hunt": 24.0
+          },
+          "spread": "Cornyn +2.0",
+          "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
         },
         {
@@ -155310,6 +156984,11 @@
           "r": 31.0,
           "c3": "Wesley Hunt",
           "c3pct": 17.0,
+          "candidates": {
+            "Ken Paxton": 38.0,
+            "John Cornyn": 31.0,
+            "Wesley Hunt": 17.0
+          },
           "spread": "Paxton +7.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155323,6 +157002,11 @@
           "r": 26.0,
           "c3": "Wesley Hunt",
           "c3pct": 16.0,
+          "candidates": {
+            "Ken Paxton": 27.0,
+            "John Cornyn": 26.0,
+            "Wesley Hunt": 16.0
+          },
           "spread": "Paxton +1.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155336,6 +157020,11 @@
           "r": 26.0,
           "c3": "Wesley Hunt",
           "c3pct": 19.0,
+          "candidates": {
+            "John Cornyn": 29.0,
+            "Ken Paxton": 26.0,
+            "Wesley Hunt": 19.0
+          },
           "spread": "Cornyn +3.0",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155349,6 +157038,11 @@
           "r": 26.0,
           "c3": "Wesley Hunt",
           "c3pct": 23.0,
+          "candidates": {
+            "Ken Paxton": 31.0,
+            "John Cornyn": 26.0,
+            "Wesley Hunt": 23.0
+          },
           "spread": "Paxton +5.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155362,6 +157056,7 @@
           "r": 26.0,
           "c3": "Wesley Hunt",
           "c3pct": 26.0,
+          "candidates": null,
           "spread": "Paxton +1.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155375,6 +157070,7 @@
           "r": 29.0,
           "c3": "Wesley Hunt",
           "c3pct": 24.0,
+          "candidates": null,
           "spread": "Cornyn +2.0",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155388,6 +157084,11 @@
           "r": 38.0,
           "c3": "Wesley Hunt",
           "c3pct": 16.0,
+          "candidates": {
+            "John Cornyn": 38.0,
+            "Ken Paxton": 38.0,
+            "Wesley Hunt": 16.0
+          },
           "spread": "",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155401,6 +157102,11 @@
           "r": 28.0,
           "c3": "John Cornyn",
           "c3pct": 27.0,
+          "candidates": {
+            "Ken Paxton": 33.0,
+            "Wesley Hunt": 28.0,
+            "John Cornyn": 27.0
+          },
           "spread": "Paxton +5.0",
           "matchup": "Ken Paxton vs. Wesley Hunt",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155414,6 +157120,11 @@
           "r": 28.0,
           "c3": "Wesley Hunt",
           "c3pct": 19.0,
+          "candidates": {
+            "Ken Paxton": 29.0,
+            "John Cornyn": 28.0,
+            "Wesley Hunt": 19.0
+          },
           "spread": "Paxton +1.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155427,6 +157138,11 @@
           "r": 27.0,
           "c3": "Wesley Hunt",
           "c3pct": 19.0,
+          "candidates": {
+            "John Cornyn": 28.0,
+            "Ken Paxton": 27.0,
+            "Wesley Hunt": 19.0
+          },
           "spread": "Cornyn +1.0",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155440,6 +157156,11 @@
           "r": 24.0,
           "c3": "Wesley Hunt",
           "c3pct": 24.0,
+          "candidates": {
+            "Ken Paxton": 29.0,
+            "John Cornyn": 24.0,
+            "Wesley Hunt": 24.0
+          },
           "spread": "Paxton +5.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155453,6 +157174,11 @@
           "r": 22.0,
           "c3": "Wesley Hunt",
           "c3pct": 22.0,
+          "candidates": {
+            "Ken Paxton": 32.0,
+            "John Cornyn": 22.0,
+            "Wesley Hunt": 22.0
+          },
           "spread": "Paxton +10.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155466,6 +157192,11 @@
           "r": 33.0,
           "c3": "Wesley Hunt",
           "c3pct": 18.0,
+          "candidates": {
+            "John Cornyn": 35.0,
+            "Ken Paxton": 33.0,
+            "Wesley Hunt": 18.0
+          },
           "spread": "Cornyn +2.0",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155479,6 +157210,11 @@
           "r": 26.0,
           "c3": "John Cornyn",
           "c3pct": 25.0,
+          "candidates": {
+            "Ken Paxton": 36.0,
+            "Wesley Hunt": 26.0,
+            "John Cornyn": 25.0
+          },
           "spread": "Paxton +10.0",
           "matchup": "Ken Paxton vs. Wesley Hunt",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155492,6 +157228,11 @@
           "r": 31.0,
           "c3": "Wesley Hunt",
           "c3pct": 21.0,
+          "candidates": {
+            "John Cornyn": 32.0,
+            "Ken Paxton": 31.0,
+            "Wesley Hunt": 21.0
+          },
           "spread": "Cornyn +1.0",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155505,6 +157246,11 @@
           "r": 27.0,
           "c3": "Wesley Hunt",
           "c3pct": 26.0,
+          "candidates": {
+            "Ken Paxton": 34.0,
+            "John Cornyn": 27.0,
+            "Wesley Hunt": 26.0
+          },
           "spread": "Paxton +7.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155518,6 +157264,11 @@
           "r": 25.0,
           "c3": "Wesley Hunt",
           "c3pct": 24.0,
+          "candidates": {
+            "John Cornyn": 26.0,
+            "Ken Paxton": 25.0,
+            "Wesley Hunt": 24.0
+          },
           "spread": "Cornyn +1.0",
           "matchup": "John Cornyn vs. Ken Paxton",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155531,6 +157282,11 @@
           "r": 24.0,
           "c3": "Wesley Hunt",
           "c3pct": 19.0,
+          "candidates": {
+            "Ken Paxton": 28.0,
+            "John Cornyn": 24.0,
+            "Wesley Hunt": 19.0
+          },
           "spread": "Paxton +4.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -155544,7 +157300,30 @@
           "r": 31.0,
           "c3": "Wesley Hunt",
           "c3pct": 24.0,
+          "candidates": {
+            "Ken Paxton": 34.0,
+            "John Cornyn": 31.0,
+            "Wesley Hunt": 24.0
+          },
           "spread": "Paxton +3.0",
+          "matchup": "Ken Paxton vs. John Cornyn",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2025-10-01",
+          "pollster": "University of Houston / Texas Southern University",
+          "c1": "Ken Paxton",
+          "d": 34.0,
+          "c2": "John Cornyn",
+          "r": 33.0,
+          "c3": "Wesley Hunt",
+          "c3pct": 22.0,
+          "candidates": {
+            "Ken Paxton": 34.0,
+            "John Cornyn": 33.0,
+            "Wesley Hunt": 22.0
+          },
+          "spread": "Paxton +1.0",
           "matchup": "Ken Paxton vs. John Cornyn",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
         }
@@ -156608,8 +158387,8 @@
         },
         {
           "date": "3/23",
-          "John Cornyn": 54.5,
-          "Ken Paxton": 46.0
+          "John Cornyn": 53.5,
+          "Ken Paxton": 45.5
         }
       ],
       "note": null
@@ -156641,6 +158420,40 @@
       "race_to_watch": true,
       "polls": [
         {
+          "date": "2026-03-02",
+          "pollster": "YouGov",
+          "c1": "James Talarico",
+          "d": 53.0,
+          "c2": "Jasmine Crockett",
+          "r": 40.0,
+          "c3": "Colin Allred",
+          "c3pct": null,
+          "candidates": {
+            "James Talarico": 53.0,
+            "Jasmine Crockett": 40.0
+          },
+          "spread": "Talarico +13.0",
+          "matchup": "James Talarico vs. Jasmine Crockett",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2026-03-01",
+          "pollster": "270toWin",
+          "c1": "Jasmine Crockett",
+          "d": 47.6,
+          "c2": "James Talarico",
+          "r": 47.6,
+          "c3": null,
+          "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 47.6,
+            "James Talarico": 47.6
+          },
+          "spread": "",
+          "matchup": "Jasmine Crockett vs. James Talarico",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
           "date": "2026-02-27",
           "pollster": "VoteHub",
           "c1": "James Talarico",
@@ -156649,6 +158462,10 @@
           "r": 45.5,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 45.9,
+            "Jasmine Crockett": 45.5
+          },
           "spread": "Talarico +0.4",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156662,6 +158479,10 @@
           "r": 44.4,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 49.1,
+            "Jasmine Crockett": 44.4
+          },
           "spread": "Talarico +4.7",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156675,6 +158496,10 @@
           "r": 45.7,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 46.2,
+            "Jasmine Crockett": 45.7
+          },
           "spread": "Talarico +0.5",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156688,6 +158513,10 @@
           "r": 47.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 52.0,
+            "Jasmine Crockett": 47.0
+          },
           "spread": "Talarico +5.0",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156701,6 +158530,10 @@
           "r": 45.6,
           "c3": null,
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 48.5,
+            "Jasmine Crockett": 45.6
+          },
           "spread": "Talarico +2.9",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156714,6 +158547,10 @@
           "r": 42.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 48.0,
+            "Jasmine Crockett": 42.0
+          },
           "spread": "Talarico +6.0",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156727,6 +158564,10 @@
           "r": 40.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 52.0,
+            "Jasmine Crockett": 40.0
+          },
           "spread": "Talarico +12.0",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156740,6 +158581,10 @@
           "r": 37.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 55.0,
+            "James Talarico": 37.0
+          },
           "spread": "Crockett +18.0",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156753,6 +158598,10 @@
           "r": 44.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 56.0,
+            "James Talarico": 44.0
+          },
           "spread": "Crockett +12.0",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156766,6 +158615,10 @@
           "r": 43.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 47.0,
+            "Jasmine Crockett": 43.0
+          },
           "spread": "Talarico +4.0",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156779,6 +158632,7 @@
           "r": 40.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": null,
           "spread": "Talarico +13.0",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156792,6 +158646,7 @@
           "r": 47.6,
           "c3": null,
           "c3pct": null,
+          "candidates": null,
           "spread": "",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156805,6 +158660,10 @@
           "r": 39.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 47.0,
+            "James Talarico": 39.0
+          },
           "spread": "Crockett +8.0",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156818,6 +158677,10 @@
           "r": 37.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 38.0,
+            "James Talarico": 37.0
+          },
           "spread": "Crockett +1.0",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156831,6 +158694,10 @@
           "r": 33.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 46.0,
+            "James Talarico": 33.0
+          },
           "spread": "Crockett +13.0",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156844,6 +158711,10 @@
           "r": 38.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 47.0,
+            "Jasmine Crockett": 38.0
+          },
           "spread": "Talarico +9.0",
           "matchup": "James Talarico vs. Jasmine Crockett",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156857,6 +158728,10 @@
           "r": 43.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 51.0,
+            "James Talarico": 43.0
+          },
           "spread": "Crockett +8.0",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156870,6 +158745,10 @@
           "r": 35.0,
           "c3": "Colin Allred",
           "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 52.0,
+            "James Talarico": 35.0
+          },
           "spread": "Crockett +17.0",
           "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
@@ -156883,8 +158762,29 @@
           "r": 42.0,
           "c3": "Jasmine Crockett",
           "c3pct": null,
+          "candidates": {
+            "James Talarico": 48.0,
+            "Colin Allred": 42.0
+          },
           "spread": "Talarico +6.0",
           "matchup": "James Talarico vs. Colin Allred",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
+        },
+        {
+          "date": "2025-10-01",
+          "pollster": "University of Houston / Texas Southern University",
+          "c1": "Jasmine Crockett",
+          "d": 52.0,
+          "c2": "James Talarico",
+          "r": 34.0,
+          "c3": "Colin Allred",
+          "c3pct": null,
+          "candidates": {
+            "Jasmine Crockett": 52.0,
+            "James Talarico": 34.0
+          },
+          "spread": "Crockett +18.0",
+          "matchup": "Jasmine Crockett vs. James Talarico",
           "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas"
         }
       ],
@@ -160923,9 +162823,9 @@
         },
         {
           "date": "3/23",
-          "Aldous Mina": 11.0,
+          "Aldous Mina": 10.5,
           "Bryce Reeves": 0.5,
-          "Chuck Smith": 29.5,
+          "Chuck Smith": 30.0,
           "David Williams": 23.0,
           "Jason Miyares": 0.5,
           "Kim Farington": 4.5,
@@ -161683,7 +163583,7 @@
           "date": "3/23",
           "Jason Reynolds": 1.5,
           "Mark Moran": 4.0,
-          "Mark Warner": 92.5
+          "Mark Warner": 93.5
         }
       ],
       "note": null

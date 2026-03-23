@@ -332,17 +332,25 @@ def save_polls(conn, poll_records):
     
     for p in poll_records:
         try:
+            # Add candidates_json column if it doesn't exist yet (idempotent migration)
+            try:
+                c.execute("ALTER TABLE polls ADD COLUMN candidates_json TEXT")
+                conn.commit()
+            except Exception:
+                pass  # column already exists
+
             c.execute("""
                 INSERT INTO polls
                     (race_id, poll_date, pollster, sample_size,
                      candidate_1, candidate_1_pct,
                      candidate_2, candidate_2_pct, candidate_3, candidate_3_pct,
-                     spread, spread_label, source_url, rcp_url, detected_date)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                     candidates_json, spread, spread_label, source_url, rcp_url, detected_date)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(race_id, poll_date, pollster) DO UPDATE SET
                     candidate_1=excluded.candidate_1, candidate_1_pct=excluded.candidate_1_pct,
                     candidate_2=excluded.candidate_2, candidate_2_pct=excluded.candidate_2_pct,
                     candidate_3=excluded.candidate_3, candidate_3_pct=excluded.candidate_3_pct,
+                    candidates_json=excluded.candidates_json,
                     spread=excluded.spread, spread_label=excluded.spread_label
             """, (
                 p["race_id"], p["poll_date"], p["pollster"],
@@ -350,6 +358,7 @@ def save_polls(conn, poll_records):
                 p.get("candidate_1"), p.get("candidate_1_pct"),
                 p.get("candidate_2"), p.get("candidate_2_pct"),
                 p.get("candidate_3"), p.get("candidate_3_pct"),
+                p.get("candidates_json"),
                 p.get("spread"), p.get("spread_label"),
                 p.get("source_url"), p.get("rcp_url"),
                 date.today().isoformat()
@@ -769,7 +778,8 @@ def export_dashboard_json(conn, output_path):
         c.execute("""
             SELECT poll_date, pollster, candidate_1, candidate_1_pct,
                    candidate_2, candidate_2_pct, spread, spread_label,
-                   source_url, rcp_url, candidate_3, candidate_3_pct
+                   source_url, rcp_url, candidate_3, candidate_3_pct,
+                   candidates_json
             FROM polls
             WHERE race_id = ?
               AND poll_date >= '2025-10-01'
@@ -778,6 +788,9 @@ def export_dashboard_json(conn, output_path):
         poll_rows = c.fetchall()
         polls = []
         for pr in poll_rows:
+            import json as _json
+            cj_raw = pr[12]
+            cj = _json.loads(cj_raw) if cj_raw else None
             polls.append({
                 "date": pr[0],
                 "pollster": pr[1],
@@ -787,6 +800,7 @@ def export_dashboard_json(conn, output_path):
                 "r":  pr[5],   # candidate_2 pct
                 "c3": pr[10],  # candidate_3 name (for primaries)
                 "c3pct": pr[11],
+                "candidates": cj,  # full candidate→pct dict for primary detail table
                 "spread": pr[7] or f"{pr[2]} +{abs(int(pr[6]))}" if pr[6] else "",
                 "matchup": f"{pr[2]} vs. {pr[4]}" if pr[2] and pr[4] else None,
                 "url": pr[8],

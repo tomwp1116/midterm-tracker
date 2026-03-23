@@ -183,10 +183,16 @@ def _parse_date(s):
         "may": "05", "jun": "06", "jul": "07", "aug": "08",
         "sep": "09", "oct": "10", "nov": "11", "dec": "12",
     }
-    month = next(
-        (num for abbr, num in months.items() if re.search(abbr, s, re.I)),
-        None
+    # Use the LAST month name found in the string (by character position).
+    # For cross-month ranges like "February 13 – March 2, 2026" or
+    # "November 29–December 7, 2025" the start month appears first and the
+    # end/publication month appears last — which is the date we want.
+    found_months = sorted(
+        (m.start(), num)
+        for abbr, num in months.items()
+        for m in [re.search(abbr, s, re.I)] if m
     )
+    month = found_months[-1][1] if found_months else None
     if not month:
         return None
 
@@ -492,24 +498,32 @@ def _parse_primary_table(table, race_id, article_url):
         else:
             spread = spread_label = None
 
+        # Store the full ranked list as JSON so the detail table can look up
+        # any candidate's number, not just the top-3 stored in c1/c2/c3.
+        import json as _json
+        all_candidates_json = _json.dumps(
+            {name: pct for name, pct in ranked_all if pct is not None}
+        )
+
         polls.append({
-            "race_id":         race_id,
-            "poll_date":       poll_date,
-            "pollster":        pollster,
-            "sample_size":     sample,
-            "candidate_1":     c1,
-            "candidate_1_pct": c1_pct,
-            "candidate_2":     c2,
-            "candidate_2_pct": c2_pct,
-            "candidate_3":     c3,
-            "candidate_3_pct": c3_pct,
-            "spread":          spread,
-            "spread_label":    spread_label,
-            "source_url":      article_url,
-            "rcp_url":         None,
-            "fte_grade":       None,
-            "population":      None,
-            "stage":           "primary",
+            "race_id":           race_id,
+            "poll_date":         poll_date,
+            "pollster":          pollster,
+            "sample_size":       sample,
+            "candidate_1":       c1,
+            "candidate_1_pct":   c1_pct,
+            "candidate_2":       c2,
+            "candidate_2_pct":   c2_pct,
+            "candidate_3":       c3,
+            "candidate_3_pct":   c3_pct,
+            "candidates_json":   all_candidates_json,
+            "spread":            spread,
+            "spread_label":      spread_label,
+            "source_url":        article_url,
+            "rcp_url":           None,
+            "fte_grade":         None,
+            "population":        None,
+            "stage":             "primary",
         })
 
     return polls

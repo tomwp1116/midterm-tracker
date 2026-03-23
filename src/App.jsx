@@ -583,10 +583,16 @@ function Detail({race,onClose}){
             </thead>
             <tbody>
               {race.polls.map((p,i)=>{
-                const pm={};
-                if(p.c1&&p.d    !=null)pm[p.c1]=p.d;
-                if(p.c2&&p.r    !=null)pm[p.c2]=p.r;
-                if(p.c3&&p.c3pct!=null)pm[p.c3]=p.c3pct;
+                // Use full candidates dict if available (all polled candidates,
+                // not just top-3 stored in c1/c2/c3), so no cell is blank
+                // purely because the candidate ranked 4th in that poll.
+                const pm = p.candidates
+                  ? {...p.candidates}
+                  : (() => { const m={};
+                      if(p.c1&&p.d    !=null)m[p.c1]=p.d;
+                      if(p.c2&&p.r    !=null)m[p.c2]=p.r;
+                      if(p.c3&&p.c3pct!=null)m[p.c3]=p.c3pct;
+                      return m; })();
                 return(
                   <tr key={i} style={{borderBottom:"1px solid #f0f0f0"}}>
                     <td style={{padding:"6px 8px"}}>
