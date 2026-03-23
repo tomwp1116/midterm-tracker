@@ -97,8 +97,13 @@ function buildPrimaryTimeSeries(race) {
     .map(pt => {
       const enhanced = { ...pt };
       if (pollByDate[pt.date]) {
-        Object.assign(enhanced, pollByDate[pt.date]);
+        const { pollster, ...pollCandValues } = pollByDate[pt.date];
         enhanced.isPollDate = true;
+        enhanced.pollster = pollster;
+        // Store poll percentages separately so they don't overwrite market line data.
+        // Merging them into the same key namespace caused one-day spikes on poll
+        // release dates (poll %s ≠ market %s), reverting the next day.
+        enhanced.pollValues = pollCandValues;
       }
       return enhanced;
     });
@@ -381,8 +386,14 @@ function PrimaryTip({active, payload, colorMap}) {
           <strong style={{color:colorMap[c]}}>{pt[c]}%</strong>
         </div>
       ))}
-      {pt.isPollDate&&<div style={{borderTop:"1px solid #eee",marginTop:6,paddingTop:5,fontSize:11,color:"#aaa"}}>
-        {pt.pollster}
+      {pt.isPollDate&&<div style={{borderTop:"1px solid #eee",marginTop:6,paddingTop:5,fontSize:11,color:"#888"}}>
+        <div style={{fontWeight:600,marginBottom:3}}>{pt.pollster} poll:</div>
+        {pt.pollValues&&Object.entries(pt.pollValues).sort(([,a],[,b])=>b-a).map(([name,pct])=>(
+          <div key={name} style={{display:"flex",justifyContent:"space-between",gap:16}}>
+            <span style={{color:colorMap[name]||"#999"}}>{name}</span>
+            <span>{pct}%</span>
+          </div>
+        ))}
       </div>}
     </div>
   );
@@ -458,7 +469,7 @@ function PrimaryChart({race}) {
           <span style={{color:colorMap[c],fontWeight:600}}>{c}</span>
         </span>
       ))}
-      <span style={{marginLeft:"auto",color:"#bbb",fontSize:11}}>Y-axis = poll support %</span>
+      <span style={{marginLeft:"auto",color:"#bbb",fontSize:11}}>Y-axis = market probability %</span>
     </div>
   </>);}
 
