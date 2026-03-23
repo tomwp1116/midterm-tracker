@@ -70,6 +70,10 @@ SENATE_STATES_2026 = [
     "VA", "WV", "WY"
 ]
 
+# States using a nonpartisan "top-two" primary (all candidates on one ballot,
+# top N finishers advance regardless of party). In our coverage only CA qualifies.
+NONPARTISAN_PRIMARY_STATES = {"CA"}   # map to top_n: {"CA": 2}
+
 # States with gubernatorial races in 2026
 GOVERNOR_STATES_2026 = [
     "AL", "AK", "AZ", "CA", "CO", "CT", "FL", "GA", "HI", "ID",
@@ -402,11 +406,15 @@ PRIMARY_RACES = {
         "primary_date": "2026-05-12",
     },
     # ── Governor Democratic nomination primaries ───────────────────────────
-    "primary-CA-governor-D-2026": {
-        "state": "CA", "chamber": "governor", "party": "D",
-        "description": "California Governor Democratic Primary",
-        "kalshi_series": "KXGOVCANOMD",
-        "pm_slug": None,
+    # California uses a nonpartisan top-two primary: all candidates on one ballot,
+    # top 2 advance to the general regardless of party.
+    "primary-CA-governor-2026": {
+        "state": "CA", "chamber": "governor", "party": None,
+        "description": "California Governor Primary",
+        "kalshi_series": "KXGOVCAPRIMARY",  # unified top-two market
+        "nonpartisan": True,
+        "top_n": 2,
+        "pm_slug": "who-will-advance-from-the-california-governor-primary",
         "primary_date": "2026-06-02",
     },
     "primary-CO-governor-D-2026": {
@@ -507,13 +515,6 @@ PRIMARY_RACES = {
         "kalshi_series": "KXGOVAZNOMR",
         "pm_slug": None,
         "primary_date": "2026-08-25",
-    },
-    "primary-CA-governor-R-2026": {
-        "state": "CA", "chamber": "governor", "party": "R",
-        "description": "California Governor Republican Primary",
-        "kalshi_series": "KXGOVCANOMR",
-        "pm_slug": None,
-        "primary_date": "2026-06-02",
     },
     "primary-CO-governor-R-2026": {
         "state": "CO", "chamber": "governor", "party": "R",

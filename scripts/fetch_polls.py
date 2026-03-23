@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from config import (
     WIKIPEDIA_API, WIKIPEDIA_USER_AGENT,
     SENATE_STATES_2026, GOVERNOR_STATES_2026,
+    NONPARTISAN_PRIMARY_STATES,
     REQUEST_TIMEOUT,
 )
 
@@ -375,16 +376,22 @@ _NON_CAND_RE = re.compile(
 def _nearest_primary_context(table):
     """
     Walk backwards through headings to determine if this table is inside a
-    Democratic or Republican primary section.  Returns 'D', 'R', or None.
+    Democratic or Republican primary section.  Returns 'D', 'R', 'NP', or None.
+    'NP' = nonpartisan/top-two primary section (no party affiliation).
     Stops at the first h2 boundary (top-level section change).
     """
     for heading in table.find_all_previous(["h2", "h3", "h4"]):
         text = re.sub(r"\[.*?\]", "", heading.get_text()).lower().strip()
-        if "primary" in text or "caucus" in text:
+        if "primary" in text or "caucus" in text or "blanket" in text or "top-two" in text or "top two" in text:
             if any(w in text for w in ("democrat", "democratic")):
                 return "D"
             if any(w in text for w in ("republican", "gop")):
                 return "R"
+            # Nonpartisan/blanket/top-two primary — no party affiliation
+            if any(w in text for w in ("nonpartisan", "blanket", "top-two", "top two", "jungle")):
+                return "NP"
+            # Generic "primary" heading with no party — treat as nonpartisan
+            return "NP"
         # Any h2 without "primary" is a different top-level section — stop
         if heading.name == "h2":
             return None
@@ -558,7 +565,22 @@ def fetch_polls_for_race(race_id):
     polls  = []
 
     for table in tables:
-        # Try general election parse first (D/R color-coded columns)
+        party = _nearest_primary_context(table) if state else None
+
+        # Nonpartisan primary tables must be parsed as primary FIRST — before
+        # _parse_table runs — because their column headers contain "(D)"/"(R)"
+        # party labels that _parse_table mistakes for a two-candidate general poll.
+        if party == "NP":
+            prim_rid = f"primary-{state}-{chamber}-2026"
+            pp = _parse_primary_table(table, prim_rid, url)
+            for p in pp:
+                key = (p["race_id"], p["pollster"], p["poll_date"])
+                if key not in seen:
+                    seen.add(key)
+                    polls.append(p)
+            continue
+
+        # Try general election parse (D/R color-coded columns)
         gp = _parse_table(table, race_id, url)
         if gp:
             for p in gp:
@@ -568,11 +590,19 @@ def fetch_polls_for_race(race_id):
                     polls.append(p)
             continue   # don't also attempt primary parse on the same table
 
-        # Try primary parse (candidate-name columns inside a primary section)
+        # Try partisan primary parse
         if state:
-            party = _nearest_primary_context(table)
-            if party:
+            if party in ("D", "R"):
                 prim_rid = f"primary-{state}-{chamber}-{party}-2026"
+                pp = _parse_primary_table(table, prim_rid, url)
+                for p in pp:
+                    key = (p["race_id"], p["pollster"], p["poll_date"])
+                    if key not in seen:
+                        seen.add(key)
+                        polls.append(p)
+            elif party is None and state in NONPARTISAN_PRIMARY_STATES:
+                # Nonpartisan state, ambiguous heading — try primary parse
+                prim_rid = f"primary-{state}-{chamber}-2026"
                 pp = _parse_primary_table(table, prim_rid, url)
                 for p in pp:
                     key = (p["race_id"], p["pollster"], p["poll_date"])

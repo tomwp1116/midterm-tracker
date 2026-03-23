@@ -15,6 +15,8 @@ from config import (
 HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
 
 _PLACEHOLDER_RE = re.compile(r"^person [abc]$", re.IGNORECASE)
+# Reject Polymarket event-level questions mistakenly parsed as candidate names
+_QUESTION_RE = re.compile(r"^who\s+will\b", re.IGNORECASE)
 
 
 def extract_candidate_name(title):
@@ -95,13 +97,31 @@ def fetch_kalshi_candidates(series_ticker, race_id, party):
         if m.get("status", "").lower() not in ACTIVE_STATUSES:
             continue
         title = m.get("title", "")
-        candidate = extract_candidate_name(title)
-        if _PLACEHOLDER_RE.match(candidate):
+        # Categorical markets (e.g. CA governor top-two) share identical titles;
+        # candidate name lives in custom_strike or yes_sub_title instead.
+        custom = m.get("custom_strike") or {}
+        candidate = (
+            custom.get("Candidate/Party")
+            or m.get("yes_sub_title")
+            or extract_candidate_name(title)
+        ).strip()
+        if _PLACEHOLDER_RE.match(candidate) or _QUESTION_RE.match(candidate):
             continue
+        # For nonpartisan races, derive per-candidate party from subtitle.
+        if party is None:
+            sub = (m.get("subtitle") or "").lower()
+            if "democratic" in sub:
+                m_party = "D"
+            elif "republican" in sub:
+                m_party = "R"
+            else:
+                m_party = None
+        else:
+            m_party = party
         records.append({
             "race_id": race_id,
             "candidate_name": candidate,
-            "party": party,
+            "party": m_party,
             "k_price": _parse_kalshi_price(m),
             "pm_price": None,
             "k_ticker": m.get("ticker", ""),
@@ -126,16 +146,18 @@ def fetch_polymarket_candidates(pm_slug, race_id, party):
     records = []
     for m in markets:
         question = (m.get("question") or "").strip()
-        # Extract candidate name from question
+        # Extract candidate name from question.
+        # Handles "Will X be/win the [party] nominee..." and
+        # "Will X advance from the ... primary" (nonpartisan top-two phrasing).
         m2 = re.match(
             r"[Ww]ill?\s+(.+?)\s+(?:be|win)\s+(?:the\s+)?(?:republican|democratic|dem|rep|gop|\d{4})\s",
             question, re.IGNORECASE,
         )
         if not m2:
-            m2 = re.match(r"[Ww]ill?\s+(.+?)\s+(?:be|win)", question, re.IGNORECASE)
+            m2 = re.match(r"[Ww]ill?\s+(.+?)\s+(?:advance\s+from|be|win)\b", question, re.IGNORECASE)
         candidate = m2.group(1).strip() if m2 else question[:40]
 
-        if _PLACEHOLDER_RE.match(candidate):
+        if _PLACEHOLDER_RE.match(candidate) or _QUESTION_RE.match(candidate):
             continue
 
         prices_raw = m.get("outcomePrices") or "[]"
@@ -191,17 +213,24 @@ def merge_by_last_name(k_records, pm_records):
     return list(merged.values())
 
 
-def fetch_all_primary_markets():
+def fetch_all_primary_markets(skip_race_ids=None):
     """
     Main entry point. Iterates over PRIMARY_RACES, fetches candidate probabilities
     from Kalshi and Polymarket, and returns merged per-candidate records.
+
+    skip_race_ids: optional set/list of race IDs to skip (e.g. already-completed races).
     """
+    skip = set(skip_race_ids or [])
     print("[Primary Markets] Fetching candidate probabilities...")
     all_records = []
     race_count = 0
 
     for race_id, info in PRIMARY_RACES.items():
-        party = info["party"]
+        if race_id in skip:
+            print(f"  {race_id}: skipped (completed)")
+            continue
+
+        party = info.get("party")
         k_series = info.get("kalshi_series")
         pm_slug = info.get("pm_slug")
 

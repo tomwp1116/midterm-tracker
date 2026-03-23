@@ -29,6 +29,7 @@ DB_PATH = Path(__file__).parent.parent / "data" / "midterms.db"
 START_DATE = date(2025, 11, 5)   # earliest meaningful date for 2026 markets
 
 _PLACEHOLDER_RE = re.compile(r"^person [abc]$", re.IGNORECASE)
+_QUESTION_RE = re.compile(r"^who\s+will\b", re.IGNORECASE)
 
 
 def date_to_ts(d: date) -> int:
@@ -125,9 +126,28 @@ def backfill_race(conn: sqlite3.Connection, race_id: str, series: str, party: st
         ticker = market.get("ticker", "")
         if not ticker:
             continue
-        candidate = extract_candidate_name(title)
-        if _PLACEHOLDER_RE.match(candidate):
+        # Categorical markets (e.g. CA governor top-two) have identical titles;
+        # candidate name lives in custom_strike or yes_sub_title instead.
+        custom = market.get("custom_strike") or {}
+        candidate = (
+            custom.get("Candidate/Party")
+            or market.get("yes_sub_title")
+            or extract_candidate_name(title)
+        ).strip()
+        if _PLACEHOLDER_RE.match(candidate) or _QUESTION_RE.match(candidate):
             continue
+
+        # For nonpartisan races, derive party from the market subtitle field.
+        if party is None:
+            sub = (market.get("subtitle") or "").lower()
+            if "democratic" in sub:
+                m_party = "D"
+            elif "republican" in sub:
+                m_party = "R"
+            else:
+                m_party = None
+        else:
+            m_party = party
 
         candles, err = fetch_candlesticks(series, ticker, start_ts, end_ts)
         time.sleep(0.3)
@@ -152,8 +172,9 @@ def backfill_race(conn: sqlite3.Connection, race_id: str, series: str, party: st
                     (race_id, snapshot_date, candidate_name, party, k_price)
                 VALUES (?, ?, ?, ?, ?)
                 ON CONFLICT(race_id, snapshot_date, candidate_name) DO UPDATE SET
-                    k_price = COALESCE(excluded.k_price, primary_candidate_snapshots.k_price)
-            """, (race_id, snap_date, candidate, party, price))
+                    k_price = COALESCE(excluded.k_price, primary_candidate_snapshots.k_price),
+                    party = COALESCE(excluded.party, primary_candidate_snapshots.party)
+            """, (race_id, snap_date, candidate, m_party, price))
             inserted += 1
 
         conn.commit()
@@ -173,7 +194,7 @@ def main():
         series = info.get("kalshi_series")
         if not series:
             continue
-        party = info.get("party", "")
+        party = info.get("party")  # None for nonpartisan races
 
         print(f"\n[{race_id}] series={series}")
         n = backfill_race(conn, race_id, series, party)
@@ -181,6 +202,15 @@ def main():
         grand_total += n
         race_count += 1
         time.sleep(0.5)
+
+        # Nonpartisan races have a second Kalshi series for the other party
+        series_2 = info.get("kalshi_series_2")
+        if series_2:
+            print(f"\n[{race_id}] series={series_2} (R)")
+            n2 = backfill_race(conn, race_id, series_2, "R")
+            print(f"  → {n2} rows total")
+            grand_total += n2
+            time.sleep(0.5)
 
     conn.close()
     print(f"\nDone. {grand_total} rows inserted across {race_count} races.")

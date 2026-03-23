@@ -17,7 +17,7 @@ import os
 import json
 import sqlite3
 import time
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 # Add parent dir to path so we can import config
@@ -372,6 +372,89 @@ def save_polls(conn, poll_records):
     return saved
 
 
+def update_disagreement_flags(conn, today):
+    """
+    For every active primary race, check whether the current poll leader and
+    market leader disagree. If so, set had_disagreement = 1 on the race row.
+    The flag is never cleared — once set it persists permanently.
+
+    Only considers polls within the last 90 days.
+    """
+    from config import PRIMARY_RACES, PRIMARY_RESULTS_PATH
+    import json as _json
+
+    # Don't flag already-completed races (they're frozen)
+    completed = set()
+    if PRIMARY_RESULTS_PATH.exists():
+        with open(PRIMARY_RESULTS_PATH) as _f:
+            completed = set(_json.load(_f).keys())
+
+    c = conn.cursor()
+    cutoff = (datetime.strptime(today, "%Y-%m-%d") - timedelta(days=90)).strftime("%Y-%m-%d")
+    flagged = 0
+
+    for rid in PRIMARY_RACES:
+        if rid in completed:
+            continue
+
+        # Latest poll within 90 days — pick the top two candidates by pct
+        c.execute("""
+            SELECT candidate_1, candidate_1_pct, candidate_2, candidate_2_pct,
+                   candidate_3, candidate_3_pct, candidates_json
+            FROM polls
+            WHERE race_id = ? AND poll_date >= ?
+            ORDER BY poll_date DESC LIMIT 1
+        """, (rid, cutoff))
+        row = c.fetchone()
+        if not row:
+            continue
+
+        c1, p1, c2, p2, c3, p3, cj_raw = row
+        # Determine poll leader
+        poll_leader = None
+        if cj_raw:
+            try:
+                cj = _json.loads(cj_raw)
+                if cj:
+                    poll_leader = max(cj, key=lambda k: cj[k] or 0)
+            except Exception:
+                pass
+        if not poll_leader:
+            candidates = [(c1, p1), (c2, p2), (c3, p3)]
+            candidates = [(n, p) for n, p in candidates if n and p is not None]
+            if candidates:
+                poll_leader = max(candidates, key=lambda x: x[1])[0]
+        if not poll_leader:
+            continue
+
+        # Latest market snapshot for this race
+        c.execute("""
+            SELECT candidate_name, COALESCE(k_price, pm_price) AS price
+            FROM primary_candidate_snapshots
+            WHERE race_id = ?
+              AND snapshot_date = (
+                  SELECT MAX(snapshot_date) FROM primary_candidate_snapshots WHERE race_id = ?
+              )
+            ORDER BY price DESC LIMIT 1
+        """, (rid, rid))
+        mkt_row = c.fetchone()
+        if not mkt_row:
+            continue
+        mkt_leader = mkt_row[0]
+
+        # Compare by last name (same fuzzy match as the frontend)
+        if poll_leader.split()[-1].lower() != mkt_leader.split()[-1].lower():
+            c.execute("""
+                UPDATE races SET had_disagreement = 1 WHERE race_id = ? AND had_disagreement = 0
+            """, (rid,))
+            if c.rowcount > 0:
+                flagged += 1
+                print(f"[Disagreement] Flagged {rid}: poll leader={poll_leader}, mkt leader={mkt_leader}")
+
+    conn.commit()
+    return flagged
+
+
 def save_primary_candidate_snapshots(conn, records, snapshot_date):
     """Save per-candidate primary probability snapshots."""
     c = conn.cursor()
@@ -384,7 +467,8 @@ def save_primary_candidate_snapshots(conn, records, snapshot_date):
                 VALUES (?, ?, ?, ?, ?, ?)
                 ON CONFLICT(race_id, snapshot_date, candidate_name) DO UPDATE SET
                     k_price  = COALESCE(excluded.k_price,  k_price),
-                    pm_price = COALESCE(excluded.pm_price, pm_price)
+                    pm_price = COALESCE(excluded.pm_price, pm_price),
+                    party    = COALESCE(excluded.party,    party)
             """, (
                 r["race_id"], snapshot_date,
                 r["candidate_name"], r.get("party"),
@@ -656,7 +740,8 @@ def export_dashboard_json(conn, output_path):
     c.execute("""
         SELECT race_id, chamber, state, district, description,
                polymarket_slug, kalshi_ticker, kalshi_url,
-               COALESCE(race_to_watch, 0) as race_to_watch
+               COALESCE(race_to_watch, 0) as race_to_watch,
+               COALESCE(had_disagreement, 0) as had_disagreement
         FROM races
         WHERE state != 'US'
            OR race_id IN ('senate-control-2026', 'house-control-2026')
@@ -666,7 +751,7 @@ def export_dashboard_json(conn, output_path):
 
     races_out = []
     for row in race_rows:
-        rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_stored, rtw = row
+        rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_stored, rtw, had_disagreement = row
         
         # Get latest market snapshot
         c.execute("""
@@ -721,10 +806,11 @@ def export_dashboard_json(conn, output_path):
         time_series_out = time_series if time_series else None
 
         # For primary races, build candidate-keyed time series
+        candidate_parties = None  # {name: "D"/"R"} for nonpartisan races
         if is_primary_race:
             c.execute("""
                 SELECT snapshot_date, candidate_name,
-                       COALESCE(k_price, pm_price) as price
+                       COALESCE(k_price, pm_price) as price, party
                 FROM primary_candidate_snapshots
                 WHERE race_id = ?
                 ORDER BY snapshot_date
@@ -732,7 +818,10 @@ def export_dashboard_json(conn, output_path):
             cand_rows = c.fetchall()
             # Build {date: {cand: price}} mapping
             by_date = {}
-            for snap_date, cand_name, price in cand_rows:
+            cand_party_map = {}
+            for snap_date, cand_name, price, party in cand_rows:
+                if party and cand_name not in cand_party_map:
+                    cand_party_map[cand_name] = party
                 d = datetime.strptime(snap_date, "%Y-%m-%d")
                 key = f"{d.month}/{d.day}"
                 if key not in by_date:
@@ -741,14 +830,32 @@ def export_dashboard_json(conn, output_path):
                     by_date[key][cand_name] = round(price * 100, 1)
             # Drop corrupted days: Kalshi returns ~50% placeholder prices for
             # illiquid/untraded candidate contracts (bid=1¢, ask=99¢ → mid=50%).
-            # A real primary market sums to ~90-110%; anything above 130% means
-            # at least one candidate is showing a stale default price.
+            # For partisan primaries, a real market sums to ~90-110%; >130% = corrupt.
+            # For nonpartisan (top-two) primaries, D+R candidates are combined so
+            # the total is naturally ~200%; use a per-candidate check instead.
+            from config import PRIMARY_RACES as _PR
+            _race_info = _PR.get(rid, {})
+            _is_nonpartisan = _race_info.get("nonpartisan", False)
+            _top_n = _race_info.get("top_n", 1)
             for key in list(by_date.keys()):
-                vals = [v for k, v in by_date[key].items() if k != "date"]
-                if sum(vals) > 130:
-                    del by_date[key]
+                if not _is_nonpartisan:
+                    vals = [v for k, v in by_date[key].items() if k != "date"]
+                    if sum(vals) > 130:
+                        del by_date[key]
+            # Cap to top 10 candidates by their peak price across all days
+            if by_date:
+                all_cands = set(k for pt in by_date.values() for k in pt if k != "date")
+                peak = {cn: max((pt.get(cn, 0) or 0) for pt in by_date.values()) for cn in all_cands}
+                top10 = set(sorted(peak, key=lambda cn: peak[cn], reverse=True)[:10])
+                for pt in by_date.values():
+                    for cn in list(pt.keys()):
+                        if cn != "date" and cn not in top10:
+                            del pt[cn]
+
             primary_ts = list(by_date.values())
             time_series_out = primary_ts if primary_ts else None
+            if cand_party_map and _is_nonpartisan:
+                candidate_parties = {k: v for k, v in cand_party_map.items() if k in top10} if by_date and top10 else None
 
         # Extract primary_party from race_id
         race_type = "primary" if is_primary_race else "general"
@@ -810,11 +917,16 @@ def export_dashboard_json(conn, output_path):
         pm_url = f"https://polymarket.com/event/{pm_slug}" if pm_slug else None
         rcp = fte_url_for(chamber, state)
         
-        # Include primary_date from config for upcoming primary races
+        # Include primary_date, nonpartisan flag, and top_n from config
         primary_date = None
+        is_nonpartisan = False
+        top_n = None
         if is_primary_race:
             from config import PRIMARY_RACES as _PR
-            primary_date = _PR.get(rid, {}).get("primary_date")
+            _info = _PR.get(rid, {})
+            primary_date = _info.get("primary_date")
+            is_nonpartisan = bool(_info.get("nonpartisan", False))
+            top_n = _info.get("top_n")
 
         race_obj = {
             "race_id": rid,
@@ -832,8 +944,12 @@ def export_dashboard_json(conn, output_path):
             "race_type": race_type,
             "primary_party": primary_party,
             "primary_date": primary_date,
+            "nonpartisan": is_nonpartisan or None,
+            "top_n": top_n,
+            "candidate_parties": candidate_parties,
             "result": primary_result,
             "race_to_watch": bool(rtw),
+            "had_disagreement": bool(had_disagreement),
             "polls": polls if polls else None,
             "time_series": time_series_out,
             "note": None,
@@ -999,6 +1115,27 @@ def main():
         conn.execute("ALTER TABLE races ADD COLUMN race_to_watch INTEGER DEFAULT 0")
     except Exception:
         pass  # column already exists
+    # Migrate: add had_disagreement column if it doesn't exist yet
+    try:
+        conn.execute("ALTER TABLE races ADD COLUMN had_disagreement INTEGER DEFAULT 0")
+    except Exception:
+        pass  # column already exists
+    conn.commit()
+
+    # One-time migration: consolidate old split CA governor primary rows into the
+    # new nonpartisan race_id. Safe to re-run — ON CONFLICT upserts are idempotent.
+    _ca_old = ("primary-CA-governor-D-2026", "primary-CA-governor-R-2026")
+    _ca_new = "primary-CA-governor-2026"
+    for _old_rid in _ca_old:
+        conn.execute("""
+            INSERT INTO primary_candidate_snapshots
+                (race_id, snapshot_date, candidate_name, party, k_price, pm_price)
+            SELECT ?, snapshot_date, candidate_name, party, k_price, pm_price
+            FROM primary_candidate_snapshots WHERE race_id = ?
+            ON CONFLICT(race_id, snapshot_date, candidate_name) DO UPDATE SET
+                k_price  = COALESCE(excluded.k_price,  primary_candidate_snapshots.k_price),
+                pm_price = COALESCE(excluded.pm_price, primary_candidate_snapshots.pm_price)
+        """, (_ca_new, _old_rid))
     conn.commit()
 
     # Races
@@ -1014,7 +1151,13 @@ def main():
     print(f"[DB] Saved {n_polls} new polls")
 
     print("\n[Primary Markets] Fetching primary candidate data...")
-    primary_records = fetch_all_primary_markets()
+    completed_race_ids = set()
+    if PRIMARY_RESULTS_PATH.exists():
+        with open(PRIMARY_RESULTS_PATH) as _f:
+            completed_race_ids = set(json.load(_f).keys())
+    if completed_race_ids:
+        print(f"[Primary Markets] Skipping {len(completed_race_ids)} completed race(s): {', '.join(sorted(completed_race_ids))}")
+    primary_records = fetch_all_primary_markets(skip_race_ids=completed_race_ids)
 
     # Upsert primary race records from PRIMARY_RACES config
     from config import PRIMARY_RACES as PRIMARY_RACES_CONFIG
@@ -1040,6 +1183,10 @@ def main():
 
     primary_saved = save_primary_candidate_snapshots(conn, primary_records, today)
     print(f"[DB] Saved {primary_saved} primary candidate snapshots")
+
+    n_flagged = update_disagreement_flags(conn, today)
+    if n_flagged == 0:
+        print("[Disagreement] No new disagreement flags set")
 
     # NBC "Race to Watch" flags
     print("\n[NBC Calendar] Fetching Race to Watch flags...")
