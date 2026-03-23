@@ -436,8 +436,8 @@ def _parse_primary_table(table, race_id, article_url):
     if len(candidate_cols) < 2:
         return []
 
-    candidate_cols = candidate_cols[:3]   # cap at 3
-    cnames = [cn for _, cn in candidate_cols]
+    # Do NOT cap here — collect all candidates and rank by % per row below
+    all_cnames = [cn for _, cn in candidate_cols]
 
     polls = []
     for row in rows:
@@ -465,19 +465,30 @@ def _parse_primary_table(table, race_id, article_url):
         if all(v is None for v in cand_pcts.values()):
             continue
 
-        c1, c2 = cnames[0], cnames[1]
-        c3 = cnames[2] if len(cnames) > 2 else None
-        c1_pct = cand_pcts.get(c1)
-        c2_pct = cand_pcts.get(c2)
-        c3_pct = cand_pcts.get(c3) if c3 else None
+        # Sort all candidates by their polling % descending so the top vote-getters
+        # are always stored in candidate_1/2/3 regardless of table column order.
+        ranked = sorted(
+            [(cn, pct) for cn, pct in cand_pcts.items() if pct is not None],
+            key=lambda x: x[1],
+            reverse=True,
+        )
+        # Candidates with no % value go at the end (preserve column order among them)
+        unranked = [(cn, None) for cn in all_cnames if cand_pcts.get(cn) is None]
+        ranked_all = ranked + unranked
+
+        if len(ranked_all) < 2:
+            continue
+
+        c1, c1_pct = ranked_all[0]
+        c2, c2_pct = ranked_all[1]
+        c3, c3_pct = ranked_all[2] if len(ranked_all) > 2 else (None, None)
 
         if c1_pct is None and c2_pct is None:
             continue
 
         if c1_pct is not None and c2_pct is not None:
             spread       = round(c1_pct - c2_pct, 1)
-            leader       = c1.split()[-1] if spread >= 0 else c2.split()[-1]
-            spread_label = f"{leader} +{abs(spread)}"
+            spread_label = f"{c1.split()[-1]} +{spread}"
         else:
             spread = spread_label = None
 
