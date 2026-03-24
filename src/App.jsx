@@ -758,6 +758,30 @@ function winnerMarketProb(race) {
   return null;
 }
 
+function marketAccuracyBySource(race) {
+  const ts = race.time_series || [];
+  const res = race.result;
+  if (!res || !ts.length) return {kalshi: null, pm: null};
+  const electionDate = parseToDate(res.date);
+  for (let i = ts.length - 1; i >= 0; i--) {
+    const pt = ts[i];
+    if (electionDate) {
+      const ptDate = parseToDate(pt.date);
+      if (ptDate && ptDate >= electionDate) continue;
+    }
+    if (isPrimary(race)) {
+      const kp = res.winner ? pt[res.winner] : null;
+      if (kp != null) return {kalshi: kp > 50, pm: null};
+    } else {
+      const toWin = v => v != null ? (res.party === "D" ? v > 50 : (100 - v) > 50) : null;
+      const kOk = toWin(pt.kalshi);
+      const pmOk = toWin(pt.polymarket);
+      if (kOk !== null || pmOk !== null) return {kalshi: kOk, pm: pmOk};
+    }
+  }
+  return {kalshi: null, pm: null};
+}
+
 function pollVsResult(race) {
   const polls = race.polls || [];
   const res = race.result;
@@ -1047,6 +1071,12 @@ function MobileRaceCard({race, open, onToggle, filter}) {
 function MobileCompletedCard({race, open, onToggle}) {
   const res = race.result;
   const winColor = res.party==="D" ? DEM : res.party==="R" ? REP : "#666";
+  const {kalshi: kOk, pm: pmOk} = marketAccuracyBySource(race);
+  const pComp = pollVsResult(race);
+  const pollOk = pComp != null ? pComp.correct : null;
+  const mParts = [kOk, pmOk].filter(v => v !== null).map(v => v ? "✅" : "❌");
+  const pStr = pollOk !== null ? (pollOk ? "✅" : "❌") : "—";
+  const mStr = mParts.length > 0 ? mParts.join("") : "—";
   return (
     <div style={{borderBottom: open ? "none" : "1px solid #e8e8e8"}}>
       <div onClick={() => onToggle(race.race_id)}
@@ -1055,9 +1085,11 @@ function MobileCompletedCard({race, open, onToggle}) {
           <div style={{display:"flex", alignItems:"center", gap:7, flex:1, minWidth:0}}>
             <span style={{fontSize:9,color:open?"#333":"#ccc",display:"inline-block",transition:"transform .2s",transform:open?"rotate(90deg)":"rotate(0)",flexShrink:0}}>▶</span>
             <span style={{fontSize:14,fontWeight:700,color:winColor,fontFamily:"Georgia,'Times New Roman',serif"}}>✓ {res.winner}</span>
-            {race.had_disagreement && <span style={{fontSize:10,fontWeight:700,background:"#fef9c3",color:"#854d0e",padding:"1px 5px",borderRadius:3,flexShrink:0}}>★</span>}
           </div>
-          <span style={{fontSize:12,color:"#888",fontFamily:S,flexShrink:0,marginLeft:8}}>{res.date}</span>
+          <div style={{display:"flex",alignItems:"center",gap:6,flexShrink:0,marginLeft:8}}>
+            <span style={{fontSize:13}}>{pStr}<span style={{color:"#ccc",margin:"0 3px"}}>/</span>{mStr}</span>
+            <span style={{fontSize:12,color:"#888",fontFamily:S}}>{res.date}</span>
+          </div>
         </div>
         <div style={{fontSize:12,color:"#888",fontFamily:S,marginLeft:16,marginBottom:res.pct!=null?4:0,lineHeight:1.3}}>{race.description}</div>
         {res.pct!=null && (
@@ -1300,7 +1332,7 @@ export default function App(){
           ) : (
           <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
             <thead><tr style={{borderBottom:"2px solid #222"}}>
-              {["Race","Winner","Result","Called","Market/Poll Split"].map(h=>(
+              {["Race","Winner","Result","Called","Polls/Markets"].map(h=>(
                 <th key={h} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600}}>{h}</th>
               ))}
             </tr></thead>
@@ -1309,6 +1341,12 @@ export default function App(){
                 const res = race.result;
                 const open = sel === race.race_id;
                 const winColor = res.party === "D" ? DEM : res.party === "R" ? REP : "#666";
+                const {kalshi: kOk, pm: pmOk} = marketAccuracyBySource(race);
+                const pComp = pollVsResult(race);
+                const pollOk = pComp != null ? pComp.correct : null;
+                const mParts = [kOk, pmOk].filter(v => v !== null).map(v => v ? "✅" : "❌");
+                const pStr = pollOk !== null ? (pollOk ? "✅" : "❌") : "—";
+                const mStr = mParts.length > 0 ? mParts.join("") : "—";
                 return [
                   <tr key={race.race_id} onClick={() => toggle(race.race_id)} style={{borderBottom:open?"none":"1px solid #e8e8e8",cursor:"pointer",background:open?"#fafafa":"transparent",transition:"background .1s"}} onMouseEnter={e=>{if(!open)e.currentTarget.style.background="#fafafa";}} onMouseLeave={e=>{e.currentTarget.style.background=open?"#fafafa":"transparent";}}>
                     <td style={{padding:"10px"}}>
@@ -1321,10 +1359,7 @@ export default function App(){
                       </div>
                     </td>
                     <td style={{padding:"10px"}}>
-                      <div style={{display:"flex",alignItems:"center",gap:6}}>
-                        <span style={{fontSize:14,fontWeight:700,color:winColor}}>✓ {res.winner}</span>
-                        {race.had_disagreement&&<span style={{fontSize:10,fontWeight:700,background:"#fef9c3",color:"#854d0e",padding:"2px 6px",borderRadius:3,letterSpacing:".03em",whiteSpace:"nowrap"}}>★</span>}
-                      </div>
+                      <span style={{fontSize:14,fontWeight:700,color:winColor}}>✓ {res.winner}</span>
                     </td>
                     <td style={{padding:"10px"}}>
                       {res.pct != null ? (
@@ -1334,11 +1369,10 @@ export default function App(){
                       )}
                     </td>
                     <td style={{padding:"10px"}}><span style={{fontSize:13,color:"#888"}}>{res.date}</span></td>
-                    <td style={{padding:"10px"}}>
-                      {race.had_disagreement
-                        ? <span style={{fontSize:14,fontWeight:700,background:"#fef9c3",color:"#854d0e",padding:"3px 8px",borderRadius:3}}>★</span>
-                        : <span style={{color:"#ddd"}}>—</span>
-                      }
+                    <td style={{padding:"10px",whiteSpace:"nowrap"}}>
+                      <span style={{fontSize:15}}>{pStr}</span>
+                      <span style={{color:"#ccc",margin:"0 5px"}}>/</span>
+                      <span style={{fontSize:15}}>{mStr}</span>
                     </td>
                   </tr>,
                   open && <CompletedDetail key={`${race.race_id}-cd`} race={race} onClose={() => setS(null)} />,
@@ -1351,7 +1385,7 @@ export default function App(){
 
         <div style={{marginTop:28,paddingTop:16,borderTop:"1px solid #ddd",fontSize:12,color:"#999",lineHeight:1.7,fontFamily:S}}>
           <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded four times a day. Polls sourced from Wikipedia. General election charts show the leading candidate's prediction market advantage, with a <span style={{color:POLL_AVG,fontWeight:600}}>muted blue dashed line</span> for the 30-day poll average; vertical markers flag poll release dates. Primary charts show per-candidate poll support (%) as multi-colored lines — blues for Dem primaries, reds/oranges for Rep primaries. Use the <strong>Primaries</strong> filter to see all tracked primaries. Created by <a href="mailto:tom.wrightpiersanti@gmail.com" style={{color:"#999",textDecoration:"underline"}}>Tom Wright-Piersanti</a>, built with Claude Code.
-          <div style={{marginTop:6}}><strong style={{color:"#666"}}>★ Market/Poll Split</strong> flags races where the prediction market leader and the polling leader disagree, based on the most recent poll within the last 90 days.</div>
+          <div style={{marginTop:6}}><strong style={{color:"#666"}}>★ Market/Poll Split</strong> flags active races where the prediction market leader and the polling leader disagree, based on the most recent poll within the last 90 days. For completed races, the <strong>Polls/Markets</strong> column shows ✅/❌ for whether the final poll and prediction market(s) correctly called the winner.</div>
         </div>
       </div>
     </div>);
