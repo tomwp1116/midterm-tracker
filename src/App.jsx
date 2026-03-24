@@ -1139,7 +1139,8 @@ export default function App(){
 
   const st = data.stats || {};
   const allRaces = data.races || [];
-  const completedRaces = allRaces.filter(r => r.result);
+  const completedRaces = allRaces.filter(r => r.result)
+    .sort((a, b) => (parseToDate(b.result.date) || 0) - (parseToDate(a.result.date) || 0));
   const activeRaces = allRaces.filter(r => !r.result);
 
   const races=useMemo(()=>{
