@@ -346,8 +346,8 @@ def save_polls(conn, poll_records):
                      candidate_2, candidate_2_pct, candidate_3, candidate_3_pct,
                      candidates_json, spread, spread_label, source_url, rcp_url, detected_date)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(race_id, poll_date, pollster) DO UPDATE SET
-                    candidate_1=excluded.candidate_1, candidate_1_pct=excluded.candidate_1_pct,
+                ON CONFLICT(race_id, poll_date, pollster, candidate_1) DO UPDATE SET
+                    candidate_1_pct=excluded.candidate_1_pct,
                     candidate_2=excluded.candidate_2, candidate_2_pct=excluded.candidate_2_pct,
                     candidate_3=excluded.candidate_3, candidate_3_pct=excluded.candidate_3_pct,
                     candidates_json=excluded.candidates_json,

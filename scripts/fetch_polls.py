@@ -561,8 +561,8 @@ def fetch_polls_for_race(race_id):
     chamber = parts[0]           # "senate" or "governor"
     state   = parts[1] if len(parts) > 1 else None
 
-    seen   = set()   # (race_id, pollster, poll_date)
-    polls  = []
+    seen   = set()   # (race_id, pollster, poll_date, candidate_1) — candidate_1 allows
+    polls  = []      # same firm/date to appear in multiple matchup tables
 
     for table in tables:
         party = _nearest_primary_context(table) if state else None
@@ -574,7 +574,7 @@ def fetch_polls_for_race(race_id):
             prim_rid = f"primary-{state}-{chamber}-2026"
             pp = _parse_primary_table(table, prim_rid, url)
             for p in pp:
-                key = (p["race_id"], p["pollster"], p["poll_date"])
+                key = (p["race_id"], p["pollster"], p["poll_date"], p.get("candidate_1"))
                 if key not in seen:
                     seen.add(key)
                     polls.append(p)
@@ -584,7 +584,7 @@ def fetch_polls_for_race(race_id):
         gp = _parse_table(table, race_id, url)
         if gp:
             for p in gp:
-                key = (p["race_id"], p["pollster"], p["poll_date"])
+                key = (p["race_id"], p["pollster"], p["poll_date"], p.get("candidate_1"))
                 if key not in seen:
                     seen.add(key)
                     polls.append(p)
@@ -596,7 +596,7 @@ def fetch_polls_for_race(race_id):
                 prim_rid = f"primary-{state}-{chamber}-{party}-2026"
                 pp = _parse_primary_table(table, prim_rid, url)
                 for p in pp:
-                    key = (p["race_id"], p["pollster"], p["poll_date"])
+                    key = (p["race_id"], p["pollster"], p["poll_date"], p.get("candidate_1"))
                     if key not in seen:
                         seen.add(key)
                         polls.append(p)
@@ -605,7 +605,7 @@ def fetch_polls_for_race(race_id):
                 prim_rid = f"primary-{state}-{chamber}-2026"
                 pp = _parse_primary_table(table, prim_rid, url)
                 for p in pp:
-                    key = (p["race_id"], p["pollster"], p["poll_date"])
+                    key = (p["race_id"], p["pollster"], p["poll_date"], p.get("candidate_1"))
                     if key not in seen:
                         seen.add(key)
                         polls.append(p)
