@@ -194,38 +194,40 @@ PRIMARY_RACES = {
     "primary-AR-governor-D-2026": {
         "state": "AR", "chamber": "governor", "party": "D",
         "description": "Arkansas Governor Democratic Primary",
-        "kalshi_series": None, "pm_slug": None,
+        "kalshi_series": "KXGOVARNOMD", "pm_slug": None,
         "primary_date": "2026-03-03",
     },
     "primary-IL-governor-R-2026": {
         "state": "IL", "chamber": "governor", "party": "R",
         "description": "Illinois Governor Republican Primary",
-        "kalshi_series": None, "pm_slug": None,
+        "kalshi_series": "KXGOVILNOMR", "pm_slug": None,
         "primary_date": "2026-03-17",
     },
     # ── House primaries — NBC Races to Watch (completed) ──────────────────
     "primary-house-NC-01-R-2026": {
         "state": "NC", "chamber": "house", "party": "R", "district": "01",
         "description": "NC-01 Republican Primary",
-        "kalshi_series": None, "pm_slug": None,
+        "kalshi_series": "KXNC01R", "pm_slug": None,
         "primary_date": "2026-03-03",
     },
     "primary-house-NC-04-D-2026": {
         "state": "NC", "chamber": "house", "party": "D", "district": "04",
         "description": "NC-04 Democratic Primary",
-        "kalshi_series": None, "pm_slug": None,
+        "kalshi_series": "KXNC04D", "pm_slug": None,
         "primary_date": "2026-03-03",
     },
     "primary-house-NC-11-R-2026": {
         "state": "NC", "chamber": "house", "party": "R", "district": "11",
         "description": "NC-11 Republican Primary",
-        "kalshi_series": None, "pm_slug": None,
+        # KXNCPRIMARY is an omnibus NC series; prefix filters to NC-11 R markets only
+        "kalshi_series": "KXNCPRIMARY", "kalshi_ticker_prefix": "KXNCPRIMARY-11R26",
+        "pm_slug": None,
         "primary_date": "2026-03-03",
     },
     "primary-house-NC-11-D-2026": {
         "state": "NC", "chamber": "house", "party": "D", "district": "11",
         "description": "NC-11 Democratic Primary",
-        "kalshi_series": None, "pm_slug": None,
+        "kalshi_series": None, "pm_slug": None,  # KXNC11D-26 no longer in Kalshi API
         "primary_date": "2026-03-03",
     },
     # ── Additional Senate Republican primaries ─────────────────────────────

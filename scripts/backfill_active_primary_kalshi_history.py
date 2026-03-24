@@ -108,7 +108,8 @@ def fetch_candlesticks(series: str, ticker: str, start_ts: int, end_ts: int):
         return None, str(e)
 
 
-def backfill_race(conn: sqlite3.Connection, race_id: str, series: str, party: str) -> int:
+def backfill_race(conn: sqlite3.Connection, race_id: str, series: str, party: str,
+                  ticker_prefix: str = None) -> int:
     end_date = date.today()
     start_ts = date_to_ts(START_DATE)
     end_ts = date_to_ts(end_date + timedelta(days=1))
@@ -117,6 +118,12 @@ def backfill_race(conn: sqlite3.Connection, race_id: str, series: str, party: st
     if not markets:
         print(f"  No markets found in series {series}")
         return 0
+
+    if ticker_prefix:
+        markets = [m for m in markets if m.get("ticker", "").upper().startswith(ticker_prefix.upper())]
+        if not markets:
+            print(f"  No markets matched prefix {ticker_prefix!r}")
+            return 0
 
     c = conn.cursor()
     total = 0
@@ -196,8 +203,9 @@ def main():
             continue
         party = info.get("party")  # None for nonpartisan races
 
-        print(f"\n[{race_id}] series={series}")
-        n = backfill_race(conn, race_id, series, party)
+        prefix = info.get("kalshi_ticker_prefix")
+        print(f"\n[{race_id}] series={series}" + (f" prefix={prefix}" if prefix else ""))
+        n = backfill_race(conn, race_id, series, party, ticker_prefix=prefix)
         print(f"  → {n} rows total")
         grand_total += n
         race_count += 1
