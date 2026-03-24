@@ -849,7 +849,7 @@ function CompletedDetail({race, onClose, mobile=false}) {
                 </div>
               </>
             ) : (
-              <div style={{fontSize:13,color:"#aaa",fontFamily:S,fontStyle:"italic",marginBottom:10}}>Race called before tracking began — no market history available</div>
+              <div style={{fontSize:13,color:"#aaa",fontFamily:S,fontStyle:"italic",marginBottom:10}}>{race.kalshi||race.pm ? "Race called before tracking began — no market history available" : "No prediction market existed for this race"}</div>
             )}
             <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
               {race.pm&&<a href={`https://polymarket.com/event/${race.pm}`} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"#555",textDecoration:"none",borderBottom:"1px solid #ccc",fontFamily:S}} onClick={e=>e.stopPropagation()}>Polymarket ↗</a>}
