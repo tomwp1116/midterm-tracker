@@ -1109,7 +1109,7 @@ function MobileCompletedCard({race, open, onToggle}) {
 // ══════════════════════════════════════════════
 export default function App(){
   const[data,setData]=useState(FALLBACK);
-  const[filter,setF]=useState("all");
+  const[filter,setF]=useState("primaries");
   const[comp,setC]=useState("all");
   const[sel,setS]=useState(null);
   const[sort,setO]=useState("competitiveness");
