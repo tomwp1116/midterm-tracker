@@ -683,6 +683,104 @@ def detect_and_save_primary_results(conn, today):
     return new_detections
 
 
+def compute_movement_rating(time_series):
+    """Compute 7-day market movement rating for a general-election race.
+
+    Returns a dict {label, level, change} where level encodes severity:
+      1 = Steady          (|change| < 3pp)
+      2 = Moderate Shift  (3pp ≤ |change| < 7pp)
+      3 = Major Shift     (|change| ≥ 7pp, no leader flip)
+      4 = New Leader      (leading candidate changed)
+
+    time_series must be a list of {date, polymarket, kalshi} dicts sorted
+    oldest-first, as emitted by export_dashboard_json.  Values are in
+    percentage-point scale (0-100).
+    """
+    if not time_series or len(time_series) < 2:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    def best_price(pt):
+        return pt.get("polymarket") if pt.get("polymarket") is not None else pt.get("kalshi")
+
+    latest_price = best_price(time_series[-1])
+    if latest_price is None:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    # Walk back up to 7 entries to find a point with data
+    lookback = min(7, len(time_series) - 1)
+    old_pt = None
+    for i in range(lookback, 0, -1):
+        candidate = time_series[-(i + 1)]
+        if best_price(candidate) is not None:
+            old_pt = candidate
+            break
+    if old_pt is None:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    old_price = best_price(old_pt)
+    change = round(latest_price - old_price, 1)
+    abs_change = abs(change)
+
+    # Leader flip: did the side ahead of 50 change?
+    leader_changed = (old_price > 50) != (latest_price > 50)
+
+    if leader_changed:
+        return {"label": "New Leader", "level": 4, "change": change}
+    elif abs_change >= 7:
+        return {"label": "Major Shift", "level": 3, "change": change}
+    elif abs_change >= 3:
+        return {"label": "Moderate Shift", "level": 2, "change": change}
+    else:
+        return {"label": "Steady", "level": 1, "change": change}
+
+
+def compute_primary_movement_rating(time_series):
+    """Compute 7-day movement rating for a primary race.
+
+    Primary time series points use candidate names as keys (e.g. {"date":"3/15",
+    "Smith":42,"Jones":38}) rather than polymarket/kalshi.  We track the leading
+    candidate's price and flag a New Leader if the front-runner changes.
+    """
+    if not time_series or len(time_series) < 2:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    def leader_of(pt):
+        prices = {k: v for k, v in pt.items()
+                  if k != "date" and isinstance(v, (int, float)) and v is not None}
+        if not prices:
+            return None, None
+        name = max(prices, key=prices.get)
+        return name, prices[name]
+
+    latest_name, latest_price = leader_of(time_series[-1])
+    if latest_name is None:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    lookback = min(7, len(time_series) - 1)
+    old_pt = None
+    for i in range(lookback, 0, -1):
+        pt = time_series[-(i + 1)]
+        if leader_of(pt)[0] is not None:
+            old_pt = pt
+            break
+    if old_pt is None:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    old_name, old_price = leader_of(old_pt)
+    leader_changed = old_name != latest_name
+    change = round(latest_price - old_price, 1)
+    abs_change = abs(change)
+
+    if leader_changed:
+        return {"label": "New Leader", "level": 4, "change": change}
+    elif abs_change >= 7:
+        return {"label": "Major Shift", "level": 3, "change": change}
+    elif abs_change >= 3:
+        return {"label": "Moderate Shift", "level": 2, "change": change}
+    else:
+        return {"label": "Steady", "level": 1, "change": change}
+
+
 def export_dashboard_json(conn, output_path):
     """
     Export a single JSON file containing everything the dashboard needs:
@@ -857,6 +955,12 @@ def export_dashboard_json(conn, output_path):
             if cand_party_map and _is_nonpartisan:
                 candidate_parties = {k: v for k, v in cand_party_map.items() if k in top10} if by_date and top10 else None
 
+        # Compute 7-day movement rating
+        if is_primary_race:
+            movement = compute_primary_movement_rating(time_series_out) if time_series_out else None
+        else:
+            movement = compute_movement_rating(time_series)
+
         # Extract primary_party from race_id
         race_type = "primary" if is_primary_race else "general"
         primary_party = None
@@ -950,6 +1054,7 @@ def export_dashboard_json(conn, output_path):
             "result": primary_result,
             "race_to_watch": bool(rtw),
             "had_disagreement": bool(had_disagreement),
+            "movement": movement,
             "polls": polls if polls else None,
             "time_series": time_series_out,
             "note": None,

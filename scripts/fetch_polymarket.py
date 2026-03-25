@@ -151,16 +151,20 @@ def extract_markets_from_event(event):
         yes_price = float(prices[0]) if len(prices) > 0 else None
         no_price = float(prices[1]) if len(prices) > 1 else None
 
-        # Determine party
+        # Determine party.
+        # Only assign the price that this market directly tracks.  Do NOT
+        # derive the opposing party's price from no_price: in any race with a
+        # third candidate (independent, write-in, etc.) the complement of the
+        # Republican market is NOT the Democrat probability — it's D + others.
+        # The consolidation code in daily_snapshot.py picks up each party's
+        # price from its own directly-framed market.
         dem_price, rep_price = None, None
         text = (question + " " + event_title + " " + " ".join(outcomes)).lower()
-        
+
         if "democrat" in text:
             dem_price = yes_price
-            rep_price = no_price
         elif "republican" in text:
             rep_price = yes_price
-            dem_price = no_price
 
         # Infer race ID from the event title + question
         combined = (event_title + " " + question + " " + event_slug).lower()

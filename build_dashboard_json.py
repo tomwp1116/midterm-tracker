@@ -12,6 +12,43 @@ import random
 from datetime import date, timedelta
 import sys
 from pathlib import Path
+
+
+def compute_movement_rating(time_series):
+    """Compute 7-day market movement rating. See daily_snapshot.py for full docs."""
+    if not time_series or len(time_series) < 2:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    def best_price(pt):
+        return pt.get("polymarket") if pt.get("polymarket") is not None else pt.get("kalshi")
+
+    latest_price = best_price(time_series[-1])
+    if latest_price is None:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    lookback = min(7, len(time_series) - 1)
+    old_pt = None
+    for i in range(lookback, 0, -1):
+        candidate = time_series[-(i + 1)]
+        if best_price(candidate) is not None:
+            old_pt = candidate
+            break
+    if old_pt is None:
+        return {"label": "Steady", "level": 1, "change": 0}
+
+    old_price = best_price(old_pt)
+    change = round(latest_price - old_price, 1)
+    abs_change = abs(change)
+    leader_changed = (old_price > 50) != (latest_price > 50)
+
+    if leader_changed:
+        return {"label": "New Leader", "level": 4, "change": change}
+    elif abs_change >= 7:
+        return {"label": "Major Shift", "level": 3, "change": change}
+    elif abs_change >= 3:
+        return {"label": "Moderate Shift", "level": 2, "change": change}
+    else:
+        return {"label": "Steady", "level": 1, "change": change}
 sys.path.insert(0, str(Path(__file__).parent))
 from config import DB_PATH, DATA_DIR, DASHBOARD_JSON
 
@@ -175,6 +212,7 @@ for rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_path in all_ra
         "kalshi_url": f"https://kalshi.com/markets/{k_url_path}" if k_url_path else None,
         "rcp": rcp,
         "note": None,
+        "movement": compute_movement_rating(time_series) if time_series else None,
         "polls": polls if polls else None,
         "time_series": time_series if time_series else None,
     })

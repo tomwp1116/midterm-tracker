@@ -361,6 +361,13 @@ function buildFallbackData() {
 // ── Chart components ──
 function Spark({data,id}){return(<ResponsiveContainer width={86} height={24}><AreaChart data={data} margin={{top:2,right:0,bottom:2,left:0}}><Area type="monotone" dataKey={data.some(d=>d.polymarket)?"polymarket":"kalshi"} stroke="#888" fill="none" strokeWidth={1.2} dot={false}/><ReferenceLine y={50} stroke="#ddd" strokeWidth={.5}/></AreaChart></ResponsiveContainer>);}
 
+const MOVEMENT_STYLES={4:{bg:"#fee2e2",color:"#991b1b",weight:700},3:{bg:"#ffedd5",color:"#9a3412",weight:700},2:{bg:"#fef9c3",color:"#854d0e",weight:600},1:{bg:"transparent",color:"#9ca3af",weight:400}};
+function MovementBadge({movement}){
+  if(!movement)return<span style={{color:"#ddd"}}>—</span>;
+  const s=MOVEMENT_STYLES[movement.level]||MOVEMENT_STYLES[1];
+  return<span style={{fontSize:11,fontWeight:s.weight,background:s.bg,color:s.color,padding:"2px 7px",borderRadius:3,letterSpacing:".03em",whiteSpace:"nowrap"}}>{movement.label}</span>;
+}
+
 function fmtMargin(v){if(v==null)return null;const r=Math.round(v);if(r===0)return{label:"Even",color:"#555"};if(r>0)return{label:`D +${r}`,color:DEM};return{label:`R +${Math.abs(r)}`,color:REP};}
 
 function Tip({active,payload}){if(!active||!payload?.length)return null;const pt=payload[0]?.payload;if(!pt)return null;const hp=pt.pollDem!=null;
@@ -1164,6 +1171,7 @@ export default function App(){
     else if(sort==="polymarket"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].polymarket!=null)return ts[i].polymarket;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
     else if(sort==="kalshi"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].kalshi!=null)return ts[i].kalshi;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
     else if(sort==="latestpoll"){const ld=r=>(r.polls||[]).map(p=>p.date||"").filter(Boolean).sort().pop()||"0";f.sort((a,b)=>ld(b).localeCompare(ld(a)));}
+    else if(sort==="movement"){f.sort((a,b)=>{const al=a.movement?.level??0,bl=b.movement?.level??0;if(bl!==al)return bl-al;return Math.abs(b.movement?.change??0)-Math.abs(a.movement?.change??0);});}
     return f;},[activeRaces,filter,comp,sort]);
 
   const pill=(act,fn,ch,block=false)=>(<button onClick={fn} style={{padding:isMobile?"7px 13px":"4px 12px",borderRadius:3,fontSize:13,fontWeight:act?600:400,border:act?"1px solid #333":"1px solid #ccc",cursor:"pointer",background:act?"#333":"#fff",color:act?"#fff":"#666",fontFamily:S,WebkitTapHighlightColor:"transparent",width:block?"100%":undefined}}>{ch}</button>);
@@ -1245,8 +1253,8 @@ export default function App(){
         <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
           <thead><tr style={{borderBottom:"2px solid #222"}}>
             {(filter==="primaries"
-              ?[{key:"state",label:"Race"},{key:null,label:"Primary Date"},{key:null,label:"Kalshi Leader"},{key:"latestpoll",label:"Latest Poll"},{key:null,label:"Trend"}]
-              :[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:null,label:"Trend"}]
+              ?[{key:"state",label:"Race"},{key:null,label:"Primary Date"},{key:null,label:"Kalshi Leader"},{key:"latestpoll",label:"Latest Poll"},{key:"movement",label:"Trend",title:"Sort by market movement over the last 7 days"}]
+              :[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:"movement",label:"Trend",title:"Sort by market movement over the last 7 days"}]
             ).map(col=>(
               <th key={col.label} onClick={col.key?()=>setO(col.key):undefined} title={col.title||""} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:sort===col.key?"#222":"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600,cursor:col.key?"pointer":"default",userSelect:"none",whiteSpace:"nowrap"}}>
                 {col.label}{sort===col.key&&<span style={{marginLeft:4,fontSize:9}}>{sort==="state"?"A→Z":"↕"}</span>}
@@ -1312,7 +1320,7 @@ export default function App(){
                       :(<div><div style={{fontSize:13,fontWeight:600,color:spreadColor(lp.d,lp.r,lp.spread)}}>{lp.spread}</div><div style={{fontSize:11,color:"#aaa"}}>{lp.pollster}, {lp.date}</div></div>)
                     ):<span style={{color:"#ddd"}}>—</span>}
                   </td>
-                  <td style={{padding:"10px"}}><Spark data={ts} id={race.race_id}/></td>
+                  <td style={{padding:"10px"}}><MovementBadge movement={race.movement}/></td>
                 </tr>,
                 open&&<Detail key={`${race.race_id}-d`} race={race} onClose={()=>setS(null)}/>,
               ];})}
@@ -1385,8 +1393,10 @@ export default function App(){
         </div>)}
 
         <div style={{marginTop:28,paddingTop:16,borderTop:"1px solid #ddd",fontSize:12,color:"#999",lineHeight:1.7,fontFamily:S}}>
-          <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded four times a day. Polls sourced from Wikipedia. General election charts show the leading candidate's prediction market advantage, with a <span style={{color:POLL_AVG,fontWeight:600}}>muted blue dashed line</span> for the 30-day poll average; vertical markers flag poll release dates. Primary charts show per-candidate poll support (%) as multi-colored lines — blues for Dem primaries, reds/oranges for Rep primaries. Use the <strong>Primaries</strong> filter to see all tracked primaries. Created by <a href="mailto:tom.wrightpiersanti@gmail.com" style={{color:"#999",textDecoration:"underline"}}>Tom Wright-Piersanti</a>, built with Claude Code.
+          <strong style={{color:"#666"}}>About this tracker</strong> — Market odds from Polymarket and Kalshi, recorded four times a day. Polls sourced from Wikipedia. General election charts show the leading candidate's prediction market advantage, with a <span style={{color:POLL_AVG,fontWeight:600}}>muted blue dashed line</span> for the 30-day poll average; vertical markers flag poll release dates. Primary charts show per-candidate poll support (%) as multi-colored lines — blues for Dem primaries, reds/oranges for Rep primaries. Use the <strong>Primaries</strong> filter to see all tracked primaries.
           <div style={{marginTop:6}}><strong style={{color:"#666"}}>★ Market/Poll Split</strong> flags active races where the prediction market leader and the polling leader disagree, based on the most recent poll within the last 90 days. For completed races, the <strong>Polls/Markets</strong> column shows ✅/❌ for whether the final poll and prediction market(s) correctly called the winner.</div>
+          <div style={{marginTop:6}}><strong style={{color:"#666"}}>Trend column</strong> — Reflects how much a race's prediction market odds have shifted over the past seven days. <strong style={{color:"#9ca3af"}}>Steady</strong> means little or no movement (under 3 points). <strong style={{color:"#854d0e"}}>Moderate Shift</strong> means a noticeable move of 3–7 points. <strong style={{color:"#9a3412"}}>Major Shift</strong> means a significant move of 7 or more points. <strong style={{color:"#991b1b"}}>New Leader</strong> means the candidate who was previously favored to win has fallen behind.</div>
+          <div style={{marginTop:6}}>Created by <a href="mailto:tom.wrightpiersanti@gmail.com" style={{color:"#999",textDecoration:"underline"}}>Tom Wright-Piersanti</a>, built with Claude Code.</div>
         </div>
       </div>
     </div>);
