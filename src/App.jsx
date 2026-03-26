@@ -1119,7 +1119,7 @@ export default function App(){
   const[filter,setF]=useState("primaries");
   const[comp,setC]=useState("all");
   const[sel,setS]=useState(null);
-  const[sort,setO]=useState("competitiveness");
+  const[sort,setO]=useState("primary_date");
   const toggle=useCallback(id=>setS(p=>p===id?null:id),[]);
   const isMobile = useWindowWidth() < 640;
 
@@ -1165,8 +1165,12 @@ export default function App(){
       if(comp==="lean")f=f.filter(r=>(r.dem_base>.15&&r.dem_base<.40)||(r.dem_base>.60&&r.dem_base<.85));
       if(comp==="safe")f=f.filter(r=>r.dem_base<=.15||r.dem_base>=.85);
     }
-    if(filter==="primaries")f.sort((a,b)=>(a.primary_date||"9999-99-99").localeCompare(b.primary_date||"9999-99-99"));
-    else if(sort==="competitiveness"){const co={senate:0,governor:1,house:2};f.sort((a,b)=>{const cd=(co[a.chamber]??3)-(co[b.chamber]??3);return cd!==0?cd:Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5);});}
+    if(filter==="primaries"){
+      if(sort==="state")f.sort((a,b)=>(a.state+(a.district||"")).localeCompare(b.state+(b.district||"")));
+      else if(sort==="latestpoll"){const ld=r=>(r.polls||[]).map(p=>p.date||"").filter(Boolean).sort().pop()||"0";f.sort((a,b)=>ld(b).localeCompare(ld(a)));}
+      else if(sort==="movement"){f.sort((a,b)=>{const al=a.movement?.level??0,bl=b.movement?.level??0;if(bl!==al)return bl-al;return Math.abs(b.movement?.change??0)-Math.abs(a.movement?.change??0);});}
+      else/*primary_date or any non-applicable sort*/f.sort((a,b)=>(a.primary_date||"9999-99-99").localeCompare(b.primary_date||"9999-99-99"));
+    } else if(sort==="competitiveness"){const co={senate:0,governor:1,house:2};f.sort((a,b)=>{const cd=(co[a.chamber]??3)-(co[b.chamber]??3);return cd!==0?cd:Math.abs(a.dem_base-.5)-Math.abs(b.dem_base-.5);});}
     else if(sort==="state")f.sort((a,b)=>(a.state+(a.district||"")).localeCompare(b.state+(b.district||"")));
     else if(sort==="polymarket"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].polymarket!=null)return ts[i].polymarket;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
     else if(sort==="kalshi"){const lv=r=>{const ts=r.time_series||[];for(let i=ts.length-1;i>=0;i--)if(ts[i].kalshi!=null)return ts[i].kalshi;return null;};f.sort((a,b)=>{const av=lv(a),bv=lv(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return Math.abs(av-50)-Math.abs(bv-50);});}
@@ -1213,7 +1217,7 @@ export default function App(){
             <div style={{fontSize:11,color:"#aaa",textTransform:"uppercase",letterSpacing:".06em",marginBottom:7}}>Show</div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6,marginBottom:10}}>
               {[["senate","Senate"],["house","House"],["governor","Governor"],["control","Control"],["all","All"],["primaries","Primaries"]].map(([v,l])=>(
-                <div key={v}>{pill(filter===v,()=>setF(v),l,true)}</div>
+                <div key={v}>{pill(filter===v,()=>{setF(v);if(v==="primaries")setO("primary_date");},l,true)}</div>
               ))}
               <div style={{gridColumn:"1 / -1"}}>{pill(filter==="watches",()=>setF("watches"),"★ Market/Poll Split",true)}</div>
             </div>
@@ -1232,7 +1236,7 @@ export default function App(){
               <span style={{fontSize:12,color:"#999",marginRight:2}}>Show:</span>
               {[["senate","Senate"],["house","House"],["governor","Governor"],["control","Control"],["all","All"]].map(([v,l])=><span key={v}>{pill(filter===v,()=>setF(v),l)}</span>)}
               <span style={{color:"#ccc",padding:"0 4px",fontSize:14,userSelect:"none"}}>|</span>
-              {pill(filter==="primaries",()=>setF("primaries"),"Primaries")}
+              {pill(filter==="primaries",()=>{setF("primaries");setO("primary_date");},"Primaries")}
               {pill(filter==="watches",()=>setF("watches"),"★ Market/Poll Split")}
             </div>
             {filter!=="primaries"&&<div style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}>
@@ -1253,7 +1257,7 @@ export default function App(){
         <table style={{width:"100%",borderCollapse:"collapse",fontFamily:S}}>
           <thead><tr style={{borderBottom:"2px solid #222"}}>
             {(filter==="primaries"
-              ?[{key:"state",label:"Race"},{key:null,label:"Primary Date"},{key:null,label:"Kalshi Leader"},{key:"latestpoll",label:"Latest Poll"},{key:"movement",label:"Trend",title:"Sort by market movement over the last 7 days"}]
+              ?[{key:"state",label:"Race"},{key:"primary_date",label:"Primary Date"},{key:null,label:"Kalshi Leader"},{key:"latestpoll",label:"Latest Poll"},{key:"movement",label:"Trend",title:"Sort by market movement over the last 7 days"}]
               :[{key:"state",label:"Race"},{key:"competitiveness",label:"Rating"},{key:"polymarket",label:"Polymarket"},{key:"kalshi",label:"Kalshi"},{key:"latestpoll",label:"Latest Poll"},{key:"movement",label:"Trend",title:"Sort by market movement over the last 7 days"}]
             ).map(col=>(
               <th key={col.label} onClick={col.key?()=>setO(col.key):undefined} title={col.title||""} style={{padding:"8px 10px",textAlign:"left",fontSize:11,color:sort===col.key?"#222":"#999",textTransform:"uppercase",letterSpacing:".05em",fontWeight:600,cursor:col.key?"pointer":"default",userSelect:"none",whiteSpace:"nowrap"}}>

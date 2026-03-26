@@ -143,7 +143,7 @@ for rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_path in all_ra
     c.execute("""
         SELECT snapshot_date,
                COALESCE(pm_dem_price, k_dem_price) as dem,
-               pm_dem_price, k_dem_price
+               pm_dem_price, pm_rep_price, k_dem_price, k_rep_price
         FROM market_snapshots WHERE race_id = ?
         ORDER BY snapshot_date DESC LIMIT 30
     """, (rid,))
@@ -151,10 +151,27 @@ for rid, chamber, state, district, desc, pm_slug, k_ticker, k_url_path in all_ra
     time_series = []
     for ts in ts_rows:
         parts = ts[0].split("-")
+        pm_dem, pm_rep = ts[2], ts[3]
+        k_dem,  k_rep  = ts[4], ts[5]
+        # Use (dem - rep + 1) / 2 when both prices available so the chart's
+        # 2*v-100 formula produces the correct D/R margin for multi-candidate
+        # markets. Equivalent to dem_price for binary markets (dem+rep==1).
+        if pm_dem is not None and pm_rep is not None:
+            pm_val = (pm_dem - pm_rep + 1) / 2
+        elif pm_dem is not None:
+            pm_val = pm_dem
+        else:
+            pm_val = None
+        if k_dem is not None and k_rep is not None:
+            k_val = (k_dem - k_rep + 1) / 2
+        elif k_dem is not None:
+            k_val = k_dem
+        else:
+            k_val = None
         time_series.append({
             "date": f"{int(parts[1])}/{int(parts[2])}",
-            "polymarket": round(ts[2] * 100) if ts[2] else None,
-            "kalshi": round(ts[3] * 100) if ts[3] else None,
+            "polymarket": round(pm_val * 100) if pm_val is not None else None,
+            "kalshi": round(k_val * 100) if k_val is not None else None,
         })
 
     # dem_base from latest

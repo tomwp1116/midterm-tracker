@@ -869,6 +869,22 @@ def export_dashboard_json(conn, output_path):
                 return round(1 - rep, 3)
             return None
 
+        def market_val(dem, rep):
+            """Convert stored D and R prices to a chart-compatible value.
+
+            For binary markets (D + R ≈ 1) this equals dem_price, and the
+            chart's 2*v-100 formula yields the correct D/R margin.
+
+            For multi-candidate markets (D + R < 1) the true D/R margin is
+            dem - rep (not 2*dem - 1). We encode it as (dem - rep + 1) / 2
+            so the chart's unchanged 2*v-100 formula produces the right result:
+              2 * ((dem - rep + 1) / 2) - 1 = dem - rep  (in 0-1 units)
+            For binary markets dem + rep == 1, so (dem - rep + 1) / 2 == dem.
+            """
+            if dem is not None and rep is not None:
+                return (dem - rep + 1) / 2
+            return dem_from_snap(dem, rep)
+
         dem_base = None
         if snap:
             pm_dem = dem_from_snap(snap[0], snap[1])
@@ -891,14 +907,14 @@ def export_dashboard_json(conn, output_path):
         ts_rows = list(reversed(c.fetchall()))
         time_series = []
         for ts in ts_rows:
-            pm_d = dem_from_snap(ts[1], ts[2])
-            k_d  = dem_from_snap(ts[3], ts[4])
+            pm_val = market_val(ts[1], ts[2])
+            k_val  = market_val(ts[3], ts[4])
             parts = ts[0].split("-")
             date_str = f"{int(parts[1])}/{int(parts[2])}"
             time_series.append({
                 "date": date_str,
-                "polymarket": round(pm_d * 100) if pm_d is not None else None,
-                "kalshi":     round(k_d  * 100) if k_d  is not None else None,
+                "polymarket": round(pm_val * 100) if pm_val is not None else None,
+                "kalshi":     round(k_val  * 100) if k_val  is not None else None,
             })
 
         time_series_out = time_series if time_series else None
