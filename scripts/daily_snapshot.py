@@ -245,16 +245,28 @@ def save_market_snapshots(conn, pm_records, k_records, snapshot_date):
         rid = r["race_id"]
         if rid not in snapshots:
             snapshots[rid] = {}
-        # Multiple markets per race (e.g. -D and -R variants): keep first non-None value
+        vol = float(r.get("volume_24h") or 0)
+        # Multiple markets per race (e.g. -D and -R variants): keep the value
+        # from the highest-volume market.  Volume is a reliable proxy for
+        # "established general-election market" vs "newly-opened primary market"
+        # — the former will have orders-of-magnitude more trading history.
+        # This prevents a freshly-created primary market (near-zero volume)
+        # from overwriting the correct general-election price.
         if r.get("dem_price") is not None:
-            snapshots[rid]["k_dem_price"] = r["dem_price"]
+            existing_vol = snapshots[rid].get("k_dem_vol", 0)
+            if vol >= existing_vol:
+                snapshots[rid]["k_dem_price"] = r["dem_price"]
+                snapshots[rid]["k_dem_vol"] = vol
         elif "k_dem_price" not in snapshots[rid]:
             snapshots[rid]["k_dem_price"] = None
         if r.get("rep_price") is not None:
-            snapshots[rid]["k_rep_price"] = r["rep_price"]
+            existing_vol = snapshots[rid].get("k_rep_vol", 0)
+            if vol >= existing_vol:
+                snapshots[rid]["k_rep_price"] = r["rep_price"]
+                snapshots[rid]["k_rep_vol"] = vol
         elif "k_rep_price" not in snapshots[rid]:
             snapshots[rid]["k_rep_price"] = None
-        snapshots[rid]["k_volume_24h"] = snapshots[rid].get("k_volume_24h", 0) + (r.get("volume_24h") or 0)
+        snapshots[rid]["k_volume_24h"] = snapshots[rid].get("k_volume_24h", 0) + vol
         snapshots[rid]["k_ticker"] = r.get("ticker") or snapshots[rid].get("k_ticker")
     
     # Pre-load recent 7-day k_dem averages for outlier detection
