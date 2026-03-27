@@ -276,15 +276,19 @@ def save_market_snapshots(conn, pm_records, k_records, snapshot_date):
         k_dem = data.get("k_dem_price")
         k_rep = data.get("k_rep_price")
 
-        # Data quality guard: drop k_dem only when it shows a large swing AND
+        # Data quality guard: drop k_dem when it shows a suspicious swing AND
         # the market has zero bid-ask spread (k_dem + k_rep == 1.000 exactly).
-        # Zero spread means the API returned a stale/untraded placeholder price —
-        # real active markets always have some spread, so their sum lands ~0.97-1.03.
+        # Zero spread means the API returned a stale/untraded placeholder price or
+        # a mismatched market (e.g. a primary market mapped to the same race_id) —
+        # real active general-election markets always have some spread (~0.97-1.03).
         # A genuine political swing (scandal, dropout, major news) will produce a
         # large move WITH a real spread, so it passes through unaffected.
+        # Threshold is 0.08 (not 0.15) because a ~10% zero-spread jump is already
+        # implausible for an active market and is how the PA-10 primary contamination
+        # slipped through previously.
         if k_dem is not None and k_rep is not None and rid in recent_k_dem:
             baseline = recent_k_dem[rid]
-            large_swing = abs(k_dem - baseline) > 0.15
+            large_swing = abs(k_dem - baseline) > 0.08
             zero_spread = abs(k_dem + k_rep - 1.0) < 0.003
             if large_swing and zero_spread:
                 print(f"  [QA] {rid}: k_dem={k_dem:.3f} vs 7d avg {baseline:.3f} "
