@@ -1,14 +1,14 @@
 {
-  "updated": "2026-05-20",
+  "updated": "2026-05-21",
   "stats": {
-    "senate_dem_pct": 48,
-    "senate_rep_pct": 52,
+    "senate_dem_pct": 46,
+    "senate_rep_pct": 53,
     "house_dem_pct": 76,
     "house_rep_pct": 24,
-    "battleground_senate": 1,
+    "battleground_senate": 2,
     "house_districts_tracked": 116,
     "seats_up": 35,
-    "polls_tracked": 824
+    "polls_tracked": 828
   },
   "races": [
     {
@@ -480,11 +480,11 @@
       "chamber": "governor",
       "state": "AL",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the governor election in Alabama be at least 10 percentage points?",
+      "description": "Will the Democratic party win the governorship in Alabama",
       "dem_base": 0.061,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-ALGOVR-P10",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-algovr",
+      "kalshi": "GOVPARTYAL-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyal/alabama-governor/govpartyal-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/alabama/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -1488,6 +1488,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 7
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 7
         }
       ],
       "note": null
@@ -1836,14 +1841,14 @@
       "chamber": "governor",
       "state": "AZ",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Arizona be at least 11 percentage points?",
-      "dem_base": 0.74,
+      "description": "Will the Democratic party win the governorship in Arizona",
+      "dem_base": 0.745,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-AZGOVD-P11",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-azgovd",
+      "kalshi": "GOVPARTYAZ-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyaz/arizona-governor/govpartyaz-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/arizona/",
       "poll_avg_dem": 45.1,
-      "market_gap": 28.9,
+      "market_gap": 29.4,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -1856,7 +1861,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -2
+        "change": 1
       },
       "polls": [
         {
@@ -2966,6 +2971,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 74
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 74
         }
       ],
       "note": null
@@ -2995,7 +3005,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -0.1
+        "change": -2.9
       },
       "polls": [
         {
@@ -5480,6 +5490,19 @@
           "Kimberly Yee": 0.5,
           "Scott Neely": 0.5,
           "Tom Hatten": 0.5
+        },
+        {
+          "date": "5/21",
+          "Andy Biggs": 93.0,
+          "Christian Grey": 0.5,
+          "Christopher Ames": 0.5,
+          "Dave Schweikert": 5.1,
+          "George Nicholson": 0.5,
+          "Jason Beck": 0.5,
+          "Karrin Taylor Robson": 0.5,
+          "Kimberly Yee": 0.5,
+          "Scott Neely": 0.5,
+          "Tom Hatten": 0.5
         }
       ],
       "note": null
@@ -5489,11 +5512,11 @@
       "chamber": "governor",
       "state": "CA",
       "district": null,
-      "description": "Will the margin of victory for Tom Steyer in the governor primary election in California be at least 1 percentage points?",
+      "description": "Will the Democratic party win the governorship in California",
       "dem_base": 0.875,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-CAGOVPTSTEY-P1",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-cagovptstey",
+      "kalshi": "GOVPARTYCA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyca/california-governor/govpartyca-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/california/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -6492,6 +6515,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 88
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 88
         }
       ],
       "note": null
@@ -6528,7 +6556,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 7.5
+        "change": 6.5
       },
       "polls": [
         {
@@ -10498,6 +10526,18 @@
           "Steve Hilton": 76.5,
           "Tom Steyer": 35.0,
           "Xavier Becerra": 84.0
+        },
+        {
+          "date": "5/21",
+          "Antonio Villaraigosa": 0.9,
+          "Butch Ware": 0.9,
+          "Elaine Culotti": 0.5,
+          "Eric Swalwell": 0.6,
+          "Javen Allen": 0.5,
+          "Jimmy Parker": 0.4,
+          "Steve Hilton": 77.0,
+          "Tom Steyer": 34.5,
+          "Xavier Becerra": 84.0
         }
       ],
       "note": null
@@ -10507,11 +10547,11 @@
       "chamber": "governor",
       "state": "CO",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Colorado be at least 12 percentage points?",
-      "dem_base": 0.645,
+      "description": "Will the Democratic party win the governorship in Colorado",
+      "dem_base": 0.909,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-COGOVD-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-cogovd",
+      "kalshi": "GOVPARTYCO-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyco/colorado-governor/govpartyco-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/colorado/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -10525,9 +10565,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -14
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -11500,6 +11540,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 77
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -12499,6 +12544,12 @@
           "Ken Salazar": 0.5,
           "Michael Bennet": 81.5,
           "Phil Weiser": 14.5
+        },
+        {
+          "date": "5/21",
+          "Ken Salazar": 0.5,
+          "Michael Bennet": 82.0,
+          "Phil Weiser": 16.5
         }
       ],
       "note": null
@@ -12528,9 +12579,28 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1.0
+        "change": 2.5
       },
-      "polls": null,
+      "polls": [
+        {
+          "date": "2026-05-08",
+          "pollster": "Cygnal (R)",
+          "c1": "Victor Marx",
+          "d": 42.0,
+          "c2": "Barbara Kirkmeyer",
+          "r": 13.0,
+          "c3": "Scott Bottoms",
+          "c3pct": 7.0,
+          "candidates": {
+            "Victor Marx": 42.0,
+            "Barbara Kirkmeyer": 13.0,
+            "Scott Bottoms": 7.0
+          },
+          "spread": "Marx +29.0",
+          "matchup": "Victor Marx vs. Barbara Kirkmeyer",
+          "url": "https://en.wikipedia.org/wiki/2026_Colorado_gubernatorial_election"
+        }
+      ],
       "time_series": [
         {
           "date": "12/5",
@@ -14256,6 +14326,17 @@
           "Mark Baisley": 0.9,
           "Scott Bottoms": 12.2,
           "Victor Marx": 69.5
+        },
+        {
+          "date": "5/21",
+          "Barbara Kirkmeyer": 16.0,
+          "Greg Lopez": 0.5,
+          "Jason Mikesell": 0.6,
+          "Jason Ray Clark": 0.5,
+          "Joshua Griffin": 0.5,
+          "Mark Baisley": 0.9,
+          "Scott Bottoms": 12.9,
+          "Victor Marx": 70.0
         }
       ],
       "note": null
@@ -14266,7 +14347,7 @@
       "state": "CT",
       "district": null,
       "description": "Will the Democratic party win the governorship in Connecticut",
-      "dem_base": 0.91,
+      "dem_base": 0.909,
       "pm": null,
       "kalshi": "GOVPARTYCT-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyct/connecticut-governor/govpartyct-26",
@@ -14283,9 +14364,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": -2
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": -3
       },
       "polls": null,
       "time_series": [
@@ -15208,6 +15289,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 91
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -15217,14 +15303,14 @@
       "chamber": "governor",
       "state": "FL",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Florida be at least 3 percentage points?",
-      "dem_base": 0.215,
+      "description": "Will the Democratic party win the governorship in Florida",
+      "dem_base": 0.22,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-FLGOVD-P3",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-flgovd",
+      "kalshi": "GOVPARTYFL-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyfl/florida-governor/govpartyfl-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/florida/",
       "poll_avg_dem": 37.8,
-      "market_gap": -16.2,
+      "market_gap": -15.8,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -15237,7 +15323,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -2
+        "change": -1
       },
       "polls": [
         {
@@ -16552,6 +16638,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 21
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 22
         }
       ],
       "note": null
@@ -16579,9 +16670,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -3.5
+        "label": "Steady",
+        "level": 1,
+        "change": -2.5
       },
       "polls": null,
       "time_series": [
@@ -18566,6 +18657,17 @@
           "Jason Pizzo": 0.9,
           "Jerry Demings": 14.5,
           "Shevrin Jones": 0.5
+        },
+        {
+          "date": "5/21",
+          "Angie Nixon": 1.0,
+          "Daniella Levine Cava": 0.9,
+          "David Jolly": 79.0,
+          "Fentrice Driskell": 0.9,
+          "Gwen Graham": 1.1,
+          "Jason Pizzo": 0.9,
+          "Jerry Demings": 19.0,
+          "Shevrin Jones": 1.3
         }
       ],
       "note": null
@@ -18595,7 +18697,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1.0
+        "change": 2.0
       },
       "polls": [
         {
@@ -21053,6 +21155,18 @@
           "Matt Gaetz": 0.1,
           "Paul Renner": 0.5,
           "Wilton Simpson": 0.1
+        },
+        {
+          "date": "5/21",
+          "Byron Donalds": 87.5,
+          "Casey DeSantis": 0.2,
+          "Charles Burkett": 0.1,
+          "James Fishback": 8.2,
+          "Jay Collins": 4.0,
+          "Jimmy Patronis": 0.1,
+          "Matt Gaetz": 0.1,
+          "Paul Renner": 0.5,
+          "Wilton Simpson": 0.1
         }
       ],
       "note": null
@@ -21062,11 +21176,11 @@
       "chamber": "governor",
       "state": "GA",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Georgia be at least 1 percentage points?",
+      "description": "Will the Democratic party win the governorship in Georgia",
       "dem_base": 0.56,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-GAGOVD-P1",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-gagovd",
+      "kalshi": "GOVPARTYGA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyga/georgia-governor/govpartyga-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/georgia/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -22078,6 +22192,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 56
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 56
         }
@@ -24522,7 +24641,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 14.0
+        "change": 16.0
       },
       "polls": [
         {
@@ -26756,6 +26875,11 @@
           "date": "5/20",
           "Burt Jones": 67.5,
           "Rick Jackson": 30.5
+        },
+        {
+          "date": "5/21",
+          "Burt Jones": 69.0,
+          "Rick Jackson": 29.0
         }
       ],
       "note": null
@@ -26766,7 +26890,7 @@
       "state": "HI",
       "district": null,
       "description": "Will the Democratic party win the governorship in Hawaii",
-      "dem_base": 0.933,
+      "dem_base": 0.932,
       "pm": null,
       "kalshi": "GOVPARTYHI-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyhi/hawaii-governor/govpartyhi-26",
@@ -27753,6 +27877,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 94
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 94
         }
       ],
       "note": null
@@ -27762,11 +27891,11 @@
       "chamber": "governor",
       "state": "IA",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Iowa be at least 12 percentage points?",
-      "dem_base": 0.665,
+      "description": "Will the Democratic party win the governorship in Iowa",
+      "dem_base": 0.65,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-IAGOVD-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-iagovd",
+      "kalshi": "GOVPARTYIA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyia/iowa-governor/govpartyia-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/iowa/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -27782,7 +27911,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": [
         {
@@ -28803,6 +28932,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 66
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 65
         }
       ],
       "note": null
@@ -28813,7 +28947,7 @@
       "state": "ID",
       "district": null,
       "description": "Will the Democratic party win the governorship in Idaho",
-      "dem_base": 0.029,
+      "dem_base": 0.03,
       "pm": null,
       "kalshi": "GOVPARTYID-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyid/idaho-governor/govpartyid-26",
@@ -29740,6 +29874,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 4
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 4
         }
       ],
       "note": null
@@ -29749,11 +29888,11 @@
       "chamber": "governor",
       "state": "IL",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Illinois be at least 12 percentage points?",
+      "description": "Will the Democratic party win the governorship in Illinois",
       "dem_base": 0.915,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-ILGOVD-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ilgovd",
+      "kalshi": "GOVPARTYIL-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyil/illinois-governor/govpartyil-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/illinois/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -30735,6 +30874,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 91
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 91
         }
@@ -32386,14 +32530,14 @@
       "chamber": "governor",
       "state": "MA",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Massachusetts be at least 14 percentage points?",
+      "description": "Will the Democratic party win the governorship in Massachusetts",
       "dem_base": 0.895,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-MAGOVD-P14",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-magovd",
+      "kalshi": "GOVPARTYMA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyma/massachusetts-governor/govpartyma-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/massachusetts/",
-      "poll_avg_dem": 52.0,
-      "market_gap": 37.5,
+      "poll_avg_dem": null,
+      "market_gap": null,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -33427,6 +33571,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 90
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -33436,11 +33585,11 @@
       "chamber": "governor",
       "state": "ME",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Maine be at least 12 percentage points?",
-      "dem_base": 0.865,
+      "description": "Will the Democratic party win the governorship in Maine",
+      "dem_base": 0.855,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-MEGOVD-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-megovd",
+      "kalshi": "GOVPARTYME-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyme/maine-governor/govpartyme-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/maine/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -33456,7 +33605,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -34414,6 +34563,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 89
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 86
         }
       ],
       "note": null
@@ -34441,9 +34595,9 @@
       "race_to_watch": false,
       "had_disagreement": true,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 8.0
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": 5.0
       },
       "polls": [
         {
@@ -36969,6 +37123,19 @@
           "Shenna Bellows": 7.5,
           "Spencer Thibodeau": 0.5,
           "Troy Jackson": 25.5
+        },
+        {
+          "date": "5/21",
+          "Angus King III": 4.1,
+          "Hannah Pingree": 14.0,
+          "Jared Golden": 0.6,
+          "Kenneth Forrest Pinet": 0.5,
+          "Nirav Shah": 49.5,
+          "Rachel Talbot Ross": 0.5,
+          "Ryan Fecteau": 0.5,
+          "Shenna Bellows": 6.5,
+          "Spencer Thibodeau": 0.5,
+          "Troy Jackson": 27.5
         }
       ],
       "note": null
@@ -36998,7 +37165,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 10.5
+        "change": 12.0
       },
       "polls": [
         {
@@ -39418,6 +39585,19 @@
           "Robert Charles": 63.5,
           "Robert Wessels": 0.9,
           "Shawn Moody": 0.5
+        },
+        {
+          "date": "5/21",
+          "Ben Midgley": 5.5,
+          "Bruce Poliquin": 0.5,
+          "David Jones": 2.1,
+          "Garrett Mason": 3.9,
+          "Jonathan Bush": 22.5,
+          "Laurel Libby": 0.5,
+          "Owen McCarthy": 1.2,
+          "Robert Charles": 64.0,
+          "Robert Wessels": 0.9,
+          "Shawn Moody": 0.5
         }
       ],
       "note": null
@@ -39428,13 +39608,13 @@
       "state": "MI",
       "district": null,
       "description": "Will the Democratic party win the governorship in Michigan",
-      "dem_base": 0.665,
+      "dem_base": 0.68,
       "pm": null,
       "kalshi": "GOVPARTYMI-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartymi/michigan-governor/govpartymi-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/michigan/",
       "poll_avg_dem": 36.1,
-      "market_gap": 30.4,
+      "market_gap": 31.9,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -40692,6 +40872,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 76
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 77
         }
       ],
       "note": null
@@ -40721,7 +40906,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.2
+        "change": -0.3
       },
       "polls": [
         {
@@ -43057,6 +43242,18 @@
           "Mark Hackel": 0.5,
           "Pete Buttigieg": 0.5,
           "Winnie Brinks": 0.5
+        },
+        {
+          "date": "5/21",
+          "Chris Swanson": 7.5,
+          "Dan Kildee": 0.5,
+          "Garlin Gilchrist": 0.5,
+          "Jocelyn Benson": 89.5,
+          "Joe Tate": 0.5,
+          "Mallory McMorrow": 0.5,
+          "Mark Hackel": 0.5,
+          "Pete Buttigieg": 0.5,
+          "Winnie Brinks": 0.5
         }
       ],
       "note": null
@@ -43084,9 +43281,9 @@
       "race_to_watch": false,
       "had_disagreement": true,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -3.5
+        "label": "New Leader",
+        "level": 4,
+        "change": -3.0
       },
       "polls": [
         {
@@ -45828,6 +46025,19 @@
           "Perry Johnson": 45.5,
           "Peter Meijer": 0.5,
           "Tom Leonard": 0.2
+        },
+        {
+          "date": "5/21",
+          "Aric Nesbitt": 1.6,
+          "Dick DeVos": 0.5,
+          "John James": 46.0,
+          "Jonathan Lindsey": 0.5,
+          "Kevin Rinke": 0.5,
+          "Mike Cox": 7.2,
+          "Mike Rogers": 0.5,
+          "Perry Johnson": 42.5,
+          "Peter Meijer": 0.5,
+          "Tom Leonard": 0.2
         }
       ],
       "note": null
@@ -45837,11 +46047,11 @@
       "chamber": "governor",
       "state": "MN",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Minnesota be at least 11 percentage points?",
+      "description": "Will the Democratic party win the governorship in Minnesota",
       "dem_base": 0.908,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-MNGOVD-P11",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mngovd",
+      "kalshi": "GOVPARTYMN-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartymn/minnesota-governor/govpartymn-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/minnesota/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -45857,7 +46067,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": [
         {
@@ -46939,6 +47149,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 92
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 92
         }
       ],
       "note": null
@@ -46968,7 +47183,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.1
+        "change": 0.6
       },
       "polls": null,
       "time_series": [
@@ -48587,6 +48802,19 @@
         {
           "date": "5/20",
           "Amy Klobuchar": 94.8,
+          "Bill Gates Jr.": 0.5,
+          "Bobby Joe Champion": 0.5,
+          "Dean Phillips": 0.4,
+          "Erin Murphy": 0.5,
+          "Jacob Frey": 0.5,
+          "Keith Ellison": 0.1,
+          "Melvin Carter": 0.5,
+          "Steve Simon": 0.2,
+          "Tim Walz": 1.3
+        },
+        {
+          "date": "5/21",
+          "Amy Klobuchar": 95.4,
           "Bill Gates Jr.": 0.5,
           "Bobby Joe Champion": 0.5,
           "Dean Phillips": 0.4,
@@ -50576,6 +50804,17 @@
           "Lisa Demuth": 66.5,
           "Mike Lindell": 15.5,
           "Scott Jensen": 0.8
+        },
+        {
+          "date": "5/21",
+          "Brad Kohler": 0.5,
+          "Chris Madel": 0.1,
+          "Jim Schultz": 0.8,
+          "Kendall Qualls": 16.5,
+          "Kristin Robbins": 0.8,
+          "Lisa Demuth": 66.5,
+          "Mike Lindell": 16.0,
+          "Scott Jensen": 0.8
         }
       ],
       "note": null
@@ -50605,7 +50844,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 1
       },
       "polls": [
         {
@@ -51572,6 +51811,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 14
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 15
         }
       ],
       "note": null
@@ -52433,7 +52677,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.0
+        "change": -0.5
       },
       "polls": [
         {
@@ -53701,6 +53945,14 @@
           "Donovan Fenton": 1.4,
           "Jon Kiper": 4.2,
           "Tom Sherman": 6.8
+        },
+        {
+          "date": "5/21",
+          "Cinde Warmington": 77.5,
+          "Deaglan McEachern": 5.2,
+          "Donovan Fenton": 1.4,
+          "Jon Kiper": 4.2,
+          "Tom Sherman": 6.8
         }
       ],
       "note": null
@@ -54762,6 +55014,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 90
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -54791,7 +55048,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 4.6
+        "change": 5.9
       },
       "polls": [
         {
@@ -56203,6 +56460,13 @@
           "Howie Morales": 0.5,
           "Ken Miyagishima": 0.5,
           "Sam Bregman": 5.3
+        },
+        {
+          "date": "5/21",
+          "Deb Haaland": 96.0,
+          "Howie Morales": 0.5,
+          "Ken Miyagishima": 0.5,
+          "Sam Bregman": 3.4
         }
       ],
       "note": null
@@ -56232,7 +56496,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.0
+        "change": 1.5
       },
       "polls": [
         {
@@ -58727,6 +58991,19 @@
           "Steve Lanier": 0.5,
           "Susana Martinez": 1.1,
           "Yvette Herrell": 1.8
+        },
+        {
+          "date": "5/21",
+          "Duke Rodriguez": 19.5,
+          "Gregg Hull": 74.0,
+          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
+          "Mark Murphy": 0.5,
+          "Mark Ronchetti": 1.8,
+          "Rebecca Dow": 1.8,
+          "Steve Lanier": 1.6,
+          "Susana Martinez": 1.8,
+          "Yvette Herrell": 1.8
         }
       ],
       "note": null
@@ -58754,9 +59031,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -3
+        "label": "Steady",
+        "level": 1,
+        "change": -2
       },
       "polls": [
         {
@@ -59936,6 +60213,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 89
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -59965,7 +60247,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1.2
+        "change": 0.9
       },
       "polls": [
         {
@@ -62278,6 +62560,18 @@
           "Letitia James": 0.5,
           "Ritchie Torres": 0.1,
           "Tom Suozzi": 0.5
+        },
+        {
+          "date": "5/21",
+          "Alvin Bragg": 0.9,
+          "Andrew Cuomo": 0.9,
+          "Antonio Delgado": 0.5,
+          "Eric Gonzalez": 0.7,
+          "Jumaane Williams": 0.5,
+          "Kathy Hochul": 98.2,
+          "Letitia James": 0.5,
+          "Ritchie Torres": 0.1,
+          "Tom Suozzi": 0.5
         }
       ],
       "note": null
@@ -62307,7 +62601,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.2
+        "change": -0.2
       },
       "polls": [
         {
@@ -63669,6 +63963,13 @@
           "Carl Hyde Jr.": 0.5,
           "Elise Stefanik": 1.5,
           "Mike Lawler": 1.8
+        },
+        {
+          "date": "5/21",
+          "Bruce Blakeman": 97.2,
+          "Carl Hyde Jr.": 0.5,
+          "Elise Stefanik": 1.5,
+          "Mike Lawler": 1.8
         }
       ],
       "note": null
@@ -63678,14 +63979,14 @@
       "chamber": "governor",
       "state": "OH",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Ohio be at least 12 percentage points?",
-      "dem_base": 0.515,
+      "description": "Will the Democratic party win the governorship in Ohio",
+      "dem_base": 0.52,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-OHGOVD-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ohgovd",
+      "kalshi": "GOVPARTYOH-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyoh/ohio-governor/govpartyoh-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/ohio/",
       "poll_avg_dem": 45.5,
-      "market_gap": 6.0,
+      "market_gap": 6.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -64876,6 +65177,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 52
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 52
         }
@@ -69376,6 +69682,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 9
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 9
         }
       ],
       "note": null
@@ -69385,14 +69696,14 @@
       "chamber": "governor",
       "state": "OR",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Oregon be at least 11 percentage points?",
-      "dem_base": 0.845,
+      "description": "Will the Democratic party win the governorship in Oregon",
+      "dem_base": 0.83,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-ORGOVD-P11",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-orgovd",
+      "kalshi": "GOVPARTYOR-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyor/oregon-governor/govpartyor-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/oregon/",
       "poll_avg_dem": 45.0,
-      "market_gap": 39.5,
+      "market_gap": 38.0,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -70445,6 +70756,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 84
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 84
         }
       ],
       "note": null
@@ -70474,7 +70790,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": [
         {
@@ -71524,6 +71840,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 95
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 95
         }
@@ -74311,6 +74632,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 91
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 91
         }
       ],
       "note": null
@@ -74320,11 +74646,11 @@
       "chamber": "governor",
       "state": "SC",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in South Carolina be at least 2 percentage points?",
-      "dem_base": 0.07,
+      "description": "Will the Democratic party win the governorship in South Carolina",
+      "dem_base": 0.078,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-SCGOVD-P2",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-scgovd",
+      "kalshi": "GOVPARTYSC-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartysc/south-carolina-governor/govpartysc-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/south-carolina/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -75268,6 +75594,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 9
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 9
         }
       ],
       "note": null
@@ -76155,6 +76486,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 3
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 3
         }
       ],
       "note": null
@@ -76164,14 +76500,14 @@
       "chamber": "governor",
       "state": "TN",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the governor election in Tennessee be at least 12 percentage points?",
+      "description": "Will the Democratic party win the governorship in Tennessee",
       "dem_base": 0.057,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-TNGOVR-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-tngovr",
+      "kalshi": "GOVPARTYTN-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartytn/tennessee-governor/govpartytn-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/tennessee/",
       "poll_avg_dem": 27.0,
-      "market_gap": -21.4,
+      "market_gap": -21.3,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -76182,9 +76518,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 5
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": [
         {
@@ -77087,6 +77423,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 12
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 7
         }
       ],
       "note": null
@@ -77096,14 +77437,14 @@
       "chamber": "governor",
       "state": "TX",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Texas be at least 3 percentage points?",
+      "description": "Will the Democratic party win the governorship in Texas",
       "dem_base": 0.13,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-TXGOVD-P3",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-txgovd",
+      "kalshi": "GOVPARTYTX-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartytx/texas-governor/govpartytx-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/texas/",
-      "poll_avg_dem": 40.5,
-      "market_gap": -27.5,
+      "poll_avg_dem": null,
+      "market_gap": null,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -78224,6 +78565,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 14
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 14
         }
@@ -79473,6 +79819,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 22
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 22
         }
       ],
       "note": null
@@ -80621,6 +80972,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 80
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 80
         }
       ],
       "note": null
@@ -80650,7 +81006,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": -5.0
+        "change": -4.5
       },
       "polls": [
         {
@@ -83154,6 +83510,19 @@
           "Missy Hughes": 0.5,
           "Sara Rodriguez": 12.0,
           "Tony Evers": 0.5
+        },
+        {
+          "date": "5/21",
+          "Ben Wikler": 0.5,
+          "Brett Hulsey": 0.5,
+          "David Crowley": 3.5,
+          "Francesca Hong": 34.0,
+          "Joel Brennan": 4.0,
+          "Kelda Roys": 0.6,
+          "Mandela Barnes": 49.5,
+          "Missy Hughes": 0.5,
+          "Sara Rodriguez": 10.2,
+          "Tony Evers": 0.5
         }
       ],
       "note": null
@@ -83183,7 +83552,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -0.8
+        "change": 0.2
       },
       "polls": [
         {
@@ -84885,6 +85254,16 @@
           "Rebecca Kleefisch": 2.0,
           "Tom Tiffany": 93.0,
           "Tommy Thompson": 3.1
+        },
+        {
+          "date": "5/21",
+          "Bryan Steil": 2.2,
+          "Eric Hovde": 0.5,
+          "Josh Schoemann": 2.0,
+          "Patrick Testin": 1.8,
+          "Rebecca Kleefisch": 2.0,
+          "Tom Tiffany": 93.0,
+          "Tommy Thompson": 3.1
         }
       ],
       "note": null
@@ -84895,7 +85274,7 @@
       "state": "WY",
       "district": null,
       "description": "Will the Democratic party win the governorship in Wyoming",
-      "dem_base": 0.038,
+      "dem_base": 0.039,
       "pm": null,
       "kalshi": "GOVPARTYWY-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartywy/wyoming-governor/govpartywy-26",
@@ -85865,6 +86244,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 5
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 5
         }
@@ -87005,6 +87389,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 68
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 68
         }
       ],
       "note": null
@@ -87967,6 +88356,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 31
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 31
         }
       ],
       "note": null
@@ -87977,7 +88371,7 @@
       "state": "AZ",
       "district": "6",
       "description": "Will Democratic win the House race for AZ-6?",
-      "dem_base": 0.81,
+      "dem_base": 0.815,
       "pm": null,
       "kalshi": "HOUSEAZ6-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseaz6/house-az-6/houseaz6-26",
@@ -88952,6 +89346,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 81
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 81
         }
@@ -90397,6 +90796,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 83
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 83
         }
       ],
       "note": null
@@ -91389,6 +91793,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 90
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -91399,7 +91808,7 @@
       "state": "CA",
       "district": "41",
       "description": "Will Democratic win the House race for CA-41?",
-      "dem_base": 0.954,
+      "dem_base": 0.953,
       "pm": null,
       "kalshi": "HOUSECA41-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca41/house-california-41st/houseca41-26",
@@ -92391,6 +92800,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 96
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 96
         }
       ],
       "note": null
@@ -92401,7 +92815,7 @@
       "state": "CA",
       "district": "47",
       "description": "Will Democratic win the House race for CA-47?",
-      "dem_base": 0.96,
+      "dem_base": 0.959,
       "pm": null,
       "kalshi": "HOUSECA47-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca47/house-ca-47/houseca47-26",
@@ -93383,6 +93797,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 96
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 96
         }
       ],
       "note": null
@@ -94333,6 +94752,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 93
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 93
         }
@@ -95325,6 +95749,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 94
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 94
         }
@@ -96339,6 +96768,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 74
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 74
         }
       ],
       "note": null
@@ -97349,6 +97783,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 66
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 66
         }
@@ -98363,6 +98802,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 92
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 92
         }
       ],
       "note": null
@@ -99375,6 +99819,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 25
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 25
         }
       ],
       "note": null
@@ -100385,6 +100834,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 85
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 85
         }
@@ -101456,6 +101910,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 33
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 33
         }
       ],
       "note": null
@@ -102443,6 +102902,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 69
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 69
         }
       ],
       "note": null
@@ -102717,7 +103181,7 @@
       "state": "CT",
       "district": "5",
       "description": "Will a Democrat win the House race for CT-5?",
-      "dem_base": 0.95,
+      "dem_base": 0.948,
       "pm": null,
       "kalshi": "HOUSECT5-26-D",
       "kalshi_url": "https://kalshi.com/markets/housect5/house-ct-5th/housect5-26",
@@ -103672,6 +104136,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 95
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 95
         }
@@ -104848,6 +105317,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 26
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 26
         }
       ],
       "note": null
@@ -104858,7 +105332,7 @@
       "state": "FL",
       "district": "23",
       "description": "Will Democratic win the House race for FL-23?",
-      "dem_base": 0.83,
+      "dem_base": 0.825,
       "pm": null,
       "kalshi": "HOUSEFL23-26-D",
       "kalshi_url": "https://kalshi.com/markets/housefl23/house-fl-23/housefl23-26",
@@ -105835,6 +106309,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 83
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 83
         }
       ],
       "note": null
@@ -105999,7 +106478,7 @@
       "state": "IA",
       "district": "1",
       "description": "Will Democratic win the House race for IA-1?",
-      "dem_base": 0.675,
+      "dem_base": 0.68,
       "pm": null,
       "kalshi": "HOUSEIA1-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseia1/house-ia-1/houseia1-26",
@@ -106018,7 +106497,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -106971,6 +107450,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 68
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 68
         }
       ],
       "note": null
@@ -106998,9 +107482,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -3
+        "label": "Steady",
+        "level": 1,
+        "change": -2
       },
       "polls": null,
       "time_series": [
@@ -107961,6 +108445,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 62
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 62
         }
@@ -109391,6 +109880,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 90
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -110450,6 +110944,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 83
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 83
         }
       ],
       "note": null
@@ -110546,11 +111045,11 @@
       "chamber": "house",
       "state": "KY",
       "district": null,
-      "description": "Will the total vote count for all participants in Kentucky 01 House General Election be above 210000?",
-      "dem_base": 0.954,
+      "description": "Will the margin of victory for Thomas Massie in the Kentucky's 4th District House Primary  election be at least 10 percentage points?",
+      "dem_base": null,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-KY01-210000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ky01",
+      "kalshi": "KXMIDTERMMOV-KY04PTMASS-P10",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ky04ptmass",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -110566,7 +111065,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -110629,6 +111128,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 52
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": null
         }
       ],
       "note": null
@@ -111721,6 +112225,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 43
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 43
         }
@@ -112959,6 +113468,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 78
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 78
         }
       ],
       "note": null
@@ -112969,7 +113483,7 @@
       "state": "MI",
       "district": "3",
       "description": "Will a Democrat win the House race for MI-3?",
-      "dem_base": 0.875,
+      "dem_base": 0.87,
       "pm": null,
       "kalshi": "HOUSEMI3-26-D",
       "kalshi_url": "https://kalshi.com/markets/housemi3/mi-03/housemi3-26",
@@ -112988,7 +113502,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -113956,6 +114470,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 88
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 87
         }
       ],
       "note": null
@@ -114931,6 +115450,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 38
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 38
         }
@@ -115920,6 +116444,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 83
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 83
         }
       ],
       "note": null
@@ -115930,7 +116459,7 @@
       "state": "MI",
       "district": "8",
       "description": "Will Democratic win the House race for MI-8?",
-      "dem_base": 0.897,
+      "dem_base": 0.892,
       "pm": null,
       "kalshi": "HOUSEMI8-26-D",
       "kalshi_url": "https://kalshi.com/markets/housemi8/house-michigan-8th/housemi8-26",
@@ -116900,6 +117429,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 89
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 89
         }
@@ -118330,6 +118864,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 92
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 92
         }
       ],
       "note": null
@@ -119663,6 +120202,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 41
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 41
         }
       ],
       "note": null
@@ -119784,7 +120328,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 3
+        "change": 4
       },
       "polls": null,
       "time_series": [
@@ -120755,6 +121299,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 57
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 57
         }
@@ -123128,6 +123677,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 80
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 80
         }
       ],
       "note": null
@@ -123434,9 +123988,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -9
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -124349,6 +124903,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 87
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 86
         }
       ],
       "note": null
@@ -125383,6 +125942,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 88
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 88
         }
       ],
       "note": null
@@ -126395,6 +126959,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 78
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 78
         }
       ],
       "note": null
@@ -127362,6 +127931,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 86
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 86
         }
       ],
       "note": null
@@ -127675,7 +128249,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": -4
+        "change": -5
       },
       "polls": null,
       "time_series": [
@@ -128643,6 +129217,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 73
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 72
         }
       ],
       "note": null
@@ -129832,6 +130411,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 86
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 86
         }
       ],
       "note": null
@@ -130812,6 +131396,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 80
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 80
         }
@@ -131816,6 +132405,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 92
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 92
         }
       ],
       "note": null
@@ -131826,7 +132420,7 @@
       "state": "NY",
       "district": "22",
       "description": "Will a Democrat win the House race for NY-22?",
-      "dem_base": 0.86,
+      "dem_base": 0.855,
       "pm": null,
       "kalshi": "HOUSENY22-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny22/house-nys-22nd/houseny22-26",
@@ -132818,6 +133412,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 86
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 86
         }
       ],
       "note": null
@@ -132828,7 +133427,7 @@
       "state": "NY",
       "district": "3",
       "description": "Will a Democrat win the House race for NY-3?",
-      "dem_base": 0.81,
+      "dem_base": 0.805,
       "pm": null,
       "kalshi": "HOUSENY3-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny3/house-ny-3/houseny3-26",
@@ -132847,7 +133446,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -133815,6 +134414,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 81
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 80
         }
       ],
       "note": null
@@ -134777,6 +135381,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 76
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 76
         }
       ],
       "note": null
@@ -134993,7 +135602,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -135974,6 +136583,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 64
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 64
         }
@@ -136988,6 +137602,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 90
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 90
         }
       ],
       "note": null
@@ -137995,6 +138614,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 82
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 82
         }
       ],
       "note": null
@@ -138967,6 +139591,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 76
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 76
         }
       ],
       "note": null
@@ -139919,6 +140548,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 89
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 89
         }
       ],
       "note": null
@@ -139929,7 +140563,7 @@
       "state": "OH",
       "district": "9",
       "description": "Will Democratic win the House race for OH-9?",
-      "dem_base": 0.465,
+      "dem_base": 0.475,
       "pm": null,
       "kalshi": "HOUSEOH9-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseoh9/house-oh-9/houseoh9-26",
@@ -140891,6 +141525,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 46
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 47
         }
       ],
       "note": null
@@ -141087,11 +141726,11 @@
       "chamber": "house",
       "state": "OH",
       "district": null,
-      "description": "Will the total vote count for all participants in Ohio 02 House General Election be above 260000?",
-      "dem_base": 0.315,
+      "description": "Will the margin of victory for Democrats in the Ohio's 3rd District House election be at least 34 percentage points?",
+      "dem_base": 0.965,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-OH02-260000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-oh02",
+      "kalshi": "KXMIDTERMMOV-OH03D-P34",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-oh03d",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -141105,9 +141744,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": -24
+        "label": "Major Shift",
+        "level": 3,
+        "change": -34
       },
       "polls": null,
       "time_series": [
@@ -141190,6 +141829,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 45
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 54
         }
       ],
       "note": null
@@ -141219,7 +141863,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -142157,6 +142801,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 91
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 91
         }
       ],
       "note": null
@@ -142353,11 +143002,11 @@
       "chamber": "house",
       "state": "OR",
       "district": null,
-      "description": "Will the total vote count for all participants in Oregon 01 House General Election be above 350000?",
-      "dem_base": 0.71,
+      "description": "Will the margin of victory for Democrats in the Oregon's 1st District House election be at least 33 percentage points?",
+      "dem_base": 0.91,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-OR01-350000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-or01",
+      "kalshi": "KXMIDTERMMOV-OR01D-P33",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-or01d",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -142371,9 +143020,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -9
+        "label": "Steady",
+        "level": 1,
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -142456,6 +143105,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 40
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 50
         }
       ],
       "note": null
@@ -143406,6 +144060,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 46
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 46
         }
@@ -144400,6 +145059,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 85
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 85
         }
       ],
       "note": null
@@ -144410,7 +145074,7 @@
       "state": "PA",
       "district": "7",
       "description": "Will Democratic win the House race for PA-7?",
-      "dem_base": 0.72,
+      "dem_base": 0.73,
       "pm": null,
       "kalshi": "HOUSEPA7-26-D",
       "kalshi_url": "https://kalshi.com/markets/housepa7/house-pennsylvania-7th/housepa7-26",
@@ -145412,6 +146076,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 72
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 73
         }
       ],
       "note": null
@@ -146409,6 +147078,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 58
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 58
         }
       ],
       "note": null
@@ -146980,7 +147654,7 @@
       "state": "PA",
       "district": "10",
       "description": "Will Democratic win the House race for PA-10?",
-      "dem_base": 0.74,
+      "dem_base": 0.735,
       "pm": null,
       "kalshi": "HOUSEPA10-26-D",
       "kalshi_url": "https://kalshi.com/markets/housepa10/house-pennsylvania-10th/housepa10-26",
@@ -146999,7 +147673,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 4
+        "change": 3
       },
       "polls": null,
       "time_series": [
@@ -147982,6 +148656,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 74
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 73
         }
       ],
       "note": null
@@ -147991,11 +148670,11 @@
       "chamber": "house",
       "state": "SC",
       "district": null,
-      "description": "Will the total vote count for all participants in South Carolina 01 House General Election be above 270000?",
+      "description": "Will the total vote count for all participants in South Carolina 03 House General Election be above 220000?",
       "dem_base": 0.22,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-SC01-270000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-sc01",
+      "kalshi": "KXMIDTERMVOTETURN-SC03-220000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-sc03",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -148009,9 +148688,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 7
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -148092,6 +148771,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 19
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 19
         }
@@ -148206,6 +148890,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 22
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 22
         }
       ],
       "note": null
@@ -148216,7 +148905,7 @@
       "state": "TX",
       "district": "28",
       "description": "Will Democratic win the House race for TX-28?",
-      "dem_base": 0.755,
+      "dem_base": 0.75,
       "pm": null,
       "kalshi": "HOUSETX28-26-D",
       "kalshi_url": "https://kalshi.com/markets/housetx28/house-tx-28/housetx28-26",
@@ -149188,6 +149877,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 75
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 75
         }
       ],
       "note": null
@@ -149198,7 +149892,7 @@
       "state": "TX",
       "district": "15",
       "description": "Will Democratic win the House race for TX-15?",
-      "dem_base": 0.435,
+      "dem_base": 0.43,
       "pm": null,
       "kalshi": "HOUSETX15-26-D",
       "kalshi_url": "https://kalshi.com/markets/housetx15/house-tx-15/housetx15-26",
@@ -149217,7 +149911,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -150200,6 +150894,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 44
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 43
         }
       ],
       "note": null
@@ -151212,6 +151911,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 72
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 72
         }
       ],
       "note": null
@@ -151222,7 +151926,7 @@
       "state": "TX",
       "district": null,
       "description": "Will the total vote count for all participants in Texas 01 House General Election be above 220000?",
-      "dem_base": 0.14,
+      "dem_base": 0.898,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-TX01-220000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tx01",
@@ -151239,9 +151943,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -18
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -151324,6 +152028,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 31
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 49
         }
       ],
       "note": null
@@ -151333,11 +152042,11 @@
       "chamber": "house",
       "state": "US",
       "district": null,
-      "description": "Will the total vote count for all participants in Indiana 02 House General Election be above 185000?",
+      "description": "Will the total vote count for all participants in South Dakota at large House General Election be above 350000?",
       "dem_base": 0.765,
       "pm": "which-party-will-win-the-house-in-2026",
-      "kalshi": "KXMIDTERMVOTETURN-IN02-185000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-in02",
+      "kalshi": "KXMIDTERMVOTETURN-SDAL-350000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-sdal",
       "rcp": null,
       "poll_avg_dem": null,
       "market_gap": null,
@@ -152336,6 +153045,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 76
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 76
         }
       ],
       "note": null
@@ -152363,9 +153077,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": -1
+        "label": "Steady",
+        "level": 1,
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -153328,6 +154042,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 50
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 52
         }
       ],
       "note": null
@@ -154335,6 +155054,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 78
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 78
         }
       ],
       "note": null
@@ -155312,6 +156036,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 96
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 96
         }
       ],
       "note": null
@@ -155696,7 +156425,7 @@
       "state": "VA",
       "district": null,
       "description": "Will the total vote count for all participants in Virginia 04 House General Election be above 260000?",
-      "dem_base": 0.53,
+      "dem_base": 0.921,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-VA04-260000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-va04",
@@ -155713,9 +156442,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": -13
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -155798,6 +156527,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 45
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 59
         }
       ],
       "note": null
@@ -155808,7 +156542,7 @@
       "state": "WA",
       "district": "3",
       "description": "Will Democratic win the House race for WA-3?",
-      "dem_base": 0.765,
+      "dem_base": 0.76,
       "pm": null,
       "kalshi": "HOUSEWA3-26-D",
       "kalshi_url": "https://kalshi.com/markets/housewa3/house-washington-3rd/housewa3-26",
@@ -156798,6 +157532,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 76
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 76
         }
@@ -157939,6 +158678,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 34
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 34
         }
       ],
       "note": null
@@ -158906,6 +159650,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 66
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 66
         }
       ],
       "note": null
@@ -159103,7 +159852,7 @@
       "state": "AK",
       "district": null,
       "description": "Will Republicans win the Senate race in Alaska?",
-      "dem_base": 0.605,
+      "dem_base": 0.6,
       "pm": "alaska-senate-election-winner",
       "kalshi": "SENATEAK-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateak/alaska-senate-race/senateak-26",
@@ -159122,7 +159871,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 1
       },
       "polls": [
         {
@@ -160204,6 +160953,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 60
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 60
         }
       ],
       "note": null
@@ -161134,6 +161888,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 4
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 4
         }
@@ -162083,6 +162842,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 4
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 4
         }
       ],
       "note": null
@@ -162161,7 +162925,7 @@
       "state": "CO",
       "district": null,
       "description": "Will Republicans win the Senate race in Colorado?",
-      "dem_base": 0.939,
+      "dem_base": 0.932,
       "pm": null,
       "kalshi": "SENATECO-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateco/colorado-senate-race/senateco-26",
@@ -163158,6 +163922,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 94
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 94
         }
       ],
       "note": null
@@ -163187,7 +163956,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.7
+        "change": 0.8
       },
       "polls": null,
       "time_series": [
@@ -164404,6 +165173,14 @@
           "Heidi Ganahl": 0.8,
           "Janak Joshi": 1.4,
           "Mark Baisley": 95.3
+        },
+        {
+          "date": "5/21",
+          "Dathan Jones": 2.5,
+          "George Washington Markert": 1.7,
+          "Heidi Ganahl": 0.8,
+          "Janak Joshi": 1.4,
+          "Mark Baisley": 95.3
         }
       ],
       "note": null
@@ -164433,7 +165210,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.5
+        "change": 2.9
       },
       "polls": [
         {
@@ -165700,6 +166477,13 @@
           "Julie Gonzales": 12.5,
           "Karen Breslin": 0.8,
           "Nichole Miner": 0.5
+        },
+        {
+          "date": "5/21",
+          "John Hickenlooper": 90.0,
+          "Julie Gonzales": 12.5,
+          "Karen Breslin": 0.8,
+          "Nichole Miner": 0.8
         }
       ],
       "note": null
@@ -165710,7 +166494,7 @@
       "state": "DE",
       "district": null,
       "description": "Will Democrats win the Senate race in Delaware?",
-      "dem_base": 0.968,
+      "dem_base": 0.96,
       "pm": null,
       "kalshi": "SENATEDE-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatede/deleware-senate-race/senatede-26",
@@ -166647,6 +167431,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 97
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 97
         }
       ],
       "note": null
@@ -166676,7 +167465,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1.2
+        "change": -0.5
       },
       "polls": null,
       "time_series": [
@@ -169011,6 +169800,19 @@
           "Jos\u00e9 R. Oliva": 0.9,
           "Lara Trump": 0.5,
           "Ron DeSantis": 3.6
+        },
+        {
+          "date": "5/21",
+          "Ashley Moody": 93.3,
+          "Ashton Hayward": 0.5,
+          "Casey DeSantis": 0.7,
+          "Cory Mills": 0.8,
+          "James Uthmeier": 0.6,
+          "Jay Collins": 1.2,
+          "Jeanette Nu\u00f1ez": 0.5,
+          "Jos\u00e9 R. Oliva": 0.9,
+          "Lara Trump": 0.5,
+          "Ron DeSantis": 3.6
         }
       ],
       "note": null
@@ -169040,7 +169842,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.0
+        "change": 0.5
       },
       "polls": null,
       "time_series": [
@@ -170761,6 +171563,17 @@
           "Jennifer Jenkins": 0.5,
           "Joey Atkins": 0.8,
           "Josh Weil": 0.8
+        },
+        {
+          "date": "5/21",
+          "Alexander Vindman": 91.2,
+          "Angie Nixon": 6.8,
+          "Charlie Crist": 0.5,
+          "Hector Mujica": 0.7,
+          "Jared Moskowitz": 2.9,
+          "Jennifer Jenkins": 0.5,
+          "Joey Atkins": 0.8,
+          "Josh Weil": 0.8
         }
       ],
       "note": null
@@ -170880,9 +171693,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -3
+        "label": "Steady",
+        "level": 1,
+        "change": -1
       },
       "polls": [
         {
@@ -171908,6 +172721,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 82
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 82
         }
       ],
       "note": null
@@ -171937,7 +172755,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 32.0
+        "change": 26.0
       },
       "polls": [
         {
@@ -174494,6 +175312,13 @@
           "Christoph La'Flare Chapman": 0.1,
           "Derek Dooley": 19.0,
           "Mike Collins": 80.5
+        },
+        {
+          "date": "5/21",
+          "Christina Loren Clement": 0.1,
+          "Christoph La'Flare Chapman": 0.1,
+          "Derek Dooley": 17.5,
+          "Mike Collins": 80.5
         }
       ],
       "note": null
@@ -174531,7 +175356,7 @@
       "state": "IA",
       "district": null,
       "description": "Will Democrats win the Senate race in Iowa?",
-      "dem_base": 0.385,
+      "dem_base": 0.39,
       "pm": null,
       "kalshi": "SENATEIA-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateia/iowa-senate-race/senateia-26",
@@ -175660,6 +176485,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 40
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 40
         }
       ],
       "note": null
@@ -175689,7 +176519,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.4
+        "change": 0.5
       },
       "polls": null,
       "time_series": [
@@ -177348,6 +178178,15 @@
           "Joshua Smith": 0.8,
           "Matthew Whitaker": 0.8,
           "Pat Grassley": 0.4
+        },
+        {
+          "date": "5/21",
+          "Ashley Hinson": 98.0,
+          "Jim Carlin": 1.6,
+          "Joni Ernst": 1.1,
+          "Joshua Smith": 0.8,
+          "Matthew Whitaker": 0.8,
+          "Pat Grassley": 0.4
         }
       ],
       "note": null
@@ -177377,7 +178216,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 10.0
+        "change": 13.6
       },
       "polls": [
         {
@@ -178849,6 +179688,13 @@
           "Josh Turek": 84.5,
           "Nathan Sage": 0.7,
           "Zach Wahls": 15.5
+        },
+        {
+          "date": "5/21",
+          "J.D. Scholten": 0.5,
+          "Josh Turek": 88.1,
+          "Nathan Sage": 0.7,
+          "Zach Wahls": 12.5
         }
       ],
       "note": null
@@ -179834,6 +180680,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 4
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 4
         }
@@ -180838,6 +181689,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 96
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 96
         }
       ],
       "note": null
@@ -181169,11 +182025,11 @@
       "time_series": [
         {
           "date": "11/5",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
           "Robert Peters": 0.5,
@@ -181182,11 +182038,11 @@
         },
         {
           "date": "11/6",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.0,
           "Robert Peters": 0.5,
@@ -181195,11 +182051,11 @@
         },
         {
           "date": "11/7",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
           "Robert Peters": 0.5,
@@ -181208,11 +182064,11 @@
         },
         {
           "date": "11/8",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.5,
           "Robert Peters": 0.5,
@@ -181221,11 +182077,11 @@
         },
         {
           "date": "11/9",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
           "Robert Peters": 0.5,
@@ -181234,11 +182090,11 @@
         },
         {
           "date": "11/10",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
           "Robert Peters": 0.5,
@@ -181247,11 +182103,11 @@
         },
         {
           "date": "11/11",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
           "Robert Peters": 0.5,
@@ -181260,11 +182116,11 @@
         },
         {
           "date": "11/12",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
           "Robert Peters": 0.5,
@@ -181273,11 +182129,11 @@
         },
         {
           "date": "11/13",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
           "Robert Peters": 0.5,
@@ -181286,11 +182142,11 @@
         },
         {
           "date": "11/14",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
           "Robert Peters": 0.5,
@@ -181299,11 +182155,11 @@
         },
         {
           "date": "11/15",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
           "Robert Peters": 0.5,
@@ -181312,11 +182168,11 @@
         },
         {
           "date": "11/16",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
           "Robert Peters": 0.5,
@@ -181325,11 +182181,11 @@
         },
         {
           "date": "11/17",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
           "Robert Peters": 0.5,
@@ -181338,11 +182194,11 @@
         },
         {
           "date": "11/18",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
           "Robert Peters": 0.5,
@@ -181351,11 +182207,11 @@
         },
         {
           "date": "11/19",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
           "Robert Peters": 1.0,
@@ -181364,11 +182220,11 @@
         },
         {
           "date": "11/20",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 43.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181377,11 +182233,11 @@
         },
         {
           "date": "11/21",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181390,11 +182246,11 @@
         },
         {
           "date": "11/22",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181403,11 +182259,11 @@
         },
         {
           "date": "11/23",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181416,11 +182272,11 @@
         },
         {
           "date": "11/24",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181429,11 +182285,11 @@
         },
         {
           "date": "11/25",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181442,11 +182298,11 @@
         },
         {
           "date": "11/26",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 41.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181455,11 +182311,11 @@
         },
         {
           "date": "11/27",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181468,11 +182324,11 @@
         },
         {
           "date": "11/28",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181481,11 +182337,11 @@
         },
         {
           "date": "11/29",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181494,11 +182350,11 @@
         },
         {
           "date": "11/30",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181507,11 +182363,11 @@
         },
         {
           "date": "12/1",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181520,11 +182376,11 @@
         },
         {
           "date": "12/2",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181533,11 +182389,11 @@
         },
         {
           "date": "12/3",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181546,11 +182402,11 @@
         },
         {
           "date": "12/4",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181559,11 +182415,11 @@
         },
         {
           "date": "12/5",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181572,11 +182428,11 @@
         },
         {
           "date": "12/6",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181585,11 +182441,11 @@
         },
         {
           "date": "12/7",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181598,11 +182454,11 @@
         },
         {
           "date": "12/8",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181611,11 +182467,11 @@
         },
         {
           "date": "12/9",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181624,11 +182480,11 @@
         },
         {
           "date": "12/10",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
           "Robert Peters": 1.0,
@@ -181637,11 +182493,11 @@
         },
         {
           "date": "12/11",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robert Peters": 1.0,
@@ -181650,11 +182506,11 @@
         },
         {
           "date": "12/12",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robert Peters": 1.0,
@@ -181663,11 +182519,11 @@
         },
         {
           "date": "12/13",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robert Peters": 1.0,
@@ -181676,11 +182532,11 @@
         },
         {
           "date": "12/14",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robert Peters": 1.0,
@@ -181689,11 +182545,11 @@
         },
         {
           "date": "12/15",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robert Peters": 1.0,
@@ -181702,11 +182558,11 @@
         },
         {
           "date": "12/16",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robert Peters": 1.0,
@@ -181715,11 +182571,11 @@
         },
         {
           "date": "12/18",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robert Peters": 1.0,
@@ -181728,11 +182584,11 @@
         },
         {
           "date": "12/19",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robert Peters": 1.0,
@@ -181741,11 +182597,11 @@
         },
         {
           "date": "12/20",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robert Peters": 1.0,
@@ -181754,11 +182610,11 @@
         },
         {
           "date": "12/21",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
           "Robert Peters": 1.0,
@@ -181767,11 +182623,11 @@
         },
         {
           "date": "12/22",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robert Peters": 1.0,
@@ -181780,11 +182636,11 @@
         },
         {
           "date": "12/23",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
           "Robert Peters": 1.0,
@@ -181793,11 +182649,11 @@
         },
         {
           "date": "12/24",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robert Peters": 1.0,
@@ -181806,11 +182662,11 @@
         },
         {
           "date": "12/25",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robert Peters": 1.0,
@@ -181819,11 +182675,11 @@
         },
         {
           "date": "12/26",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robert Peters": 1.0,
@@ -181832,11 +182688,11 @@
         },
         {
           "date": "12/27",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 34.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robert Peters": 1.0,
@@ -181845,11 +182701,11 @@
         },
         {
           "date": "12/28",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
           "Robert Peters": 1.0,
@@ -181858,11 +182714,11 @@
         },
         {
           "date": "12/29",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
           "Robert Peters": 1.0,
@@ -181871,11 +182727,11 @@
         },
         {
           "date": "12/30",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robert Peters": 1.0,
@@ -181884,11 +182740,11 @@
         },
         {
           "date": "12/31",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.0,
           "Robert Peters": 1.0,
@@ -181897,11 +182753,11 @@
         },
         {
           "date": "1/1",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robert Peters": 1.0,
@@ -181910,11 +182766,11 @@
         },
         {
           "date": "1/2",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robert Peters": 1.0,
@@ -181923,11 +182779,11 @@
         },
         {
           "date": "1/3",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robert Peters": 1.0,
@@ -181936,11 +182792,11 @@
         },
         {
           "date": "1/4",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robert Peters": 1.0,
@@ -181949,11 +182805,11 @@
         },
         {
           "date": "1/5",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robert Peters": 1.0,
@@ -181962,11 +182818,11 @@
         },
         {
           "date": "1/6",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robert Peters": 1.0,
@@ -181975,11 +182831,11 @@
         },
         {
           "date": "1/7",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robert Peters": 1.0,
@@ -181988,11 +182844,11 @@
         },
         {
           "date": "1/8",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 25.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 66.5,
           "Robert Peters": 1.0,
@@ -182001,11 +182857,11 @@
         },
         {
           "date": "1/9",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
           "Robert Peters": 1.0,
@@ -182014,11 +182870,11 @@
         },
         {
           "date": "1/10",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
           "Robert Peters": 1.0,
@@ -182027,11 +182883,11 @@
         },
         {
           "date": "1/11",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
           "Robert Peters": 1.0,
@@ -182040,11 +182896,11 @@
         },
         {
           "date": "1/12",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
           "Robert Peters": 1.0,
@@ -182053,11 +182909,11 @@
         },
         {
           "date": "1/13",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
           "Robert Peters": 1.0,
@@ -182066,11 +182922,11 @@
         },
         {
           "date": "1/14",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
           "Robert Peters": 1.0,
@@ -182079,11 +182935,11 @@
         },
         {
           "date": "1/16",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 72.5,
           "Robert Peters": 1.0,
@@ -182092,11 +182948,11 @@
         },
         {
           "date": "1/17",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
           "Robert Peters": 1.0,
@@ -182105,11 +182961,11 @@
         },
         {
           "date": "1/18",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
           "Robert Peters": 1.0,
@@ -182118,11 +182974,11 @@
         },
         {
           "date": "1/19",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
           "Robert Peters": 1.0,
@@ -182131,11 +182987,11 @@
         },
         {
           "date": "1/20",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
           "Robert Peters": 1.0,
@@ -182144,11 +183000,11 @@
         },
         {
           "date": "1/21",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.0,
           "Robert Peters": 1.0,
@@ -182157,11 +183013,11 @@
         },
         {
           "date": "1/22",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
           "Robert Peters": 1.0,
@@ -182170,11 +183026,11 @@
         },
         {
           "date": "1/23",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.5,
           "Robert Peters": 1.0,
@@ -182183,11 +183039,11 @@
         },
         {
           "date": "1/24",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
           "Robert Peters": 1.0,
@@ -182196,11 +183052,11 @@
         },
         {
           "date": "1/25",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 68.5,
           "Robert Peters": 1.0,
@@ -182209,11 +183065,11 @@
         },
         {
           "date": "1/26",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
           "Robert Peters": 1.0,
@@ -182222,11 +183078,11 @@
         },
         {
           "date": "1/27",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 60.5,
           "Robert Peters": 1.0,
@@ -182235,11 +183091,11 @@
         },
         {
           "date": "1/28",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 37.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.0,
           "Robert Peters": 0.5,
@@ -182248,11 +183104,11 @@
         },
         {
           "date": "1/29",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robert Peters": 0.5,
@@ -182261,11 +183117,11 @@
         },
         {
           "date": "1/30",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 64.5,
           "Robert Peters": 0.5,
@@ -182274,11 +183130,11 @@
         },
         {
           "date": "1/31",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 1.0,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 67.0,
           "Robert Peters": 0.5,
@@ -182287,11 +183143,11 @@
         },
         {
           "date": "2/1",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 67.0,
           "Robert Peters": 0.5,
@@ -182300,11 +183156,11 @@
         },
         {
           "date": "2/2",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 29.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
           "Robert Peters": 0.5,
@@ -182313,11 +183169,11 @@
         },
         {
           "date": "2/3",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
           "Robert Peters": 0.5,
@@ -182326,11 +183182,11 @@
         },
         {
           "date": "2/4",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 65.5,
           "Robert Peters": 0.5,
@@ -182339,11 +183195,11 @@
         },
         {
           "date": "2/5",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 10.0,
           "Raja Krishnamoorthi": 68.5,
           "Robert Peters": 0.5,
@@ -182352,11 +183208,11 @@
         },
         {
           "date": "2/6",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 68.5,
           "Robert Peters": 0.5,
@@ -182365,11 +183221,11 @@
         },
         {
           "date": "2/7",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
           "Robert Peters": 0.5,
@@ -182378,11 +183234,11 @@
         },
         {
           "date": "2/8",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
           "Robert Peters": 0.5,
@@ -182391,11 +183247,11 @@
         },
         {
           "date": "2/9",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
           "Robert Peters": 0.5,
@@ -182404,11 +183260,11 @@
         },
         {
           "date": "2/10",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robert Peters": 0.5,
@@ -182428,11 +183284,11 @@
         },
         {
           "date": "2/13",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 45.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robert Peters": 0.5,
@@ -182455,11 +183311,11 @@
         },
         {
           "date": "2/16",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 43.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robert Peters": 0.5,
@@ -182496,11 +183352,11 @@
         },
         {
           "date": "2/21",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robert Peters": 0.5,
@@ -182558,11 +183414,11 @@
         },
         {
           "date": "3/1",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 63.5,
           "Robert Peters": 0.5,
@@ -182585,20 +183441,20 @@
         },
         {
           "date": "3/4",
-          "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
           "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/5",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 53.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 47.0,
           "Robert Peters": 0.5,
@@ -182607,6 +183463,7 @@
         },
         {
           "date": "3/6",
+          "Austin Mink": 0.5,
           "Juliana Stratton": 53.5,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
@@ -182614,7 +183471,7 @@
         },
         {
           "date": "3/7",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
           "Lauren Underwood": 0.5,
@@ -182623,6 +183480,7 @@
         },
         {
           "date": "3/8",
+          "Austin Mink": 0.5,
           "Juliana Stratton": 53.5,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 46.5,
@@ -182630,6 +183488,7 @@
         },
         {
           "date": "3/9",
+          "Austin Mink": 0.5,
           "Juliana Stratton": 52.5,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
@@ -182637,6 +183496,7 @@
         },
         {
           "date": "3/10",
+          "Austin Mink": 0.5,
           "Juliana Stratton": 43.0,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.0,
@@ -182644,6 +183504,7 @@
         },
         {
           "date": "3/11",
+          "Austin Mink": 0.5,
           "Juliana Stratton": 39.5,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 62.5,
@@ -182651,7 +183512,7 @@
         },
         {
           "date": "3/12",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 40.0,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
@@ -182665,6 +183526,7 @@
         },
         {
           "date": "3/14",
+          "Austin Mink": 0.5,
           "Juliana Stratton": 51.5,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 48.0,
@@ -182672,6 +183534,7 @@
         },
         {
           "date": "3/15",
+          "Austin Mink": 0.5,
           "Juliana Stratton": 50.5,
           "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 50.5,
@@ -182679,11 +183542,11 @@
         },
         {
           "date": "3/16",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 51.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 48.5,
           "Robert Peters": 0.5,
@@ -182692,11 +183555,11 @@
         },
         {
           "date": "3/17",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 48.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.0,
           "Robert Peters": 0.5,
@@ -182705,11 +183568,11 @@
         },
         {
           "date": "3/18",
-          "Dick Durbin": 0.5,
+          "Austin Mink": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 99.5,
           "Lauren Underwood": 0.5,
-          "Meredith Shiner": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 0.5,
           "Robert Peters": 0.5,
@@ -182718,11 +183581,11 @@
         },
         {
           "date": "3/19",
-          "Dick Durbin": 1.0,
+          "Austin Mink": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 99.0,
           "Lauren Underwood": 1.0,
-          "Meredith Shiner": 1.0,
+          "Michael Frerichs": 1.0,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 1.0,
           "Robert Peters": 1.0,
@@ -182738,13 +183601,13 @@
       "state": "KS",
       "district": null,
       "description": "Will Democrats win the Senate race in Kansas?",
-      "dem_base": 0.225,
+      "dem_base": 0.23,
       "pm": null,
       "kalshi": "SENATEKS-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateks/kansas-senate-race/senateks-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/kansas/",
       "poll_avg_dem": 45.0,
-      "market_gap": -22.5,
+      "market_gap": -22.0,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -183815,6 +184678,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 23
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 23
         }
       ],
       "note": null
@@ -183824,10 +184692,10 @@
       "chamber": "senate",
       "state": "KY",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the U.S. Senate election in Kentucky be at least 12 percentage points?",
+      "description": "Kentucky Senate \u2014 McConnell (R-retiring)",
       "dem_base": 0.2,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-KYSENR-P12",
+      "kalshi": "SENATEKY-26",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-kysenr",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/kentucky/",
       "poll_avg_dem": null,
@@ -186122,7 +186990,7 @@
       "state": "LA",
       "district": null,
       "description": "Will Democrats win the Senate race in Kentucky?",
-      "dem_base": 0.087,
+      "dem_base": 0.086,
       "pm": null,
       "kalshi": "SENATELA-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatela/kentucky-senate-race/senatela-26",
@@ -186141,7 +187009,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 3
+        "change": 4
       },
       "polls": null,
       "time_series": [
@@ -187124,6 +187992,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 8
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 9
         }
       ],
       "note": null
@@ -187134,13 +188007,13 @@
       "state": "MA",
       "district": null,
       "description": "Will Democrats win the Senate race in Massachusetts?",
-      "dem_base": 0.966,
+      "dem_base": 0.965,
       "pm": null,
       "kalshi": "SENATEMA-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatema/massachusetts-senate-race/senatema-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/massachusetts/",
-      "poll_avg_dem": 55.5,
-      "market_gap": 41.0,
+      "poll_avg_dem": null,
+      "market_gap": null,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -188220,6 +189093,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 97
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 97
         }
       ],
       "note": null
@@ -188249,7 +189127,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": -3.0
+        "change": -3.5
       },
       "polls": null,
       "time_series": [
@@ -189245,6 +190123,13 @@
         {
           "date": "5/20",
           "Charlie Baker": 8.8,
+          "Christopher Thrasher": 2.4,
+          "John Deaton": 88.5,
+          "Lewis Evangelidis": 2.4
+        },
+        {
+          "date": "5/21",
+          "Charlie Baker": 9.0,
           "Christopher Thrasher": 2.4,
           "John Deaton": 88.5,
           "Lewis Evangelidis": 2.4
@@ -190848,6 +191733,13 @@
           "Ayanna Pressley": 0.4,
           "Ed Markey": 72.0,
           "Seth Moulton": 27.5
+        },
+        {
+          "date": "5/21",
+          "Alexander Rikleen": 0.8,
+          "Ayanna Pressley": 0.4,
+          "Ed Markey": 72.0,
+          "Seth Moulton": 27.0
         }
       ],
       "note": null
@@ -190877,7 +191769,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -8
+        "change": -7
       },
       "polls": [
         {
@@ -192533,6 +193425,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 70
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 70
         }
       ],
       "note": null
@@ -192562,7 +193459,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.0
+        "change": -0.2
       },
       "polls": [
         {
@@ -194953,6 +195850,18 @@
           "Jared Golden": 0.1,
           "Jordan Wood": 0.1,
           "Troy Jackson": 0.1
+        },
+        {
+          "date": "5/21",
+          "Andrea LaFlamme": 0.5,
+          "Chellie Pingree": 0.1,
+          "Dan Kleban": 0.1,
+          "David Costello": 0.5,
+          "Graham Platner": 98.2,
+          "Janet Mills": 1.4,
+          "Jared Golden": 0.1,
+          "Jordan Wood": 0.1,
+          "Troy Jackson": 0.1
         }
       ],
       "note": null
@@ -194982,7 +195891,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.5
+        "change": 0.4
       },
       "polls": [
         {
@@ -195992,6 +196901,11 @@
           "date": "5/20",
           "Dan Smeriglio": 2.6,
           "Susan Collins": 98.0
+        },
+        {
+          "date": "5/21",
+          "Dan Smeriglio": 2.8,
+          "Susan Collins": 98.4
         }
       ],
       "note": null
@@ -197579,6 +198493,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 74
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 74
         }
       ],
       "note": null
@@ -197606,9 +198525,9 @@
       "race_to_watch": true,
       "had_disagreement": true,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3.0
+        "label": "Steady",
+        "level": 1,
+        "change": 2.0
       },
       "polls": [
         {
@@ -199519,12 +200438,12 @@
           "Andy Levin": 0.5,
           "Dana Nessel": 0.5,
           "Haley Stevens": 21.0,
-          "Kelly Morrison": 0.0,
           "Kristen McDonald Rivet": 0.5,
           "Mallory McMorrow": 59.0,
           "Matt Sahr": 0.5,
           "Rashida Tlaib": 1.0,
-          "Sarah Anthony": 0.5
+          "Sarah Anthony": 0.5,
+          "Tim Walz": 0.0
         },
         {
           "date": "3/18",
@@ -200293,6 +201212,18 @@
           "Matt Sahr": 0.3,
           "Rashida Tlaib": 0.1,
           "Sarah Anthony": 0.2
+        },
+        {
+          "date": "5/21",
+          "Abdul El-Sayed": 56.5,
+          "Andy Levin": 0.1,
+          "Dana Nessel": 0.1,
+          "Haley Stevens": 17.5,
+          "Kristen McDonald Rivet": 0.2,
+          "Mallory McMorrow": 26.5,
+          "Matt Sahr": 0.3,
+          "Rashida Tlaib": 0.1,
+          "Sarah Anthony": 0.2
         }
       ],
       "note": null
@@ -200322,7 +201253,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.0
+        "change": -0.5
       },
       "polls": [
         {
@@ -201751,6 +202682,14 @@
           "Genevieve Scott": 0.5,
           "Kent Benham": 0.5,
           "Mike Rogers": 97.0
+        },
+        {
+          "date": "5/21",
+          "Bernadette Smith": 1.7,
+          "Frederick Heurtebise": 0.4,
+          "Genevieve Scott": 0.5,
+          "Kent Benham": 0.5,
+          "Mike Rogers": 96.5
         }
       ],
       "note": null
@@ -202778,6 +203717,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 92
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 92
         }
       ],
       "note": null
@@ -202807,7 +203751,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1.0
+        "change": -2.0
       },
       "polls": [
         {
@@ -204683,6 +205627,18 @@
           "Michele Tafoya": 75.5,
           "Royce White": 5.0,
           "Tom Weiler": 0.9
+        },
+        {
+          "date": "5/21",
+          "Adam Schwarze": 11.5,
+          "Alycia Gruenhagen": 0.9,
+          "David Hann": 1.0,
+          "Julia Coleman": 0.5,
+          "Kristin Robbins": 0.5,
+          "Mark York": 5.8,
+          "Michele Tafoya": 74.5,
+          "Royce White": 5.4,
+          "Tom Weiler": 0.9
         }
       ],
       "note": null
@@ -204712,7 +205668,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -0.5
+        "change": 1.5
       },
       "polls": [
         {
@@ -206866,6 +207822,18 @@
           "Melisa L\u00f3pez Franzen": 0.5,
           "Peggy Flanagan": 84.0,
           "Steve Simon": 0.5
+        },
+        {
+          "date": "5/21",
+          "Angie Craig": 15.0,
+          "Betty McCollum": 0.4,
+          "David Wellstone": 0.4,
+          "Ilhan Omar": 0.7,
+          "Jacob Frey": 0.4,
+          "Keith Ellison": 0.7,
+          "Melisa L\u00f3pez Franzen": 0.5,
+          "Peggy Flanagan": 86.0,
+          "Steve Simon": 0.5
         }
       ],
       "note": null
@@ -206876,7 +207844,7 @@
       "state": "MS",
       "district": null,
       "description": "Will Democrats win the Senate race in Mississippi?",
-      "dem_base": 0.112,
+      "dem_base": 0.11,
       "pm": null,
       "kalshi": "SENATEMS-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatems/mississippi-senate-race/senatems-26",
@@ -206895,7 +207863,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": [
         {
@@ -207877,6 +208845,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 11
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 12
         }
       ],
       "note": null
@@ -208569,13 +209542,13 @@
       "state": "MT",
       "district": null,
       "description": "Will Democrats win the Senate race in Montana?",
-      "dem_base": 0.025,
+      "dem_base": 0.045,
       "pm": null,
       "kalshi": "SENATEMT-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatemt/montana-senate-race/senatemt-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/montana/",
-      "poll_avg_dem": null,
-      "market_gap": null,
+      "poll_avg_dem": 34.0,
+      "market_gap": -29.6,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -208588,9 +209561,37 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 1
       },
       "polls": [
+        {
+          "date": "2026-05-18",
+          "pollster": "Tavern Research (D)",
+          "c1": "Reilly Neill (D)",
+          "d": 24.0,
+          "c2": "Kurt Alme (R)",
+          "r": 46.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +22.0",
+          "matchup": "Reilly Neill (D) vs. Kurt Alme (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Montana"
+        },
+        {
+          "date": "2026-05-18",
+          "pollster": "Tavern Research (D)",
+          "c1": "Generic Democrat",
+          "d": 44.0,
+          "c2": "Kurt Alme (R)",
+          "r": 56.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(R) +12.0",
+          "matchup": "Generic Democrat vs. Kurt Alme (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Montana"
+        },
         {
           "date": "2026-05-18",
           "pollster": "Tavern Research (D)",
@@ -209618,6 +210619,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 13
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 14
         }
       ],
       "note": null
@@ -209647,9 +210653,28 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1.5
+        "change": 1.2
       },
-      "polls": null,
+      "polls": [
+        {
+          "date": "2026-05-07",
+          "pollster": "Rutgers-Eagleton",
+          "c1": "Kurt Alme",
+          "d": 73.0,
+          "c2": "Charles Walking Child",
+          "r": 15.0,
+          "c3": "Lee Calhoun",
+          "c3pct": 12.0,
+          "candidates": {
+            "Kurt Alme": 73.0,
+            "Charles Walking Child": 15.0,
+            "Lee Calhoun": 12.0
+          },
+          "spread": "Alme +58.0",
+          "matchup": "Kurt Alme vs. Charles Walking Child",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Montana"
+        }
+      ],
       "time_series": [
         {
           "date": "3/6",
@@ -210063,6 +211088,12 @@
         },
         {
           "date": "5/20",
+          "Charles WalkingChild": 1.4,
+          "Kurt Alme": 98.0,
+          "Lee Calhoun": 1.6
+        },
+        {
+          "date": "5/21",
           "Charles WalkingChild": 1.4,
           "Kurt Alme": 98.0,
           "Lee Calhoun": 1.6
@@ -211161,6 +212192,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 85
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 85
         }
@@ -213317,9 +214353,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": -2
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": -4
       },
       "polls": [
         {
@@ -214387,6 +215423,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 20
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 19
         }
       ],
       "note": null
@@ -215540,6 +216581,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 82
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 82
         }
       ],
       "note": null
@@ -215569,7 +216615,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1.3
+        "change": 0.8
       },
       "polls": [
         {
@@ -217309,6 +218355,13 @@
           "Dan Innis": 1.0,
           "John E. Sununu": 89.4,
           "Scott Brown": 7.3
+        },
+        {
+          "date": "5/21",
+          "Chris Sununu": 0.7,
+          "Dan Innis": 1.0,
+          "John E. Sununu": 88.9,
+          "Scott Brown": 7.3
         }
       ],
       "note": null
@@ -217338,7 +218391,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -0.7
+        "change": -0.8
       },
       "polls": [
         {
@@ -219000,6 +220053,15 @@
           "Karishma Manzur": 4.8,
           "Maggie Goodlander": 1.7,
           "Stefany Shaheen": 1.9
+        },
+        {
+          "date": "5/21",
+          "Annie Kuster": 1.7,
+          "Chris Pappas": 90.3,
+          "Jared Sullivan": 0.8,
+          "Karishma Manzur": 4.5,
+          "Maggie Goodlander": 1.7,
+          "Stefany Shaheen": 1.9
         }
       ],
       "note": null
@@ -219010,7 +220072,7 @@
       "state": "NJ",
       "district": null,
       "description": "Will Republicans win the Senate race in New Jersey?",
-      "dem_base": 0.931,
+      "dem_base": 0.93,
       "pm": null,
       "kalshi": "SENATENJ-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatenj/new-jersey-senate-race/senatenj-26",
@@ -219992,6 +221054,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 94
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 94
         }
       ],
       "note": null
@@ -220019,9 +221086,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -3.0
+        "label": "New Leader",
+        "level": 4,
+        "change": -0.5
       },
       "polls": null,
       "time_series": [
@@ -220943,6 +222010,16 @@
           "Natalie Rivera": 1.2,
           "Richard Tabor": 45.5,
           "Vinnie Brand": 1.2
+        },
+        {
+          "date": "5/21",
+          "Alex Zdan": 53.5,
+          "Alina Habba": 1.8,
+          "Justin Murphy": 1.9,
+          "Mike Testa": 0.4,
+          "Natalie Rivera": 1.6,
+          "Richard Tabor": 46.5,
+          "Vinnie Brand": 1.1
         }
       ],
       "note": null
@@ -221943,6 +223020,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 96
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 96
         }
@@ -222959,6 +224041,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 3
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 3
         }
       ],
       "note": null
@@ -223871,6 +224958,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 95
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 95
         }
       ],
       "note": null
@@ -223900,7 +224992,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 27.5
+        "change": 26.0
       },
       "polls": null,
       "time_series": [
@@ -224141,6 +225233,16 @@
           "David Burch": 0.5,
           "Deborah C. Brown": 0.5,
           "Jo Rae Perkins": 4.0,
+          "Russ McAlmond": 0.5,
+          "Tim Skelton": 0.5
+        },
+        {
+          "date": "5/21",
+          "Brent Barker": 1.0,
+          "David Brock Smith": 94.0,
+          "David Burch": 0.5,
+          "Deborah C. Brown": 0.5,
+          "Jo Rae Perkins": 4.5,
           "Russ McAlmond": 0.5,
           "Tim Skelton": 0.5
         }
@@ -225129,13 +226231,13 @@
       "state": "RI",
       "district": null,
       "description": "Will Republicans win the Senate race in Rhode Island?",
-      "dem_base": 0.941,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "SENATERI-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateri/rhode-island-senate-race/senateri-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/rhode-island/",
-      "poll_avg_dem": 52.0,
-      "market_gap": 42.0,
+      "poll_avg_dem": null,
+      "market_gap": null,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -226084,6 +227186,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 95
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 95
         }
@@ -227155,6 +228262,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 17
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 17
         }
       ],
       "note": null
@@ -227182,9 +228294,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 7.3
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": 5.3
       },
       "polls": [
         {
@@ -228606,6 +229718,13 @@
           "Mark Lynch": 6.5,
           "Paul Dans": 0.7,
           "Thomas Murphy": 0.5
+        },
+        {
+          "date": "5/21",
+          "Lindsey Graham": 94.8,
+          "Mark Lynch": 6.2,
+          "Paul Dans": 0.7,
+          "Thomas Murphy": 0.5
         }
       ],
       "note": null
@@ -228635,7 +229754,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -0.2
+        "change": 0.0
       },
       "polls": null,
       "time_series": [
@@ -230027,6 +231146,14 @@
           "Catherine Fleming Bruce": 2.5,
           "Joe Walsh": 1.8,
           "Kyle Freeman": 1.2
+        },
+        {
+          "date": "5/21",
+          "Annie Andrews": 92.5,
+          "Brandon Brown": 1.7,
+          "Catherine Fleming Bruce": 1.9,
+          "Joe Walsh": 1.8,
+          "Kyle Freeman": 1.7
         }
       ],
       "note": null
@@ -230037,7 +231164,7 @@
       "state": "SD",
       "district": null,
       "description": "Will Democrats win the Senate race in South Dakota?",
-      "dem_base": 0.037,
+      "dem_base": 0.038,
       "pm": null,
       "kalshi": "SENATESD-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatesd/south-dakota-senate-race/senatesd-26",
@@ -231018,6 +232145,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 6
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 6
         }
       ],
       "note": null
@@ -231988,6 +233120,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 4
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 4
         }
@@ -233129,6 +234266,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 45
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 45
         }
       ],
       "note": null
@@ -233158,7 +234300,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 30.7
+        "change": 32.0
       },
       "polls": [
         {
@@ -235388,6 +236530,11 @@
           "date": "5/20",
           "John Cornyn": 5.2,
           "Ken Paxton": 94.2
+        },
+        {
+          "date": "5/21",
+          "John Cornyn": 5.2,
+          "Ken Paxton": 94.5
         }
       ],
       "note": null
@@ -235806,7 +236953,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.5,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235819,7 +236966,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.5,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235832,7 +236979,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235845,7 +236992,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235858,7 +237005,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235871,7 +237018,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235884,7 +237031,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235897,7 +237044,7 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 1.5,
           "Veronica Escobar": 1.5
         },
@@ -235910,7 +237057,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -235923,7 +237070,7 @@
           "Jasmine Crockett": 39.0,
           "Juli\u00e1n Castro": 3.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -235936,7 +237083,7 @@
           "Jasmine Crockett": 41.0,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -235949,7 +237096,7 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -235962,7 +237109,7 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -235975,7 +237122,7 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -235988,7 +237135,7 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -236001,7 +237148,7 @@
           "Jasmine Crockett": 42.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -236014,7 +237161,7 @@
           "Jasmine Crockett": 41.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -236027,7 +237174,7 @@
           "Jasmine Crockett": 40.0,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -236040,7 +237187,7 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -236053,7 +237200,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -236066,7 +237213,7 @@
           "Jasmine Crockett": 38.0,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         },
@@ -236079,7 +237226,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236092,7 +237239,7 @@
           "Jasmine Crockett": 40.0,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236105,7 +237252,7 @@
           "Jasmine Crockett": 43.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236118,7 +237265,7 @@
           "Jasmine Crockett": 39.0,
           "Juli\u00e1n Castro": 10.0,
           "Nathan Johnson": 3.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 2.5,
           "Veronica Escobar": 0.5
         },
@@ -236131,7 +237278,7 @@
           "Jasmine Crockett": 42.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236144,7 +237291,7 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236157,7 +237304,7 @@
           "Jasmine Crockett": 45.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236170,7 +237317,7 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236183,7 +237330,7 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236196,7 +237343,7 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 0.5
         },
@@ -236209,7 +237356,7 @@
           "Jasmine Crockett": 50.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236222,7 +237369,7 @@
           "Jasmine Crockett": 45.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236235,7 +237382,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236248,7 +237395,7 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 1.5,
+          "Ronald Gutierrez": 1.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236261,7 +237408,7 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236274,7 +237421,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236287,7 +237434,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236300,7 +237447,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236313,7 +237460,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236326,7 +237473,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236339,7 +237486,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236352,7 +237499,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236365,7 +237512,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236378,7 +237525,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236391,7 +237538,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236404,7 +237551,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236417,7 +237564,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236430,7 +237577,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236443,7 +237590,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236456,7 +237603,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236469,7 +237616,7 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236482,7 +237629,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236495,7 +237642,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236508,7 +237655,7 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236521,7 +237668,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236534,7 +237681,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236547,7 +237694,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236560,7 +237707,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236573,7 +237720,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236586,7 +237733,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236599,7 +237746,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236612,7 +237759,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236625,7 +237772,7 @@
           "Jasmine Crockett": 32.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236638,7 +237785,7 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236651,7 +237798,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236664,7 +237811,7 @@
           "Jasmine Crockett": 34.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236677,7 +237824,7 @@
           "Jasmine Crockett": 32.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236690,7 +237837,7 @@
           "Jasmine Crockett": 28.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236703,7 +237850,7 @@
           "Jasmine Crockett": 17.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236716,7 +237863,7 @@
           "Jasmine Crockett": 17.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236729,7 +237876,7 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236742,7 +237889,7 @@
           "Jasmine Crockett": 15.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236755,7 +237902,7 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236768,7 +237915,7 @@
           "Jasmine Crockett": 15.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236781,7 +237928,7 @@
           "Jasmine Crockett": 18.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236794,7 +237941,7 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236807,7 +237954,7 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236820,7 +237967,7 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236833,7 +237980,7 @@
           "Jasmine Crockett": 20.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236846,7 +237993,7 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236859,7 +238006,7 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236872,7 +238019,7 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236885,7 +238032,7 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236898,7 +238045,7 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236911,7 +238058,7 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236924,7 +238071,7 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236937,7 +238084,7 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236950,7 +238097,7 @@
           "Jasmine Crockett": 20.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236963,7 +238110,7 @@
           "Jasmine Crockett": 20.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236976,7 +238123,7 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -236989,7 +238136,7 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237002,7 +238149,7 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237015,7 +238162,7 @@
           "Jasmine Crockett": 26.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237028,7 +238175,7 @@
           "Jasmine Crockett": 34.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237055,7 +238202,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237068,7 +238215,7 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237081,7 +238228,7 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237094,7 +238241,7 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237107,7 +238254,7 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237120,7 +238267,7 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237133,7 +238280,7 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237146,7 +238293,7 @@
           "Jasmine Crockett": 29.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237159,7 +238306,7 @@
           "Jasmine Crockett": 28.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237172,7 +238319,7 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237185,7 +238332,7 @@
           "Jasmine Crockett": 21.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237198,7 +238345,7 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237211,7 +238358,7 @@
           "Jasmine Crockett": 21.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237224,7 +238371,7 @@
           "Jasmine Crockett": 30.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237237,7 +238384,7 @@
           "Jasmine Crockett": 30.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237250,7 +238397,7 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237263,7 +238410,7 @@
           "Jasmine Crockett": 31.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237276,7 +238423,7 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237289,7 +238436,7 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237302,7 +238449,7 @@
           "Jasmine Crockett": 0.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
+          "Ronald Gutierrez": 0.5,
           "Scott Kelly": 0.5,
           "Veronica Escobar": 0.5
         },
@@ -237315,7 +238462,7 @@
           "Jasmine Crockett": 1.0,
           "Juli\u00e1n Castro": 1.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
+          "Ronald Gutierrez": 1.0,
           "Scott Kelly": 1.0,
           "Veronica Escobar": 1.0
         }
@@ -237328,7 +238475,7 @@
       "state": "US",
       "district": null,
       "description": "Which party will win the Senate in 2026?",
-      "dem_base": 0.475,
+      "dem_base": 0.465,
       "pm": "which-party-will-win-the-senate-in-2026",
       "kalshi": "CONTROLS-SENATE-26",
       "kalshi_url": "https://kalshi.com/markets/controls/senate-winner/controls-2026",
@@ -237347,7 +238494,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -238330,6 +239477,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 47
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 46
         }
       ],
       "note": null
@@ -239290,6 +240442,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 96
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 96
         }
@@ -241014,6 +242171,17 @@
           "Jason Miyares": 0.8,
           "Kim Farington": 28.0,
           "Winsome Earle-Sears": 2.5
+        },
+        {
+          "date": "5/21",
+          "Aldous Mina": 2.0,
+          "Bert Mizusawa": 51.0,
+          "Bryce Reeves": 1.8,
+          "Chuck Smith": 1.0,
+          "David Williams": 10.4,
+          "Jason Miyares": 3.1,
+          "Kim Farington": 26.0,
+          "Winsome Earle-Sears": 2.9
         }
       ],
       "note": null
@@ -241043,7 +242211,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1.0
+        "change": -0.6
       },
       "polls": null,
       "time_series": [
@@ -242125,6 +243293,12 @@
           "Jason Reynolds": 2.0,
           "Mark Moran": 0.9,
           "Mark Warner": 97.8
+        },
+        {
+          "date": "5/21",
+          "Jason Reynolds": 2.5,
+          "Mark Moran": 0.9,
+          "Mark Warner": 96.2
         }
       ],
       "note": null
@@ -242152,9 +243326,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -4
+        "label": "Steady",
+        "level": 1,
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -243100,6 +244274,11 @@
         },
         {
           "date": "5/20",
+          "polymarket": null,
+          "kalshi": 4
+        },
+        {
+          "date": "5/21",
           "polymarket": null,
           "kalshi": 4
         }
@@ -245971,6 +247150,11 @@
           "date": "5/20",
           "polymarket": null,
           "kalshi": 4
+        },
+        {
+          "date": "5/21",
+          "polymarket": null,
+          "kalshi": 4
         }
       ],
       "note": null
@@ -246694,6 +247878,12 @@
         },
         {
           "date": "5/20",
+          "Harriet Hageman": 90.1,
+          "Jimmy Skovgard": 3.8,
+          "Reid Rasner": 3.4
+        },
+        {
+          "date": "5/21",
           "Harriet Hageman": 90.1,
           "Jimmy Skovgard": 3.8,
           "Reid Rasner": 3.4
