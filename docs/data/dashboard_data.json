@@ -5,7 +5,7 @@
     "senate_rep_pct": 56,
     "house_dem_pct": 80,
     "house_rep_pct": 19,
-    "battleground_senate": 3,
+    "battleground_senate": 2,
     "house_districts_tracked": 116,
     "seats_up": 35,
     "polls_tracked": 976
@@ -88,7 +88,7 @@
       "chamber": "governor",
       "state": "AK",
       "district": null,
-      "description": "Will the total vote count for all participants in Alaska Governor General Election be above 260000?",
+      "description": "Will another candidate win the 2026 Alaska governor election?",
       "dem_base": null,
       "pm": "alaska-governor-election-winner",
       "kalshi": "KXMIDTERMVOTETURN-AKGOV-260000",
@@ -604,11 +604,11 @@
       "chamber": "governor",
       "state": "AL",
       "district": null,
-      "description": "Will the total vote count for all participants in Alabama Governor General Election be above 1420000?",
+      "description": "Will the Democratic party win the governorship in Alabama",
       "dem_base": 0.082,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-ALGOV-1420000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-algov",
+      "kalshi": "GOVPARTYAL-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyal/alabama-governor/govpartyal-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/alabama/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -622,9 +622,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 6
+        "label": "Steady",
+        "level": 1,
+        "change": 1
       },
       "polls": [
         {
@@ -1641,7 +1641,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 15
+          "kalshi": 10
         }
       ],
       "note": null
@@ -1990,11 +1990,11 @@
       "chamber": "governor",
       "state": "AZ",
       "district": null,
-      "description": "Will the total vote count for all participants in Arizona Governor General Election be above 2600000?",
+      "description": "Will the Democratic party win the governorship in Arizona",
       "dem_base": 0.765,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-AZGOV-2600000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-azgov",
+      "kalshi": "GOVPARTYAZ-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyaz/arizona-governor/govpartyaz-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/arizona/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -2010,7 +2010,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": 1
       },
       "polls": [
         {
@@ -3139,7 +3139,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 78
+          "kalshi": 77
         }
       ],
       "note": null
@@ -3169,7 +3169,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.7
+        "change": 1.2
       },
       "polls": [
         {
@@ -5960,10 +5960,10 @@
         },
         {
           "date": "6/12",
-          "Andy Biggs": 96.4,
+          "Andy Biggs": 96.9,
           "Christian Grey": 0.5,
-          "Christopher Ames": 0.5,
-          "Dave Schweikert": 2.4,
+          "Christopher Ames": 0.9,
+          "Dave Schweikert": 2.1,
           "George Nicholson": 0.5,
           "Jason Beck": 0.5,
           "Karrin Taylor Robson": 0.5,
@@ -5979,11 +5979,11 @@
       "chamber": "governor",
       "state": "CA",
       "district": null,
-      "description": "Will the total vote count for all participants in California Governor General Election be above 10900000?",
+      "description": "Will the Democratic party win the governorship in California",
       "dem_base": 0.905,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-CAGOV-10900000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-cagov",
+      "kalshi": "GOVPARTYCA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyca/california-governor/govpartyca-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/california/",
       "poll_avg_dem": 56.5,
       "market_gap": 34.0,
@@ -12125,11 +12125,11 @@
       "chamber": "governor",
       "state": "CO",
       "district": null,
-      "description": "Will the total vote count for all participants in Colorado Governor General Election be above 2500000?",
+      "description": "Will the Democratic party win the governorship in Colorado",
       "dem_base": 0.907,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-COGOV-2500000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-cogov",
+      "kalshi": "GOVPARTYCO-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyco/colorado-governor/govpartyco-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/colorado/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -13177,7 +13177,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -11.5
+        "change": -12.0
       },
       "polls": [
         {
@@ -14335,7 +14335,7 @@
         {
           "date": "6/12",
           "Ken Salazar": 0.7,
-          "Michael Bennet": 64.0,
+          "Michael Bennet": 63.5,
           "Phil Weiser": 34.5
         }
       ],
@@ -17407,14 +17407,14 @@
       "chamber": "governor",
       "state": "FL",
       "district": null,
-      "description": "Will the total vote count for all participants in Florida Governor General Election be above 7700000?",
-      "dem_base": 0.077,
+      "description": "Will the Democratic party win the governorship in Florida",
+      "dem_base": 0.235,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-FLGOV-7700000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-flgov",
+      "kalshi": "GOVPARTYFL-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyfl/florida-governor/govpartyfl-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/florida/",
       "poll_avg_dem": 36.5,
-      "market_gap": -28.8,
+      "market_gap": -13.0,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -17425,9 +17425,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -9
+        "label": "Steady",
+        "level": 1,
+        "change": -1
       },
       "polls": [
         {
@@ -18766,7 +18766,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 15
+          "kalshi": 23
         }
       ],
       "note": null
@@ -21063,7 +21063,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 4.3
+        "change": 4.5
       },
       "polls": [
         {
@@ -23805,11 +23805,11 @@
         },
         {
           "date": "6/12",
-          "Byron Donalds": 93.8,
+          "Byron Donalds": 94.0,
           "Casey DeSantis": 0.4,
           "Charles Burkett": 0.1,
-          "James Fishback": 4.8,
-          "Jay Collins": 2.1,
+          "James Fishback": 5.8,
+          "Jay Collins": 1.9,
           "Jimmy Patronis": 0.1,
           "Matt Gaetz": 0.1,
           "Paul Renner": 0.5,
@@ -23823,11 +23823,11 @@
       "chamber": "governor",
       "state": "GA",
       "district": null,
-      "description": "Will the total vote count for all participants in Georgia Governor General Election be above 3900000?",
+      "description": "Will the Democratic party win the governorship in Georgia",
       "dem_base": 0.515,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-GAGOV-3900000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-gagov",
+      "kalshi": "GOVPARTYGA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyga/georgia-governor/govpartyga-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/georgia/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -27301,9 +27301,9 @@
       "race_to_watch": true,
       "had_disagreement": true,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -6.0
+        "label": "Major Shift",
+        "level": 3,
+        "change": -8.0
       },
       "polls": [
         {
@@ -29650,8 +29650,8 @@
         },
         {
           "date": "6/12",
-          "Burt Jones": 58.5,
-          "Rick Jackson": 41.5
+          "Burt Jones": 56.5,
+          "Rick Jackson": 42.5
         }
       ],
       "note": null
@@ -30693,11 +30693,11 @@
       "chamber": "governor",
       "state": "IA",
       "district": null,
-      "description": "Will the total vote count for all participants in Iowa Governor General Election be above 1220000?",
+      "description": "Will the Democratic party win the governorship in Iowa",
       "dem_base": 0.61,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-IAGOV-1220000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-iagov",
+      "kalshi": "GOVPARTYIA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyia/iowa-governor/govpartyia-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/iowa/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -32800,11 +32800,11 @@
       "chamber": "governor",
       "state": "IL",
       "district": null,
-      "description": "Will the total vote count for all participants in Illinois Governor General Election be above 4100000?",
-      "dem_base": 0.655,
+      "description": "Will the Democratic party win the governorship in Illinois",
+      "dem_base": 0.921,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-ILGOV-4100000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ilgov",
+      "kalshi": "GOVPARTYIL-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyil/illinois-governor/govpartyil-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/illinois/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -32818,9 +32818,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -13
+        "label": "Steady",
+        "level": 1,
+        "change": 1
       },
       "polls": [
         {
@@ -33837,7 +33837,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 79
+          "kalshi": 93
         }
       ],
       "note": null
@@ -35542,11 +35542,11 @@
       "chamber": "governor",
       "state": "MA",
       "district": null,
-      "description": "Will the total vote count for all participants in Massachusetts Governor General Election be above 2400000?",
+      "description": "Will the Democratic party win the governorship in Massachusetts",
       "dem_base": 0.909,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-MAGOV-2400000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-magov",
+      "kalshi": "GOVPARTYMA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyma/massachusetts-governor/govpartyma-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/massachusetts/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -36631,11 +36631,11 @@
       "chamber": "governor",
       "state": "ME",
       "district": null,
-      "description": "Will the total vote count for all participants in Maine Governor General Election be above 620000?",
+      "description": "Will the Democratic party win the governorship in Maine",
       "dem_base": 0.855,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-MEGOV-620000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-megov",
+      "kalshi": "GOVPARTYME-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyme/maine-governor/govpartyme-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/maine/",
       "poll_avg_dem": 47.0,
       "market_gap": 38.5,
@@ -36651,7 +36651,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": [
         {
@@ -37668,7 +37668,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 87
+          "kalshi": 86
         }
       ],
       "note": null
@@ -40582,7 +40582,7 @@
           "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 24.5,
-          "Troy Jackson": 4.5
+          "Troy Jackson": 5.1
         }
       ],
       "note": null
@@ -40612,7 +40612,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 11.2
+        "change": 10.6
       },
       "polls": [
         {
@@ -43369,11 +43369,11 @@
           "Ben Midgley": 2.7,
           "Bruce Poliquin": 0.2,
           "David Jones": 0.1,
-          "Garrett Mason": 0.5,
+          "Garrett Mason": 0.9,
           "Jonathan Bush": 2.9,
           "Laurel Libby": 0.1,
           "Owen McCarthy": 0.1,
-          "Robert Charles": 96.2,
+          "Robert Charles": 95.6,
           "Robert Wessels": 0.1,
           "Shawn Moody": 0.1
         }
@@ -43385,11 +43385,11 @@
       "chamber": "governor",
       "state": "MI",
       "district": null,
-      "description": "Will the total vote count for all participants in Michigan Governor General Election be above 4400000?",
+      "description": "Will the Democratic party win the governorship in Michigan",
       "dem_base": 0.835,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-MIGOV-4400000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-migov",
+      "kalshi": "GOVPARTYMI-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartymi/michigan-governor/govpartymi-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/michigan/",
       "poll_avg_dem": 46.0,
       "market_gap": 37.5,
@@ -47335,7 +47335,7 @@
         },
         {
           "date": "6/12",
-          "Chris Swanson": 8.2,
+          "Chris Swanson": 7.7,
           "Dan Kildee": 0.5,
           "Garlin Gilchrist": 0.5,
           "Jocelyn Benson": 92.3,
@@ -50502,7 +50502,7 @@
           "Kevin Rinke": 0.5,
           "Mike Cox": 5.0,
           "Mike Rogers": 0.7,
-          "Perry Johnson": 36.5,
+          "Perry Johnson": 35.5,
           "Peter Meijer": 0.9,
           "Tom Leonard": 0.4,
           "Tudor Dixon": 0.9
@@ -50515,14 +50515,14 @@
       "chamber": "governor",
       "state": "MN",
       "district": null,
-      "description": "Will the total vote count for all participants in Minnesota Governor General Election be above 2500000?",
-      "dem_base": 0.635,
+      "description": "Will the Democratic party win the governorship in Minnesota",
+      "dem_base": 0.928,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-MNGOV-2500000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-mngov",
+      "kalshi": "GOVPARTYMN-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartymn/minnesota-governor/govpartymn-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/minnesota/",
       "poll_avg_dem": 19.0,
-      "market_gap": 44.5,
+      "market_gap": 73.8,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -50533,9 +50533,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -15
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": [
         {
@@ -51650,7 +51650,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 79
+          "kalshi": 94
         }
       ],
       "note": null
@@ -53636,7 +53636,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -10.5
+        "change": -11.0
       },
       "polls": null,
       "time_series": [
@@ -55835,9 +55835,9 @@
           "Brad Kohler": 0.5,
           "Chris Madel": 0.5,
           "Jim Schultz": 0.5,
-          "Kendall Qualls": 51.0,
+          "Kendall Qualls": 50.5,
           "Kristin Robbins": 0.5,
-          "Lisa Demuth": 26.0,
+          "Lisa Demuth": 27.5,
           "Mike Lindell": 14.5,
           "Scott Jensen": 0.5
         }
@@ -57859,7 +57859,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 5.0
+        "change": 5.5
       },
       "polls": [
         {
@@ -59306,11 +59306,11 @@
         },
         {
           "date": "6/12",
-          "Cinde Warmington": 83.0,
-          "Deaglan McEachern": 4.1,
+          "Cinde Warmington": 83.5,
+          "Deaglan McEachern": 4.0,
           "Donovan Fenton": 1.2,
           "Jon Kiper": 3.6,
-          "Tom Sherman": 5.5
+          "Tom Sherman": 5.4
         }
       ],
       "note": null
@@ -59375,7 +59375,7 @@
       "state": "NM",
       "district": null,
       "description": "Will the Democratic party win the governorship in New Mexico",
-      "dem_base": 0.85,
+      "dem_base": 0.86,
       "pm": "new-mexico-governor-winner-2026",
       "kalshi": "GOVPARTYNM-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartynm/new-mexico-governor/govpartynm-26",
@@ -59394,7 +59394,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -60395,7 +60395,7 @@
         },
         {
           "date": "6/12",
-          "polymarket": 86,
+          "polymarket": 88,
           "kalshi": 85
         }
       ],
@@ -62029,8 +62029,8 @@
           "date": "11/5",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Susana Martinez": 7.0,
@@ -62040,8 +62040,8 @@
           "date": "11/6",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Susana Martinez": 7.0,
@@ -62051,8 +62051,8 @@
           "date": "11/7",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Susana Martinez": 7.0,
@@ -62062,8 +62062,8 @@
           "date": "11/8",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Susana Martinez": 7.0,
@@ -62073,8 +62073,8 @@
           "date": "11/9",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Susana Martinez": 7.0,
@@ -62084,8 +62084,8 @@
           "date": "11/10",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Susana Martinez": 7.0,
@@ -62095,8 +62095,8 @@
           "date": "11/11",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Susana Martinez": 7.0,
@@ -62106,8 +62106,8 @@
           "date": "11/12",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
+          "John Sanchez": 7.0,
           "Judith Nakamura": 7.0,
-          "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
           "Steve Lanier": 49.5,
@@ -62118,8 +62118,8 @@
           "date": "11/13",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 11.0,
+          "John Sanchez": 4.5,
           "Judith Nakamura": 4.5,
-          "Mark Murphy": 4.5,
           "Mark Ronchetti": 4.5,
           "Rebecca Dow": 4.5,
           "Steve Lanier": 47.0,
@@ -62130,8 +62130,8 @@
           "date": "11/14",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62142,8 +62142,8 @@
           "date": "11/15",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62154,8 +62154,8 @@
           "date": "11/16",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62166,8 +62166,8 @@
           "date": "11/17",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62178,8 +62178,8 @@
           "date": "11/18",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.0,
@@ -62190,8 +62190,8 @@
           "date": "11/19",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62202,8 +62202,8 @@
           "date": "11/20",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62214,8 +62214,8 @@
           "date": "11/21",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62226,8 +62226,8 @@
           "date": "11/22",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62238,8 +62238,8 @@
           "date": "11/23",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62250,8 +62250,8 @@
           "date": "11/24",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62262,8 +62262,8 @@
           "date": "11/25",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62274,8 +62274,8 @@
           "date": "11/26",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62286,8 +62286,8 @@
           "date": "11/27",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62298,8 +62298,8 @@
           "date": "11/28",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62310,8 +62310,8 @@
           "date": "11/29",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62322,8 +62322,8 @@
           "date": "11/30",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62334,8 +62334,8 @@
           "date": "12/1",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62346,8 +62346,8 @@
           "date": "12/2",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62358,8 +62358,8 @@
           "date": "12/3",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62370,8 +62370,8 @@
           "date": "12/4",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62382,8 +62382,8 @@
           "date": "12/5",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62394,8 +62394,8 @@
           "date": "12/6",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 11.5,
+          "John Sanchez": 2.5,
           "Judith Nakamura": 2.5,
-          "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
           "Steve Lanier": 47.5,
@@ -62406,8 +62406,8 @@
           "date": "12/7",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62418,8 +62418,8 @@
           "date": "12/8",
           "Duke Rodriguez": 5.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62430,8 +62430,8 @@
           "date": "12/9",
           "Duke Rodriguez": 5.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62442,8 +62442,8 @@
           "date": "12/10",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62454,8 +62454,8 @@
           "date": "12/11",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62466,8 +62466,8 @@
           "date": "12/12",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62478,8 +62478,8 @@
           "date": "12/13",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62490,8 +62490,8 @@
           "date": "12/14",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62502,8 +62502,8 @@
           "date": "12/15",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62514,8 +62514,8 @@
           "date": "12/16",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62526,8 +62526,8 @@
           "date": "12/17",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62538,8 +62538,8 @@
           "date": "12/18",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62550,8 +62550,8 @@
           "date": "12/19",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62562,8 +62562,8 @@
           "date": "12/20",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 35.5,
@@ -62574,8 +62574,8 @@
           "date": "12/21",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 15.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 34.5,
@@ -62586,8 +62586,8 @@
           "date": "12/22",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 15.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 34.5,
@@ -62598,8 +62598,8 @@
           "date": "12/23",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 34.5,
@@ -62610,8 +62610,8 @@
           "date": "12/24",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 34.5,
@@ -62622,8 +62622,8 @@
           "date": "12/25",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 15.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 34.5,
@@ -62634,8 +62634,8 @@
           "date": "12/26",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 34.5,
@@ -62646,8 +62646,8 @@
           "date": "12/27",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 34.5,
@@ -62658,8 +62658,8 @@
           "date": "12/28",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 19.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 28.5,
@@ -62670,8 +62670,8 @@
           "date": "12/29",
           "Duke Rodriguez": 5.0,
           "Gregg Hull": 21.5,
+          "John Sanchez": 3.5,
           "Judith Nakamura": 3.5,
-          "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
           "Steve Lanier": 29.5,
@@ -62682,8 +62682,8 @@
           "date": "12/30",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -62694,8 +62694,8 @@
           "date": "12/31",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -62706,8 +62706,8 @@
           "date": "1/1",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -62718,8 +62718,8 @@
           "date": "1/2",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -62730,8 +62730,8 @@
           "date": "1/3",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.5,
@@ -62742,8 +62742,8 @@
           "date": "1/4",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.0,
@@ -62754,8 +62754,8 @@
           "date": "1/5",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 36.5,
@@ -62766,8 +62766,8 @@
           "date": "1/6",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.0,
@@ -62778,8 +62778,8 @@
           "date": "1/7",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.0,
@@ -62790,8 +62790,8 @@
           "date": "1/8",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.0,
@@ -62802,8 +62802,8 @@
           "date": "1/9",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 36.5,
@@ -62814,8 +62814,8 @@
           "date": "1/10",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.0,
@@ -62826,8 +62826,8 @@
           "date": "1/11",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 36.5,
@@ -62838,8 +62838,8 @@
           "date": "1/12",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 36.5,
@@ -62850,8 +62850,8 @@
           "date": "1/13",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 36.5,
@@ -62862,8 +62862,8 @@
           "date": "1/14",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -62874,8 +62874,8 @@
           "date": "1/15",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.0,
@@ -62886,8 +62886,8 @@
           "date": "1/16",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.0,
@@ -62898,8 +62898,8 @@
           "date": "1/17",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 36.5,
@@ -62910,8 +62910,8 @@
           "date": "1/18",
           "Duke Rodriguez": 7.5,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -62922,8 +62922,8 @@
           "date": "1/19",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -62934,8 +62934,8 @@
           "date": "1/20",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -62946,8 +62946,8 @@
           "date": "1/21",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -62958,8 +62958,8 @@
           "date": "1/22",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -62970,8 +62970,8 @@
           "date": "1/23",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -62982,8 +62982,8 @@
           "date": "1/24",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -62994,8 +62994,8 @@
           "date": "1/25",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.5,
@@ -63006,8 +63006,8 @@
           "date": "1/26",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -63018,8 +63018,8 @@
           "date": "1/27",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.5,
@@ -63030,8 +63030,8 @@
           "date": "1/28",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63042,8 +63042,8 @@
           "date": "1/29",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63054,8 +63054,8 @@
           "date": "1/30",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -63066,8 +63066,8 @@
           "date": "1/31",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -63078,8 +63078,8 @@
           "date": "2/1",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63090,8 +63090,8 @@
           "date": "2/2",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -63102,8 +63102,8 @@
           "date": "2/3",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -63114,8 +63114,8 @@
           "date": "2/4",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 37.5,
@@ -63126,8 +63126,8 @@
           "date": "2/5",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63138,8 +63138,8 @@
           "date": "2/6",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63150,8 +63150,8 @@
           "date": "2/7",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63162,8 +63162,8 @@
           "date": "2/8",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63174,8 +63174,8 @@
           "date": "2/9",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63186,8 +63186,8 @@
           "date": "2/10",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.5,
@@ -63206,8 +63206,8 @@
           "date": "2/13",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 24.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 2.0,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 38.5,
@@ -63218,8 +63218,8 @@
           "date": "2/14",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
           "Steve Lanier": 39.0,
@@ -63235,8 +63235,8 @@
           "date": "2/16",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 51.5,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 25.0,
@@ -63247,8 +63247,8 @@
           "date": "2/17",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 51.5,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 24.0,
           "Susana Martinez": 4.5,
@@ -63258,8 +63258,8 @@
           "date": "2/18",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 52.0,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 24.5,
           "Susana Martinez": 4.5,
@@ -63276,8 +63276,8 @@
           "date": "2/20",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 52.0,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 23.0,
@@ -63327,8 +63327,8 @@
           "date": "2/26",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 53.5,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 23.5,
@@ -63339,8 +63339,8 @@
           "date": "2/27",
           "Duke Rodriguez": 8.5,
           "Gregg Hull": 57.0,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 18.5,
@@ -63359,8 +63359,8 @@
           "date": "3/1",
           "Duke Rodriguez": 9.5,
           "Gregg Hull": 55.0,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 18.5,
@@ -63371,8 +63371,8 @@
           "date": "3/2",
           "Duke Rodriguez": 13.0,
           "Gregg Hull": 57.0,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 16.0,
@@ -63383,8 +63383,8 @@
           "date": "3/3",
           "Duke Rodriguez": 15.5,
           "Gregg Hull": 55.0,
+          "John Sanchez": 1.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 15.5,
@@ -63395,7 +63395,6 @@
           "date": "3/4",
           "Duke Rodriguez": 15.5,
           "Gregg Hull": 56.0,
-          "Mark Murphy": 1.0,
           "Steve Lanier": 16.0,
           "Susana Martinez": 1.5
         },
@@ -63403,8 +63402,8 @@
           "date": "3/5",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 57.5,
+          "John Sanchez": 2.0,
           "Judith Nakamura": 2.0,
-          "Mark Murphy": 2.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 16.5,
@@ -63415,8 +63414,8 @@
           "date": "3/6",
           "Duke Rodriguez": 22.5,
           "Gregg Hull": 58.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Steve Lanier": 16.0,
           "Susana Martinez": 1.5
         },
@@ -63424,8 +63423,8 @@
           "date": "3/7",
           "Duke Rodriguez": 27.5,
           "Gregg Hull": 57.0,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 14.5,
@@ -63436,8 +63435,8 @@
           "date": "3/9",
           "Duke Rodriguez": 17.5,
           "Gregg Hull": 71.0,
+          "John Sanchez": 2.0,
           "Judith Nakamura": 2.0,
-          "Mark Murphy": 2.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 10.5,
@@ -63448,8 +63447,8 @@
           "date": "3/10",
           "Duke Rodriguez": 28.5,
           "Gregg Hull": 66.0,
+          "John Sanchez": 2.0,
           "Judith Nakamura": 2.0,
-          "Mark Murphy": 2.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 4.5,
@@ -63460,8 +63459,8 @@
           "date": "3/11",
           "Duke Rodriguez": 29.5,
           "Gregg Hull": 67.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.5,
-          "Mark Murphy": 1.5,
           "Steve Lanier": 4.0,
           "Susana Martinez": 1.5
         },
@@ -63469,8 +63468,8 @@
           "date": "3/12",
           "Duke Rodriguez": 30.0,
           "Gregg Hull": 66.5,
+          "John Sanchez": 2.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Steve Lanier": 3.5,
           "Susana Martinez": 2.0
         },
@@ -63478,8 +63477,8 @@
           "date": "3/13",
           "Duke Rodriguez": 30.5,
           "Gregg Hull": 63.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 3.0,
@@ -63490,8 +63489,8 @@
           "date": "3/14",
           "Duke Rodriguez": 30.5,
           "Gregg Hull": 63.5,
+          "John Sanchez": 2.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 4.5,
@@ -63502,8 +63501,8 @@
           "date": "3/15",
           "Duke Rodriguez": 37.5,
           "Gregg Hull": 59.5,
+          "John Sanchez": 1.5,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 2.5,
@@ -63514,8 +63513,8 @@
           "date": "3/16",
           "Duke Rodriguez": 38.5,
           "Gregg Hull": 57.5,
+          "John Sanchez": 2.0,
           "Judith Nakamura": 1.0,
-          "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
           "Steve Lanier": 4.5,
@@ -63526,8 +63525,8 @@
           "date": "3/17",
           "Duke Rodriguez": 39.5,
           "Gregg Hull": 56.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 2.0,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.5,
@@ -63538,8 +63537,8 @@
           "date": "3/18",
           "Duke Rodriguez": 48.0,
           "Gregg Hull": 49.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63556,8 +63555,8 @@
           "date": "3/20",
           "Duke Rodriguez": 47.0,
           "Gregg Hull": 50.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63568,8 +63567,8 @@
           "date": "3/21",
           "Duke Rodriguez": 46.0,
           "Gregg Hull": 51.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63580,8 +63579,8 @@
           "date": "3/22",
           "Duke Rodriguez": 45.0,
           "Gregg Hull": 51.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63592,8 +63591,8 @@
           "date": "3/23",
           "Duke Rodriguez": 45.0,
           "Gregg Hull": 51.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63604,8 +63603,8 @@
           "date": "3/24",
           "Duke Rodriguez": 44.5,
           "Gregg Hull": 52.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63616,8 +63615,8 @@
           "date": "3/25",
           "Duke Rodriguez": 44.5,
           "Gregg Hull": 50.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.5,
@@ -63628,8 +63627,8 @@
           "date": "3/26",
           "Duke Rodriguez": 44.5,
           "Gregg Hull": 51.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.5,
@@ -63640,8 +63639,8 @@
           "date": "3/27",
           "Duke Rodriguez": 38.5,
           "Gregg Hull": 56.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.5,
@@ -63652,8 +63651,8 @@
           "date": "3/28",
           "Duke Rodriguez": 39.5,
           "Gregg Hull": 56.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63664,8 +63663,8 @@
           "date": "3/29",
           "Duke Rodriguez": 38.5,
           "Gregg Hull": 58.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.5,
@@ -63676,8 +63675,8 @@
           "date": "3/30",
           "Duke Rodriguez": 38.0,
           "Gregg Hull": 57.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.5,
@@ -63688,8 +63687,8 @@
           "date": "3/31",
           "Duke Rodriguez": 40.0,
           "Gregg Hull": 56.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 4.0,
@@ -63700,8 +63699,8 @@
           "date": "4/1",
           "Duke Rodriguez": 40.0,
           "Gregg Hull": 56.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.5,
@@ -63712,8 +63711,8 @@
           "date": "4/2",
           "Duke Rodriguez": 39.5,
           "Gregg Hull": 57.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.0,
@@ -63724,8 +63723,8 @@
           "date": "4/3",
           "Duke Rodriguez": 37.5,
           "Gregg Hull": 58.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.0,
@@ -63736,8 +63735,8 @@
           "date": "4/4",
           "Duke Rodriguez": 38.0,
           "Gregg Hull": 58.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.0,
@@ -63748,8 +63747,8 @@
           "date": "4/5",
           "Duke Rodriguez": 42.0,
           "Gregg Hull": 51.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.0,
@@ -63760,8 +63759,8 @@
           "date": "4/6",
           "Duke Rodriguez": 41.5,
           "Gregg Hull": 55.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.0,
@@ -63772,8 +63771,8 @@
           "date": "4/7",
           "Duke Rodriguez": 50.5,
           "Gregg Hull": 46.0,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.0,
@@ -63784,8 +63783,8 @@
           "date": "4/8",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
           "Steve Lanier": 3.0,
@@ -63796,8 +63795,8 @@
           "date": "4/9",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 3.0,
@@ -63808,8 +63807,8 @@
           "date": "4/10",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 3.0,
@@ -63820,8 +63819,8 @@
           "date": "4/11",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 3.0,
@@ -63832,8 +63831,8 @@
           "date": "4/12",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 3.0,
@@ -63844,8 +63843,8 @@
           "date": "4/13",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 3.0,
@@ -63856,8 +63855,8 @@
           "date": "4/14",
           "Duke Rodriguez": 53.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.4,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63868,8 +63867,8 @@
           "date": "4/15",
           "Duke Rodriguez": 53.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63880,8 +63879,8 @@
           "date": "4/16",
           "Duke Rodriguez": 53.0,
           "Gregg Hull": 45.5,
+          "John Sanchez": 1.4,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63892,8 +63891,8 @@
           "date": "4/17",
           "Duke Rodriguez": 51.5,
           "Gregg Hull": 41.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63904,8 +63903,8 @@
           "date": "4/18",
           "Duke Rodriguez": 53.5,
           "Gregg Hull": 41.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63916,8 +63915,8 @@
           "date": "4/19",
           "Duke Rodriguez": 53.5,
           "Gregg Hull": 41.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63928,8 +63927,8 @@
           "date": "4/20",
           "Duke Rodriguez": 15.5,
           "Gregg Hull": 75.0,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 4.0,
@@ -63940,8 +63939,8 @@
           "date": "4/21",
           "Duke Rodriguez": 16.0,
           "Gregg Hull": 74.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 3.5,
@@ -63952,8 +63951,8 @@
           "date": "4/22",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 69.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63964,8 +63963,8 @@
           "date": "4/23",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 67.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63976,8 +63975,8 @@
           "date": "4/24",
           "Duke Rodriguez": 21.0,
           "Gregg Hull": 62.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -63988,8 +63987,8 @@
           "date": "4/25",
           "Duke Rodriguez": 31.0,
           "Gregg Hull": 58.0,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64000,8 +63999,8 @@
           "date": "4/26",
           "Duke Rodriguez": 35.0,
           "Gregg Hull": 60.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64012,8 +64011,8 @@
           "date": "4/27",
           "Duke Rodriguez": 31.5,
           "Gregg Hull": 63.5,
+          "John Sanchez": 1.1,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64024,8 +64023,8 @@
           "date": "4/28",
           "Duke Rodriguez": 31.5,
           "Gregg Hull": 63.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64036,8 +64035,8 @@
           "date": "4/29",
           "Duke Rodriguez": 30.5,
           "Gregg Hull": 65.0,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64048,8 +64047,8 @@
           "date": "4/30",
           "Duke Rodriguez": 29.5,
           "Gregg Hull": 59.0,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64060,8 +64059,8 @@
           "date": "5/1",
           "Duke Rodriguez": 20.5,
           "Gregg Hull": 60.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64072,8 +64071,8 @@
           "date": "5/2",
           "Duke Rodriguez": 20.5,
           "Gregg Hull": 61.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64084,8 +64083,8 @@
           "date": "5/3",
           "Duke Rodriguez": 29.5,
           "Gregg Hull": 61.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64096,8 +64095,8 @@
           "date": "5/4",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 57.0,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64108,8 +64107,8 @@
           "date": "5/5",
           "Duke Rodriguez": 21.0,
           "Gregg Hull": 61.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64120,8 +64119,8 @@
           "date": "5/6",
           "Duke Rodriguez": 20.5,
           "Gregg Hull": 62.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64132,8 +64131,8 @@
           "date": "5/7",
           "Duke Rodriguez": 31.5,
           "Gregg Hull": 65.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64144,8 +64143,8 @@
           "date": "5/8",
           "Duke Rodriguez": 32.5,
           "Gregg Hull": 66.0,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64156,8 +64155,8 @@
           "date": "5/9",
           "Duke Rodriguez": 32.5,
           "Gregg Hull": 66.5,
+          "John Sanchez": 1.4,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64168,8 +64167,8 @@
           "date": "5/10",
           "Duke Rodriguez": 22.5,
           "Gregg Hull": 77.0,
+          "John Sanchez": 1.1,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64180,8 +64179,8 @@
           "date": "5/11",
           "Duke Rodriguez": 14.5,
           "Gregg Hull": 73.0,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64192,8 +64191,8 @@
           "date": "5/12",
           "Duke Rodriguez": 18.5,
           "Gregg Hull": 75.0,
+          "John Sanchez": 1.1,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64204,8 +64203,8 @@
           "date": "5/13",
           "Duke Rodriguez": 18.5,
           "Gregg Hull": 72.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64216,8 +64215,8 @@
           "date": "5/14",
           "Duke Rodriguez": 18.5,
           "Gregg Hull": 72.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64228,8 +64227,8 @@
           "date": "5/15",
           "Duke Rodriguez": 23.0,
           "Gregg Hull": 72.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64240,8 +64239,8 @@
           "date": "5/16",
           "Duke Rodriguez": 23.0,
           "Gregg Hull": 72.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 2.5,
@@ -64252,8 +64251,8 @@
           "date": "5/17",
           "Duke Rodriguez": 24.5,
           "Gregg Hull": 72.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64264,8 +64263,8 @@
           "date": "5/18",
           "Duke Rodriguez": 21.5,
           "Gregg Hull": 72.0,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64276,8 +64275,8 @@
           "date": "5/19",
           "Duke Rodriguez": 24.5,
           "Gregg Hull": 72.5,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64288,8 +64287,8 @@
           "date": "5/20",
           "Duke Rodriguez": 22.5,
           "Gregg Hull": 72.5,
+          "John Sanchez": 1.3,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64300,8 +64299,8 @@
           "date": "5/21",
           "Duke Rodriguez": 19.5,
           "Gregg Hull": 73.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64312,8 +64311,8 @@
           "date": "5/22",
           "Duke Rodriguez": 15.0,
           "Gregg Hull": 83.0,
+          "John Sanchez": 1.8,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 1.6,
@@ -64324,8 +64323,8 @@
           "date": "5/23",
           "Duke Rodriguez": 15.0,
           "Gregg Hull": 83.0,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64336,8 +64335,8 @@
           "date": "5/24",
           "Duke Rodriguez": 6.2,
           "Gregg Hull": 80.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64348,8 +64347,8 @@
           "date": "5/25",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 88.0,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 1.1,
@@ -64360,8 +64359,8 @@
           "date": "5/26",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 89.4,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 1.1,
@@ -64372,8 +64371,8 @@
           "date": "5/27",
           "Duke Rodriguez": 2.6,
           "Gregg Hull": 91.2,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 1.1,
@@ -64384,8 +64383,8 @@
           "date": "5/28",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 89.5,
+          "John Sanchez": 1.6,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64396,8 +64395,8 @@
           "date": "5/29",
           "Duke Rodriguez": 12.5,
           "Gregg Hull": 79.0,
+          "John Sanchez": 1.1,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
           "Steve Lanier": 0.5,
@@ -64409,8 +64408,8 @@
           "Doug Turner": 14.5,
           "Duke Rodriguez": 1.0,
           "Gregg Hull": 85.5,
+          "John Sanchez": 1.1,
           "Judith Nakamura": 0.5,
-          "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.9,
           "Rebecca Dow": 0.9,
           "Steve Lanier": 0.5,
@@ -64422,8 +64421,8 @@
           "Doug Turner": 29.0,
           "Duke Rodriguez": 0.7,
           "Gregg Hull": 73.5,
+          "John Sanchez": 0.6,
           "Judith Nakamura": 0.4,
-          "Mark Murphy": 0.4,
           "Mark Ronchetti": 0.4,
           "Rebecca Dow": 0.4,
           "Steve Lanier": 0.4,
@@ -64435,8 +64434,8 @@
           "Doug Turner": 19.5,
           "Duke Rodriguez": 0.5,
           "Gregg Hull": 80.5,
+          "John Sanchez": 0.5,
           "Judith Nakamura": 0.4,
-          "Mark Murphy": 0.4,
           "Mark Ronchetti": 0.4,
           "Rebecca Dow": 0.4,
           "Steve Lanier": 0.4,
@@ -64448,8 +64447,8 @@
           "Doug Turner": 30.5,
           "Duke Rodriguez": 0.5,
           "Gregg Hull": 69.0,
+          "John Sanchez": 0.1,
           "Judith Nakamura": 0.4,
-          "Mark Murphy": 0.4,
           "Mark Ronchetti": 0.4,
           "Rebecca Dow": 0.4,
           "Steve Lanier": 0.4,
@@ -69842,14 +69841,14 @@
       "chamber": "governor",
       "state": "OH",
       "district": null,
-      "description": "Will the total vote count for all participants in Ohio Governor General Election be above 4100000?",
-      "dem_base": 0.455,
+      "description": "Will the Democratic party win the governorship in Ohio",
+      "dem_base": 0.465,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-OHGOV-4100000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ohgov",
+      "kalshi": "GOVPARTYOH-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyoh/ohio-governor/govpartyoh-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/ohio/",
       "poll_avg_dem": 50.0,
-      "market_gap": -4.5,
+      "market_gap": -3.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -69862,7 +69861,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": [
         {
@@ -71075,7 +71074,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 45
+          "kalshi": 46
         }
       ],
       "note": null
@@ -75613,11 +75612,11 @@
       "chamber": "governor",
       "state": "OR",
       "district": null,
-      "description": "Will the total vote count for all participants in Oregon Governor General Election be above 1930000?",
+      "description": "Will the Democratic party win the governorship in Oregon",
       "dem_base": 0.815,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-ORGOV-1930000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-orgov",
+      "kalshi": "GOVPARTYOR-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyor/oregon-governor/govpartyor-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/oregon/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -80691,11 +80690,11 @@
       "chamber": "governor",
       "state": "SC",
       "district": null,
-      "description": "Will the total vote count for all participants in South Carolina Governor General Election be above 1700000?",
-      "dem_base": 0.07,
+      "description": "Will the Democratic party win the governorship in South Carolina",
+      "dem_base": 0.113,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-SCGOV-1700000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-scgov",
+      "kalshi": "GOVPARTYSC-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartysc/south-carolina-governor/govpartysc-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/south-carolina/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -80711,7 +80710,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -81713,7 +81712,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 9
+          "kalshi": 11
         }
       ],
       "note": null
@@ -82725,11 +82724,11 @@
       "chamber": "governor",
       "state": "TN",
       "district": null,
-      "description": "Will the total vote count for all participants in Tennessee Governor General Election be above 1730000?",
+      "description": "Will the Democratic party win the governorship in Tennessee",
       "dem_base": 0.058,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-TNGOV-1730000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tngov",
+      "kalshi": "GOVPARTYTN-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartytn/tennessee-governor/govpartytn-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/tennessee/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -82743,9 +82742,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 4
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": [
         {
@@ -83762,7 +83761,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 11
+          "kalshi": 7
         }
       ],
       "note": null
@@ -83772,11 +83771,11 @@
       "chamber": "governor",
       "state": "TX",
       "district": null,
-      "description": "Will the total vote count for all participants in Texas Governor General Election be above 8000000?",
+      "description": "Will the Democratic party win the governorship in Texas",
       "dem_base": 0.155,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-TXGOV-8000000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-txgov",
+      "kalshi": "GOVPARTYTX-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartytx/texas-governor/govpartytx-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/texas/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -83790,9 +83789,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 26
+        "label": "Steady",
+        "level": 1,
+        "change": -1
       },
       "polls": [
         {
@@ -84921,7 +84920,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 42
+          "kalshi": 15
         }
       ],
       "note": null
@@ -85202,7 +85201,7 @@
       "state": "VT",
       "district": null,
       "description": "Will the Democratic party win the governorship in Vermont",
-      "dem_base": 0.118,
+      "dem_base": 0.117,
       "pm": null,
       "kalshi": "GOVPARTYVT-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyvt/vermont-governor/govpartyvt-26",
@@ -90222,12 +90221,12 @@
           "Ben Wikler": 0.1,
           "Brett Hulsey": 0.1,
           "David Crowley": 1.2,
-          "Francesca Hong": 36.0,
+          "Francesca Hong": 36.5,
           "Joel Brennan": 1.4,
           "Kelda Roys": 0.1,
           "Mandela Barnes": 44.0,
           "Missy Hughes": 0.1,
-          "Sara Rodriguez": 20.0,
+          "Sara Rodriguez": 19.5,
           "Tony Evers": 0.1
         }
       ],
@@ -98207,7 +98206,7 @@
       "state": "CA",
       "district": "3",
       "description": "Will Democratic win the House race for CA-3?",
-      "dem_base": 0.925,
+      "dem_base": 0.926,
       "pm": null,
       "kalshi": "HOUSECA3-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca3/house-ca3/houseca3-26",
@@ -98224,9 +98223,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 2
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": 3
       },
       "polls": null,
       "time_series": [
@@ -99228,7 +99227,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 92
+          "kalshi": 93
         }
       ],
       "note": null
@@ -101303,7 +101302,7 @@
       "state": "CA",
       "district": "49",
       "description": "Will a Democrat win the House race for CA-49?",
-      "dem_base": 0.91,
+      "dem_base": 0.545,
       "pm": null,
       "kalshi": "HOUSECA49-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca49/house-ca-49/houseca49-26",
@@ -101320,9 +101319,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 20
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -102324,7 +102323,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 92
+          "kalshi": 74
         }
       ],
       "note": null
@@ -102335,7 +102334,7 @@
       "state": "CA",
       "district": "9",
       "description": "Will Democratic win the House race for CA-9?",
-      "dem_base": 0.915,
+      "dem_base": 0.52,
       "pm": null,
       "kalshi": "HOUSECA9-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca9/house-ca-9/houseca9-26",
@@ -102352,9 +102351,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 20
+        "label": "Steady",
+        "level": 1,
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -103356,7 +103355,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 92
+          "kalshi": 73
         }
       ],
       "note": null
@@ -111022,7 +111021,7 @@
       "state": "CT",
       "district": "5",
       "description": "Will a Democrat win the House race for CT-5?",
-      "dem_base": 0.497,
+      "dem_base": 0.5,
       "pm": null,
       "kalshi": "HOUSECT5-26-D",
       "kalshi_url": "https://kalshi.com/markets/housect5/house-ct-5th/housect5-26",
@@ -117189,7 +117188,7 @@
       "state": "IL",
       "district": "17",
       "description": "Will a Democrat win the House race for IL-17?",
-      "dem_base": 0.935,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "HOUSEIL17-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseil17/house-ils-17th/houseil17-26",
@@ -117208,7 +117207,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": -5
+        "change": -6
       },
       "polls": null,
       "time_series": [
@@ -118210,7 +118209,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 73
+          "kalshi": 72
         }
       ],
       "note": null
@@ -118378,7 +118377,7 @@
       "state": "IN",
       "district": "1",
       "description": "Will a Democrat win the House race for IN-1?",
-      "dem_base": 0.88,
+      "dem_base": 0.897,
       "pm": null,
       "kalshi": "HOUSEIN1-26-D",
       "kalshi_url": "https://kalshi.com/markets/housein1/house-ins-1st/housein1-26",
@@ -118397,7 +118396,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -119399,7 +119398,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 88
+          "kalshi": 89
         }
       ],
       "note": null
@@ -137145,7 +137144,7 @@
       "state": "NJ",
       "district": "9",
       "description": "Will Democratic win the House race for NJ-9?",
-      "dem_base": 0.713,
+      "dem_base": 0.525,
       "pm": null,
       "kalshi": "HOUSENJ9-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenj9/house-nj-9/housenj9-26",
@@ -137162,9 +137161,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 9
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -138166,7 +138165,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 72
+          "kalshi": 63
         }
       ],
       "note": null
@@ -139799,7 +139798,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 1
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -140801,7 +140800,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 51
+          "kalshi": 52
         }
       ],
       "note": null
@@ -142876,7 +142875,7 @@
       "state": "NY",
       "district": "22",
       "description": "Will a Democrat win the House race for NY-22?",
-      "dem_base": 0.5,
+      "dem_base": 0.495,
       "pm": null,
       "kalshi": "HOUSENY22-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny22/house-nys-22nd/houseny22-26",
@@ -142893,9 +142892,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": 5
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -143897,7 +143896,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 55
+          "kalshi": 50
         }
       ],
       "note": null
@@ -151319,7 +151318,7 @@
       "state": "OH",
       "district": "9",
       "description": "Will Democratic win the House race for OH-9?",
-      "dem_base": 0.545,
+      "dem_base": 0.525,
       "pm": null,
       "kalshi": "HOUSEOH9-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseoh9/house-oh-9/houseoh9-26",
@@ -151338,7 +151337,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 4
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -152340,7 +152339,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 54
+          "kalshi": 52
         }
       ],
       "note": null
@@ -152537,11 +152536,11 @@
       "chamber": "house",
       "state": "OH",
       "district": null,
-      "description": "Will the total vote count for all participants in Ohio 13 House General Election be above 270000?",
-      "dem_base": 0.415,
+      "description": "Will the total vote count for all participants in Ohio 02 House General Election be above 260000?",
+      "dem_base": 0.963,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-OH13-270000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-oh13",
+      "kalshi": "KXMIDTERMVOTETURN-OH02-260000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-oh02",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -152557,7 +152556,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -28
+        "change": -37
       },
       "polls": null,
       "time_series": [
@@ -152754,7 +152753,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 60
+          "kalshi": 51
         }
       ],
       "note": null
@@ -152782,9 +152781,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 8
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -153786,7 +153785,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 79
+          "kalshi": 71
         }
       ],
       "note": null
@@ -153983,11 +153982,11 @@
       "chamber": "house",
       "state": "OR",
       "district": null,
-      "description": "Will the total vote count for all participants in Oregon 05 House General Election be above 340000?",
-      "dem_base": 0.715,
+      "description": "Will the total vote count for all participants in Oregon 01 House General Election be above 350000?",
+      "dem_base": 0.91,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-OR05-340000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-or05",
+      "kalshi": "KXMIDTERMVOTETURN-OR01-350000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-or01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -154001,9 +154000,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -10
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -154200,7 +154199,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 40
+          "kalshi": 50
         }
       ],
       "note": null
@@ -154230,7 +154229,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -155232,7 +155231,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 48
+          "kalshi": 47
         }
       ],
       "note": null
@@ -155260,9 +155259,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": 4
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -156264,7 +156263,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 54
+          "kalshi": 50
         }
       ],
       "note": null
@@ -163481,11 +163480,11 @@
       "chamber": "house",
       "state": "TX",
       "district": null,
-      "description": "Will the total vote count for all participants in Texas 15 House General Election be above 163000?",
-      "dem_base": 0.15,
+      "description": "Will the total vote count for all participants in Texas 01 House General Election be above 220000?",
+      "dem_base": 0.895,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-TX15-163000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tx15",
+      "kalshi": "KXMIDTERMVOTETURN-TX01-220000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tx01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -163499,9 +163498,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": -20
+        "label": "Major Shift",
+        "level": 3,
+        "change": 18
       },
       "polls": null,
       "time_series": [
@@ -163698,7 +163697,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 49
+          "kalshi": 87
         }
       ],
       "note": null
@@ -163708,11 +163707,11 @@
       "chamber": "house",
       "state": "US",
       "district": null,
-      "description": "Will the total vote count for all participants in Connecticut 05 House General Election be above 250000?",
+      "description": "Will the total vote count for all participants in New York 26 House General Election be above 300000?",
       "dem_base": 0.805,
       "pm": "which-party-will-win-the-house-in-2026",
-      "kalshi": "KXMIDTERMVOTETURN-CT05-250000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ct05",
+      "kalshi": "KXMIDTERMVOTETURN-NY26-300000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ny26",
       "rcp": null,
       "poll_avg_dem": null,
       "market_gap": null,
@@ -168210,11 +168209,11 @@
       "chamber": "house",
       "state": "VA",
       "district": null,
-      "description": "Will the total vote count for all participants in Virginia 01 House General Election be above 320000?",
+      "description": "Will the total vote count for all participants in Virginia 04 House General Election be above 260000?",
       "dem_base": 0.835,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-VA01-320000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-va01",
+      "kalshi": "KXMIDTERMVOTETURN-VA04-260000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-va04",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -168228,9 +168227,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 7
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": -5
       },
       "polls": null,
       "time_series": [
@@ -168427,7 +168426,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 66
+          "kalshi": 54
         }
       ],
       "note": null
@@ -175214,7 +175213,7 @@
       "state": "CO",
       "district": null,
       "description": "Will Republicans win the Senate race in Colorado?",
-      "dem_base": 0.939,
+      "dem_base": 0.933,
       "pm": null,
       "kalshi": "SENATECO-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateco/colorado-senate-race/senateco-26",
@@ -176265,7 +176264,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.6
+        "change": 1.3
       },
       "polls": null,
       "time_series": [
@@ -177665,7 +177664,7 @@
           "George Washington Markert": 1.1,
           "Heidi Ganahl": 0.8,
           "Janak Joshi": 1.2,
-          "Mark Baisley": 95.5
+          "Mark Baisley": 96.2
         }
       ],
       "note": null
@@ -179150,7 +179149,7 @@
       "state": "DE",
       "district": null,
       "description": "Will Democrats win the Senate race in Delaware?",
-      "dem_base": 0.899,
+      "dem_base": 0.815,
       "pm": null,
       "kalshi": "SENATEDE-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatede/deleware-senate-race/senatede-26",
@@ -179167,9 +179166,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 4
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -180171,7 +180170,7 @@
         {
           "date": "6/12",
           "polymarket": null,
-          "kalshi": 91
+          "kalshi": 87
         }
       ],
       "note": null
@@ -180201,7 +180200,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.1
+        "change": 0.0
       },
       "polls": null,
       "time_series": [
@@ -182825,7 +182824,7 @@
         },
         {
           "date": "6/12",
-          "Ashley Moody": 96.2,
+          "Ashley Moody": 96.1,
           "Ashton Hayward": 0.5,
           "Casey DeSantis": 0.7,
           "Cory Mills": 0.7,
@@ -184995,7 +184994,7 @@
       "state": "GA",
       "district": null,
       "description": "Will Republicans win the Senate race in Georgia?",
-      "dem_base": 0.833,
+      "dem_base": 0.83,
       "pm": "georgia-senate-election-winner",
       "kalshi": "SENATEGA-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatega/georgia-senate-race/senatega-26",
@@ -185014,7 +185013,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": [
         {
@@ -186058,7 +186057,7 @@
         },
         {
           "date": "6/12",
-          "polymarket": 85,
+          "polymarket": 84,
           "kalshi": 82
         }
       ],
@@ -186089,7 +186088,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 7.1
+        "change": 7.3
       },
       "polls": [
         {
@@ -188805,8 +188804,8 @@
           "date": "6/12",
           "Christina Loren Clement": 0.1,
           "Christoph La'Flare Chapman": 0.1,
-          "Derek Dooley": 7.0,
-          "Mike Collins": 93.1
+          "Derek Dooley": 6.9,
+          "Mike Collins": 93.3
         }
       ],
       "note": null
@@ -195888,9 +195887,9 @@
       "time_series": [
         {
           "date": "11/5",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
@@ -195901,9 +195900,9 @@
         },
         {
           "date": "11/6",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
@@ -195914,9 +195913,9 @@
         },
         {
           "date": "11/7",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
@@ -195927,9 +195926,9 @@
         },
         {
           "date": "11/8",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
@@ -195940,9 +195939,9 @@
         },
         {
           "date": "11/9",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
@@ -195953,9 +195952,9 @@
         },
         {
           "date": "11/10",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
@@ -195966,9 +195965,9 @@
         },
         {
           "date": "11/11",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -195979,9 +195978,9 @@
         },
         {
           "date": "11/12",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -195992,9 +195991,9 @@
         },
         {
           "date": "11/13",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -196005,9 +196004,9 @@
         },
         {
           "date": "11/14",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -196018,9 +196017,9 @@
         },
         {
           "date": "11/15",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -196031,9 +196030,9 @@
         },
         {
           "date": "11/16",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -196044,9 +196043,9 @@
         },
         {
           "date": "11/17",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -196057,9 +196056,9 @@
         },
         {
           "date": "11/18",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -196070,9 +196069,9 @@
         },
         {
           "date": "11/19",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -196083,9 +196082,9 @@
         },
         {
           "date": "11/20",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 43.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196096,9 +196095,9 @@
         },
         {
           "date": "11/21",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196109,9 +196108,9 @@
         },
         {
           "date": "11/22",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196122,9 +196121,9 @@
         },
         {
           "date": "11/23",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196135,9 +196134,9 @@
         },
         {
           "date": "11/24",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196148,9 +196147,9 @@
         },
         {
           "date": "11/25",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196161,9 +196160,9 @@
         },
         {
           "date": "11/26",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 41.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196174,9 +196173,9 @@
         },
         {
           "date": "11/27",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196187,9 +196186,9 @@
         },
         {
           "date": "11/28",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196200,9 +196199,9 @@
         },
         {
           "date": "11/29",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196213,9 +196212,9 @@
         },
         {
           "date": "11/30",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196226,9 +196225,9 @@
         },
         {
           "date": "12/1",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196239,9 +196238,9 @@
         },
         {
           "date": "12/2",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196252,9 +196251,9 @@
         },
         {
           "date": "12/3",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196265,9 +196264,9 @@
         },
         {
           "date": "12/4",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196278,9 +196277,9 @@
         },
         {
           "date": "12/5",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196291,9 +196290,9 @@
         },
         {
           "date": "12/6",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196304,9 +196303,9 @@
         },
         {
           "date": "12/7",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196317,9 +196316,9 @@
         },
         {
           "date": "12/8",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196330,9 +196329,9 @@
         },
         {
           "date": "12/9",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196343,9 +196342,9 @@
         },
         {
           "date": "12/10",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196356,9 +196355,9 @@
         },
         {
           "date": "12/11",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196369,9 +196368,9 @@
         },
         {
           "date": "12/12",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196382,9 +196381,9 @@
         },
         {
           "date": "12/13",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196395,9 +196394,9 @@
         },
         {
           "date": "12/14",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196408,9 +196407,9 @@
         },
         {
           "date": "12/15",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196421,9 +196420,9 @@
         },
         {
           "date": "12/16",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196434,9 +196433,9 @@
         },
         {
           "date": "12/18",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196447,9 +196446,9 @@
         },
         {
           "date": "12/19",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196460,9 +196459,9 @@
         },
         {
           "date": "12/20",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196473,9 +196472,9 @@
         },
         {
           "date": "12/21",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196486,9 +196485,9 @@
         },
         {
           "date": "12/22",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196499,9 +196498,9 @@
         },
         {
           "date": "12/23",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196512,9 +196511,9 @@
         },
         {
           "date": "12/24",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196525,9 +196524,9 @@
         },
         {
           "date": "12/25",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196538,9 +196537,9 @@
         },
         {
           "date": "12/26",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196551,9 +196550,9 @@
         },
         {
           "date": "12/27",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196564,9 +196563,9 @@
         },
         {
           "date": "12/28",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196577,9 +196576,9 @@
         },
         {
           "date": "12/29",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196590,9 +196589,9 @@
         },
         {
           "date": "12/30",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196603,9 +196602,9 @@
         },
         {
           "date": "12/31",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196616,9 +196615,9 @@
         },
         {
           "date": "1/1",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196629,9 +196628,9 @@
         },
         {
           "date": "1/2",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196642,9 +196641,9 @@
         },
         {
           "date": "1/3",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196655,9 +196654,9 @@
         },
         {
           "date": "1/4",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196668,9 +196667,9 @@
         },
         {
           "date": "1/5",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196681,9 +196680,9 @@
         },
         {
           "date": "1/6",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196694,9 +196693,9 @@
         },
         {
           "date": "1/7",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196707,9 +196706,9 @@
         },
         {
           "date": "1/8",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 25.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196720,9 +196719,9 @@
         },
         {
           "date": "1/9",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196733,9 +196732,9 @@
         },
         {
           "date": "1/10",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196746,9 +196745,9 @@
         },
         {
           "date": "1/11",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196759,9 +196758,9 @@
         },
         {
           "date": "1/12",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196772,9 +196771,9 @@
         },
         {
           "date": "1/13",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196785,9 +196784,9 @@
         },
         {
           "date": "1/14",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196798,9 +196797,9 @@
         },
         {
           "date": "1/16",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196811,9 +196810,9 @@
         },
         {
           "date": "1/17",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196824,9 +196823,9 @@
         },
         {
           "date": "1/18",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196837,9 +196836,9 @@
         },
         {
           "date": "1/19",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196850,9 +196849,9 @@
         },
         {
           "date": "1/20",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196863,9 +196862,9 @@
         },
         {
           "date": "1/21",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196876,9 +196875,9 @@
         },
         {
           "date": "1/22",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196889,9 +196888,9 @@
         },
         {
           "date": "1/23",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196902,9 +196901,9 @@
         },
         {
           "date": "1/24",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196915,9 +196914,9 @@
         },
         {
           "date": "1/25",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196928,9 +196927,9 @@
         },
         {
           "date": "1/26",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196941,9 +196940,9 @@
         },
         {
           "date": "1/27",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196954,9 +196953,9 @@
         },
         {
           "date": "1/28",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 37.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196967,9 +196966,9 @@
         },
         {
           "date": "1/29",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196980,9 +196979,9 @@
         },
         {
           "date": "1/30",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -196993,9 +196992,9 @@
         },
         {
           "date": "1/31",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197006,9 +197005,9 @@
         },
         {
           "date": "2/1",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197019,9 +197018,9 @@
         },
         {
           "date": "2/2",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 29.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197032,9 +197031,9 @@
         },
         {
           "date": "2/3",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197045,9 +197044,9 @@
         },
         {
           "date": "2/4",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197058,9 +197057,9 @@
         },
         {
           "date": "2/5",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.0,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 10.0,
@@ -197071,9 +197070,9 @@
         },
         {
           "date": "2/6",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197084,9 +197083,9 @@
         },
         {
           "date": "2/7",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197097,9 +197096,9 @@
         },
         {
           "date": "2/8",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197110,9 +197109,9 @@
         },
         {
           "date": "2/9",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
@@ -197123,9 +197122,9 @@
         },
         {
           "date": "2/10",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197147,9 +197146,9 @@
         },
         {
           "date": "2/13",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 45.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197161,20 +197160,22 @@
         {
           "date": "2/14",
           "Juliana Stratton": 44.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/15",
           "Juliana Stratton": 45.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/16",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 43.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197186,32 +197187,36 @@
         {
           "date": "2/17",
           "Juliana Stratton": 44.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/18",
           "Juliana Stratton": 42.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robin Kelly": 3.0
         },
         {
           "date": "2/19",
           "Juliana Stratton": 42.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 57.0,
           "Robin Kelly": 3.0
         },
         {
           "date": "2/20",
           "Juliana Stratton": 42.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 2.5
         },
         {
           "date": "2/21",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197223,49 +197228,57 @@
         {
           "date": "2/22",
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 60.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/23",
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 40.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/24",
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 58.0,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/25",
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/26",
           "Juliana Stratton": 48.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 50.5
         },
         {
           "date": "2/27",
           "Juliana Stratton": 40.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/28",
           "Juliana Stratton": 41.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.0,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/1",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197277,28 +197290,31 @@
         {
           "date": "3/2",
           "Juliana Stratton": 36.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 62.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/3",
           "Juliana Stratton": 32.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 67.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/4",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
+          "Lauren Underwood": 0.5,
           "Michael Frerichs": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/5",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 53.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197310,44 +197326,50 @@
         {
           "date": "3/6",
           "Juliana Stratton": 53.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/7",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "3/8",
           "Juliana Stratton": 53.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/9",
           "Juliana Stratton": 52.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "3/10",
           "Juliana Stratton": 43.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/11",
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 62.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/12",
-          "Dick Durbin": 0.5,
           "Juliana Stratton": 40.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 1.0
         },
@@ -197360,20 +197382,22 @@
         {
           "date": "3/14",
           "Juliana Stratton": 51.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 48.0,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/15",
           "Juliana Stratton": 50.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 50.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/16",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 51.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197384,9 +197408,9 @@
         },
         {
           "date": "3/17",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 48.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197397,9 +197421,9 @@
         },
         {
           "date": "3/18",
-          "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 99.5,
-          "Kwame Raoul": 0.5,
+          "Lauren Underwood": 0.5,
           "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
@@ -197410,9 +197434,9 @@
         },
         {
           "date": "3/19",
-          "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 99.0,
-          "Kwame Raoul": 1.0,
+          "Lauren Underwood": 1.0,
           "Meredith Shiner": 1.0,
           "Michael Frerichs": 1.0,
           "Rahm Emanuel": 1.0,
@@ -198546,10 +198570,10 @@
       "chamber": "senate",
       "state": "KY",
       "district": null,
-      "description": "Will the total vote count for all participants in Kentucky Senate General Election be above 1480000?",
+      "description": "Kentucky Senate \u2014 McConnell (R-retiring)",
       "dem_base": 0.195,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-KYSEN-1480000",
+      "kalshi": "SENATEKY-26",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-kysen",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/kentucky/",
       "poll_avg_dem": null,
@@ -204270,7 +204294,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1.5
+        "change": -1.0
       },
       "polls": [
         {
@@ -206036,8 +206060,8 @@
           "date": "6/12",
           "Alexander Rikleen": 0.7,
           "Ayanna Pressley": 0.5,
-          "Ed Markey": 71.5,
-          "Seth Moulton": 29.5
+          "Ed Markey": 72.0,
+          "Seth Moulton": 28.0
         }
       ],
       "note": null
@@ -206048,13 +206072,13 @@
       "state": "ME",
       "district": null,
       "description": "Will Democrats win the Senate race in Maine?",
-      "dem_base": 0.627,
+      "dem_base": 0.63,
       "pm": "maine-senate-election-winner",
       "kalshi": "SENATEME-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateme/maine-senate-race/senateme-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/maine/",
       "poll_avg_dem": 48.8,
-      "market_gap": 13.9,
+      "market_gap": 14.2,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -208036,7 +208060,7 @@
         {
           "date": "6/12",
           "polymarket": 66,
-          "kalshi": 59
+          "kalshi": 60
         }
       ],
       "note": null
@@ -210801,8 +210825,8 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player U": 0.0,
-          "Troy Jackson": 0.0
+          "Troy Jackson": 0.0,
+          "any other person": 0.0
         },
         {
           "date": "6/11",
@@ -210812,8 +210836,8 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player U": 0.0,
-          "Troy Jackson": 0.0
+          "Troy Jackson": 0.0,
+          "any other person": 0.0
         },
         {
           "date": "6/12",
@@ -210823,8 +210847,8 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player U": 0.0,
-          "Troy Jackson": 0.0
+          "Troy Jackson": 0.0,
+          "any other person": 0.0
         }
       ],
       "note": null
@@ -211982,13 +212006,13 @@
       "state": "MI",
       "district": null,
       "description": "Will Democrats win the Senate race in Michigan?",
-      "dem_base": 0.542,
+      "dem_base": 0.712,
       "pm": "michigan-senate-election-winner",
       "kalshi": "SENATEMI-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatemi/michigan-senate-race/senatemi-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/michigan/",
       "poll_avg_dem": 42.4,
-      "market_gap": 11.8,
+      "market_gap": 28.9,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -213844,7 +213868,7 @@
         {
           "date": "6/12",
           "polymarket": 72,
-          "kalshi": 54
+          "kalshi": 70
         }
       ],
       "note": null
@@ -215963,12 +215987,12 @@
           "date": "3/17",
           "Abdul El-Sayed": 21.5,
           "Andy Levin": 0.5,
-          "Angie Craig": 0.0,
           "Dana Nessel": 0.5,
           "Haley Stevens": 21.0,
           "Kristen McDonald Rivet": 0.5,
           "Mallory McMorrow": 59.0,
           "Matt Sahr": 0.5,
+          "Peggy Flanagan": 0.0,
           "Rashida Tlaib": 1.0,
           "Sarah Anthony": 0.5
         },
@@ -217009,9 +217033,9 @@
           "Abdul El-Sayed": 70.5,
           "Andy Levin": 0.1,
           "Dana Nessel": 0.1,
-          "Haley Stevens": 23.5,
+          "Haley Stevens": 24.0,
           "Kristen McDonald Rivet": 0.1,
-          "Mallory McMorrow": 6.9,
+          "Mallory McMorrow": 6.6,
           "Matt Sahr": 0.2,
           "Rashida Tlaib": 0.1,
           "Sarah Anthony": 0.1
@@ -217044,7 +217068,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.5
+        "change": 0.0
       },
       "polls": [
         {
@@ -218652,11 +218676,11 @@
         },
         {
           "date": "6/12",
-          "Bernadette Smith": 2.1,
+          "Bernadette Smith": 1.7,
           "Frederick Heurtebise": 0.4,
-          "Genevieve Scott": 1.0,
-          "Kent Benham": 2.0,
-          "Mike Rogers": 97.5
+          "Genevieve Scott": 0.8,
+          "Kent Benham": 0.7,
+          "Mike Rogers": 97.0
         }
       ],
       "note": null
@@ -226163,13 +226187,13 @@
       "state": "MT",
       "district": null,
       "description": "Will Democrats win the Senate race in Montana?",
-      "dem_base": 0.035,
+      "dem_base": 0.04,
       "pm": null,
       "kalshi": "SENATEMT-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatemt/montana-senate-race/senatemt-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/montana/",
       "poll_avg_dem": 34.0,
-      "market_gap": -30.5,
+      "market_gap": -30.1,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -227847,7 +227871,7 @@
       "state": "NC",
       "district": null,
       "description": "Will Democrats win the Senate race in North Carolina?",
-      "dem_base": 0.765,
+      "dem_base": 0.853,
       "pm": "north-carolina-senate-election-winner",
       "kalshi": "SENATENC-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatenc/north-carolina-senate-race/senatenc-26",
@@ -227866,7 +227890,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": [
         {
@@ -228952,8 +228976,8 @@
         },
         {
           "date": "6/12",
-          "polymarket": 84,
-          "kalshi": 77
+          "polymarket": 85,
+          "kalshi": 86
         }
       ],
       "note": null
@@ -232208,7 +232232,7 @@
       "state": "NH",
       "district": null,
       "description": "Will Democrats win the Senate race in New Hampshire?",
-      "dem_base": 0.83,
+      "dem_base": 0.827,
       "pm": "new-hampshire-senate-election-winner",
       "kalshi": "SENATENH-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatenh/new-hampshire-senate-race/senatenh-26",
@@ -232225,9 +232249,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": [
         {
@@ -233369,7 +233393,7 @@
         },
         {
           "date": "6/12",
-          "polymarket": 85,
+          "polymarket": 84,
           "kalshi": 84
         }
       ],
@@ -233400,7 +233424,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.6
+        "change": 1.4
       },
       "polls": [
         {
@@ -235299,7 +235323,7 @@
           "date": "6/12",
           "Chris Sununu": 0.7,
           "Dan Innis": 1.1,
-          "John E. Sununu": 91.1,
+          "John E. Sununu": 91.9,
           "Scott Brown": 6.8
         }
       ],
@@ -243839,7 +243863,7 @@
       "state": "RI",
       "district": null,
       "description": "Will Republicans win the Senate race in Rhode Island?",
-      "dem_base": 0.941,
+      "dem_base": 0.942,
       "pm": null,
       "kalshi": "SENATERI-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateri/rhode-island-senate-race/senateri-26",
@@ -251444,7 +251468,7 @@
       "state": "TX",
       "district": null,
       "description": "Will Republicans win the Senate race in Texas?",
-      "dem_base": 0.425,
+      "dem_base": 0.43,
       "pm": "texas-senate-election-winner",
       "kalshi": "SENATETX-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatetx/texas-senate-race/senatetx-26",
@@ -251463,7 +251487,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 3
+        "change": 4
       },
       "polls": [
         {
@@ -252591,7 +252615,7 @@
         },
         {
           "date": "6/12",
-          "polymarket": 43,
+          "polymarket": 44,
           "kalshi": 42
         }
       ],
@@ -255300,9 +255324,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.5,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/6",
@@ -255313,9 +255337,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.5,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/7",
@@ -255326,9 +255350,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/8",
@@ -255339,9 +255363,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/10",
@@ -255352,9 +255376,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/11",
@@ -255365,9 +255389,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/12",
@@ -255378,9 +255402,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/13",
@@ -255391,9 +255415,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/14",
@@ -255404,9 +255428,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/15",
@@ -255417,9 +255441,9 @@
           "Jasmine Crockett": 39.0,
           "Juli\u00e1n Castro": 3.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/16",
@@ -255430,9 +255454,9 @@
           "Jasmine Crockett": 41.0,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/17",
@@ -255443,9 +255467,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/18",
@@ -255456,9 +255480,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/19",
@@ -255469,9 +255493,9 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/20",
@@ -255482,9 +255506,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/23",
@@ -255495,9 +255519,9 @@
           "Jasmine Crockett": 42.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/24",
@@ -255508,9 +255532,9 @@
           "Jasmine Crockett": 41.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/25",
@@ -255521,9 +255545,9 @@
           "Jasmine Crockett": 40.0,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/26",
@@ -255534,9 +255558,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/27",
@@ -255547,9 +255571,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/28",
@@ -255560,9 +255584,9 @@
           "Jasmine Crockett": 38.0,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/29",
@@ -255573,9 +255597,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "11/30",
@@ -255586,9 +255610,9 @@
           "Jasmine Crockett": 40.0,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/1",
@@ -255599,9 +255623,9 @@
           "Jasmine Crockett": 43.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/2",
@@ -255612,9 +255636,9 @@
           "Jasmine Crockett": 39.0,
           "Juli\u00e1n Castro": 10.0,
           "Nathan Johnson": 3.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 2.5
+          "Scott Kelly": 2.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/3",
@@ -255625,9 +255649,9 @@
           "Jasmine Crockett": 42.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/4",
@@ -255638,9 +255662,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/5",
@@ -255651,9 +255675,9 @@
           "Jasmine Crockett": 45.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/6",
@@ -255664,9 +255688,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/7",
@@ -255677,9 +255701,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/8",
@@ -255690,9 +255714,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/9",
@@ -255703,9 +255727,9 @@
           "Jasmine Crockett": 50.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/10",
@@ -255716,9 +255740,9 @@
           "Jasmine Crockett": 45.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/11",
@@ -255729,9 +255753,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/12",
@@ -255742,9 +255766,9 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/13",
@@ -255755,9 +255779,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/14",
@@ -255768,9 +255792,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/15",
@@ -255781,9 +255805,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/16",
@@ -255794,9 +255818,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/17",
@@ -255807,9 +255831,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/18",
@@ -255820,9 +255844,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/19",
@@ -255833,9 +255857,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/20",
@@ -255846,9 +255870,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/21",
@@ -255859,9 +255883,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/22",
@@ -255872,9 +255896,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/23",
@@ -255885,9 +255909,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/24",
@@ -255898,9 +255922,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/25",
@@ -255911,9 +255935,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/26",
@@ -255924,9 +255948,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/27",
@@ -255937,9 +255961,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/28",
@@ -255950,9 +255974,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/29",
@@ -255963,9 +255987,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/30",
@@ -255976,9 +256000,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/31",
@@ -255989,9 +256013,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/1",
@@ -256002,9 +256026,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/2",
@@ -256015,9 +256039,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/3",
@@ -256028,9 +256052,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/4",
@@ -256041,9 +256065,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/5",
@@ -256054,9 +256078,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/6",
@@ -256067,9 +256091,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/7",
@@ -256080,9 +256104,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/8",
@@ -256093,9 +256117,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/9",
@@ -256106,9 +256130,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/10",
@@ -256119,9 +256143,9 @@
           "Jasmine Crockett": 32.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/11",
@@ -256132,9 +256156,9 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/12",
@@ -256145,9 +256169,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/13",
@@ -256158,9 +256182,9 @@
           "Jasmine Crockett": 34.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/14",
@@ -256171,9 +256195,9 @@
           "Jasmine Crockett": 32.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/15",
@@ -256184,9 +256208,9 @@
           "Jasmine Crockett": 28.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/16",
@@ -256197,9 +256221,9 @@
           "Jasmine Crockett": 17.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/17",
@@ -256210,9 +256234,9 @@
           "Jasmine Crockett": 17.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/18",
@@ -256223,9 +256247,9 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/19",
@@ -256236,9 +256260,9 @@
           "Jasmine Crockett": 15.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/20",
@@ -256249,9 +256273,9 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/21",
@@ -256262,9 +256286,9 @@
           "Jasmine Crockett": 15.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/22",
@@ -256275,9 +256299,9 @@
           "Jasmine Crockett": 18.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/23",
@@ -256288,9 +256312,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/24",
@@ -256301,9 +256325,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/25",
@@ -256314,9 +256338,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/26",
@@ -256327,9 +256351,9 @@
           "Jasmine Crockett": 20.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/27",
@@ -256340,9 +256364,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/28",
@@ -256353,9 +256377,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/29",
@@ -256366,9 +256390,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/30",
@@ -256379,9 +256403,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/31",
@@ -256392,9 +256416,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/1",
@@ -256405,9 +256429,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/2",
@@ -256418,9 +256442,9 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/3",
@@ -256431,9 +256455,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/4",
@@ -256444,9 +256468,9 @@
           "Jasmine Crockett": 20.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/5",
@@ -256457,9 +256481,9 @@
           "Jasmine Crockett": 20.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/6",
@@ -256470,9 +256494,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/7",
@@ -256483,9 +256507,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/8",
@@ -256496,9 +256520,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/9",
@@ -256509,9 +256533,9 @@
           "Jasmine Crockett": 26.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/10",
@@ -256522,9 +256546,9 @@
           "Jasmine Crockett": 34.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/11",
@@ -256549,9 +256573,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/14",
@@ -256562,9 +256586,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/15",
@@ -256575,9 +256599,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/16",
@@ -256588,9 +256612,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/17",
@@ -256601,9 +256625,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/18",
@@ -256614,9 +256638,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/19",
@@ -256627,9 +256651,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/20",
@@ -256640,9 +256664,9 @@
           "Jasmine Crockett": 29.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/21",
@@ -256653,9 +256677,9 @@
           "Jasmine Crockett": 28.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/22",
@@ -256666,9 +256690,9 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/23",
@@ -256679,9 +256703,9 @@
           "Jasmine Crockett": 21.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/24",
@@ -256692,9 +256716,9 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/25",
@@ -256705,9 +256729,9 @@
           "Jasmine Crockett": 21.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/26",
@@ -256718,9 +256742,9 @@
           "Jasmine Crockett": 30.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/27",
@@ -256731,9 +256755,9 @@
           "Jasmine Crockett": 30.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/28",
@@ -256744,9 +256768,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/1",
@@ -256757,9 +256781,9 @@
           "Jasmine Crockett": 31.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/2",
@@ -256770,9 +256794,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/3",
@@ -256783,9 +256807,9 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/4",
@@ -256796,9 +256820,9 @@
           "Jasmine Crockett": 0.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/5",
@@ -256809,9 +256833,9 @@
           "Jasmine Crockett": 1.0,
           "Juli\u00e1n Castro": 1.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         }
       ],
       "note": null
@@ -256822,7 +256846,7 @@
       "state": "US",
       "district": null,
       "description": "Which party will win the Senate in 2026?",
-      "dem_base": 0.435,
+      "dem_base": 0.44,
       "pm": "which-party-will-win-the-senate-in-2026",
       "kalshi": "CONTROLS-SENATE-26",
       "kalshi_url": "https://kalshi.com/markets/controls/senate-winner/controls-2026",
@@ -257843,7 +257867,7 @@
         {
           "date": "6/12",
           "polymarket": 44,
-          "kalshi": 43
+          "kalshi": 44
         }
       ],
       "note": null
@@ -260861,10 +260885,10 @@
           "Aldous Mina": 1.6,
           "Bert Mizusawa": 74.5,
           "Bryce Reeves": 0.5,
-          "Chuck Smith": 0.8,
-          "David Williams": 5.8,
-          "Jason Miyares": 0.6,
-          "Kim Farington": 16.5,
+          "Chuck Smith": 2.5,
+          "David Williams": 5.5,
+          "Jason Miyares": 2.1,
+          "Kim Farington": 17.0,
           "Winsome Earle-Sears": 2.0
         }
       ],
