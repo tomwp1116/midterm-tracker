@@ -759,7 +759,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": [
         {
@@ -1775,7 +1775,7 @@
         },
         {
           "date": "7/9",
-          "polymarket": 9,
+          "polymarket": 8,
           "kalshi": 12
         }
       ],
@@ -2126,7 +2126,7 @@
       "state": "AZ",
       "district": null,
       "description": "Will the Democratic party win the governorship in Arizona",
-      "dem_base": 0.78,
+      "dem_base": 0.782,
       "pm": "arizona-governor-winner-2026",
       "kalshi": "GOVPARTYAZ-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyaz/arizona-governor/govpartyaz-26",
@@ -6499,8 +6499,8 @@
           "date": "7/9",
           "Andy Biggs": 99.0,
           "Christian Grey": 0.4,
-          "Christopher Ames": 0.6,
-          "Dave Schweikert": 0.8,
+          "Christopher Ames": 0.5,
+          "Dave Schweikert": 0.7,
           "George Nicholson": 0.4,
           "Jason Beck": 0.4,
           "Karrin Taylor Robson": 0.7,
@@ -6517,7 +6517,7 @@
       "state": "CA",
       "district": null,
       "description": "Will the Democratic party win the governorship in California",
-      "dem_base": 0.919,
+      "dem_base": 0.929,
       "pm": "california-governor-election-2026",
       "kalshi": "GOVPARTYCA-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyca/california-governor/govpartyca-26",
@@ -6536,7 +6536,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 2
       },
       "polls": [
         {
@@ -7581,7 +7581,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 92
+          "kalshi": 93
         }
       ],
       "note": null
@@ -17683,7 +17683,7 @@
         },
         {
           "date": "7/9",
-          "Barbara Kirkmeyer": 1.4,
+          "Barbara Kirkmeyer": 1.6,
           "Greg Lopez": 0.1,
           "Jason Mikesell": 0.1,
           "Jason Ray Clark": 0.1,
@@ -17701,13 +17701,13 @@
       "state": "CT",
       "district": null,
       "description": "Will the Democratic party win the governorship in Connecticut",
-      "dem_base": 0.927,
+      "dem_base": 0.93,
       "pm": "connecticut-governor-winner-2026",
       "kalshi": "GOVPARTYCT-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyct/connecticut-governor/govpartyct-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/connecticut/",
       "poll_avg_dem": 49.0,
-      "market_gap": 43.8,
+      "market_gap": 44.0,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -18748,7 +18748,7 @@
       "state": "FL",
       "district": null,
       "description": "Will the Democratic party win the governorship in Florida",
-      "dem_base": 0.208,
+      "dem_base": 0.205,
       "pm": "florida-governor-winner-2026",
       "kalshi": "GOVPARTYFL-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyfl/florida-governor/govpartyfl-26",
@@ -18767,7 +18767,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": [
         {
@@ -20105,7 +20105,7 @@
         },
         {
           "date": "7/9",
-          "polymarket": 19,
+          "polymarket": 18,
           "kalshi": 22
         }
       ],
@@ -22700,7 +22700,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0.3
+        "change": -0.8
       },
       "polls": [
         {
@@ -25802,11 +25802,11 @@
         },
         {
           "date": "7/9",
-          "Byron Donalds": 96.0,
+          "Byron Donalds": 94.9,
           "Casey DeSantis": 0.1,
           "Charles Burkett": 0.1,
-          "James Fishback": 3.6,
-          "Jay Collins": 0.8,
+          "James Fishback": 3.7,
+          "Jay Collins": 1.4,
           "Jimmy Patronis": 0.1,
           "Matt Gaetz": 0.1,
           "Paul Renner": 0.1,
@@ -37650,13 +37650,13 @@
       "state": "MA",
       "district": null,
       "description": "Will the Democratic party win the governorship in Massachusetts",
-      "dem_base": 0.926,
+      "dem_base": 0.928,
       "pm": "massachusetts-governor-winner-2026",
       "kalshi": "GOVPARTYMA-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyma/massachusetts-governor/govpartyma-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/massachusetts/",
       "poll_avg_dem": 53.5,
-      "market_gap": 39.1,
+      "market_gap": 39.3,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -38767,13 +38767,13 @@
       "state": "ME",
       "district": null,
       "description": "Will the Democratic party win the governorship in Maine",
-      "dem_base": 0.892,
+      "dem_base": 0.901,
       "pm": "maine-governor-winner-2026",
       "kalshi": "GOVPARTYME-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyme/maine-governor/govpartyme-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/maine/",
       "poll_avg_dem": 51.5,
-      "market_gap": 37.7,
+      "market_gap": 38.6,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -39831,7 +39831,7 @@
         {
           "date": "7/9",
           "polymarket": 93,
-          "kalshi": 89
+          "kalshi": 90
         }
       ],
       "note": null
@@ -40141,9 +40141,9 @@
           "Hannah Pingree": 33.5,
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 21.0
         },
         {
@@ -40153,9 +40153,9 @@
           "Hannah Pingree": 33.0,
           "Jared Golden": 1.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 21.0
         },
         {
@@ -40165,9 +40165,9 @@
           "Hannah Pingree": 48.0,
           "Jared Golden": 2.0,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 9.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 23.0
         },
         {
@@ -40177,9 +40177,9 @@
           "Hannah Pingree": 47.5,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 23.0
         },
         {
@@ -40189,9 +40189,9 @@
           "Hannah Pingree": 58.0,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 8.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 19.0
         },
         {
@@ -40201,9 +40201,9 @@
           "Hannah Pingree": 57.0,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 8.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 20.0
         },
         {
@@ -40213,9 +40213,9 @@
           "Hannah Pingree": 57.0,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 7.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 20.0
         },
         {
@@ -40225,9 +40225,9 @@
           "Hannah Pingree": 57.0,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 7.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 19.5
         },
         {
@@ -40237,9 +40237,9 @@
           "Hannah Pingree": 56.5,
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 20.5
         },
         {
@@ -40249,9 +40249,9 @@
           "Hannah Pingree": 55.5,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 19.5
         },
         {
@@ -40261,9 +40261,9 @@
           "Hannah Pingree": 57.5,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40273,9 +40273,9 @@
           "Hannah Pingree": 57.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40285,9 +40285,9 @@
           "Hannah Pingree": 59.5,
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.5
         },
         {
@@ -40297,9 +40297,9 @@
           "Hannah Pingree": 59.5,
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.5
         },
         {
@@ -40309,9 +40309,9 @@
           "Hannah Pingree": 59.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40321,9 +40321,9 @@
           "Hannah Pingree": 59.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40333,9 +40333,9 @@
           "Hannah Pingree": 59.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40345,9 +40345,9 @@
           "Hannah Pingree": 59.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40357,9 +40357,9 @@
           "Hannah Pingree": 59.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40369,9 +40369,9 @@
           "Hannah Pingree": 57.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40381,9 +40381,9 @@
           "Hannah Pingree": 57.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40393,9 +40393,9 @@
           "Hannah Pingree": 57.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40405,9 +40405,9 @@
           "Hannah Pingree": 57.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40417,9 +40417,9 @@
           "Hannah Pingree": 58.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40429,9 +40429,9 @@
           "Hannah Pingree": 58.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40441,9 +40441,9 @@
           "Hannah Pingree": 63.5,
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40453,9 +40453,9 @@
           "Hannah Pingree": 63.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40465,9 +40465,9 @@
           "Hannah Pingree": 63.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40477,9 +40477,9 @@
           "Hannah Pingree": 63.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40489,9 +40489,9 @@
           "Hannah Pingree": 63.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 12.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40501,9 +40501,9 @@
           "Hannah Pingree": 62.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 14.0
         },
         {
@@ -40513,9 +40513,9 @@
           "Hannah Pingree": 61.5,
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.5
         },
         {
@@ -40525,9 +40525,9 @@
           "Hannah Pingree": 65.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.5
         },
         {
@@ -40537,9 +40537,9 @@
           "Hannah Pingree": 65.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 14.5
         },
         {
@@ -40549,9 +40549,9 @@
           "Hannah Pingree": 65.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 14.5
         },
         {
@@ -40561,9 +40561,9 @@
           "Hannah Pingree": 65.5,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 14.5
         },
         {
@@ -40573,9 +40573,9 @@
           "Hannah Pingree": 71.0,
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 5.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.5
         },
         {
@@ -40585,9 +40585,9 @@
           "Hannah Pingree": 73.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 4.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.0
         },
         {
@@ -40597,9 +40597,9 @@
           "Hannah Pingree": 73.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 4.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.0
         },
         {
@@ -40609,9 +40609,9 @@
           "Hannah Pingree": 73.5,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 4.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.0
         },
         {
@@ -40621,9 +40621,9 @@
           "Hannah Pingree": 73.5,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 4.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.0
         },
         {
@@ -40633,9 +40633,9 @@
           "Hannah Pingree": 71.0,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 4.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40645,9 +40645,9 @@
           "Hannah Pingree": 70.5,
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 4.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40657,9 +40657,9 @@
           "Hannah Pingree": 69.0,
           "Jared Golden": 2.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 4.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.5
         },
         {
@@ -40669,9 +40669,9 @@
           "Hannah Pingree": 68.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 5.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.5
         },
         {
@@ -40681,9 +40681,9 @@
           "Hannah Pingree": 68.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 5.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40693,9 +40693,9 @@
           "Hannah Pingree": 68.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 5.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40705,9 +40705,9 @@
           "Hannah Pingree": 67.5,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 5.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 18.0
         },
         {
@@ -40717,9 +40717,9 @@
           "Hannah Pingree": 69.5,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 5.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.0
         },
         {
@@ -40729,9 +40729,9 @@
           "Hannah Pingree": 52.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40741,9 +40741,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40753,9 +40753,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40765,9 +40765,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40777,9 +40777,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40789,9 +40789,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40801,9 +40801,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40813,9 +40813,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40825,9 +40825,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40837,9 +40837,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40849,9 +40849,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40861,9 +40861,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40873,9 +40873,9 @@
           "Hannah Pingree": 52.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40885,9 +40885,9 @@
           "Hannah Pingree": 51.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40897,9 +40897,9 @@
           "Hannah Pingree": 51.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -40909,9 +40909,9 @@
           "Hannah Pingree": 51.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40921,9 +40921,9 @@
           "Hannah Pingree": 51.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40933,9 +40933,9 @@
           "Hannah Pingree": 51.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40945,9 +40945,9 @@
           "Hannah Pingree": 51.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40957,9 +40957,9 @@
           "Hannah Pingree": 51.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40969,9 +40969,9 @@
           "Hannah Pingree": 51.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40981,9 +40981,9 @@
           "Hannah Pingree": 51.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -40993,9 +40993,9 @@
           "Hannah Pingree": 51.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41005,9 +41005,9 @@
           "Hannah Pingree": 50.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41017,9 +41017,9 @@
           "Hannah Pingree": 50.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41029,9 +41029,9 @@
           "Hannah Pingree": 49.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41041,9 +41041,9 @@
           "Hannah Pingree": 49.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41053,9 +41053,9 @@
           "Hannah Pingree": 50.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41065,9 +41065,9 @@
           "Hannah Pingree": 50.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41077,9 +41077,9 @@
           "Hannah Pingree": 48.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41089,9 +41089,9 @@
           "Hannah Pingree": 48.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41101,9 +41101,9 @@
           "Hannah Pingree": 48.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41113,9 +41113,9 @@
           "Hannah Pingree": 48.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41125,9 +41125,9 @@
           "Hannah Pingree": 48.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41137,9 +41137,9 @@
           "Hannah Pingree": 48.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 20.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 17.0
         },
         {
@@ -41149,9 +41149,9 @@
           "Hannah Pingree": 48.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.0
         },
         {
@@ -41161,9 +41161,9 @@
           "Hannah Pingree": 47.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.5
         },
         {
@@ -41173,9 +41173,9 @@
           "Hannah Pingree": 47.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.5
         },
         {
@@ -41185,9 +41185,9 @@
           "Hannah Pingree": 47.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.5
         },
         {
@@ -41197,9 +41197,9 @@
           "Hannah Pingree": 47.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 15.5
         },
         {
@@ -41209,9 +41209,9 @@
           "Hannah Pingree": 47.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -41221,9 +41221,9 @@
           "Hannah Pingree": 47.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 19.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -41233,9 +41233,9 @@
           "Hannah Pingree": 45.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 20.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 16.5
         },
         {
@@ -41245,9 +41245,9 @@
           "Hannah Pingree": 42.0,
           "Jared Golden": 5.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 21.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 20.0
         },
         {
@@ -41257,9 +41257,9 @@
           "Hannah Pingree": 40.5,
           "Jared Golden": 5.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 20.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 22.0
         },
         {
@@ -41269,9 +41269,9 @@
           "Hannah Pingree": 40.0,
           "Jared Golden": 5.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 21.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 22.0
         },
         {
@@ -41281,9 +41281,9 @@
           "Hannah Pingree": 36.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 28.5
         },
         {
@@ -41293,9 +41293,9 @@
           "Hannah Pingree": 36.5,
           "Jared Golden": 5.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 28.5
         },
         {
@@ -41313,9 +41313,9 @@
           "Hannah Pingree": 37.5,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 28.5
         },
         {
@@ -41416,9 +41416,9 @@
           "Hannah Pingree": 31.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 17.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 34.0
         },
         {
@@ -41428,9 +41428,9 @@
           "Hannah Pingree": 31.0,
           "Jared Golden": 4.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 34.5
         },
         {
@@ -41440,9 +41440,9 @@
           "Hannah Pingree": 30.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 33.0
         },
         {
@@ -41461,9 +41461,9 @@
           "Hannah Pingree": 31.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 17.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 33.5
         },
         {
@@ -41473,9 +41473,9 @@
           "Hannah Pingree": 31.0,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 34.5
         },
         {
@@ -41485,9 +41485,9 @@
           "Hannah Pingree": 31.0,
           "Jared Golden": 5.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 32.0
         },
         {
@@ -41505,9 +41505,9 @@
           "Hannah Pingree": 31.0,
           "Jared Golden": 5.0,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 31.5
         },
         {
@@ -41524,9 +41524,9 @@
           "Chellie Pingree": 1.0,
           "Hannah Pingree": 29.5,
           "Jared Golden": 5.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 33.5
         },
         {
@@ -41536,9 +41536,9 @@
           "Hannah Pingree": 30.0,
           "Jared Golden": 5.0,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 31.5
         },
         {
@@ -41573,9 +41573,9 @@
           "Hannah Pingree": 31.5,
           "Jared Golden": 4.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 18.5,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 32.0
         },
         {
@@ -41585,9 +41585,9 @@
           "Hannah Pingree": 32.5,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 1.0,
           "Ryan Fecteau": 1.0,
           "Shenna Bellows": 17.0,
-          "Spencer Thibodeau": 1.0,
           "Troy Jackson": 33.0
         },
         {
@@ -41613,9 +41613,9 @@
           "Hannah Pingree": 36.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 1.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 17.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.0
         },
         {
@@ -41625,9 +41625,9 @@
           "Hannah Pingree": 36.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 17.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.0
         },
         {
@@ -41637,9 +41637,9 @@
           "Hannah Pingree": 36.0,
           "Jared Golden": 3.5,
           "Kenneth Forrest Pinet": 0.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 16.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.0
         },
         {
@@ -41658,9 +41658,9 @@
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 6.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 14.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 26.0
         },
         {
@@ -41671,9 +41671,9 @@
           "Jared Golden": 2.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 19.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 17.5
         },
         {
@@ -41684,9 +41684,9 @@
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 27.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 12.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 15.5
         },
         {
@@ -41697,9 +41697,9 @@
           "Jared Golden": 3.0,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 26.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 12.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 16.0
         },
         {
@@ -41710,9 +41710,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 26.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 14.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 15.5
         },
         {
@@ -41723,9 +41723,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 34.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 16.0
         },
         {
@@ -41736,9 +41736,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 33.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 14.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 15.0
         },
         {
@@ -41749,9 +41749,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 36.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 12.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 15.0
         },
         {
@@ -41762,9 +41762,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 36.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 12.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 16.0
         },
         {
@@ -41775,9 +41775,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 37.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 16.5
         },
         {
@@ -41788,9 +41788,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 36.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 15.5
         },
         {
@@ -41801,9 +41801,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 16.5
         },
         {
@@ -41814,9 +41814,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 36.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 16.5
         },
         {
@@ -41827,9 +41827,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 36.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 15.5
         },
         {
@@ -41840,9 +41840,9 @@
           "Jared Golden": 1.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 36.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 15.5
         },
         {
@@ -41853,9 +41853,9 @@
           "Jared Golden": 1.0,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 51.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 13.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 17.5
         },
         {
@@ -41866,9 +41866,9 @@
           "Jared Golden": 1.0,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 49.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 4.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 19.5
         },
         {
@@ -41879,9 +41879,9 @@
           "Jared Golden": 1.0,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 47.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 4.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 18.5
         },
         {
@@ -41892,9 +41892,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 43.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 4.5,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 24.5
         },
         {
@@ -41905,9 +41905,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 45.0,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 4.6,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 23.5
         },
         {
@@ -41918,9 +41918,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 43.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 4.7,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 25.5
         },
         {
@@ -41931,9 +41931,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 41.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 4.7,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 26.5
         },
         {
@@ -41944,9 +41944,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 43.0,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 4.7,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 27.0
         },
         {
@@ -41957,9 +41957,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 43.0,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 4.7,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 27.5
         },
         {
@@ -41970,9 +41970,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 43.0,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 3.5,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 27.5
         },
         {
@@ -41983,9 +41983,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 42.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 4.0,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 28.5
         },
         {
@@ -41996,9 +41996,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 43.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 3.0,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 28.5
         },
         {
@@ -42009,9 +42009,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 43.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 3.5,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 28.5
         },
         {
@@ -42022,9 +42022,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 43.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 3.0,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 26.5
         },
         {
@@ -42035,9 +42035,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 41.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 2.3,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 26.5
         },
         {
@@ -42048,9 +42048,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 41.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 2.7,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 26.5
         },
         {
@@ -42061,9 +42061,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 41.0,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 3.0,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 27.0
         },
         {
@@ -42074,9 +42074,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 40.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 2.7,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 25.5
         },
         {
@@ -42087,9 +42087,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 39.0,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 3.6,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 26.0
         },
         {
@@ -42100,9 +42100,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.6,
           "Nirav Shah": 39.0,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 6.0,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 26.0
         },
         {
@@ -42113,9 +42113,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.6,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 5.5,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 28.5
         },
         {
@@ -42126,9 +42126,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.0,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 5.9,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 26.5
         },
         {
@@ -42139,9 +42139,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 40.0,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 5.8,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 26.5
         },
         {
@@ -42152,9 +42152,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 8.1,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 27.0
         },
         {
@@ -42165,9 +42165,9 @@
           "Jared Golden": 0.9,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 8.5,
-          "Spencer Thibodeau": 0.8,
           "Troy Jackson": 28.5
         },
         {
@@ -42178,9 +42178,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 32.5
         },
         {
@@ -42191,9 +42191,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.2,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 34.5
         },
         {
@@ -42204,9 +42204,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 10.5,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 31.5
         },
         {
@@ -42217,9 +42217,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 31.5
         },
         {
@@ -42230,9 +42230,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 32.0
         },
         {
@@ -42243,9 +42243,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 32.0
         },
         {
@@ -42256,9 +42256,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 31.5
         },
         {
@@ -42269,9 +42269,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 31.5
         },
         {
@@ -42282,9 +42282,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 29.5
         },
         {
@@ -42295,9 +42295,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 29.5
         },
         {
@@ -42308,9 +42308,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 9.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 31.0
         },
         {
@@ -42321,9 +42321,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 9.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 32.5
         },
         {
@@ -42334,9 +42334,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 9.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 31.5
         },
         {
@@ -42347,9 +42347,9 @@
           "Jared Golden": 0.8,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 9.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 32.5
         },
         {
@@ -42360,9 +42360,9 @@
           "Jared Golden": 0.7,
           "Kenneth Forrest Pinet": 0.7,
           "Nirav Shah": 39.5,
+          "Rachel Talbot Ross": 0.7,
           "Ryan Fecteau": 0.7,
           "Shenna Bellows": 13.0,
-          "Spencer Thibodeau": 0.7,
           "Troy Jackson": 29.5
         },
         {
@@ -42373,9 +42373,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 44.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 11.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 29.5
         },
         {
@@ -42386,9 +42386,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 47.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.0
         },
         {
@@ -42399,9 +42399,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 47.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 8.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.5
         },
         {
@@ -42412,9 +42412,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 47.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 9.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.0
         },
         {
@@ -42425,9 +42425,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 47.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 7.6,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 30.5
         },
         {
@@ -42438,9 +42438,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 48.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 7.6,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 29.5
         },
         {
@@ -42451,9 +42451,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 47.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 7.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 25.5
         },
         {
@@ -42464,9 +42464,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 49.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 8.1,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 26.0
         },
         {
@@ -42477,9 +42477,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 50.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 9.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 28.0
         },
         {
@@ -42490,9 +42490,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 33.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 7.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 37.5
         },
         {
@@ -42503,9 +42503,9 @@
           "Jared Golden": 0.6,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 34.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 6.3,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 45.5
         },
         {
@@ -42516,9 +42516,9 @@
           "Jared Golden": 2.6,
           "Kenneth Forrest Pinet": 0.8,
           "Nirav Shah": 34.5,
+          "Rachel Talbot Ross": 0.8,
           "Ryan Fecteau": 0.8,
           "Shenna Bellows": 6.0,
-          "Spencer Thibodeau": 0.6,
           "Troy Jackson": 44.0
         },
         {
@@ -42529,9 +42529,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 39.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 3.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 41.5
         },
         {
@@ -42542,9 +42542,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 35.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 53.5
         },
         {
@@ -42555,9 +42555,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 28.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.3,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 60.5
         },
         {
@@ -42568,9 +42568,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 27.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.6,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 61.5
         },
         {
@@ -42581,9 +42581,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 26.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.6,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 62.5
         },
         {
@@ -42594,9 +42594,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 26.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.8,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 62.0
         },
         {
@@ -42607,9 +42607,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 31.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.5,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 60.5
         },
         {
@@ -42620,9 +42620,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 30.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.6,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 60.5
         },
         {
@@ -42633,9 +42633,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 35.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 2.0,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 55.5
         },
         {
@@ -42646,9 +42646,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 49.5,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 1.4,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 41.0
         },
         {
@@ -42659,9 +42659,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.5,
           "Nirav Shah": 43.0,
+          "Rachel Talbot Ross": 0.5,
           "Ryan Fecteau": 0.5,
           "Shenna Bellows": 1.4,
-          "Spencer Thibodeau": 0.5,
           "Troy Jackson": 41.5
         },
         {
@@ -42672,9 +42672,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 41.0,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 1.4,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 41.0
         },
         {
@@ -42685,9 +42685,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 43.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 3.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 34.5
         },
         {
@@ -42698,9 +42698,9 @@
           "Jared Golden": 0.5,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 48.0,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 3.6,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 22.5
         },
         {
@@ -42711,9 +42711,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 58.0,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 3.0,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 28.0
         },
         {
@@ -42724,9 +42724,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 16.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 24.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 5.4
         },
         {
@@ -42737,9 +42737,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 18.0,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 24.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 4.3
         },
         {
@@ -42750,9 +42750,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 19.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 22.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 3.7
         },
         {
@@ -42763,9 +42763,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 18.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 23.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 3.1
         },
         {
@@ -42776,9 +42776,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 15.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 23.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 3.2
         },
         {
@@ -42789,9 +42789,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 15.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 23.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 1.4
         },
         {
@@ -42802,9 +42802,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 15.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 29.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 1.1
         },
         {
@@ -42815,9 +42815,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 17.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 25.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 2.7
         },
         {
@@ -42828,9 +42828,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 16.5,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 25.5,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 4.0
         },
         {
@@ -42841,9 +42841,9 @@
           "Jared Golden": 0.1,
           "Kenneth Forrest Pinet": 0.1,
           "Nirav Shah": 0.1,
+          "Rachel Talbot Ross": 0.1,
           "Ryan Fecteau": 0.1,
           "Shenna Bellows": 0.1,
-          "Spencer Thibodeau": 0.1,
           "Troy Jackson": 0.1
         }
       ],
@@ -53739,7 +53739,7 @@
       "kalshi_url": "https://kalshi.com/markets/govpartymn/minnesota-governor/govpartymn-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/minnesota/",
       "poll_avg_dem": 28.8,
-      "market_gap": 64.4,
+      "market_gap": 64.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -57272,7 +57272,7 @@
           "Keith Ellison": 0.5,
           "Melvin Carter": 0.4,
           "Steve Simon": 0.5,
-          "Tim Walz": 0.9
+          "Tim Walz": 0.8
         }
       ],
       "note": null
@@ -57302,7 +57302,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 4.5
+        "change": 4.0
       },
       "polls": null,
       "time_series": [
@@ -59800,8 +59800,8 @@
           "Jim Schultz": 0.5,
           "Kendall Qualls": 29.5,
           "Kristin Robbins": 0.5,
-          "Lisa Demuth": 42.5,
-          "Mike Lindell": 25.0,
+          "Lisa Demuth": 42.0,
+          "Mike Lindell": 24.5,
           "Scott Jensen": 0.5
         }
       ],
@@ -63681,7 +63681,7 @@
       "state": "NM",
       "district": null,
       "description": "Will the Democratic party win the governorship in New Mexico",
-      "dem_base": 0.894,
+      "dem_base": 0.896,
       "pm": "new-mexico-governor-winner-2026",
       "kalshi": "GOVPARTYNM-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartynm/new-mexico-governor/govpartynm-26",
@@ -68771,13 +68771,13 @@
       "state": "NY",
       "district": null,
       "description": "Will the Democratic party win the governorship in New York",
-      "dem_base": 0.915,
+      "dem_base": 0.916,
       "pm": "new-york-governor-winner-2026",
       "kalshi": "GOVPARTYNY-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyny/new-york-governor/govpartyny-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/new-york/",
       "poll_avg_dem": 51.0,
-      "market_gap": 40.5,
+      "market_gap": 40.6,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -79052,7 +79052,7 @@
       "state": "OK",
       "district": null,
       "description": "Will the Democratic party win the governorship in Oklahoma",
-      "dem_base": 0.089,
+      "dem_base": 0.085,
       "pm": null,
       "kalshi": "GOVPARTYOK-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyok/oklahoma-governor/govpartyok-26",
@@ -79071,7 +79071,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -80073,7 +80073,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 9
+          "kalshi": 8
         }
       ],
       "note": null
@@ -80084,7 +80084,7 @@
       "state": "OR",
       "district": null,
       "description": "Will the Democratic party win the governorship in Oregon",
-      "dem_base": 0.917,
+      "dem_base": 0.921,
       "pm": null,
       "kalshi": "GOVPARTYOR-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyor/oregon-governor/govpartyor-26",
@@ -84017,13 +84017,13 @@
       "state": "RI",
       "district": null,
       "description": "Will the Democratic party win the governorship in Rhode Island",
-      "dem_base": 0.903,
+      "dem_base": 0.913,
       "pm": "rhode-island-governor-winner-2026",
       "kalshi": "GOVPARTYRI-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyri/rhode-island-governor/govpartyri-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/rhode-island/",
       "poll_avg_dem": 32.5,
-      "market_gap": 57.8,
+      "market_gap": 58.8,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -85179,7 +85179,7 @@
         {
           "date": "7/9",
           "polymarket": 95,
-          "kalshi": 91
+          "kalshi": 92
         }
       ],
       "note": null
@@ -92025,7 +92025,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 3.5
+        "change": 5.0
       },
       "polls": [
         {
@@ -95184,10 +95184,10 @@
           "Ben Wikler": 0.1,
           "Brett Hulsey": 0.1,
           "David Crowley": 0.1,
-          "Francesca Hong": 49.5,
+          "Francesca Hong": 51.0,
           "Joel Brennan": 0.6,
-          "Kelda Roys": 0.9,
-          "Mandela Barnes": 19.5,
+          "Kelda Roys": 0.8,
+          "Mandela Barnes": 18.5,
           "Missy Hughes": 0.1,
           "Sara Rodriguez": 33.5,
           "Tony Evers": 0.1
@@ -95220,7 +95220,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -0.1
+        "change": 0.1
       },
       "polls": [
         {
@@ -97415,13 +97415,13 @@
         },
         {
           "date": "7/9",
-          "Andy Manske": 3.0,
+          "Andy Manske": 2.5,
           "Bryan Steil": 1.3,
           "Eric Hovde": 0.5,
           "Josh Schoemann": 1.5,
           "Patrick Testin": 1.2,
           "Rebecca Kleefisch": 1.6,
-          "Tom Tiffany": 96.8,
+          "Tom Tiffany": 97.0,
           "Tommy Thompson": 0.5
         }
       ],
@@ -114327,7 +114327,7 @@
       "state": "CO",
       "district": "3",
       "description": "Will Democratic win the House race for CO-3?",
-      "dem_base": 0.32,
+      "dem_base": 0.33,
       "pm": null,
       "kalshi": "HOUSECO3-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseco3/house-co-3/houseco3-26",
@@ -115378,7 +115378,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 4
+        "change": 3
       },
       "polls": null,
       "time_series": [
@@ -116380,7 +116380,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 84
+          "kalshi": 83
         }
       ],
       "note": null
@@ -116825,7 +116825,7 @@
       "state": "CT",
       "district": "5",
       "description": "Will a Democrat win the House race for CT-5?",
-      "dem_base": 0.839,
+      "dem_base": 0.885,
       "pm": null,
       "kalshi": "HOUSECT5-26-D",
       "kalshi_url": "https://kalshi.com/markets/housect5/house-ct-5th/housect5-26",
@@ -116844,7 +116844,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 15
+        "change": 18
       },
       "polls": null,
       "time_series": [
@@ -117846,7 +117846,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 85
+          "kalshi": 88
         }
       ],
       "note": null
@@ -123069,11 +123069,11 @@
       "chamber": "house",
       "state": "IA",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the Iowa's 2nd District House election be at least 1 percentage points?",
-      "dem_base": 0.44,
+      "description": "Will the margin of victory for Republicans in the Iowa's 2nd District House election be at least 11 percentage points?",
+      "dem_base": 0.89,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-IA02D-P1",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ia02d",
+      "kalshi": "KXMIDTERMMOV-IA02R-P11",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ia02r",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -123087,9 +123087,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": -2
+        "label": "Major Shift",
+        "level": 3,
+        "change": 37
       },
       "polls": null,
       "time_series": [
@@ -123337,6 +123337,11 @@
           "date": "7/8",
           "polymarket": null,
           "kalshi": 67
+        },
+        {
+          "date": "7/9",
+          "polymarket": null,
+          "kalshi": 89
         }
       ],
       "note": null
@@ -124378,11 +124383,11 @@
       "chamber": "house",
       "state": "IL",
       "district": null,
-      "description": "Will the total vote count for all participants in Illinois 11 House General Election be above 280000?",
-      "dem_base": 0.875,
+      "description": "Will the margin of victory for Democrats in the Illinois's 2nd District House election be at least 28 percentage points?",
+      "dem_base": 0.949,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-IL11-280000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-il11",
+      "kalshi": "KXMIDTERMMOV-IL02D-P28",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-il02d",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -124396,9 +124401,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -4
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -124651,6 +124656,11 @@
           "date": "7/8",
           "polymarket": null,
           "kalshi": 52
+        },
+        {
+          "date": "7/9",
+          "polymarket": null,
+          "kalshi": 56
         }
       ],
       "note": null
@@ -130254,7 +130264,7 @@
       "state": "MI",
       "district": "4",
       "description": "Will Democratic win the House race for MI-4?",
-      "dem_base": 0.395,
+      "dem_base": 0.335,
       "pm": null,
       "kalshi": "HOUSEMI4-26-D",
       "kalshi_url": "https://kalshi.com/markets/housemi4/house-mi-4/housemi4-26",
@@ -130271,9 +130281,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 0
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": -6
       },
       "polls": null,
       "time_series": [
@@ -131275,7 +131285,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 39
+          "kalshi": 33
         }
       ],
       "note": null
@@ -135270,7 +135280,7 @@
       "state": "MN",
       "district": null,
       "description": "Will the margin of victory for Democrats in the Minnesota's 1st District House election be at least 2 percentage points?",
-      "dem_base": 0.235,
+      "dem_base": 0.175,
       "pm": null,
       "kalshi": "KXMIDTERMMOV-MN01D-P2",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mn01d",
@@ -135287,9 +135297,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 1
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": -5
       },
       "polls": null,
       "time_series": [
@@ -135586,7 +135596,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 31
+          "kalshi": 25
         }
       ],
       "note": null
@@ -137302,7 +137312,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -138304,7 +138314,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 53
+          "kalshi": 54
         }
       ],
       "note": null
@@ -146117,7 +146127,7 @@
       "state": "NJ",
       "district": null,
       "description": "Will the margin of victory for Democrats in the New Jersey's 1st District House election be at least 15 percentage points?",
-      "dem_base": 0.785,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "KXMIDTERMMOV-NJ01D-P15",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-nj01d",
@@ -146134,9 +146144,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -8
+        "label": "Steady",
+        "level": 1,
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -146438,7 +146448,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 73
+          "kalshi": 81
         }
       ],
       "note": null
@@ -154047,7 +154057,7 @@
       "state": "NY",
       "district": "17",
       "description": "Will Democratic win the House race for NY-17?",
-      "dem_base": 0.735,
+      "dem_base": 0.725,
       "pm": null,
       "kalshi": "HOUSENY17-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny17/house-ny-17/houseny17-26",
@@ -160445,7 +160455,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 10
+        "change": -26
       },
       "polls": null,
       "time_series": [
@@ -160777,7 +160787,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 87
+          "kalshi": 51
         }
       ],
       "note": null
@@ -168452,7 +168462,7 @@
       "state": "TN",
       "district": null,
       "description": "Will the total vote count for all participants in Tennessee 01 House General Election be above 193000?",
-      "dem_base": 0.185,
+      "dem_base": 0.19,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-TN01-193000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tn01",
@@ -168814,7 +168824,7 @@
       "state": "TX",
       "district": "28",
       "description": "Will Democratic win the House race for TX-28?",
-      "dem_base": 0.835,
+      "dem_base": 0.825,
       "pm": null,
       "kalshi": "HOUSETX28-26-D",
       "kalshi_url": "https://kalshi.com/markets/housetx28/house-tx-28/housetx28-26",
@@ -168833,7 +168843,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -169835,7 +169845,7 @@
         {
           "date": "7/9",
           "polymarket": null,
-          "kalshi": 82
+          "kalshi": 81
         }
       ],
       "note": null
@@ -194491,7 +194501,7 @@
         {
           "date": "7/9",
           "Alexander Vindman": 92.5,
-          "Angie Nixon": 5.5,
+          "Angie Nixon": 6.0,
           "Charlie Crist": 0.4,
           "Hector Mujica": 0.5,
           "Jared Moskowitz": 1.7,
@@ -205867,1249 +205877,1249 @@
       "time_series": [
         {
           "date": "11/5",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 3.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/6",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 3.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/7",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 3.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/8",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 3.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/9",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 3.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/10",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 3.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/11",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/12",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/13",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/14",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/15",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/16",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/17",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/18",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/19",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 44.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/20",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 43.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/21",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/22",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/23",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/24",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/25",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/26",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 41.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 7.5,
           "Rod Blajegovich": 1.0
         },
         {
           "date": "11/27",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 7.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/28",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 7.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/29",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 7.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "11/30",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 7.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/1",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 7.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/2",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 7.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/3",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 6.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/4",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 6.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/5",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 5.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/6",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 5.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/7",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 6.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/8",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/9",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/10",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/11",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/12",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/13",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/14",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/15",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/16",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/18",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/19",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/20",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/21",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/22",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/23",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/24",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/25",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/26",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 9.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/27",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 34.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/28",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/29",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/30",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "12/31",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/1",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/2",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/3",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/4",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/5",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/6",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/7",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 8.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/8",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 25.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 66.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 6.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/9",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 3.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/10",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/11",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/12",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/13",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/14",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/16",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 72.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 3.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/17",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 3.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/18",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 3.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/19",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/20",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/21",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 5.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/22",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 5.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/23",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 5.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/24",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 5.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/25",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 68.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 5.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/26",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 4.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/27",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 60.5,
-          "Robert Peters": 1.0,
           "Robin Kelly": 3.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/28",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 37.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/29",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/30",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 64.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "1/31",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 67.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/1",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 67.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/2",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 29.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/3",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/4",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 65.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/5",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 33.0,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 10.0,
           "Raja Krishnamoorthi": 68.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 3.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/6",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 68.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/7",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/8",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/9",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/10",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.5,
           "Rod Blajegovich": 0.5
         },
@@ -207126,228 +207136,240 @@
         },
         {
           "date": "2/13",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 45.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/14",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 44.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/15",
           "Juliana Stratton": 45.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/16",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 43.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/17",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 44.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/18",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 42.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robin Kelly": 3.0
         },
         {
           "date": "2/19",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 42.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 57.0,
           "Robin Kelly": 3.0
         },
         {
           "date": "2/20",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 42.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 2.5
         },
         {
           "date": "2/21",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 39.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 2.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "2/22",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 60.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/23",
-          "Alexi Giannoulias": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 40.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/24",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 58.0,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/25",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/26",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 48.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 50.5
         },
         {
           "date": "2/27",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 40.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/28",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 41.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.0,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/1",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "3/2",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 36.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 62.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/3",
-          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 32.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 67.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/4",
-          "Alexi Giannoulias": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/5",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 53.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 47.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 1.0,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "3/6",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 53.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/7",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "3/8",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 53.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/9",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 52.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "3/10",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 43.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/11",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 39.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 62.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/12",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "Juliana Stratton": 40.0,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 1.0
         },
@@ -207359,67 +207381,69 @@
         },
         {
           "date": "3/14",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 51.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 48.0,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/15",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Juliana Stratton": 50.5,
+          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 50.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/16",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 51.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 48.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 0.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "3/17",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 48.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.0,
-          "Robert Peters": 0.5,
           "Robin Kelly": 0.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "3/18",
-          "Alexi Giannoulias": 0.5,
+          "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
+          "JB Pritzker": 0.5,
           "Juliana Stratton": 99.5,
-          "Kwame Raoul": 0.5,
-          "Meredith Shiner": 0.5,
+          "Lauren Underwood": 0.5,
+          "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 0.5,
-          "Robert Peters": 0.5,
           "Robin Kelly": 0.5,
           "Rod Blajegovich": 0.5
         },
         {
           "date": "3/19",
-          "Alexi Giannoulias": 1.0,
+          "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
+          "JB Pritzker": 1.0,
           "Juliana Stratton": 99.0,
-          "Kwame Raoul": 1.0,
-          "Meredith Shiner": 1.0,
+          "Lauren Underwood": 1.0,
+          "Michael Frerichs": 1.0,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 1.0,
-          "Robert Peters": 1.0,
           "Robin Kelly": 1.0,
           "Rod Blajegovich": 1.0
         }
@@ -210981,7 +211005,7 @@
       "state": "LA",
       "district": null,
       "description": "Will Democrats win the Senate race in Kentucky?",
-      "dem_base": 0.077,
+      "dem_base": 0.075,
       "pm": null,
       "kalshi": "SENATELA-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatela/senate-races/senatela-26",
@@ -212019,7 +212043,7 @@
       "kalshi_url": "https://kalshi.com/markets/senatema/massachusetts-senate-race/senatema-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/massachusetts/",
       "poll_avg_dem": 52.2,
-      "market_gap": 44.5,
+      "market_gap": 44.6,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -214597,7 +214621,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1.5
+        "change": -1.0
       },
       "polls": [
         {
@@ -216569,8 +216593,8 @@
           "date": "7/9",
           "Alexander Rikleen": 0.5,
           "Ayanna Pressley": 0.4,
-          "Ed Markey": 74.5,
-          "Seth Moulton": 26.5
+          "Ed Markey": 75.0,
+          "Seth Moulton": 25.5
         }
       ],
       "note": null
@@ -216581,7 +216605,7 @@
       "state": "ME",
       "district": null,
       "description": "Will Democrats win the Senate race in Maine?",
-      "dem_base": 0.63,
+      "dem_base": 0.633,
       "pm": "maine-senate-election-winner",
       "kalshi": "SENATEME-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateme/maine-senate-race/senateme-26",
@@ -216598,9 +216622,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 6
+        "label": "Major Shift",
+        "level": 3,
+        "change": 7
       },
       "polls": [
         {
@@ -218568,8 +218592,8 @@
         },
         {
           "date": "7/9",
-          "polymarket": 63,
-          "kalshi": 64
+          "polymarket": 64,
+          "kalshi": 62
         }
       ],
       "note": null
@@ -221334,7 +221358,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221345,7 +221369,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221356,7 +221380,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221367,7 +221391,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221378,7 +221402,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221389,7 +221413,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221400,7 +221424,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221411,7 +221435,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221422,7 +221446,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221433,7 +221457,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221444,7 +221468,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221455,7 +221479,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221466,7 +221490,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221477,7 +221501,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221488,7 +221512,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221499,7 +221523,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221510,7 +221534,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221521,7 +221545,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221532,7 +221556,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221543,7 +221567,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221554,7 +221578,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221565,7 +221589,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221576,7 +221600,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221587,7 +221611,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221598,7 +221622,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221609,7 +221633,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221620,7 +221644,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221631,7 +221655,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221642,7 +221666,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -221653,7 +221677,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player R": 0.0,
           "Troy Jackson": 0.0
         }
       ],
@@ -222812,13 +222836,13 @@
       "state": "MI",
       "district": null,
       "description": "Will Democrats win the Senate race in Michigan?",
-      "dem_base": 0.71,
+      "dem_base": 0.712,
       "pm": "michigan-senate-election-winner",
       "kalshi": "SENATEMI-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatemi/michigan-senate-race/senatemi-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/michigan/",
       "poll_avg_dem": 44.0,
-      "market_gap": 27.0,
+      "market_gap": 27.2,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -222831,7 +222855,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 1
       },
       "polls": [
         {
@@ -225023,7 +225047,7 @@
         },
         {
           "date": "7/9",
-          "polymarket": 72,
+          "polymarket": 73,
           "kalshi": 70
         }
       ],
@@ -225052,9 +225076,9 @@
       "race_to_watch": true,
       "had_disagreement": true,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -6.0
+        "label": "Major Shift",
+        "level": 3,
+        "change": -7.0
       },
       "polls": [
         {
@@ -227575,14 +227599,14 @@
           "date": "3/17",
           "Abdul El-Sayed": 21.5,
           "Andy Levin": 0.5,
+          "Angie Craig": 0.0,
           "Dana Nessel": 0.5,
           "Haley Stevens": 21.0,
           "Kristen McDonald Rivet": 0.5,
           "Mallory McMorrow": 59.0,
           "Matt Sahr": 0.5,
           "Rashida Tlaib": 1.0,
-          "Sarah Anthony": 0.5,
-          "Steve Simon": 0.0
+          "Sarah Anthony": 0.5
         },
         {
           "date": "3/18",
@@ -228942,10 +228966,10 @@
         },
         {
           "date": "7/9",
-          "Abdul El-Sayed": 81.5,
+          "Abdul El-Sayed": 80.5,
           "Andy Levin": 0.1,
           "Dana Nessel": 0.1,
-          "Haley Stevens": 18.5,
+          "Haley Stevens": 19.5,
           "Kristen McDonald Rivet": 0.1,
           "Mallory McMorrow": 0.1,
           "Matt Sahr": 0.1,
@@ -248483,7 +248507,7 @@
           "Chris Sununu": 0.7,
           "Dan Innis": 0.7,
           "John E. Sununu": 94.8,
-          "Scott Brown": 4.3
+          "Scott Brown": 4.2
         }
       ],
       "note": null
@@ -274733,11 +274757,11 @@
         },
         {
           "date": "7/9",
-          "Aldous Mina": 1.7,
+          "Aldous Mina": 1.8,
           "Bert Mizusawa": 79.0,
           "Bryce Reeves": 0.9,
           "Chuck Smith": 1.8,
-          "David Williams": 2.1,
+          "David Williams": 1.8,
           "Jason Miyares": 2.1,
           "Kim Farington": 17.5,
           "Winsome Earle-Sears": 1.8
