@@ -5,10 +5,10 @@
     "senate_rep_pct": 50,
     "house_dem_pct": 86,
     "house_rep_pct": 14,
-    "battleground_senate": 2,
+    "battleground_senate": 1,
     "house_districts_tracked": 116,
     "seats_up": 35,
-    "polls_tracked": 1409
+    "polls_tracked": 1411
   },
   "races": [
     {
@@ -1087,11 +1087,11 @@
       "chamber": "governor",
       "state": "AL",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Alabama",
+      "description": "Will the margin of victory for Republicans in the governor election in Alabama be at least 10 percentage points?",
       "dem_base": 0.1,
       "pm": "alabama-governor-winner-2026",
-      "kalshi": "GOVPARTYAL-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyal/alabama-governor/govpartyal-26",
+      "kalshi": "KXMIDTERMMOV-ALGOVR-P10",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-algovr",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/alabama/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -2124,7 +2124,7 @@
         {
           "date": "9/11",
           "polymarket": 11,
-          "kalshi": 9
+          "kalshi": 18
         }
       ],
       "note": null
@@ -2473,11 +2473,11 @@
       "chamber": "governor",
       "state": "AZ",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Arizona",
+      "description": "Will the margin of victory for Democrats in the governor election in Arizona be at least 11 percentage points?",
       "dem_base": 0.865,
       "pm": "arizona-governor-winner-2026",
-      "kalshi": "GOVPARTYAZ-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyaz/arizona-governor/govpartyaz-26",
+      "kalshi": "KXMIDTERMMOV-AZGOVD-P11",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-azgovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/arizona/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -3622,7 +3622,7 @@
         {
           "date": "9/11",
           "polymarket": 86,
-          "kalshi": 87
+          "kalshi": 86
         }
       ],
       "note": null
@@ -7059,7 +7059,7 @@
       "state": "CA",
       "district": null,
       "description": "Will the Democratic party win the governorship in California",
-      "dem_base": 0.962,
+      "dem_base": 0.964,
       "pm": "california-governor-election-2026",
       "kalshi": "GOVPARTYCA-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyca/california-governor/govpartyca-26",
@@ -14432,11 +14432,11 @@
       "chamber": "governor",
       "state": "CO",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Colorado",
-      "dem_base": 0.967,
+      "description": "Will the margin of victory for Democrats in the governor election in Colorado be at least 12 percentage points?",
+      "dem_base": 0.968,
       "pm": "colorado-governor-winner-2026",
-      "kalshi": "GOVPARTYCO-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyco/colorado-governor/govpartyco-26",
+      "kalshi": "KXMIDTERMMOV-COGOVD-P12",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-cogovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/colorado/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -19135,8 +19135,8 @@
       "kalshi": "GOVPARTYCT-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyct/connecticut-governor/govpartyct-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/connecticut/",
-      "poll_avg_dem": 51.7,
-      "market_gap": 45.0,
+      "poll_avg_dem": 51.0,
+      "market_gap": 45.7,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -19152,6 +19152,20 @@
         "change": 0
       },
       "polls": [
+        {
+          "date": "2026-09-08",
+          "pollster": "GreatBlue Research",
+          "c1": "Ned Lamont (D)",
+          "d": 48.0,
+          "c2": "Ryan Fazio (R)",
+          "r": 34.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(D) +14.0",
+          "matchup": "Ned Lamont (D) vs. Ryan Fazio (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_Connecticut_gubernatorial_election"
+        },
         {
           "date": "2026-08-27",
           "pollster": "270toWin",
@@ -20260,14 +20274,14 @@
       "chamber": "governor",
       "state": "FL",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Florida",
-      "dem_base": 0.193,
+      "description": "Will the margin of victory for Democrats in the governor election in Florida be at least 3 percentage points?",
+      "dem_base": 0.198,
       "pm": "florida-governor-winner-2026",
-      "kalshi": "GOVPARTYFL-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyfl/florida-governor/govpartyfl-26",
+      "kalshi": "KXMIDTERMMOV-FLGOVD-P3",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-flgovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/florida/",
       "poll_avg_dem": 46.0,
-      "market_gap": -26.8,
+      "market_gap": -26.2,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -21689,7 +21703,7 @@
         {
           "date": "9/11",
           "polymarket": 19,
-          "kalshi": 19
+          "kalshi": 20
         }
       ],
       "note": null
@@ -28881,11 +28895,11 @@
       "chamber": "governor",
       "state": "GA",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Georgia",
+      "description": "Will the margin of victory for Democrats in the governor election in Georgia be at least 1 percentage points?",
       "dem_base": 0.565,
       "pm": "georgia-governor-winner-2026",
-      "kalshi": "GOVPARTYGA-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyga/georgia-governor/govpartyga-26",
+      "kalshi": "KXMIDTERMMOV-GAGOVD-P1",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-gagovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/georgia/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -35771,11 +35785,11 @@
       "chamber": "governor",
       "state": "IA",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Iowa",
-      "dem_base": 0.772,
+      "description": "Will the margin of victory for Democrats in the governor election in Iowa be at least 12 percentage points?",
+      "dem_base": 0.518,
       "pm": "iowa-governor-winner-2026",
-      "kalshi": "GOVPARTYIA-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyia/iowa-governor/govpartyia-26",
+      "kalshi": "KXMIDTERMMOV-IAGOVD-P12",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-iagovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/iowa/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -36836,7 +36850,7 @@
         {
           "date": "9/11",
           "polymarket": 77,
-          "kalshi": 77
+          "kalshi": 52
         }
       ],
       "note": null
@@ -36847,7 +36861,7 @@
       "state": "ID",
       "district": null,
       "description": "Will the Democratic party win the governorship in Idaho",
-      "dem_base": 0.023,
+      "dem_base": 0.026,
       "pm": "idaho-governor-winner-2026",
       "kalshi": "GOVPARTYID-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyid/idaho-governor/govpartyid-26",
@@ -36866,7 +36880,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": [
         {
@@ -37896,7 +37910,7 @@
         },
         {
           "date": "9/11",
-          "polymarket": 2,
+          "polymarket": 3,
           "kalshi": 2
         }
       ],
@@ -37908,7 +37922,7 @@
       "state": "IL",
       "district": null,
       "description": "Will the total vote count for all participants in Illinois Governor General Election be above 3900000?",
-      "dem_base": 0.954,
+      "dem_base": 0.956,
       "pm": "illinois-governor-winner-2026",
       "kalshi": "KXMIDTERMVOTETURN-ILGOV-3900000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ilgov",
@@ -39832,8 +39846,8 @@
       "chamber": "governor",
       "state": "KS",
       "district": null,
-      "description": "Will Other win the Kansas governor race in 2026?",
-      "dem_base": 0.32,
+      "description": "Will the margin of victory for Democrats in the governor election in Kansas be at least 1 percentage points?",
+      "dem_base": 0.3,
       "pm": "kansas-governor-winner-2026",
       "kalshi": "KXMIDTERMMOV-KSGOVD-P1",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ksgovd",
@@ -40854,7 +40868,7 @@
         {
           "date": "9/11",
           "polymarket": 32,
-          "kalshi": null
+          "kalshi": 50
         }
       ],
       "note": null
@@ -40864,14 +40878,14 @@
       "chamber": "governor",
       "state": "MA",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Massachusetts",
-      "dem_base": 0.958,
+      "description": "Will the margin of victory for Democrats in the governor election in Massachusetts be at least 14 percentage points?",
+      "dem_base": 0.954,
       "pm": "massachusetts-governor-winner-2026",
-      "kalshi": "GOVPARTYMA-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyma/massachusetts-governor/govpartyma-26",
+      "kalshi": "KXMIDTERMMOV-MAGOVD-P14",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-magovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/massachusetts/",
       "poll_avg_dem": 54.0,
-      "market_gap": 41.8,
+      "market_gap": 41.3,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -40884,7 +40898,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": [
         {
@@ -42026,7 +42040,7 @@
         },
         {
           "date": "9/11",
-          "polymarket": 97,
+          "polymarket": 96,
           "kalshi": 94
         }
       ],
@@ -42037,11 +42051,11 @@
       "chamber": "governor",
       "state": "ME",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Maine",
-      "dem_base": 0.949,
+      "description": "Will the margin of victory for Democrats in the governor election in Maine be at least 12 percentage points?",
+      "dem_base": 0.955,
       "pm": "maine-governor-winner-2026",
-      "kalshi": "GOVPARTYME-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyme/maine-governor/govpartyme-26",
+      "kalshi": "KXMIDTERMMOV-MEGOVD-P12",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-megovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/maine/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -43158,7 +43172,7 @@
         {
           "date": "9/11",
           "polymarket": 96,
-          "kalshi": 94
+          "kalshi": 95
         }
       ],
       "note": null
@@ -58054,14 +58068,14 @@
       "chamber": "governor",
       "state": "MN",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Minnesota",
-      "dem_base": 0.958,
+      "description": "Will the margin of victory for Democrats in the governor election in Minnesota be at least 11 percentage points?",
+      "dem_base": 0.956,
       "pm": "minnesota-governor-winner-2026",
-      "kalshi": "GOVPARTYMN-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartymn/minnesota-governor/govpartymn-26",
+      "kalshi": "KXMIDTERMMOV-MNGOVD-P11",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mngovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/minnesota/",
       "poll_avg_dem": 36.0,
-      "market_gap": 59.8,
+      "market_gap": 59.6,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -59343,7 +59357,7 @@
         {
           "date": "9/11",
           "polymarket": 95,
-          "kalshi": 96
+          "kalshi": 95
         }
       ],
       "note": null
@@ -64991,7 +65005,7 @@
       "state": "NE",
       "district": null,
       "description": "Will the Democratic party win the governorship in Nebraska",
-      "dem_base": 0.079,
+      "dem_base": 0.075,
       "pm": "nebraska-governor-winner-2026",
       "kalshi": "GOVPARTYNE-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyne/nebraska-governor/govpartyne-26",
@@ -66069,7 +66083,7 @@
         {
           "date": "9/11",
           "polymarket": 7,
-          "kalshi": 9
+          "kalshi": 8
         }
       ],
       "note": null
@@ -66079,14 +66093,14 @@
       "chamber": "governor",
       "state": "NH",
       "district": null,
-      "description": "Will Other win the New Hampshire governor race in 2026?",
-      "dem_base": 0.152,
+      "description": "Will the margin of victory for Democrats in the governor election in New Hampshire be at least 1 percentage points?",
+      "dem_base": 0.161,
       "pm": "new-hampshire-governor-winner-2026",
       "kalshi": "KXMIDTERMMOV-NHGOVD-P1",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-nhgovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/new-hampshire/",
       "poll_avg_dem": 38.3,
-      "market_gap": -23.1,
+      "market_gap": -22.2,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -67312,7 +67326,7 @@
         {
           "date": "9/11",
           "polymarket": 15,
-          "kalshi": null
+          "kalshi": 20
         }
       ],
       "note": null
@@ -72295,7 +72309,7 @@
           "date": "11/5",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72306,7 +72320,7 @@
           "date": "11/6",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72317,7 +72331,7 @@
           "date": "11/7",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72328,7 +72342,7 @@
           "date": "11/8",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72339,7 +72353,7 @@
           "date": "11/9",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72350,7 +72364,7 @@
           "date": "11/10",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72361,7 +72375,7 @@
           "date": "11/11",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72372,7 +72386,7 @@
           "date": "11/12",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 8.0,
-          "John Sanchez": 7.0,
+          "Judith Nakamura": 7.0,
           "Mark Murphy": 7.0,
           "Mark Ronchetti": 7.0,
           "Rebecca Dow": 7.0,
@@ -72384,7 +72398,7 @@
           "date": "11/13",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 11.0,
-          "John Sanchez": 4.5,
+          "Judith Nakamura": 4.5,
           "Mark Murphy": 4.5,
           "Mark Ronchetti": 4.5,
           "Rebecca Dow": 4.5,
@@ -72396,7 +72410,7 @@
           "date": "11/14",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72408,7 +72422,7 @@
           "date": "11/15",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72420,7 +72434,7 @@
           "date": "11/16",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72432,7 +72446,7 @@
           "date": "11/17",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72444,7 +72458,7 @@
           "date": "11/18",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72456,7 +72470,7 @@
           "date": "11/19",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72468,7 +72482,7 @@
           "date": "11/20",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72480,7 +72494,7 @@
           "date": "11/21",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72492,7 +72506,7 @@
           "date": "11/22",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72504,7 +72518,7 @@
           "date": "11/23",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72516,7 +72530,7 @@
           "date": "11/24",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72528,7 +72542,7 @@
           "date": "11/25",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72540,7 +72554,7 @@
           "date": "11/26",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72552,7 +72566,7 @@
           "date": "11/27",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72564,7 +72578,7 @@
           "date": "11/28",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72576,7 +72590,7 @@
           "date": "11/29",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72588,7 +72602,7 @@
           "date": "11/30",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72600,7 +72614,7 @@
           "date": "12/1",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72612,7 +72626,7 @@
           "date": "12/2",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72624,7 +72638,7 @@
           "date": "12/3",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72636,7 +72650,7 @@
           "date": "12/4",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72648,7 +72662,7 @@
           "date": "12/5",
           "Duke Rodriguez": 2.5,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72660,7 +72674,7 @@
           "date": "12/6",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 11.5,
-          "John Sanchez": 2.5,
+          "Judith Nakamura": 2.5,
           "Mark Murphy": 2.5,
           "Mark Ronchetti": 2.5,
           "Rebecca Dow": 2.5,
@@ -72672,7 +72686,7 @@
           "date": "12/7",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72684,7 +72698,7 @@
           "date": "12/8",
           "Duke Rodriguez": 5.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72696,7 +72710,7 @@
           "date": "12/9",
           "Duke Rodriguez": 5.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72708,7 +72722,7 @@
           "date": "12/10",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72720,7 +72734,7 @@
           "date": "12/11",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72732,7 +72746,7 @@
           "date": "12/12",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72744,7 +72758,7 @@
           "date": "12/13",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72756,7 +72770,7 @@
           "date": "12/14",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72768,7 +72782,7 @@
           "date": "12/15",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72780,7 +72794,7 @@
           "date": "12/16",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72792,7 +72806,7 @@
           "date": "12/17",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72804,7 +72818,7 @@
           "date": "12/18",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72816,7 +72830,7 @@
           "date": "12/19",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72828,7 +72842,7 @@
           "date": "12/20",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 14.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72840,7 +72854,7 @@
           "date": "12/21",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 15.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72852,7 +72866,7 @@
           "date": "12/22",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 15.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72864,7 +72878,7 @@
           "date": "12/23",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72876,7 +72890,7 @@
           "date": "12/24",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72888,7 +72902,7 @@
           "date": "12/25",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 15.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72900,7 +72914,7 @@
           "date": "12/26",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72912,7 +72926,7 @@
           "date": "12/27",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 15.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72924,7 +72938,7 @@
           "date": "12/28",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 19.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72936,7 +72950,7 @@
           "date": "12/29",
           "Duke Rodriguez": 5.0,
           "Gregg Hull": 21.5,
-          "John Sanchez": 3.5,
+          "Judith Nakamura": 3.5,
           "Mark Murphy": 3.5,
           "Mark Ronchetti": 3.5,
           "Rebecca Dow": 3.5,
@@ -72948,7 +72962,7 @@
           "date": "12/30",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -72960,7 +72974,7 @@
           "date": "12/31",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -72972,7 +72986,7 @@
           "date": "1/1",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -72984,7 +72998,7 @@
           "date": "1/2",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 28.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -72996,7 +73010,7 @@
           "date": "1/3",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73008,7 +73022,7 @@
           "date": "1/4",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73020,7 +73034,7 @@
           "date": "1/5",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73032,7 +73046,7 @@
           "date": "1/6",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73044,7 +73058,7 @@
           "date": "1/7",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73056,7 +73070,7 @@
           "date": "1/8",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73068,7 +73082,7 @@
           "date": "1/9",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73080,7 +73094,7 @@
           "date": "1/10",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73092,7 +73106,7 @@
           "date": "1/11",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73104,7 +73118,7 @@
           "date": "1/12",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73116,7 +73130,7 @@
           "date": "1/13",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73128,7 +73142,7 @@
           "date": "1/14",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73140,7 +73154,7 @@
           "date": "1/15",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73152,7 +73166,7 @@
           "date": "1/16",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73164,7 +73178,7 @@
           "date": "1/17",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 27.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73176,7 +73190,7 @@
           "date": "1/18",
           "Duke Rodriguez": 7.5,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73188,7 +73202,7 @@
           "date": "1/19",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73200,7 +73214,7 @@
           "date": "1/20",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73212,7 +73226,7 @@
           "date": "1/21",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73224,7 +73238,7 @@
           "date": "1/22",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73236,7 +73250,7 @@
           "date": "1/23",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73248,7 +73262,7 @@
           "date": "1/24",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73260,7 +73274,7 @@
           "date": "1/25",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73272,7 +73286,7 @@
           "date": "1/26",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73284,7 +73298,7 @@
           "date": "1/27",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73296,7 +73310,7 @@
           "date": "1/28",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73308,7 +73322,7 @@
           "date": "1/29",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73320,7 +73334,7 @@
           "date": "1/30",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73332,7 +73346,7 @@
           "date": "1/31",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73344,7 +73358,7 @@
           "date": "2/1",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73356,7 +73370,7 @@
           "date": "2/2",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73368,7 +73382,7 @@
           "date": "2/3",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73380,7 +73394,7 @@
           "date": "2/4",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73392,7 +73406,7 @@
           "date": "2/5",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73404,7 +73418,7 @@
           "date": "2/6",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73416,7 +73430,7 @@
           "date": "2/7",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73428,7 +73442,7 @@
           "date": "2/8",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73440,7 +73454,7 @@
           "date": "2/9",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73452,7 +73466,7 @@
           "date": "2/10",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 26.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73472,7 +73486,7 @@
           "date": "2/13",
           "Duke Rodriguez": 7.0,
           "Gregg Hull": 24.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 2.0,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73484,7 +73498,7 @@
           "date": "2/14",
           "Duke Rodriguez": 6.5,
           "Gregg Hull": 25.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 1.5,
           "Rebecca Dow": 1.5,
@@ -73501,7 +73515,7 @@
           "date": "2/16",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 51.5,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
@@ -73513,7 +73527,7 @@
           "date": "2/17",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 51.5,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 24.0,
@@ -73524,7 +73538,7 @@
           "date": "2/18",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 52.0,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Rebecca Dow": 1.0,
           "Steve Lanier": 24.5,
@@ -73542,7 +73556,7 @@
           "date": "2/20",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 52.0,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
@@ -73568,6 +73582,7 @@
           "date": "2/23",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 51.5,
+          "Judith Nakamura": 1.0,
           "Steve Lanier": 23.0,
           "Susana Martinez": 3.0
         },
@@ -73575,6 +73590,7 @@
           "date": "2/24",
           "Duke Rodriguez": 4.5,
           "Gregg Hull": 52.5,
+          "Judith Nakamura": 1.0,
           "Steve Lanier": 23.0,
           "Susana Martinez": 3.0
         },
@@ -73582,6 +73598,7 @@
           "date": "2/25",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 52.5,
+          "Judith Nakamura": 1.0,
           "Steve Lanier": 23.5,
           "Susana Martinez": 4.5,
           "Yvette Herrell": 1.5
@@ -73590,7 +73607,7 @@
           "date": "2/26",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 53.5,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
@@ -73602,7 +73619,7 @@
           "date": "2/27",
           "Duke Rodriguez": 8.5,
           "Gregg Hull": 57.0,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
@@ -73622,7 +73639,7 @@
           "date": "3/1",
           "Duke Rodriguez": 9.5,
           "Gregg Hull": 55.0,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
@@ -73634,7 +73651,7 @@
           "date": "3/2",
           "Duke Rodriguez": 13.0,
           "Gregg Hull": 57.0,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
@@ -73646,7 +73663,7 @@
           "date": "3/3",
           "Duke Rodriguez": 15.5,
           "Gregg Hull": 55.0,
-          "John Sanchez": 1.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 1.0,
           "Rebecca Dow": 1.0,
@@ -73666,7 +73683,7 @@
           "date": "3/5",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 57.5,
-          "John Sanchez": 2.0,
+          "Judith Nakamura": 2.0,
           "Mark Murphy": 2.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73678,7 +73695,7 @@
           "date": "3/6",
           "Duke Rodriguez": 22.5,
           "Gregg Hull": 58.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Steve Lanier": 16.0,
           "Susana Martinez": 1.5
@@ -73687,7 +73704,7 @@
           "date": "3/7",
           "Duke Rodriguez": 27.5,
           "Gregg Hull": 57.0,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73699,7 +73716,7 @@
           "date": "3/9",
           "Duke Rodriguez": 17.5,
           "Gregg Hull": 71.0,
-          "John Sanchez": 2.0,
+          "Judith Nakamura": 2.0,
           "Mark Murphy": 2.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73711,7 +73728,7 @@
           "date": "3/10",
           "Duke Rodriguez": 28.5,
           "Gregg Hull": 66.0,
-          "John Sanchez": 2.0,
+          "Judith Nakamura": 2.0,
           "Mark Murphy": 2.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73723,7 +73740,7 @@
           "date": "3/11",
           "Duke Rodriguez": 29.5,
           "Gregg Hull": 67.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.5,
           "Mark Murphy": 1.5,
           "Steve Lanier": 4.0,
           "Susana Martinez": 1.5
@@ -73732,7 +73749,7 @@
           "date": "3/12",
           "Duke Rodriguez": 30.0,
           "Gregg Hull": 66.5,
-          "John Sanchez": 2.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Steve Lanier": 3.5,
           "Susana Martinez": 2.0
@@ -73741,7 +73758,7 @@
           "date": "3/13",
           "Duke Rodriguez": 30.5,
           "Gregg Hull": 63.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73753,7 +73770,7 @@
           "date": "3/14",
           "Duke Rodriguez": 30.5,
           "Gregg Hull": 63.5,
-          "John Sanchez": 2.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73765,7 +73782,7 @@
           "date": "3/15",
           "Duke Rodriguez": 37.5,
           "Gregg Hull": 59.5,
-          "John Sanchez": 1.5,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73777,7 +73794,7 @@
           "date": "3/16",
           "Duke Rodriguez": 38.5,
           "Gregg Hull": 57.5,
-          "John Sanchez": 2.0,
+          "Judith Nakamura": 1.0,
           "Mark Murphy": 1.0,
           "Mark Ronchetti": 2.0,
           "Rebecca Dow": 2.0,
@@ -73789,7 +73806,7 @@
           "date": "3/17",
           "Duke Rodriguez": 39.5,
           "Gregg Hull": 56.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 2.0,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73801,7 +73818,7 @@
           "date": "3/18",
           "Duke Rodriguez": 48.0,
           "Gregg Hull": 49.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73819,7 +73836,7 @@
           "date": "3/20",
           "Duke Rodriguez": 47.0,
           "Gregg Hull": 50.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73831,7 +73848,7 @@
           "date": "3/21",
           "Duke Rodriguez": 46.0,
           "Gregg Hull": 51.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73843,7 +73860,7 @@
           "date": "3/22",
           "Duke Rodriguez": 45.0,
           "Gregg Hull": 51.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73855,7 +73872,7 @@
           "date": "3/23",
           "Duke Rodriguez": 45.0,
           "Gregg Hull": 51.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73867,7 +73884,7 @@
           "date": "3/24",
           "Duke Rodriguez": 44.5,
           "Gregg Hull": 52.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73879,7 +73896,7 @@
           "date": "3/25",
           "Duke Rodriguez": 44.5,
           "Gregg Hull": 50.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73891,7 +73908,7 @@
           "date": "3/26",
           "Duke Rodriguez": 44.5,
           "Gregg Hull": 51.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73903,7 +73920,7 @@
           "date": "3/27",
           "Duke Rodriguez": 38.5,
           "Gregg Hull": 56.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73915,7 +73932,7 @@
           "date": "3/28",
           "Duke Rodriguez": 39.5,
           "Gregg Hull": 56.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73927,7 +73944,7 @@
           "date": "3/29",
           "Duke Rodriguez": 38.5,
           "Gregg Hull": 58.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73939,7 +73956,7 @@
           "date": "3/30",
           "Duke Rodriguez": 38.0,
           "Gregg Hull": 57.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73951,7 +73968,7 @@
           "date": "3/31",
           "Duke Rodriguez": 40.0,
           "Gregg Hull": 56.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73963,7 +73980,7 @@
           "date": "4/1",
           "Duke Rodriguez": 40.0,
           "Gregg Hull": 56.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73975,7 +73992,7 @@
           "date": "4/2",
           "Duke Rodriguez": 39.5,
           "Gregg Hull": 57.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73987,7 +74004,7 @@
           "date": "4/3",
           "Duke Rodriguez": 37.5,
           "Gregg Hull": 58.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -73999,7 +74016,7 @@
           "date": "4/4",
           "Duke Rodriguez": 38.0,
           "Gregg Hull": 58.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -74011,7 +74028,7 @@
           "date": "4/5",
           "Duke Rodriguez": 42.0,
           "Gregg Hull": 51.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -74023,7 +74040,7 @@
           "date": "4/6",
           "Duke Rodriguez": 41.5,
           "Gregg Hull": 55.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -74035,7 +74052,7 @@
           "date": "4/7",
           "Duke Rodriguez": 50.5,
           "Gregg Hull": 46.0,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -74047,7 +74064,7 @@
           "date": "4/8",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.5,
           "Rebecca Dow": 0.5,
@@ -74059,7 +74076,7 @@
           "date": "4/9",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74071,7 +74088,7 @@
           "date": "4/10",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74083,7 +74100,7 @@
           "date": "4/11",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74095,7 +74112,7 @@
           "date": "4/12",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74107,7 +74124,7 @@
           "date": "4/13",
           "Duke Rodriguez": 52.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74119,7 +74136,7 @@
           "date": "4/14",
           "Duke Rodriguez": 53.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.4,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74131,7 +74148,7 @@
           "date": "4/15",
           "Duke Rodriguez": 53.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74143,7 +74160,7 @@
           "date": "4/16",
           "Duke Rodriguez": 53.0,
           "Gregg Hull": 45.5,
-          "John Sanchez": 1.4,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74155,7 +74172,7 @@
           "date": "4/17",
           "Duke Rodriguez": 51.5,
           "Gregg Hull": 41.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74167,7 +74184,7 @@
           "date": "4/18",
           "Duke Rodriguez": 53.5,
           "Gregg Hull": 41.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74179,7 +74196,7 @@
           "date": "4/19",
           "Duke Rodriguez": 53.5,
           "Gregg Hull": 41.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74191,7 +74208,7 @@
           "date": "4/20",
           "Duke Rodriguez": 15.5,
           "Gregg Hull": 75.0,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74203,7 +74220,7 @@
           "date": "4/21",
           "Duke Rodriguez": 16.0,
           "Gregg Hull": 74.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74215,7 +74232,7 @@
           "date": "4/22",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 69.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74227,7 +74244,7 @@
           "date": "4/23",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 67.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74239,7 +74256,7 @@
           "date": "4/24",
           "Duke Rodriguez": 21.0,
           "Gregg Hull": 62.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74251,7 +74268,7 @@
           "date": "4/25",
           "Duke Rodriguez": 31.0,
           "Gregg Hull": 58.0,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74263,7 +74280,7 @@
           "date": "4/26",
           "Duke Rodriguez": 35.0,
           "Gregg Hull": 60.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74275,7 +74292,7 @@
           "date": "4/27",
           "Duke Rodriguez": 31.5,
           "Gregg Hull": 63.5,
-          "John Sanchez": 1.1,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74287,7 +74304,7 @@
           "date": "4/28",
           "Duke Rodriguez": 31.5,
           "Gregg Hull": 63.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74299,7 +74316,7 @@
           "date": "4/29",
           "Duke Rodriguez": 30.5,
           "Gregg Hull": 65.0,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74311,7 +74328,7 @@
           "date": "4/30",
           "Duke Rodriguez": 29.5,
           "Gregg Hull": 59.0,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74323,7 +74340,7 @@
           "date": "5/1",
           "Duke Rodriguez": 20.5,
           "Gregg Hull": 60.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74335,7 +74352,7 @@
           "date": "5/2",
           "Duke Rodriguez": 20.5,
           "Gregg Hull": 61.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74347,7 +74364,7 @@
           "date": "5/3",
           "Duke Rodriguez": 29.5,
           "Gregg Hull": 61.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74359,7 +74376,7 @@
           "date": "5/4",
           "Duke Rodriguez": 23.5,
           "Gregg Hull": 57.0,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74371,7 +74388,7 @@
           "date": "5/5",
           "Duke Rodriguez": 21.0,
           "Gregg Hull": 61.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74383,7 +74400,7 @@
           "date": "5/6",
           "Duke Rodriguez": 20.5,
           "Gregg Hull": 62.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74395,7 +74412,7 @@
           "date": "5/7",
           "Duke Rodriguez": 31.5,
           "Gregg Hull": 65.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74407,7 +74424,7 @@
           "date": "5/8",
           "Duke Rodriguez": 32.5,
           "Gregg Hull": 66.0,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74419,7 +74436,7 @@
           "date": "5/9",
           "Duke Rodriguez": 32.5,
           "Gregg Hull": 66.5,
-          "John Sanchez": 1.4,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74431,7 +74448,7 @@
           "date": "5/10",
           "Duke Rodriguez": 22.5,
           "Gregg Hull": 77.0,
-          "John Sanchez": 1.1,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74443,7 +74460,7 @@
           "date": "5/11",
           "Duke Rodriguez": 14.5,
           "Gregg Hull": 73.0,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74455,7 +74472,7 @@
           "date": "5/12",
           "Duke Rodriguez": 18.5,
           "Gregg Hull": 75.0,
-          "John Sanchez": 1.1,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74467,7 +74484,7 @@
           "date": "5/13",
           "Duke Rodriguez": 18.5,
           "Gregg Hull": 72.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74479,7 +74496,7 @@
           "date": "5/14",
           "Duke Rodriguez": 18.5,
           "Gregg Hull": 72.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74491,7 +74508,7 @@
           "date": "5/15",
           "Duke Rodriguez": 23.0,
           "Gregg Hull": 72.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74503,7 +74520,7 @@
           "date": "5/16",
           "Duke Rodriguez": 23.0,
           "Gregg Hull": 72.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74515,7 +74532,7 @@
           "date": "5/17",
           "Duke Rodriguez": 24.5,
           "Gregg Hull": 72.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74527,7 +74544,7 @@
           "date": "5/18",
           "Duke Rodriguez": 21.5,
           "Gregg Hull": 72.0,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74539,7 +74556,7 @@
           "date": "5/19",
           "Duke Rodriguez": 24.5,
           "Gregg Hull": 72.5,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74551,7 +74568,7 @@
           "date": "5/20",
           "Duke Rodriguez": 22.5,
           "Gregg Hull": 72.5,
-          "John Sanchez": 1.3,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74563,7 +74580,7 @@
           "date": "5/21",
           "Duke Rodriguez": 19.5,
           "Gregg Hull": 73.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74575,7 +74592,7 @@
           "date": "5/22",
           "Duke Rodriguez": 15.0,
           "Gregg Hull": 83.0,
-          "John Sanchez": 1.8,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74587,7 +74604,7 @@
           "date": "5/23",
           "Duke Rodriguez": 15.0,
           "Gregg Hull": 83.0,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74599,7 +74616,7 @@
           "date": "5/24",
           "Duke Rodriguez": 6.2,
           "Gregg Hull": 80.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74611,7 +74628,7 @@
           "date": "5/25",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 88.0,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74623,7 +74640,7 @@
           "date": "5/26",
           "Duke Rodriguez": 4.0,
           "Gregg Hull": 89.4,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74635,7 +74652,7 @@
           "date": "5/27",
           "Duke Rodriguez": 2.6,
           "Gregg Hull": 91.2,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74647,7 +74664,7 @@
           "date": "5/28",
           "Duke Rodriguez": 3.5,
           "Gregg Hull": 89.5,
-          "John Sanchez": 1.6,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74659,7 +74676,7 @@
           "date": "5/29",
           "Duke Rodriguez": 12.5,
           "Gregg Hull": 79.0,
-          "John Sanchez": 1.1,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 1.8,
           "Rebecca Dow": 1.8,
@@ -74672,7 +74689,7 @@
           "Doug Turner": 14.5,
           "Duke Rodriguez": 1.0,
           "Gregg Hull": 85.5,
-          "John Sanchez": 1.1,
+          "Judith Nakamura": 0.5,
           "Mark Murphy": 0.5,
           "Mark Ronchetti": 0.9,
           "Rebecca Dow": 0.9,
@@ -74685,7 +74702,7 @@
           "Doug Turner": 29.0,
           "Duke Rodriguez": 0.7,
           "Gregg Hull": 73.5,
-          "John Sanchez": 0.6,
+          "Judith Nakamura": 0.4,
           "Mark Murphy": 0.4,
           "Mark Ronchetti": 0.4,
           "Rebecca Dow": 0.4,
@@ -74698,7 +74715,7 @@
           "Doug Turner": 19.5,
           "Duke Rodriguez": 0.5,
           "Gregg Hull": 80.5,
-          "John Sanchez": 0.5,
+          "Judith Nakamura": 0.4,
           "Mark Murphy": 0.4,
           "Mark Ronchetti": 0.4,
           "Rebecca Dow": 0.4,
@@ -74711,7 +74728,7 @@
           "Doug Turner": 30.5,
           "Duke Rodriguez": 0.5,
           "Gregg Hull": 69.0,
-          "John Sanchez": 0.1,
+          "Judith Nakamura": 0.4,
           "Mark Murphy": 0.4,
           "Mark Ronchetti": 0.4,
           "Rebecca Dow": 0.4,
@@ -80269,11 +80286,11 @@
       "chamber": "governor",
       "state": "OH",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Ohio",
+      "description": "Will the margin of victory for Democrats in the governor election in Ohio be at least 12 percentage points?",
       "dem_base": 0.56,
       "pm": "ohio-governor-winner-2026",
-      "kalshi": "GOVPARTYOH-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyoh/ohio-governor/govpartyoh-26",
+      "kalshi": "KXMIDTERMMOV-OHGOVD-P12",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ohgovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/ohio/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -85009,7 +85026,7 @@
       "state": "OK",
       "district": null,
       "description": "Will the Democratic party win the governorship in Oklahoma",
-      "dem_base": 0.074,
+      "dem_base": 0.075,
       "pm": "oklahoma-governor-winner-2026",
       "kalshi": "GOVPARTYOK-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyok/oklahoma-governor/govpartyok-26",
@@ -86040,11 +86057,11 @@
       "chamber": "governor",
       "state": "OR",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Oregon",
-      "dem_base": 0.847,
+      "description": "Will the margin of victory for Democrats in the governor election in Oregon be at least 11 percentage points?",
+      "dem_base": 0.845,
       "pm": "oregon-governor-winner-2026",
-      "kalshi": "GOVPARTYOR-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartyor/oregon-governor/govpartyor-26",
+      "kalshi": "KXMIDTERMMOV-ORGOVD-P11",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-orgovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/oregon/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -88250,7 +88267,7 @@
         {
           "date": "9/11",
           "polymarket": 97,
-          "kalshi": 97
+          "kalshi": 96
         }
       ],
       "note": null
@@ -91272,11 +91289,11 @@
       "chamber": "governor",
       "state": "SC",
       "district": null,
-      "description": "Will the Democratic party win the governorship in South Carolina",
-      "dem_base": 0.059,
+      "description": "Will the margin of victory for Democrats in the governor election in South Carolina be at least 2 percentage points?",
+      "dem_base": 0.055,
       "pm": null,
-      "kalshi": "GOVPARTYSC-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartysc/south-carolina-governor/govpartysc-26",
+      "kalshi": "KXMIDTERMMOV-SCGOVD-P2",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-scgovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/south-carolina/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -93336,11 +93353,11 @@
       "chamber": "governor",
       "state": "TN",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Tennessee",
+      "description": "Will the margin of victory for Republicans in the governor election in Tennessee be at least 12 percentage points?",
       "dem_base": 0.041,
       "pm": null,
-      "kalshi": "GOVPARTYTN-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartytn/tennessee-governor/govpartytn-26",
+      "kalshi": "KXMIDTERMMOV-TNGOVR-P12",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-tngovr",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/tennessee/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -94383,11 +94400,11 @@
       "chamber": "governor",
       "state": "TX",
       "district": null,
-      "description": "Will the Democratic party win the governorship in Texas",
-      "dem_base": 0.175,
+      "description": "Will the margin of victory for Democrats in the governor election in Texas be at least 3 percentage points?",
+      "dem_base": 0.185,
       "pm": null,
-      "kalshi": "GOVPARTYTX-26-D",
-      "kalshi_url": "https://kalshi.com/markets/govpartytx/texas-governor/govpartytx-26",
+      "kalshi": "KXMIDTERMMOV-TXGOVD-P3",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-txgovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/texas/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -94403,7 +94420,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": [
         {
@@ -95532,7 +95549,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 17
+          "kalshi": 18
         }
       ],
       "note": null
@@ -96921,7 +96938,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": [
         {
@@ -98232,7 +98249,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 81
+          "kalshi": 80
         }
       ],
       "note": null
@@ -104930,7 +104947,7 @@
       "state": "WY",
       "district": null,
       "description": "Will the Democratic party win the governorship in Wyoming",
-      "dem_base": 0.033,
+      "dem_base": 0.032,
       "pm": null,
       "kalshi": "GOVPARTYWY-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartywy/wyoming-governor/govpartywy-26",
@@ -106148,11 +106165,11 @@
       "chamber": "house",
       "state": "AL",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the Alabama's 3rd District House election be at least 27 percentage points?",
-      "dem_base": 0.1,
+      "description": "Will the margin of victory for Republicans in the Alabama's 1st District House election be at least 33 percentage points?",
+      "dem_base": 0.085,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-AL03R-P27",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-al03r",
+      "kalshi": "KXMIDTERMMOV-AL01R-P33",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-al01r",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -106168,7 +106185,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": -31
+        "change": -22
       },
       "polls": null,
       "time_series": [
@@ -106675,7 +106692,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 33
+          "kalshi": 42
         }
       ],
       "note": null
@@ -106686,7 +106703,7 @@
       "state": "AR",
       "district": null,
       "description": "Will the margin of victory for Republicans in the Arkansas's 4th District House election be at least 24 percentage points?",
-      "dem_base": 0.685,
+      "dem_base": 0.69,
       "pm": null,
       "kalshi": "KXMIDTERMMOV-AR04R-P24",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ar04r",
@@ -106705,7 +106722,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 60
+        "change": 61
       },
       "polls": null,
       "time_series": [
@@ -107212,7 +107229,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 68
+          "kalshi": 69
         }
       ],
       "note": null
@@ -108255,7 +108272,7 @@
       "state": "AZ",
       "district": "2",
       "description": "Will Democratic win the House race for AZ-2?",
-      "dem_base": 0.285,
+      "dem_base": 0.29,
       "pm": null,
       "kalshi": "HOUSEAZ2-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseaz2/house-az-2/houseaz2-26",
@@ -109287,7 +109304,7 @@
       "state": "AZ",
       "district": "6",
       "description": "Will Democratic win the House race for AZ-6?",
-      "dem_base": 0.785,
+      "dem_base": 0.805,
       "pm": null,
       "kalshi": "HOUSEAZ6-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseaz6/house-az-6/houseaz6-26",
@@ -109306,7 +109323,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -2
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -110308,7 +110325,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 80
+          "kalshi": 81
         }
       ],
       "note": null
@@ -110693,7 +110710,7 @@
       "state": "AZ",
       "district": null,
       "description": "Will the total vote count for all participants in Arizona 03 House General Election be above 200000?",
-      "dem_base": 0.976,
+      "dem_base": 0.265,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-AZ03-200000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-az03",
@@ -110710,9 +110727,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": 33
+        "label": "Major Shift",
+        "level": 3,
+        "change": -10
       },
       "polls": null,
       "time_series": [
@@ -111239,7 +111256,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 73
+          "kalshi": 30
         }
       ],
       "note": null
@@ -111250,7 +111267,7 @@
       "state": "CA",
       "district": "21",
       "description": "Will a Democrat win the House race for CA-21?",
-      "dem_base": 0.92,
+      "dem_base": 0.926,
       "pm": null,
       "kalshi": "HOUSECA21-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca21/ca-21/houseca21-26",
@@ -112282,7 +112299,7 @@
       "state": "CA",
       "district": "3",
       "description": "Will Democratic win the House race for CA-3?",
-      "dem_base": 0.95,
+      "dem_base": 0.944,
       "pm": null,
       "kalshi": "HOUSECA3-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca3/house-ca3/houseca3-26",
@@ -112301,7 +112318,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -113303,7 +113320,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 94
         }
       ],
       "note": null
@@ -114346,7 +114363,7 @@
       "state": "CA",
       "district": "47",
       "description": "Will Democratic win the House race for CA-47?",
-      "dem_base": 0.95,
+      "dem_base": 0.942,
       "pm": null,
       "kalshi": "HOUSECA47-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca47/house-ca-47/houseca47-26",
@@ -115378,7 +115395,7 @@
       "state": "CA",
       "district": "49",
       "description": "Will a Democrat win the House race for CA-49?",
-      "dem_base": 0.954,
+      "dem_base": 0.952,
       "pm": null,
       "kalshi": "HOUSECA49-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca49/house-ca-49/houseca49-26",
@@ -116410,7 +116427,7 @@
       "state": "CA",
       "district": "9",
       "description": "Will Democratic win the House race for CA-9?",
-      "dem_base": 0.951,
+      "dem_base": 0.941,
       "pm": null,
       "kalshi": "HOUSECA9-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca9/house-ca-9/houseca9-26",
@@ -116429,7 +116446,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -117431,7 +117448,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 96
+          "kalshi": 95
         }
       ],
       "note": null
@@ -119506,7 +119523,7 @@
       "state": "CA",
       "district": "27",
       "description": "Will Democratic win the House race for CA-27?",
-      "dem_base": 0.948,
+      "dem_base": 0.928,
       "pm": null,
       "kalshi": "HOUSECA27-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca27/house-california-27th/houseca27-26",
@@ -119525,7 +119542,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -120527,7 +120544,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 93
         }
       ],
       "note": null
@@ -122602,7 +122619,7 @@
       "state": "CA",
       "district": null,
       "description": "Will the total vote count for all participants in California 11 House General Election be above 290000?",
-      "dem_base": 0.385,
+      "dem_base": 0.375,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-CA11-290000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ca11",
@@ -123118,7 +123135,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": -5
+        "change": -4
       },
       "polls": null,
       "time_series": [
@@ -124120,7 +124137,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 31
+          "kalshi": 32
         }
       ],
       "note": null
@@ -124150,7 +124167,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 4
+        "change": 3
       },
       "polls": null,
       "time_series": [
@@ -125152,7 +125169,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 82
+          "kalshi": 81
         }
       ],
       "note": null
@@ -125350,7 +125367,7 @@
       "state": "CO",
       "district": null,
       "description": "Will the total vote count for all participants in Colorado 07 House General Election be above 380000?",
-      "dem_base": 0.255,
+      "dem_base": 0.205,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-CO07-380000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-co07",
@@ -125367,9 +125384,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -14
+        "label": "New Leader",
+        "level": 4,
+        "change": 4
       },
       "polls": null,
       "time_series": [
@@ -125911,7 +125928,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 34
+          "kalshi": 52
         }
       ],
       "note": null
@@ -125922,7 +125939,7 @@
       "state": "CT",
       "district": "5",
       "description": "Will a Democrat win the House race for CT-5?",
-      "dem_base": 0.946,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "HOUSECT5-26-D",
       "kalshi_url": "https://kalshi.com/markets/housect5/house-ct-5th/housect5-26",
@@ -129205,7 +129222,7 @@
       "state": "FL",
       "district": null,
       "description": "Will the total vote count for all participants in Florida 10 House General Election be above 200000?",
-      "dem_base": 0.195,
+      "dem_base": 0.2,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-FL10-200000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-fl10",
@@ -130379,7 +130396,7 @@
       "state": "IA",
       "district": "1",
       "description": "Will Democratic win the House race for IA-1?",
-      "dem_base": 0.715,
+      "dem_base": 0.72,
       "pm": null,
       "kalshi": "HOUSEIA1-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseia1/house-ia-1/houseia1-26",
@@ -131411,7 +131428,7 @@
       "state": "IA",
       "district": "3",
       "description": "Will Democratic win the House race for IA-3?",
-      "dem_base": 0.755,
+      "dem_base": 0.76,
       "pm": null,
       "kalshi": "HOUSEIA3-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseia3/house-ia-3/houseia3-26",
@@ -132816,11 +132833,11 @@
       "chamber": "house",
       "state": "IA",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the Iowa's 2nd District House election be at least 1 percentage points?",
-      "dem_base": 0.445,
+      "description": "Will the margin of victory for Democrats in the Iowa's 1st District House election be at least 12 percentage points?",
+      "dem_base": 0.375,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-IA02D-P1",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ia02d",
+      "kalshi": "KXMIDTERMMOV-IA01D-P12",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ia01d",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -132834,9 +132851,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": -1
+        "label": "Major Shift",
+        "level": 3,
+        "change": -7
       },
       "polls": null,
       "time_series": [
@@ -133408,7 +133425,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 67
+          "kalshi": 61
         }
       ],
       "note": null
@@ -133419,7 +133436,7 @@
       "state": "IL",
       "district": "17",
       "description": "Will a Democrat win the House race for IL-17?",
-      "dem_base": 0.946,
+      "dem_base": 0.93,
       "pm": null,
       "kalshi": "HOUSEIL17-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseil17/house-ils-17th/houseil17-26",
@@ -133438,7 +133455,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -134440,7 +134457,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 94
         }
       ],
       "note": null
@@ -135058,7 +135075,7 @@
       "state": "IN",
       "district": "1",
       "description": "Will a Democrat win the House race for IN-1?",
-      "dem_base": 0.95,
+      "dem_base": 0.946,
       "pm": null,
       "kalshi": "HOUSEIN1-26-D",
       "kalshi_url": "https://kalshi.com/markets/housein1/house-ins-1st/housein1-26",
@@ -135075,9 +135092,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -136079,7 +136096,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 96
+          "kalshi": 95
         }
       ],
       "note": null
@@ -138001,7 +138018,7 @@
       "state": "ME",
       "district": "2",
       "description": "Will Democratic win the House race for ME-2?",
-      "dem_base": 0.43,
+      "dem_base": 0.44,
       "pm": null,
       "kalshi": "HOUSEME2-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseme2/house-maine-2nd/houseme2-26",
@@ -139219,11 +139236,11 @@
       "chamber": "house",
       "state": "ME",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the Maine's 1st District House election be at least 17 percentage points?",
-      "dem_base": 0.942,
+      "description": "Will the margin of victory for Democrats in the Maine's 2nd District House election be at least 12 percentage points?",
+      "dem_base": 0.067,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-ME01D-P17",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-me01d",
+      "kalshi": "KXMIDTERMMOV-ME02D-P12",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-me02d",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -139237,9 +139254,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 0
+        "label": "New Leader",
+        "level": 4,
+        "change": -44
       },
       "polls": null,
       "time_series": [
@@ -139856,7 +139873,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 91
+          "kalshi": 47
         }
       ],
       "note": null
@@ -140899,7 +140916,7 @@
       "state": "MI",
       "district": "3",
       "description": "Will a Democrat win the House race for MI-3?",
-      "dem_base": 0.955,
+      "dem_base": 0.952,
       "pm": null,
       "kalshi": "HOUSEMI3-26-D",
       "kalshi_url": "https://kalshi.com/markets/housemi3/mi-03/housemi3-26",
@@ -143995,7 +144012,7 @@
       "state": "MI",
       "district": "8",
       "description": "Will Democratic win the House race for MI-8?",
-      "dem_base": 0.935,
+      "dem_base": 0.931,
       "pm": null,
       "kalshi": "HOUSEMI8-26-D",
       "kalshi_url": "https://kalshi.com/markets/housemi8/house-michigan-8th/housemi8-26",
@@ -145400,11 +145417,11 @@
       "chamber": "house",
       "state": "MI",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the Michigan's 1st District House election be at least 10 percentage points?",
-      "dem_base": 0.951,
+      "description": "Will the total vote count for all participants in Michigan 11 House General Election be above 420000?",
+      "dem_base": 0.805,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-MI01R-P10",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mi01r",
+      "kalshi": "KXMIDTERMVOTETURN-MI11-420000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-mi11",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -145418,9 +145435,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 0
+        "label": "Major Shift",
+        "level": 3,
+        "change": 12
       },
       "polls": null,
       "time_series": [
@@ -146037,7 +146054,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 70
+          "kalshi": 82
         }
       ],
       "note": null
@@ -147266,11 +147283,11 @@
       "chamber": "house",
       "state": "MN",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the Minnesota's 1st District House election be at least 2 percentage points?",
-      "dem_base": 0.15,
+      "description": "Will the total vote count for all participants in Minnesota 01 House General Election be above 300000?",
+      "dem_base": 0.924,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-MN01D-P2",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mn01d",
+      "kalshi": "KXMIDTERMVOTETURN-MN01-300000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-mn01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -147284,9 +147301,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -9
+        "label": "New Leader",
+        "level": 4,
+        "change": 30
       },
       "polls": null,
       "time_series": [
@@ -147903,7 +147920,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 21
+          "kalshi": 60
         }
       ],
       "note": null
@@ -147913,11 +147930,11 @@
       "chamber": "house",
       "state": "MS",
       "district": null,
-      "description": "Will the total vote count for all participants in Mississippi 03 House General Election be above 223000?",
+      "description": "Will the total vote count for all participants in Mississippi 01 House General Election be above 165000?",
       "dem_base": 0.906,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-MS03-223000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ms03",
+      "kalshi": "KXMIDTERMVOTETURN-MS01-165000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ms01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -149592,11 +149609,11 @@
       "chamber": "house",
       "state": "MT",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the Montana's 2nd District House election be at least 13 percentage points?",
+      "description": "Will the total vote count for all participants in Montana 02 House General Election be above 250000?",
       "dem_base": 0.32,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-MT02R-P13",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mt02r",
+      "kalshi": "KXMIDTERMVOTETURN-MT02-250000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-mt02",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -149610,9 +149627,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -3
+        "label": "New Leader",
+        "level": 4,
+        "change": 34
       },
       "polls": null,
       "time_series": [
@@ -150229,7 +150246,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 20
+          "kalshi": 57
         }
       ],
       "note": null
@@ -152558,11 +152575,11 @@
       "chamber": "house",
       "state": "NC",
       "district": null,
-      "description": "Will the total vote count for all participants in North Carolina 11 House General Election be above 360000?",
-      "dem_base": 0.933,
+      "description": "Will the total vote count for all participants in North Carolina 02 House General Election be above 280000?",
+      "dem_base": 0.515,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-NC11-360000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-nc11",
+      "kalshi": "KXMIDTERMVOTETURN-NC02-280000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-nc02",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -152578,7 +152595,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -9
+        "change": -30
       },
       "polls": null,
       "time_series": [
@@ -153195,7 +153212,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 77
+          "kalshi": 56
         }
       ],
       "note": null
@@ -154424,11 +154441,11 @@
       "chamber": "house",
       "state": "NE",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the Nebraska's 1st District House election be at least 12 percentage points?",
+      "description": "Will the total vote count for all participants in Nebraska 01 House General Election be above 230000?",
       "dem_base": 0.425,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-NE01R-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ne01r",
+      "kalshi": "KXMIDTERMVOTETURN-NE01-230000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ne01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -154442,9 +154459,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 0
+        "label": "Major Shift",
+        "level": 3,
+        "change": 15
       },
       "polls": null,
       "time_series": [
@@ -155061,7 +155078,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 52
+          "kalshi": 67
         }
       ],
       "note": null
@@ -155072,7 +155089,7 @@
       "state": "NH",
       "district": "1",
       "description": "Will a Democrat win the House race for NH-1?",
-      "dem_base": 0.927,
+      "dem_base": 0.908,
       "pm": null,
       "kalshi": "HOUSENH1-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenh1/house-nhs-1st/housenh1-26",
@@ -155089,9 +155106,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 4
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -156093,7 +156110,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 93
+          "kalshi": 91
         }
       ],
       "note": null
@@ -156103,11 +156120,11 @@
       "chamber": "house",
       "state": "NH",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the New Hampshire's 2nd District House election be at least 1 percentage points?",
-      "dem_base": 0.905,
+      "description": "Will the total vote count for all participants in New Hampshire 02 House General Election be above 290000?",
+      "dem_base": 0.914,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-NH02D-P1",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-nh02d",
+      "kalshi": "KXMIDTERMVOTETURN-NH02-290000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-nh02",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -156123,7 +156140,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -156740,7 +156757,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 90
+          "kalshi": 91
         }
       ],
       "note": null
@@ -156751,7 +156768,7 @@
       "state": "NJ",
       "district": "5",
       "description": "Will a Democrat win the House race for NJ-5?",
-      "dem_base": 0.954,
+      "dem_base": 0.938,
       "pm": null,
       "kalshi": "HOUSENJ5-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenj5/house-njs-5th/housenj5-26",
@@ -156770,7 +156787,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -157772,7 +157789,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 96
+          "kalshi": 94
         }
       ],
       "note": null
@@ -158815,7 +158832,7 @@
       "state": "NJ",
       "district": "9",
       "description": "Will Democratic win the House race for NJ-9?",
-      "dem_base": 0.938,
+      "dem_base": 0.93,
       "pm": null,
       "kalshi": "HOUSENJ9-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenj9/house-nj-9/housenj9-26",
@@ -158834,7 +158851,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -159836,7 +159853,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 94
+          "kalshi": 93
         }
       ],
       "note": null
@@ -160033,11 +160050,11 @@
       "chamber": "house",
       "state": "NJ",
       "district": null,
-      "description": "Will the total vote count for all participants in New Jersey 08 House General Election be above 134000?",
-      "dem_base": 0.924,
+      "description": "Will the total vote count for all participants in New Jersey 01 House General Election be above 230000?",
+      "dem_base": 0.7,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-NJ08-134000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-nj08",
+      "kalshi": "KXMIDTERMVOTETURN-NJ01-230000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-nj01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -160051,9 +160068,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -14
+        "label": "New Leader",
+        "level": 4,
+        "change": -25
       },
       "polls": null,
       "time_series": [
@@ -160675,7 +160692,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 61
+          "kalshi": 50
         }
       ],
       "note": null
@@ -160686,7 +160703,7 @@
       "state": "NM",
       "district": "2",
       "description": "Will Democratic win the House race for NM-2?",
-      "dem_base": 0.909,
+      "dem_base": 0.899,
       "pm": null,
       "kalshi": "HOUSENM2-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenm2/house-nm-2/housenm2-26",
@@ -160703,9 +160720,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -161707,7 +161724,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 91
+          "kalshi": 90
         }
       ],
       "note": null
@@ -161905,7 +161922,7 @@
       "state": "NV",
       "district": "1",
       "description": "Will a Democrat win the House race for NV-1?",
-      "dem_base": 0.909,
+      "dem_base": 0.905,
       "pm": null,
       "kalshi": "HOUSENV1-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenv1/house-nevadas-1st/housenv1-26",
@@ -161922,9 +161939,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -162926,7 +162943,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 93
+          "kalshi": 92
         }
       ],
       "note": null
@@ -163969,7 +163986,7 @@
       "state": "NV",
       "district": "4",
       "description": "Will a Democrat win the House race for NV-4?",
-      "dem_base": 0.919,
+      "dem_base": 0.917,
       "pm": null,
       "kalshi": "HOUSENV4-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenv4/house-nevadas-4th/housenv4-26",
@@ -163986,9 +164003,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -164990,7 +165007,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 93
+          "kalshi": 92
         }
       ],
       "note": null
@@ -165001,7 +165018,7 @@
       "state": "NY",
       "district": "22",
       "description": "Will a Democrat win the House race for NY-22?",
-      "dem_base": 0.949,
+      "dem_base": 0.933,
       "pm": null,
       "kalshi": "HOUSENY22-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny22/house-nys-22nd/houseny22-26",
@@ -165020,7 +165037,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -166022,7 +166039,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 94
         }
       ],
       "note": null
@@ -167065,7 +167082,7 @@
       "state": "NY",
       "district": "4",
       "description": "Will Democratic win the House race for NY-4?",
-      "dem_base": 0.942,
+      "dem_base": 0.924,
       "pm": null,
       "kalshi": "HOUSENY4-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny4/house-new-york-4th/houseny4-26",
@@ -167084,7 +167101,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 6
+        "change": 5
       },
       "polls": null,
       "time_series": [
@@ -168086,7 +168103,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 94
+          "kalshi": 93
         }
       ],
       "note": null
@@ -168284,7 +168301,7 @@
       "state": "NY",
       "district": "17",
       "description": "Will Democratic win the House race for NY-17?",
-      "dem_base": 0.61,
+      "dem_base": 0.605,
       "pm": null,
       "kalshi": "HOUSENY17-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny17/house-ny-17/houseny17-26",
@@ -169316,7 +169333,7 @@
       "state": "NY",
       "district": "18",
       "description": "Will a Democrat win the House race for NY-18?",
-      "dem_base": 0.951,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "HOUSENY18-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny18/house-nys-18th/houseny18-26",
@@ -169335,7 +169352,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -170337,7 +170354,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 94
         }
       ],
       "note": null
@@ -172412,7 +172429,7 @@
       "state": "OH",
       "district": "13",
       "description": "Will Democratic win the House race for OH-13?",
-      "dem_base": 0.946,
+      "dem_base": 0.93,
       "pm": null,
       "kalshi": "HOUSEOH13-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseoh13/house-oh-13/houseoh13-26",
@@ -172431,7 +172448,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -173433,7 +173450,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 93
         }
       ],
       "note": null
@@ -173444,7 +173461,7 @@
       "state": "OH",
       "district": "9",
       "description": "Will Democratic win the House race for OH-9?",
-      "dem_base": 0.665,
+      "dem_base": 0.685,
       "pm": null,
       "kalshi": "HOUSEOH9-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseoh9/house-oh-9/houseoh9-26",
@@ -173461,9 +173478,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 1
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": 5
       },
       "polls": null,
       "time_series": [
@@ -174465,7 +174482,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 66
+          "kalshi": 70
         }
       ],
       "note": null
@@ -174662,11 +174679,11 @@
       "chamber": "house",
       "state": "OH",
       "district": null,
-      "description": "Will the margin of victory for Republicans in the Ohio's 2nd District House election be at least 24 percentage points?",
-      "dem_base": 0.968,
+      "description": "Will the total vote count for all participants in Ohio 02 House General Election be above 260000?",
+      "dem_base": 0.914,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-OH02R-P24",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-oh02r",
+      "kalshi": "KXMIDTERMVOTETURN-OH02-260000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-oh02",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -174682,7 +174699,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -14
+        "change": 20
       },
       "polls": null,
       "time_series": [
@@ -175334,7 +175351,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 54
+          "kalshi": 88
         }
       ],
       "note": null
@@ -175345,7 +175362,7 @@
       "state": "OR",
       "district": "5",
       "description": "Will Democratic win the House race for OR-5?",
-      "dem_base": 0.952,
+      "dem_base": 0.932,
       "pm": null,
       "kalshi": "HOUSEOR5-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseor5/house-or-5/houseor5-26",
@@ -175364,7 +175381,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": 5
+        "change": 3
       },
       "polls": null,
       "time_series": [
@@ -176366,7 +176383,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 96
+          "kalshi": 94
         }
       ],
       "note": null
@@ -176563,11 +176580,11 @@
       "chamber": "house",
       "state": "OR",
       "district": null,
-      "description": "Will the total vote count for all participants in Oregon 04 House General Election be above 340000?",
-      "dem_base": 0.933,
+      "description": "Will the total vote count for all participants in Oregon 01 House General Election be above 350000?",
+      "dem_base": 0.775,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-OR04-340000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-or04",
+      "kalshi": "KXMIDTERMVOTETURN-OR01-350000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-or01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -176581,9 +176598,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 0
+        "label": "New Leader",
+        "level": 4,
+        "change": -8
       },
       "polls": null,
       "time_series": [
@@ -177235,7 +177252,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 51
+          "kalshi": 43
         }
       ],
       "note": null
@@ -177246,7 +177263,7 @@
       "state": "PA",
       "district": "1",
       "description": "Will Democratic win the House race for PA-1?",
-      "dem_base": 0.395,
+      "dem_base": 0.4,
       "pm": null,
       "kalshi": "HOUSEPA1-26-D",
       "kalshi_url": "https://kalshi.com/markets/housepa1/house-pa-1/housepa1-26",
@@ -177263,9 +177280,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -7
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": -6
       },
       "polls": null,
       "time_series": [
@@ -178267,7 +178284,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 39
+          "kalshi": 40
         }
       ],
       "note": null
@@ -179310,7 +179327,7 @@
       "state": "PA",
       "district": "7",
       "description": "Will Democratic win the House race for PA-7?",
-      "dem_base": 0.675,
+      "dem_base": 0.685,
       "pm": null,
       "kalshi": "HOUSEPA7-26-D",
       "kalshi_url": "https://kalshi.com/markets/housepa7/house-pennsylvania-7th/housepa7-26",
@@ -179329,7 +179346,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -11
+        "change": -10
       },
       "polls": null,
       "time_series": [
@@ -180331,7 +180348,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 67
+          "kalshi": 68
         }
       ],
       "note": null
@@ -182966,11 +182983,11 @@
       "chamber": "house",
       "state": "SC",
       "district": null,
-      "description": "Will the total vote count for all participants in South Carolina 04 House General Election be above 230000?",
+      "description": "Will the total vote count for all participants in South Carolina 01 House General Election be above 270000?",
       "dem_base": 0.485,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-SC04-230000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-sc04",
+      "kalshi": "KXMIDTERMVOTETURN-SC01-270000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-sc01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -183648,11 +183665,11 @@
       "chamber": "house",
       "state": "TN",
       "district": null,
-      "description": "Will the total vote count for all participants in Tennessee 09 House General Election be above 178000?",
+      "description": "Will the total vote count for all participants in Tennessee 01 House General Election be above 193000?",
       "dem_base": 0.024,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-TN09-178000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tn09",
+      "kalshi": "KXMIDTERMVOTETURN-TN01-193000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tn01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -184331,7 +184348,7 @@
       "state": "TX",
       "district": "28",
       "description": "Will Democratic win the House race for TX-28?",
-      "dem_base": 0.795,
+      "dem_base": 0.785,
       "pm": null,
       "kalshi": "HOUSETX28-26-D",
       "kalshi_url": "https://kalshi.com/markets/housetx28/house-tx-28/housetx28-26",
@@ -184350,7 +184367,7 @@
       "movement": {
         "label": "Moderate Shift",
         "level": 2,
-        "change": -3
+        "change": -5
       },
       "polls": null,
       "time_series": [
@@ -185352,7 +185369,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 80
+          "kalshi": 78
         }
       ],
       "note": null
@@ -185363,7 +185380,7 @@
       "state": "TX",
       "district": "15",
       "description": "Will Democratic win the House race for TX-15?",
-      "dem_base": 0.57,
+      "dem_base": 0.585,
       "pm": null,
       "kalshi": "HOUSETX15-26-D",
       "kalshi_url": "https://kalshi.com/markets/housetx15/house-tx-15/housetx15-26",
@@ -186395,7 +186412,7 @@
       "state": "TX",
       "district": "34",
       "description": "Will Democratic win the House race for TX-34?",
-      "dem_base": 0.75,
+      "dem_base": 0.755,
       "pm": null,
       "kalshi": "HOUSETX34-26-D",
       "kalshi_url": "https://kalshi.com/markets/housetx34/house-tx-34/housetx34-26",
@@ -186414,7 +186431,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -2
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -187416,7 +187433,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 75
+          "kalshi": 76
         }
       ],
       "note": null
@@ -187426,11 +187443,11 @@
       "chamber": "house",
       "state": "TX",
       "district": null,
-      "description": "Will the total vote count for all participants in Texas 32 House General Election be above 190000?",
-      "dem_base": 0.902,
+      "description": "Will the total vote count for all participants in Texas 01 House General Election be above 220000?",
+      "dem_base": 0.545,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-TX32-190000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tx32",
+      "kalshi": "KXMIDTERMVOTETURN-TX01-220000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tx01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -187444,9 +187461,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 5
+        "label": "Steady",
+        "level": 1,
+        "change": -2
       },
       "polls": null,
       "time_series": [
@@ -188098,7 +188115,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 74
+          "kalshi": 67
         }
       ],
       "note": null
@@ -188108,11 +188125,11 @@
       "chamber": "house",
       "state": "US",
       "district": null,
-      "description": "Will the total vote count for all participants in Vermont at large House General Election be above 290000?",
+      "description": "Will the total vote count for all participants in Missouri 01 House General Election be above 230000?",
       "dem_base": 0.865,
       "pm": "which-party-will-win-the-house-in-2026",
-      "kalshi": "KXMIDTERMVOTETURN-VTAL-290000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-vtal",
+      "kalshi": "KXMIDTERMVOTETURN-MO01-230000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-mo01",
       "rcp": null,
       "poll_avg_dem": null,
       "market_gap": null,
@@ -191205,7 +191222,7 @@
       "state": "VA",
       "district": "7",
       "description": "Will Democratic win the House race for VA-07?",
-      "dem_base": 0.949,
+      "dem_base": 0.929,
       "pm": null,
       "kalshi": "HOUSEVA7-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseva7/house-virginia-7th/houseva7-26",
@@ -191222,9 +191239,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3
+        "label": "Steady",
+        "level": 1,
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -192226,7 +192243,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 95
+          "kalshi": 93
         }
       ],
       "note": null
@@ -192610,11 +192627,11 @@
       "chamber": "house",
       "state": "VA",
       "district": null,
-      "description": "Will the total vote count for all participants in Virginia 08 House General Election be above 300000?",
+      "description": "Will the total vote count for all participants in Virginia 04 House General Election be above 260000?",
       "dem_base": 0.77,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-VA08-300000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-va08",
+      "kalshi": "KXMIDTERMVOTETURN-VA04-260000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-va04",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -193293,7 +193310,7 @@
       "state": "WA",
       "district": "3",
       "description": "Will Democratic win the House race for WA-3?",
-      "dem_base": 0.865,
+      "dem_base": 0.87,
       "pm": null,
       "kalshi": "HOUSEWA3-26-D",
       "kalshi_url": "https://kalshi.com/markets/housewa3/house-washington-3rd/housewa3-26",
@@ -211751,7 +211768,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -30
+        "change": -12
       },
       "polls": null,
       "time_series": [
@@ -212119,6 +212136,11 @@
           "date": "9/10",
           "polymarket": null,
           "kalshi": 19
+        },
+        {
+          "date": "9/11",
+          "polymarket": null,
+          "kalshi": 28
         }
       ],
       "note": null
@@ -216724,9 +216746,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": 2
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": 3
       },
       "polls": [
         {
@@ -217855,7 +217877,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 38
+          "kalshi": 39
         }
       ],
       "note": null
@@ -223927,8 +223949,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 3.0
+          "Robin Kelly": 3.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/6",
@@ -223940,8 +223962,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 3.0
+          "Robin Kelly": 3.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/7",
@@ -223953,8 +223975,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 3.0
+          "Robin Kelly": 3.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/8",
@@ -223966,8 +223988,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 3.0
+          "Robin Kelly": 3.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/9",
@@ -223979,8 +224001,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 3.0
+          "Robin Kelly": 3.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/10",
@@ -223992,8 +224014,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 3.0
+          "Robin Kelly": 3.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/11",
@@ -224005,8 +224027,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/12",
@@ -224018,8 +224040,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/13",
@@ -224031,8 +224053,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/14",
@@ -224044,8 +224066,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/15",
@@ -224057,8 +224079,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/16",
@@ -224070,8 +224092,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.5
+          "Robin Kelly": 2.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/17",
@@ -224083,8 +224105,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/18",
@@ -224096,8 +224118,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/19",
@@ -224109,8 +224131,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/20",
@@ -224122,8 +224144,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/21",
@@ -224135,8 +224157,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/22",
@@ -224148,8 +224170,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/23",
@@ -224161,8 +224183,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/24",
@@ -224174,8 +224196,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/25",
@@ -224187,8 +224209,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/26",
@@ -224200,8 +224222,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 7.5
+          "Robin Kelly": 7.5,
+          "Rod Blajegovich": 1.0
         },
         {
           "date": "11/27",
@@ -224213,8 +224235,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 7.5
+          "Robin Kelly": 7.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/28",
@@ -224226,8 +224248,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 7.5
+          "Robin Kelly": 7.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/29",
@@ -224239,8 +224261,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 7.5
+          "Robin Kelly": 7.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "11/30",
@@ -224252,8 +224274,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 7.5
+          "Robin Kelly": 7.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/1",
@@ -224265,8 +224287,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 7.5
+          "Robin Kelly": 7.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/2",
@@ -224278,8 +224300,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 7.5
+          "Robin Kelly": 7.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/3",
@@ -224291,8 +224313,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 6.0
+          "Robin Kelly": 6.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/4",
@@ -224304,8 +224326,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 6.0
+          "Robin Kelly": 6.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/5",
@@ -224317,8 +224339,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 5.5
+          "Robin Kelly": 5.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/6",
@@ -224330,8 +224352,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 5.5
+          "Robin Kelly": 5.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/7",
@@ -224343,8 +224365,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 6.0
+          "Robin Kelly": 6.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/8",
@@ -224356,8 +224378,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/9",
@@ -224369,8 +224391,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/10",
@@ -224382,8 +224404,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/11",
@@ -224395,8 +224417,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/12",
@@ -224408,8 +224430,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/13",
@@ -224421,8 +224443,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/14",
@@ -224434,8 +224456,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/15",
@@ -224447,8 +224469,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/16",
@@ -224460,8 +224482,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/18",
@@ -224473,8 +224495,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/19",
@@ -224486,8 +224508,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/20",
@@ -224499,8 +224521,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/21",
@@ -224512,8 +224534,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/22",
@@ -224525,8 +224547,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/23",
@@ -224538,8 +224560,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/24",
@@ -224551,8 +224573,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/25",
@@ -224564,8 +224586,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/26",
@@ -224577,8 +224599,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 9.0
+          "Robin Kelly": 9.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/27",
@@ -224590,8 +224612,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/28",
@@ -224603,8 +224625,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/29",
@@ -224616,8 +224638,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/30",
@@ -224629,8 +224651,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "12/31",
@@ -224642,8 +224664,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/1",
@@ -224655,8 +224677,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/2",
@@ -224668,8 +224690,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/3",
@@ -224681,8 +224703,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/4",
@@ -224694,8 +224716,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/5",
@@ -224707,8 +224729,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/6",
@@ -224720,8 +224742,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/7",
@@ -224733,8 +224755,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 8.5
+          "Robin Kelly": 8.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/8",
@@ -224746,8 +224768,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 66.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 6.5
+          "Robin Kelly": 6.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/9",
@@ -224759,8 +224781,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 3.5
+          "Robin Kelly": 3.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/10",
@@ -224772,8 +224794,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.0
+          "Robin Kelly": 4.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/11",
@@ -224785,8 +224807,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.0
+          "Robin Kelly": 4.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/12",
@@ -224798,8 +224820,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.0
+          "Robin Kelly": 4.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/13",
@@ -224811,8 +224833,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.0
+          "Robin Kelly": 4.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/14",
@@ -224824,8 +224846,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.0
+          "Robin Kelly": 4.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/16",
@@ -224837,8 +224859,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 72.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 3.5
+          "Robin Kelly": 3.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/17",
@@ -224850,8 +224872,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 3.5
+          "Robin Kelly": 3.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/18",
@@ -224863,8 +224885,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 3.5
+          "Robin Kelly": 3.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/19",
@@ -224876,8 +224898,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.5
+          "Robin Kelly": 4.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/20",
@@ -224889,8 +224911,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.5
+          "Robin Kelly": 4.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/21",
@@ -224902,8 +224924,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 5.0
+          "Robin Kelly": 5.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/22",
@@ -224915,8 +224937,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 5.0
+          "Robin Kelly": 5.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/23",
@@ -224928,8 +224950,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 5.0
+          "Robin Kelly": 5.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/24",
@@ -224941,8 +224963,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 5.0
+          "Robin Kelly": 5.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/25",
@@ -224954,8 +224976,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 68.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 5.0
+          "Robin Kelly": 5.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/26",
@@ -224967,8 +224989,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 4.5
+          "Robin Kelly": 4.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/27",
@@ -224980,8 +225002,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 60.5,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 3.5
+          "Robin Kelly": 3.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/28",
@@ -224993,8 +225015,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.5
+          "Robin Kelly": 2.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/29",
@@ -225006,8 +225028,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.5
+          "Robin Kelly": 2.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/30",
@@ -225019,8 +225041,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 64.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "1/31",
@@ -225032,8 +225054,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 67.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/1",
@@ -225045,8 +225067,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 67.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/2",
@@ -225058,8 +225080,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/3",
@@ -225071,8 +225093,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/4",
@@ -225084,8 +225106,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 65.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/5",
@@ -225097,8 +225119,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 10.0,
           "Raja Krishnamoorthi": 68.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 3.0
+          "Robin Kelly": 3.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/6",
@@ -225110,8 +225132,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 68.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/7",
@@ -225123,8 +225145,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.5
+          "Robin Kelly": 2.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/8",
@@ -225136,8 +225158,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/9",
@@ -225149,8 +225171,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/10",
@@ -225162,8 +225184,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.5
+          "Robin Kelly": 2.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/11",
@@ -225186,8 +225208,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/14",
@@ -225212,8 +225234,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.5
+          "Robin Kelly": 1.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/17",
@@ -225253,8 +225275,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 2.0
+          "Robin Kelly": 2.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "2/22",
@@ -225315,8 +225337,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 63.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.0
+          "Robin Kelly": 1.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "3/2",
@@ -225351,8 +225373,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 47.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 1.0
+          "Robin Kelly": 1.0,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "3/6",
@@ -225443,8 +225465,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 48.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 0.5
+          "Robin Kelly": 0.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "3/17",
@@ -225456,8 +225478,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.0,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 0.5
+          "Robin Kelly": 0.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "3/18",
@@ -225469,8 +225491,8 @@
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 0.5,
-          "Robert Peters": 0.5,
-          "Robin Kelly": 0.5
+          "Robin Kelly": 0.5,
+          "Rod Blajegovich": 0.5
         },
         {
           "date": "3/19",
@@ -225482,8 +225504,8 @@
           "Michael Frerichs": 1.0,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 1.0,
-          "Robert Peters": 1.0,
-          "Robin Kelly": 1.0
+          "Robin Kelly": 1.0,
+          "Rod Blajegovich": 1.0
         }
       ],
       "note": null
@@ -226708,10 +226730,10 @@
       "chamber": "senate",
       "state": "KY",
       "district": null,
-      "description": "Kentucky Senate \u2014 McConnell (R-retiring)",
+      "description": "Will the margin of victory for Republicans in the U.S. Senate election in Kentucky be at least 12 percentage points?",
       "dem_base": 0.19,
       "pm": null,
-      "kalshi": "SENATEKY-26",
+      "kalshi": "KXMIDTERMMOV-KYSENR-P12",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-kysenr",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/kentucky/",
       "poll_avg_dem": null,
@@ -227113,6 +227135,11 @@
         },
         {
           "date": "9/10",
+          "polymarket": null,
+          "kalshi": 19
+        },
+        {
+          "date": "9/11",
           "polymarket": null,
           "kalshi": 19
         }
@@ -229301,7 +229328,7 @@
       "state": "LA",
       "district": null,
       "description": "Will Democrats win the Senate race in Kentucky?",
-      "dem_base": 0.047,
+      "dem_base": 0.045,
       "pm": null,
       "kalshi": "SENATELA-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatela/senate-races/senatela-26",
@@ -230348,13 +230375,13 @@
       "state": "MA",
       "district": null,
       "description": "Will Democrats win the Senate race in Massachusetts?",
-      "dem_base": 0.974,
+      "dem_base": 0.973,
       "pm": null,
       "kalshi": "SENATEMA-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatema/massachusetts-senate-race/senatema-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/massachusetts/",
       "poll_avg_dem": 46.8,
-      "market_gap": 50.6,
+      "market_gap": 50.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -235865,7 +235892,7 @@
       "state": "ME",
       "district": null,
       "description": "Will Democrats win the Senate race in Maine?",
-      "dem_base": 0.685,
+      "dem_base": 0.688,
       "pm": "maine-senate-election-winner",
       "kalshi": "SENATEME-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateme/maine-senate-race/senateme-26",
@@ -237853,7 +237880,7 @@
         {
           "date": "9/11",
           "polymarket": 71,
-          "kalshi": 66
+          "kalshi": 67
         }
       ],
       "note": null
@@ -240618,7 +240645,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240629,7 +240656,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240640,7 +240667,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240651,7 +240678,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240662,7 +240689,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240673,7 +240700,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240684,7 +240711,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240695,7 +240722,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240706,7 +240733,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240717,7 +240744,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240728,7 +240755,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240739,7 +240766,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240750,7 +240777,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240761,7 +240788,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240772,7 +240799,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240783,7 +240810,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240794,7 +240821,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240805,7 +240832,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240816,7 +240843,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240827,7 +240854,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240838,7 +240865,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240849,7 +240876,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240860,7 +240887,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240871,7 +240898,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240882,7 +240909,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240893,7 +240920,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240904,7 +240931,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240915,7 +240942,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240926,7 +240953,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240937,7 +240964,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240948,7 +240975,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240959,7 +240986,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240970,7 +240997,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240981,7 +241008,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -240992,7 +241019,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241003,7 +241030,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241014,7 +241041,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241025,7 +241052,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241036,7 +241063,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241047,7 +241074,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241058,7 +241085,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241069,7 +241096,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241080,7 +241107,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241091,7 +241118,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241102,7 +241129,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241113,7 +241140,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241124,7 +241151,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241135,7 +241162,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241146,7 +241173,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241157,7 +241184,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241168,7 +241195,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241179,7 +241206,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241190,7 +241217,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241201,7 +241228,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241212,7 +241239,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241223,7 +241250,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241234,7 +241261,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241245,7 +241272,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241256,7 +241283,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241267,7 +241294,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241278,7 +241305,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241289,7 +241316,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241300,7 +241327,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241311,7 +241338,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241322,7 +241349,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241333,7 +241360,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241344,7 +241371,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241355,7 +241382,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241366,7 +241393,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241377,7 +241404,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241388,7 +241415,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241399,7 +241426,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241410,7 +241437,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241421,7 +241448,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241432,7 +241459,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241443,7 +241470,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241454,7 +241481,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241465,7 +241492,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241476,7 +241503,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241487,7 +241514,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241498,7 +241525,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241509,7 +241536,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241520,7 +241547,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241531,7 +241558,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241542,7 +241569,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241553,7 +241580,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241564,7 +241591,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241575,7 +241602,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241586,7 +241613,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241597,7 +241624,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241608,7 +241635,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241619,7 +241646,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241630,7 +241657,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -241641,7 +241668,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player H": 0.0,
+          "Player K": 0.0,
           "Troy Jackson": 0.0
         }
       ],
@@ -248574,10 +248601,10 @@
           "Andy Levin": 0.5,
           "Dana Nessel": 0.5,
           "Haley Stevens": 21.0,
+          "Jacob Frey": 0.0,
           "Kristen McDonald Rivet": 0.5,
           "Mallory McMorrow": 59.0,
           "Matt Sahr": 0.5,
-          "Melisa L\u00f3pez Franzen": 0.0,
           "Rashida Tlaib": 1.0,
           "Sarah Anthony": 0.5
         },
@@ -252808,7 +252835,7 @@
       "state": "MN",
       "district": null,
       "description": "Will Democratic (DFL)s win the Senate race in Minnesota?",
-      "dem_base": 0.903,
+      "dem_base": 0.907,
       "pm": null,
       "kalshi": "SENATEMN-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatemn/minnesota-senate-race/senatemn-26",
@@ -252827,7 +252854,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -2
+        "change": -1
       },
       "polls": [
         {
@@ -253858,7 +253885,7 @@
         {
           "date": "9/11",
           "polymarket": null,
-          "kalshi": 90
+          "kalshi": 91
         }
       ],
       "note": null
@@ -267157,7 +267184,7 @@
           "c1": "Democratic",
           "d": null,
           "c2": "Pete Ricketts (R)",
-          "r": 47.5,
+          "r": 47.4,
           "c3": null,
           "c3pct": null,
           "candidates": null,
@@ -268302,13 +268329,13 @@
       "state": "NH",
       "district": null,
       "description": "Will Democrats win the Senate race in New Hampshire?",
-      "dem_base": 0.825,
+      "dem_base": 0.835,
       "pm": "new-hampshire-senate-election-winner",
       "kalshi": "SENATENH-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatenh/new-hampshire-senate-race/senatenh-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/senate/2026/new-hampshire/",
-      "poll_avg_dem": 42.3,
-      "market_gap": 40.2,
+      "poll_avg_dem": 43.0,
+      "market_gap": 40.5,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -268324,6 +268351,20 @@
         "change": 0
       },
       "polls": [
+        {
+          "date": "2026-09-10",
+          "pollster": "Rasmussen Reports (R)",
+          "c1": "Chris Pappas (D)",
+          "d": 45.0,
+          "c2": "John E. Sununu (R)",
+          "r": 34.0,
+          "c3": null,
+          "c3pct": null,
+          "candidates": null,
+          "spread": "(D) +11.0",
+          "matchup": "Chris Pappas (D) vs. John E. Sununu (R)",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire"
+        },
         {
           "date": "2026-08-30",
           "pollster": "Fabrizio, Lee, & Associates (R)",
@@ -275153,7 +275194,7 @@
       "state": "NJ",
       "district": null,
       "description": "Will Republicans win the Senate race in New Jersey?",
-      "dem_base": 0.978,
+      "dem_base": 0.976,
       "pm": null,
       "kalshi": "SENATENJ-26-R",
       "kalshi_url": "https://kalshi.com/markets/senatenj/new-jersey-senate-race/senatenj-26",
@@ -278314,7 +278355,7 @@
       "state": "OH",
       "district": null,
       "description": "Ohio Senate \u2014 Brown (D) vs. Husted (R-appointed)",
-      "dem_base": 0.45,
+      "dem_base": 0.045,
       "pm": null,
       "kalshi": "SENATEOH-26",
       "kalshi_url": null,
@@ -278331,9 +278372,9 @@
       "race_to_watch": true,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 5
+        "label": "Major Shift",
+        "level": 3,
+        "change": 11
       },
       "polls": null,
       "time_series": [
@@ -278711,6 +278752,11 @@
           "date": "9/10",
           "polymarket": null,
           "kalshi": 69
+        },
+        {
+          "date": "9/11",
+          "polymarket": null,
+          "kalshi": 49
         }
       ],
       "note": null
@@ -278721,7 +278767,7 @@
       "state": "OK",
       "district": null,
       "description": "Will Republicans win the Senate race in Oklahoma?",
-      "dem_base": 0.043,
+      "dem_base": 0.04,
       "pm": null,
       "kalshi": "SENATEOK-26-R",
       "kalshi_url": "https://kalshi.com/markets/senateok/oklahoma-senate-race/senateok-26",
@@ -290188,7 +290234,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 1
+        "change": 2
       },
       "polls": [
         {
@@ -291316,7 +291362,7 @@
         },
         {
           "date": "9/11",
-          "polymarket": 51,
+          "polymarket": 52,
           "kalshi": 50
         }
       ],
