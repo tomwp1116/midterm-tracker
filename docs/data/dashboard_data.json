@@ -1178,7 +1178,7 @@
       "state": "AL",
       "district": null,
       "description": "Will the total vote count for all participants in Alabama Governor General Election be above 1350000?",
-      "dem_base": 0.048,
+      "dem_base": 0.05,
       "pm": "alabama-governor-winner-2026",
       "kalshi": "KXMIDTERMVOTETURN-ALGOV-1350000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-algov",
@@ -15243,10 +15243,10 @@
       "chamber": "governor",
       "state": "CO",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Colorado be at least 12 percentage points?",
+      "description": "Will the margin of victory for Democrats in the governor election in Colorado be at least 30 percentage points?",
       "dem_base": 0.967,
       "pm": "colorado-governor-winner-2026",
-      "kalshi": "KXMIDTERMMOV-COGOVD-P12",
+      "kalshi": "KXMIDTERMMOV-COGOVD-P30",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-cogovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/colorado/",
       "poll_avg_dem": null,
@@ -21085,10 +21085,10 @@
       "chamber": "governor",
       "state": "FL",
       "district": null,
-      "description": "Will the total vote count for all participants in Florida Governor General Election be above 7300000?",
+      "description": "Will the total vote count for all participants in Florida Governor General Election be above 9700000?",
       "dem_base": 0.205,
       "pm": "florida-governor-winner-2026",
-      "kalshi": "KXMIDTERMVOTETURN-FLGOV-7300000",
+      "kalshi": "KXMIDTERMVOTETURN-FLGOV-9700000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-flgov",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/florida/",
       "poll_avg_dem": null,
@@ -35565,7 +35565,7 @@
       "state": "HI",
       "district": null,
       "description": "Will the Democratic party win the governorship in Hawaii",
-      "dem_base": 0.984,
+      "dem_base": 0.985,
       "pm": "hawaii-governor-winner-2026",
       "kalshi": "GOVPARTYHI-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyhi/hawaii-governor/govpartyhi-26",
@@ -37672,7 +37672,7 @@
       "state": "ID",
       "district": null,
       "description": "Will the Democratic party win the governorship in Idaho",
-      "dem_base": 0.016,
+      "dem_base": 0.017,
       "pm": "idaho-governor-winner-2026",
       "kalshi": "GOVPARTYID-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyid/idaho-governor/govpartyid-26",
@@ -38732,11 +38732,11 @@
       "chamber": "governor",
       "state": "IL",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Illinois be at least 12 percentage points?",
+      "description": "Will the Democratic party win the governorship in Illinois",
       "dem_base": 0.971,
       "pm": "illinois-governor-winner-2026",
-      "kalshi": "KXMIDTERMMOV-ILGOVD-P12",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ilgovd",
+      "kalshi": "GOVPARTYIL-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyil/illinois-governor/govpartyil-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/illinois/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -38752,7 +38752,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": [
         {
@@ -39768,7 +39768,7 @@
         },
         {
           "date": "10/17",
-          "polymarket": 97,
+          "polymarket": 98,
           "kalshi": 97
         }
       ],
@@ -41689,14 +41689,14 @@
       "chamber": "governor",
       "state": "MA",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Massachusetts be at least 14 percentage points?",
-      "dem_base": 0.953,
+      "description": "Will the Democratic party win the governorship in Massachusetts",
+      "dem_base": 0.955,
       "pm": "massachusetts-governor-winner-2026",
-      "kalshi": "KXMIDTERMMOV-MAGOVD-P14",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-magovd",
+      "kalshi": "GOVPARTYMA-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyma/massachusetts-governor/govpartyma-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/massachusetts/",
       "poll_avg_dem": 53.5,
-      "market_gap": 41.8,
+      "market_gap": 42.0,
       "race_type": "general",
       "primary_party": null,
       "primary_date": null,
@@ -42890,10 +42890,10 @@
       "chamber": "governor",
       "state": "ME",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Maine be at least 12 percentage points?",
-      "dem_base": 0.948,
+      "description": "Will the margin of victory for Democrats in the governor election in Maine be at least 24 percentage points?",
+      "dem_base": 0.949,
       "pm": "maine-governor-winner-2026",
-      "kalshi": "KXMIDTERMMOV-MEGOVD-P12",
+      "kalshi": "KXMIDTERMMOV-MEGOVD-P24",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-megovd",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/maine/",
       "poll_avg_dem": null,
@@ -42910,7 +42910,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": 0
       },
       "polls": [
         {
@@ -44010,8 +44010,8 @@
         },
         {
           "date": "10/17",
-          "polymarket": 95,
-          "kalshi": 95
+          "polymarket": 96,
+          "kalshi": 94
         }
       ],
       "note": null
@@ -49927,7 +49927,7 @@
       "state": "MI",
       "district": null,
       "description": "Will the total vote count for all participants in Michigan Governor General Election be above 5500000?",
-      "dem_base": 0.951,
+      "dem_base": 0.944,
       "pm": "michigan-governor-winner-2026",
       "kalshi": "KXMIDTERMVOTETURN-MIGOV-5500000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-migov",
@@ -49946,7 +49946,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 2
+        "change": 1
       },
       "polls": [
         {
@@ -51438,7 +51438,7 @@
         },
         {
           "date": "10/17",
-          "polymarket": 96,
+          "polymarket": 95,
           "kalshi": 94
         }
       ],
@@ -58908,7 +58908,7 @@
       "state": "MN",
       "district": null,
       "description": "Will the total vote count for all participants in Minnesota Governor General Election be above 2300000?",
-      "dem_base": 0.956,
+      "dem_base": 0.955,
       "pm": "minnesota-governor-winner-2026",
       "kalshi": "KXMIDTERMVOTETURN-MNGOV-2300000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-mngov",
@@ -65844,7 +65844,7 @@
       "state": "NE",
       "district": null,
       "description": "Will the margin of victory for Republicans in the governor election in Nebraska be at least 1 percentage point?",
-      "dem_base": 0.105,
+      "dem_base": 0.103,
       "pm": "nebraska-governor-winner-2026",
       "kalshi": "KXMIDTERMMOV-NEGOVR-P1",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-negovr",
@@ -66932,7 +66932,7 @@
       "chamber": "governor",
       "state": "NH",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in New Hampshire be at least 1 percentage points?",
+      "description": "Will Other win the New Hampshire governor race in 2026?",
       "dem_base": 0.041,
       "pm": "new-hampshire-governor-winner-2026",
       "kalshi": "KXMIDTERMMOV-NHGOVD-P1",
@@ -70599,7 +70599,7 @@
       "state": "NM",
       "district": null,
       "description": "Will the Democratic party win the governorship in New Mexico",
-      "dem_base": 0.941,
+      "dem_base": 0.939,
       "pm": "new-mexico-governor-winner-2026",
       "kalshi": "GOVPARTYNM-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartynm/new-mexico-governor/govpartynm-26",
@@ -75749,7 +75749,7 @@
       "state": "NY",
       "district": null,
       "description": "Will the Democratic party win the governorship in New York",
-      "dem_base": 0.943,
+      "dem_base": 0.944,
       "pm": "new-york-governor-winner-2026",
       "kalshi": "GOVPARTYNY-26-D",
       "kalshi_url": "https://kalshi.com/markets/govpartyny/new-york-governor/govpartyny-26",
@@ -87061,11 +87061,11 @@
       "chamber": "governor",
       "state": "OR",
       "district": null,
-      "description": "Will the total vote count for all participants in Oregon Governor General Election be above 1600000?",
+      "description": "Will the Democratic party win the governorship in Oregon",
       "dem_base": 0.755,
       "pm": "oregon-governor-winner-2026",
-      "kalshi": "KXMIDTERMVOTETURN-ORGOV-1600000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-orgov",
+      "kalshi": "GOVPARTYOR-26-D",
+      "kalshi_url": "https://kalshi.com/markets/govpartyor/oregon-governor/govpartyor-26",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/oregon/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -91014,7 +91014,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": [
         {
@@ -92324,7 +92324,7 @@
         },
         {
           "date": "10/17",
-          "polymarket": 98,
+          "polymarket": 97,
           "kalshi": 97
         }
       ],
@@ -92335,11 +92335,11 @@
       "chamber": "governor",
       "state": "SC",
       "district": null,
-      "description": "Will the total vote count for all participants in South Carolina Governor General Election be above 1500000?",
+      "description": "Will the margin of victory for Republicans in the governor election in South Carolina be at least 25 percentage points?",
       "dem_base": 0.051,
       "pm": "south-carolina-governor-winner-2026",
-      "kalshi": "KXMIDTERMVOTETURN-SCGOV-1500000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-scgov",
+      "kalshi": "KXMIDTERMMOV-SCGOVR-P25",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-scgovr",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/south-carolina/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -93357,7 +93357,7 @@
         {
           "date": "10/17",
           "polymarket": 6,
-          "kalshi": 31
+          "kalshi": 51
         }
       ],
       "note": null
@@ -95446,11 +95446,11 @@
       "chamber": "governor",
       "state": "TX",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the governor election in Texas be at least 3 percentage points?",
-      "dem_base": 0.255,
+      "description": "Will the margin of victory for Republicans in the governor election in Texas be at least 1 percentage points?",
+      "dem_base": 0.245,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-TXGOVD-P3",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-txgovd",
+      "kalshi": "KXMIDTERMMOV-TXGOVR-P1",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-txgovr",
       "rcp": "https://projects.fivethirtyeight.com/polls/governor/2026/texas/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -107298,11 +107298,11 @@
       "chamber": "house",
       "state": "AL",
       "district": null,
-      "description": "Will the total vote count for all participants in Alabama 02 House General Election be above 190000?",
-      "dem_base": 0.815,
+      "description": "Will the total vote count for all participants in Alabama 03 House General Election be above 170000?",
+      "dem_base": 0.943,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-AL02-190000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-al02",
+      "kalshi": "KXMIDTERMVOTETURN-AL03-170000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-al03",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -107318,7 +107318,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -8
+        "change": 17
       },
       "polls": null,
       "time_series": [
@@ -108000,7 +108000,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 58
+          "kalshi": 83
         }
       ],
       "note": null
@@ -108010,11 +108010,11 @@
       "chamber": "house",
       "state": "AR",
       "district": null,
-      "description": "Will the total vote count for all participants in Arkansas 03 House General Election be above 220000?",
+      "description": "Will the total vote count for all participants in Arkansas 01 House General Election be above 190000?",
       "dem_base": 0.715,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-AR03-220000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ar03",
+      "kalshi": "KXMIDTERMVOTETURN-AR01-190000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ar01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -108723,7 +108723,7 @@
       "state": "AZ",
       "district": "1",
       "description": "Will Democratic win the House race for AZ-1?",
-      "dem_base": 0.795,
+      "dem_base": 0.805,
       "pm": null,
       "kalshi": "HOUSEAZ1-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseaz1/house-arizona-1st/houseaz1-26",
@@ -112193,7 +112193,7 @@
       "state": "AZ",
       "district": null,
       "description": "Will the total vote count for all participants in Arizona 01 House General Election be above 350000?",
-      "dem_base": 0.16,
+      "dem_base": 0.046,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-AZ01-350000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-az01",
@@ -112212,7 +112212,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": -52
+        "change": -57
       },
       "polls": null,
       "time_series": [
@@ -112919,7 +112919,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 38
+          "kalshi": 33
         }
       ],
       "note": null
@@ -116026,7 +116026,7 @@
       "state": "CA",
       "district": "47",
       "description": "Will Democratic win the House race for CA-47?",
-      "dem_base": 0.952,
+      "dem_base": 0.958,
       "pm": null,
       "kalshi": "HOUSECA47-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca47/house-ca-47/houseca47-26",
@@ -118090,7 +118090,7 @@
       "state": "CA",
       "district": "9",
       "description": "Will Democratic win the House race for CA-9?",
-      "dem_base": 0.952,
+      "dem_base": 0.96,
       "pm": null,
       "kalshi": "HOUSECA9-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca9/house-ca-9/houseca9-26",
@@ -119122,7 +119122,7 @@
       "state": "CA",
       "district": "13",
       "description": "Will Democratic win the House race for CA-13?",
-      "dem_base": 0.949,
+      "dem_base": 0.948,
       "pm": null,
       "kalshi": "HOUSECA13-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca13/house-ca-13/houseca13-26",
@@ -120154,7 +120154,7 @@
       "state": "CA",
       "district": "22",
       "description": "Will Democratic win the House race for CA-22?",
-      "dem_base": 0.902,
+      "dem_base": 0.901,
       "pm": null,
       "kalshi": "HOUSECA22-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseca22/house-california-22nd/houseca22-26",
@@ -120173,7 +120173,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -121175,7 +121175,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 90
+          "kalshi": 89
         }
       ],
       "note": null
@@ -123269,7 +123269,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -124271,7 +124271,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 93
+          "kalshi": 92
         }
       ],
       "note": null
@@ -124281,11 +124281,11 @@
       "chamber": "house",
       "state": "CA",
       "district": null,
-      "description": "Will the total vote count for all participants in California 06 House General Election be above 241000?",
-      "dem_base": 0.53,
+      "description": "Will the total vote count for all participants in California 42 House General Election be above 210000?",
+      "dem_base": 0.425,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-CA06-241000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ca06",
+      "kalshi": "KXMIDTERMVOTETURN-CA42-210000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ca42",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -124301,7 +124301,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": -35
+        "change": -41
       },
       "polls": null,
       "time_series": [
@@ -124948,7 +124948,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 48
+          "kalshi": 42
         }
       ],
       "note": null
@@ -124959,7 +124959,7 @@
       "state": "CO",
       "district": "3",
       "description": "Will Democratic win the House race for CO-3?",
-      "dem_base": 0.29,
+      "dem_base": 0.295,
       "pm": null,
       "kalshi": "HOUSECO3-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseco3/house-co-3/houseco3-26",
@@ -124978,7 +124978,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -125980,7 +125980,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 29
+          "kalshi": 30
         }
       ],
       "note": null
@@ -125991,7 +125991,7 @@
       "state": "CO",
       "district": "8",
       "description": "Will Democratic win the House race for CO-8?",
-      "dem_base": 0.84,
+      "dem_base": 0.83,
       "pm": null,
       "kalshi": "HOUSECO8-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseco8/house-co-8/houseco8-26",
@@ -126010,7 +126010,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -1
+        "change": -2
       },
       "polls": null,
       "time_series": [
@@ -127012,7 +127012,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 84
+          "kalshi": 83
         }
       ],
       "note": null
@@ -127227,9 +127227,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": 43
+        "label": "Major Shift",
+        "level": 3,
+        "change": 23
       },
       "polls": null,
       "time_series": [
@@ -127951,7 +127951,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 68
+          "kalshi": 48
         }
       ],
       "note": null
@@ -127962,7 +127962,7 @@
       "state": "CT",
       "district": "5",
       "description": "Will a Democrat win the House race for CT-5?",
-      "dem_base": 0.946,
+      "dem_base": 0.942,
       "pm": null,
       "kalshi": "HOUSECT5-26-D",
       "kalshi_url": "https://kalshi.com/markets/housect5/house-ct-5th/housect5-26",
@@ -129181,7 +129181,7 @@
       "state": "FL",
       "district": "13",
       "description": "Will Democratic win the House race for FL-13?",
-      "dem_base": 0.26,
+      "dem_base": 0.255,
       "pm": null,
       "kalshi": "HOUSEFL13-26-D",
       "kalshi_url": "https://kalshi.com/markets/housefl13/house-fl-13/housefl13-26",
@@ -129200,7 +129200,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -130202,7 +130202,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 26
+          "kalshi": 25
         }
       ],
       "note": null
@@ -131244,10 +131244,10 @@
       "chamber": "house",
       "state": "FL",
       "district": null,
-      "description": "Will the total vote count for all participants in Florida 17 House General Election be above 360000?",
-      "dem_base": 0.49,
+      "description": "Will the total vote count for all participants in Florida 17 House General Election be above 380000?",
+      "dem_base": 0.933,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-FL17-360000",
+      "kalshi": "KXMIDTERMVOTETURN-FL17-380000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-fl17",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
@@ -132011,11 +132011,11 @@
       "chamber": "house",
       "state": "GA",
       "district": null,
-      "description": "Will the total vote count for all participants in Georgia 06 House General Election be above 300000?",
+      "description": "Will the total vote count for all participants in Georgia 07 House General Election be above 350000?",
       "dem_base": 0.695,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-GA06-300000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ga06",
+      "kalshi": "KXMIDTERMVOTETURN-GA07-350000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ga07",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -135236,7 +135236,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 16
+        "change": 20
       },
       "polls": null,
       "time_series": [
@@ -135988,7 +135988,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 72
+          "kalshi": 76
         }
       ],
       "note": null
@@ -137030,11 +137030,11 @@
       "chamber": "house",
       "state": "IL",
       "district": null,
-      "description": "Will the total vote count for all participants in Illinois 07 House General Election be above 160000?",
+      "description": "Will the total vote count for all participants in Illinois 11 House General Election be above 330000?",
       "dem_base": 0.931,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-IL07-160000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-il07",
+      "kalshi": "KXMIDTERMVOTETURN-IL11-330000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-il11",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -138849,11 +138849,11 @@
       "chamber": "house",
       "state": "KS",
       "district": null,
-      "description": "Will the total vote count for all participants in Kansas 02 House General Election be above 220000?",
+      "description": "Will the total vote count for all participants in Kansas 01 House General Election be above 220000?",
       "dem_base": 0.83,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-KS02-220000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ks02",
+      "kalshi": "KXMIDTERMVOTETURN-KS01-220000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ks01",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -139674,9 +139674,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": -5
+        "label": "Major Shift",
+        "level": 3,
+        "change": -8
       },
       "polls": null,
       "time_series": [
@@ -140473,7 +140473,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 67
+          "kalshi": 64
         }
       ],
       "note": null
@@ -142520,7 +142520,7 @@
       "state": "ME",
       "district": null,
       "description": "Will the total vote count for all participants in Maine 01 House General Election be above 480000?",
-      "dem_base": 0.042,
+      "dem_base": 0.915,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-ME01-480000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-me01",
@@ -142537,9 +142537,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "New Leader",
-        "level": 4,
-        "change": -48
+        "label": "Major Shift",
+        "level": 3,
+        "change": -29
       },
       "polls": null,
       "time_series": [
@@ -143336,7 +143336,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 46
+          "kalshi": 65
         }
       ],
       "note": null
@@ -147475,7 +147475,7 @@
       "state": "MI",
       "district": "8",
       "description": "Will Democratic win the House race for MI-8?",
-      "dem_base": 0.939,
+      "dem_base": 0.94,
       "pm": null,
       "kalshi": "HOUSEMI8-26-D",
       "kalshi_url": "https://kalshi.com/markets/housemi8/house-michigan-8th/housemi8-26",
@@ -148880,11 +148880,11 @@
       "chamber": "house",
       "state": "MI",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the Michigan's 3rd District House election be at least 10 percentage points?",
-      "dem_base": 0.785,
+      "description": "Will the margin of victory for Republicans in the Michigan's 1st District House election be at least 10 percentage points?",
+      "dem_base": 0.949,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-MI03D-P10",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mi03d",
+      "kalshi": "KXMIDTERMMOV-MI01R-P10",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-mi01r",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -148900,7 +148900,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": 28
+        "change": 23
       },
       "polls": null,
       "time_series": [
@@ -149697,7 +149697,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 74
+          "kalshi": 69
         }
       ],
       "note": null
@@ -149708,7 +149708,7 @@
       "state": "MN",
       "district": "2",
       "description": "Will a Democrat win the House race for MN-2?",
-      "dem_base": 0.925,
+      "dem_base": 0.927,
       "pm": null,
       "kalshi": "HOUSEMN2-26-D",
       "kalshi_url": "https://kalshi.com/markets/housemn2/house-mns-2nd/housemn2-26",
@@ -151753,11 +151753,11 @@
       "chamber": "house",
       "state": "MS",
       "district": null,
-      "description": "Will the total vote count for all participants in Mississippi 01 House General Election be above 230000?",
+      "description": "Will the margin of victory for Republicans in the Mississippi's 1st District House election be at least 18 percentage points?",
       "dem_base": 0.911,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-MS01-230000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ms01",
+      "kalshi": "KXMIDTERMMOV-MS01R-P18",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-ms01r",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -153613,7 +153613,7 @@
       "state": "MT",
       "district": null,
       "description": "Will the total vote count for all participants in Montana 02 House General Election be above 235000?",
-      "dem_base": 0.135,
+      "dem_base": 0.235,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-MT02-235000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-mt02",
@@ -153630,9 +153630,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": 32
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": 6
       },
       "polls": null,
       "time_series": [
@@ -154429,7 +154429,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 41
+          "kalshi": 15
         }
       ],
       "note": null
@@ -154440,7 +154440,7 @@
       "state": "NC",
       "district": "1",
       "description": "Will Democratic win the House race for NC-1?",
-      "dem_base": 0.685,
+      "dem_base": 0.68,
       "pm": null,
       "kalshi": "HOUSENC1-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenc1/house-nc-1/housenc1-26",
@@ -156759,7 +156759,7 @@
       "state": "NC",
       "district": null,
       "description": "Will the total vote count for all participants in North Carolina 03 House General Election be above 225000?",
-      "dem_base": 0.595,
+      "dem_base": 0.948,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-NC03-225000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-nc03",
@@ -156776,9 +156776,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -14
+        "label": "Moderate Shift",
+        "level": 2,
+        "change": 4
       },
       "polls": null,
       "time_series": [
@@ -157575,7 +157575,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 61
+          "kalshi": 79
         }
       ],
       "note": null
@@ -157586,7 +157586,7 @@
       "state": "NE",
       "district": "2",
       "description": "Will Democratic win the House race for NE-2?",
-      "dem_base": 0.942,
+      "dem_base": 0.938,
       "pm": null,
       "kalshi": "HOUSENE2-26-D",
       "kalshi_url": "https://kalshi.com/markets/housene2/house-nebraska-2nd/housene2-26",
@@ -158805,7 +158805,7 @@
       "state": "NE",
       "district": null,
       "description": "Will the total vote count for all participants in Nebraska 01 House General Election be above 320000?",
-      "dem_base": 0.58,
+      "dem_base": 0.91,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-NE01-320000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-ne01",
@@ -158822,9 +158822,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 6
+        "label": "New Leader",
+        "level": 4,
+        "change": 22
       },
       "polls": null,
       "time_series": [
@@ -159621,7 +159621,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 45
+          "kalshi": 61
         }
       ],
       "note": null
@@ -160663,11 +160663,11 @@
       "chamber": "house",
       "state": "NH",
       "district": null,
-      "description": "Will the margin of victory for Democrats in the New Hampshire's 1st District House election be at least 1 percentage points?",
-      "dem_base": 0.423,
+      "description": "Will the margin of victory for Democrats in the New Hampshire's 2nd District House election be at least 1 percentage points?",
+      "dem_base": 0.921,
       "pm": null,
-      "kalshi": "KXMIDTERMMOV-NH01D-P1",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-nh01d",
+      "kalshi": "KXMIDTERMMOV-NH02D-P1",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermmov/midterm-margin-of-victory/kxmidtermmov-nh02d",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -160681,9 +160681,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -23
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -161480,7 +161480,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 69
+          "kalshi": 94
         }
       ],
       "note": null
@@ -161491,7 +161491,7 @@
       "state": "NJ",
       "district": "5",
       "description": "Will a Democrat win the House race for NJ-5?",
-      "dem_base": 0.958,
+      "dem_base": 0.96,
       "pm": null,
       "kalshi": "HOUSENJ5-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenj5/house-njs-5th/housenj5-26",
@@ -164774,7 +164774,7 @@
       "state": "NJ",
       "district": null,
       "description": "Will the total vote count for all participants in New Jersey 07 House General Election be above 280000?",
-      "dem_base": 0.595,
+      "dem_base": 0.968,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-NJ07-280000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-nj07",
@@ -164791,9 +164791,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Steady",
-        "level": 1,
-        "change": -2
+        "label": "Major Shift",
+        "level": 3,
+        "change": 17
       },
       "polls": null,
       "time_series": [
@@ -165595,7 +165595,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 75
+          "kalshi": 94
         }
       ],
       "note": null
@@ -165606,7 +165606,7 @@
       "state": "NM",
       "district": "2",
       "description": "Will Democratic win the House race for NM-2?",
-      "dem_base": 0.909,
+      "dem_base": 0.907,
       "pm": null,
       "kalshi": "HOUSENM2-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenm2/house-nm-2/housenm2-26",
@@ -167857,7 +167857,7 @@
       "state": "NV",
       "district": "3",
       "description": "Will Democratic win the House race for NV-3?",
-      "dem_base": 0.933,
+      "dem_base": 0.929,
       "pm": null,
       "kalshi": "HOUSENV3-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenv3/house-nv-3/housenv3-26",
@@ -168889,7 +168889,7 @@
       "state": "NV",
       "district": "4",
       "description": "Will a Democrat win the House race for NV-4?",
-      "dem_base": 0.955,
+      "dem_base": 0.958,
       "pm": null,
       "kalshi": "HOUSENV4-26-D",
       "kalshi_url": "https://kalshi.com/markets/housenv4/house-nevadas-4th/housenv4-26",
@@ -168908,7 +168908,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -2
+        "change": -1
       },
       "polls": null,
       "time_series": [
@@ -169910,7 +169910,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 96
+          "kalshi": 97
         }
       ],
       "note": null
@@ -171985,7 +171985,7 @@
       "state": "NY",
       "district": "4",
       "description": "Will Democratic win the House race for NY-4?",
-      "dem_base": 0.92,
+      "dem_base": 0.924,
       "pm": null,
       "kalshi": "HOUSENY4-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny4/house-new-york-4th/houseny4-26",
@@ -172004,7 +172004,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -173006,7 +173006,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 92
+          "kalshi": 93
         }
       ],
       "note": null
@@ -175268,7 +175268,7 @@
       "state": "NY",
       "district": "19",
       "description": "Will Democratic win the House race for NY-19?",
-      "dem_base": 0.964,
+      "dem_base": 0.965,
       "pm": null,
       "kalshi": "HOUSENY19-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseny19/house-ny-19/houseny19-26",
@@ -177332,7 +177332,7 @@
       "state": "OH",
       "district": "13",
       "description": "Will Democratic win the House race for OH-13?",
-      "dem_base": 0.939,
+      "dem_base": 0.948,
       "pm": null,
       "kalshi": "HOUSEOH13-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseoh13/house-oh-13/houseoh13-26",
@@ -179582,11 +179582,11 @@
       "chamber": "house",
       "state": "OH",
       "district": null,
-      "description": "Will the total vote count for all participants in Ohio 12 House General Election be above 320000?",
-      "dem_base": 0.295,
+      "description": "Will the total vote count for all participants in Ohio 08 House General Election be above 310000?",
+      "dem_base": 0.923,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-OH12-320000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-oh12",
+      "kalshi": "KXMIDTERMVOTETURN-OH08-310000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-oh08",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -179600,9 +179600,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Major Shift",
-        "level": 3,
-        "change": -9
+        "label": "New Leader",
+        "level": 4,
+        "change": -21
       },
       "polls": null,
       "time_series": [
@@ -180434,7 +180434,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 61
+          "kalshi": 49
         }
       ],
       "note": null
@@ -181664,7 +181664,7 @@
       "state": "OR",
       "district": null,
       "description": "Will the total vote count for all participants in Oregon 02 House General Election be above 240000?",
-      "dem_base": 0.715,
+      "dem_base": 0.95,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-OR02-240000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-or02",
@@ -181683,7 +181683,7 @@
       "movement": {
         "label": "New Leader",
         "level": 4,
-        "change": -22
+        "change": -11
       },
       "polls": null,
       "time_series": [
@@ -182515,7 +182515,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 39
+          "kalshi": 50
         }
       ],
       "note": null
@@ -183558,7 +183558,7 @@
       "state": "PA",
       "district": "17",
       "description": "Will Democratic win the House race for PA-17?",
-      "dem_base": 0.953,
+      "dem_base": 0.956,
       "pm": null,
       "kalshi": "HOUSEPA17-26-D",
       "kalshi_url": "https://kalshi.com/markets/housepa17/house-pa-17/housepa17-26",
@@ -187215,7 +187215,7 @@
       "state": "PA",
       "district": "10",
       "description": "Will Democratic win the House race for PA-10?",
-      "dem_base": 0.805,
+      "dem_base": 0.795,
       "pm": null,
       "kalshi": "HOUSEPA10-26-D",
       "kalshi_url": "https://kalshi.com/markets/housepa10/house-pennsylvania-10th/housepa10-26",
@@ -188264,9 +188264,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 6
+        "label": "Major Shift",
+        "level": 3,
+        "change": 19
       },
       "polls": null,
       "time_series": [
@@ -189098,7 +189098,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 24
+          "kalshi": 37
         }
       ],
       "note": null
@@ -189109,7 +189109,7 @@
       "state": "TN",
       "district": null,
       "description": "Will the total vote count for all participants in Tennessee 06 House General Election be above 210000?",
-      "dem_base": 0.059,
+      "dem_base": 0.058,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-TN06-210000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tn06",
@@ -193067,7 +193067,7 @@
       "state": "TX",
       "district": null,
       "description": "Will the total vote count for all participants in Texas 03 House General Election be above 245000?",
-      "dem_base": 0.66,
+      "dem_base": 0.695,
       "pm": null,
       "kalshi": "KXMIDTERMVOTETURN-TX03-245000",
       "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-tx03",
@@ -193086,7 +193086,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": 7
+        "change": 8
       },
       "polls": null,
       "time_series": [
@@ -193918,7 +193918,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 47
+          "kalshi": 48
         }
       ],
       "note": null
@@ -193928,11 +193928,11 @@
       "chamber": "house",
       "state": "US",
       "district": null,
-      "description": "Will the total vote count for all participants in Indiana 07 House General Election be above 150000?",
+      "description": "Will the total vote count for all participants in Wisconsin 02 House General Election be above 280000?",
       "dem_base": 0.903,
       "pm": "which-party-will-win-the-house-in-2026",
-      "kalshi": "KXMIDTERMVOTETURN-IN07-150000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-in07",
+      "kalshi": "KXMIDTERMVOTETURN-WI02-280000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-wi02",
       "rcp": null,
       "poll_avg_dem": null,
       "market_gap": null,
@@ -194961,7 +194961,7 @@
       "state": "VA",
       "district": "1",
       "description": "Will Democratic win the House race for VA-1?",
-      "dem_base": 0.535,
+      "dem_base": 0.545,
       "pm": null,
       "kalshi": "HOUSEVA1-26-D",
       "kalshi_url": "https://kalshi.com/markets/houseva1/house-va-1/houseva1-26",
@@ -194980,7 +194980,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": -2
+        "change": 0
       },
       "polls": null,
       "time_series": [
@@ -195982,7 +195982,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 53
+          "kalshi": 55
         }
       ],
       "note": null
@@ -198430,11 +198430,11 @@
       "chamber": "house",
       "state": "VA",
       "district": null,
-      "description": "Will the total vote count for all participants in West Virginia 02 House General Election be above 230000?",
-      "dem_base": 0.29,
+      "description": "Will the total vote count for all participants in Virginia 02 House General Election be above 350000?",
+      "dem_base": 0.978,
       "pm": null,
-      "kalshi": "KXMIDTERMVOTETURN-WV02-230000",
-      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-wv02",
+      "kalshi": "KXMIDTERMVOTETURN-VA02-350000",
+      "kalshi_url": "https://kalshi.com/markets/kxmidtermvoteturn/midterm-voter-turnout/kxmidtermvoteturn-va02",
       "rcp": "https://projects.fivethirtyeight.com/polls/house/2026/",
       "poll_avg_dem": null,
       "market_gap": null,
@@ -198450,7 +198450,7 @@
       "movement": {
         "label": "Major Shift",
         "level": 3,
-        "change": -26
+        "change": -38
       },
       "polls": null,
       "time_series": [
@@ -199282,7 +199282,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 63
+          "kalshi": 51
         }
       ],
       "note": null
@@ -200512,7 +200512,7 @@
       "state": "WI",
       "district": "1",
       "description": "Will Democratic win the House race for WI-1?",
-      "dem_base": 0.37,
+      "dem_base": 0.375,
       "pm": null,
       "kalshi": "HOUSEWI1-26-D",
       "kalshi_url": "https://kalshi.com/markets/housewi1/house-wi-1/housewi1-26",
@@ -200531,7 +200531,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 1
+        "change": 2
       },
       "polls": null,
       "time_series": [
@@ -201533,7 +201533,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 37
+          "kalshi": 38
         }
       ],
       "note": null
@@ -204034,7 +204034,7 @@
       "state": "AL",
       "district": null,
       "description": "Will Democrats win the Senate race in Alabama?",
-      "dem_base": 0.027,
+      "dem_base": 0.028,
       "pm": null,
       "kalshi": "SENATEAL-26-D",
       "kalshi_url": "https://kalshi.com/markets/senateal/alabama/senateal-26",
@@ -205081,7 +205081,7 @@
       "state": "AR",
       "district": null,
       "description": "Will Democrats win the Senate race in Arkansas?",
-      "dem_base": 0.059,
+      "dem_base": 0.06,
       "pm": null,
       "kalshi": "SENATEAR-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatear/arkansas-senate-race/senatear-26",
@@ -230029,1251 +230029,1251 @@
       "time_series": [
         {
           "date": "11/5",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
-          "Robin Kelly": 3.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.0
         },
         {
           "date": "11/6",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.0,
-          "Robin Kelly": 3.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.0
         },
         {
           "date": "11/7",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 47.5,
-          "Robin Kelly": 3.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.0
         },
         {
           "date": "11/8",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.5,
-          "Robin Kelly": 3.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.0
         },
         {
           "date": "11/9",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
-          "Robin Kelly": 3.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.0
         },
         {
           "date": "11/10",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.5,
           "Raja Krishnamoorthi": 48.0,
-          "Robin Kelly": 3.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.0
         },
         {
           "date": "11/11",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "11/12",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "11/13",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 55.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "11/14",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 54.0,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/15",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/16",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robin Kelly": 2.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.5
         },
         {
           "date": "11/17",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "11/18",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 51.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "11/19",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 44.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 52.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 2.0
         },
         {
           "date": "11/20",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 43.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/21",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/22",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/23",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/24",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/25",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 1.5
         },
         {
           "date": "11/26",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 41.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 7.5,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 7.5
         },
         {
           "date": "11/27",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 7.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 7.5
         },
         {
           "date": "11/28",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 7.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 7.5
         },
         {
           "date": "11/29",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 7.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 7.5
         },
         {
           "date": "11/30",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 7.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 7.5
         },
         {
           "date": "12/1",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 7.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 7.5
         },
         {
           "date": "12/2",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 7.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 7.5
         },
         {
           "date": "12/3",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 6.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 6.0
         },
         {
           "date": "12/4",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 6.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 6.0
         },
         {
           "date": "12/5",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 5.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 5.5
         },
         {
           "date": "12/6",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 5.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 5.5
         },
         {
           "date": "12/7",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 6.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 6.0
         },
         {
           "date": "12/8",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/9",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/10",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/11",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/12",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/13",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/14",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/15",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/16",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/18",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/19",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/20",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/21",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/22",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/23",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.0,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/24",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.5,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/25",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/26",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 34.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robin Kelly": 9.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 9.0
         },
         {
           "date": "12/27",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 34.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/28",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/29",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 55.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/30",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "12/31",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.0,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/1",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/2",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/3",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 57.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/4",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/5",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/6",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/7",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robin Kelly": 8.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 8.5
         },
         {
           "date": "1/8",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 25.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 66.5,
-          "Robin Kelly": 6.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 6.5
         },
         {
           "date": "1/9",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robin Kelly": 3.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.5
         },
         {
           "date": "1/10",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robin Kelly": 4.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.0
         },
         {
           "date": "1/11",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robin Kelly": 4.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.0
         },
         {
           "date": "1/12",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robin Kelly": 4.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.0
         },
         {
           "date": "1/13",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robin Kelly": 4.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.0
         },
         {
           "date": "1/14",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 74.0,
-          "Robin Kelly": 4.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.0
         },
         {
           "date": "1/16",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 72.5,
-          "Robin Kelly": 3.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.5
         },
         {
           "date": "1/17",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
-          "Robin Kelly": 3.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.5
         },
         {
           "date": "1/18",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
-          "Robin Kelly": 3.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.5
         },
         {
           "date": "1/19",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robin Kelly": 4.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.5
         },
         {
           "date": "1/20",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 71.5,
-          "Robin Kelly": 4.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.5
         },
         {
           "date": "1/21",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.0,
-          "Robin Kelly": 5.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 5.0
         },
         {
           "date": "1/22",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robin Kelly": 5.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 5.0
         },
         {
           "date": "1/23",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 21.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 69.5,
-          "Robin Kelly": 5.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 5.0
         },
         {
           "date": "1/24",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.5,
-          "Robin Kelly": 5.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 5.0
         },
         {
           "date": "1/25",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 20.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 68.5,
-          "Robin Kelly": 5.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 5.0
         },
         {
           "date": "1/26",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 22.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 70.0,
-          "Robin Kelly": 4.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 4.5
         },
         {
           "date": "1/27",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 32.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 60.5,
-          "Robin Kelly": 3.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.5
         },
         {
           "date": "1/28",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 37.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.0,
-          "Robin Kelly": 2.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.5
         },
         {
           "date": "1/29",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
-          "Robin Kelly": 2.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.5
         },
         {
           "date": "1/30",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 64.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "1/31",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 1.0,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 67.0,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "2/1",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 67.0,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "2/2",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 29.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "2/3",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 30.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 66.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "2/4",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 65.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "2/5",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 33.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 10.0,
           "Raja Krishnamoorthi": 68.5,
-          "Robin Kelly": 3.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 3.0
         },
         {
           "date": "2/6",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 31.0,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 68.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "2/7",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robin Kelly": 2.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.5
         },
         {
           "date": "2/8",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.5
         },
         {
           "date": "2/9",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 36.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 63.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.5
         },
         {
           "date": "2/10",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 58.5,
-          "Robin Kelly": 2.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.5
         },
         {
           "date": "2/11",
@@ -231288,240 +231288,239 @@
         },
         {
           "date": "2/13",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 45.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 54.5,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.5
         },
         {
           "date": "2/14",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 44.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/15",
           "Juliana Stratton": 45.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 54.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/16",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 43.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 56.0,
-          "Robin Kelly": 1.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.5
         },
         {
           "date": "2/17",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 44.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/18",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.5,
           "Robin Kelly": 3.0
         },
         {
           "date": "2/19",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 57.0,
           "Robin Kelly": 3.0
         },
         {
           "date": "2/20",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 42.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 2.5
         },
         {
           "date": "2/21",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 39.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 59.5,
-          "Robin Kelly": 2.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 2.0
         },
         {
           "date": "2/22",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 39.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 60.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "2/23",
+          "Alexi Giannoulias": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 40.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/24",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 39.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 58.0,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/25",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 39.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 57.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/26",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 48.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 50.5
         },
         {
           "date": "2/27",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 40.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 58.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "2/28",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 41.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.0,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/1",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 38.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 63.5,
-          "Robin Kelly": 1.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.0
         },
         {
           "date": "3/2",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 36.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 62.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/3",
+          "Alexi Giannoulias": 0.5,
           "Juliana Stratton": 32.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 67.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/4",
+          "Alexi Giannoulias": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
-          "Lauren Underwood": 0.5,
           "Michael Frerichs": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/5",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 53.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 47.0,
-          "Robin Kelly": 1.0,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 1.0
         },
         {
           "date": "3/6",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Juliana Stratton": 53.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/7",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 54.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "3/8",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Juliana Stratton": 53.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 46.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/9",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Juliana Stratton": 52.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 47.5,
           "Robin Kelly": 1.5
         },
         {
           "date": "3/10",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Juliana Stratton": 43.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 56.0,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/11",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Juliana Stratton": 39.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 62.5,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/12",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "Juliana Stratton": 40.0,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 59.5,
           "Robin Kelly": 1.0
         },
@@ -231533,71 +231532,71 @@
         },
         {
           "date": "3/14",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Juliana Stratton": 51.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 48.0,
           "Robin Kelly": 0.5
         },
         {
           "date": "3/15",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Juliana Stratton": 50.5,
-          "Lauren Underwood": 0.5,
           "Raja Krishnamoorthi": 50.5,
           "Robin Kelly": 1.0
         },
         {
           "date": "3/16",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 51.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 48.5,
-          "Robin Kelly": 0.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 0.5
         },
         {
           "date": "3/17",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 48.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 53.0,
-          "Robin Kelly": 0.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 0.5
         },
         {
           "date": "3/18",
+          "Alexi Giannoulias": 0.5,
           "Austin Mink": 0.5,
           "Dick Durbin": 0.5,
           "JB Pritzker": 0.5,
           "Juliana Stratton": 99.5,
-          "Lauren Underwood": 0.5,
+          "Meredith Shiner": 0.5,
           "Michael Frerichs": 0.5,
           "Rahm Emanuel": 0.5,
           "Raja Krishnamoorthi": 0.5,
-          "Robin Kelly": 0.5,
-          "Rod Blajegovich": 0.5
+          "Robin Kelly": 0.5
         },
         {
           "date": "3/19",
+          "Alexi Giannoulias": 1.0,
           "Austin Mink": 1.0,
           "Dick Durbin": 1.0,
           "JB Pritzker": 1.0,
           "Juliana Stratton": 99.0,
-          "Lauren Underwood": 1.0,
+          "Meredith Shiner": 1.0,
           "Michael Frerichs": 1.0,
           "Rahm Emanuel": 1.0,
           "Raja Krishnamoorthi": 1.0,
-          "Robin Kelly": 1.0,
-          "Rod Blajegovich": 1.0
+          "Robin Kelly": 1.0
         }
       ],
       "note": null
@@ -244202,7 +244201,7 @@
         {
           "date": "10/17",
           "polymarket": 60,
-          "kalshi": 57
+          "kalshi": 56
         }
       ],
       "note": null
@@ -246967,7 +246966,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -246978,7 +246977,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -246989,7 +246988,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247000,7 +246999,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247011,7 +247010,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247022,7 +247021,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247033,7 +247032,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247044,7 +247043,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247055,7 +247054,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247066,7 +247065,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247077,7 +247076,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247088,7 +247087,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247099,7 +247098,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247110,7 +247109,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247121,7 +247120,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247132,7 +247131,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247143,7 +247142,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247154,7 +247153,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247165,7 +247164,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247176,7 +247175,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247187,7 +247186,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247198,7 +247197,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247209,7 +247208,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247220,7 +247219,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247231,7 +247230,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247242,7 +247241,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247253,7 +247252,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247264,7 +247263,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247275,7 +247274,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247286,7 +247285,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247297,7 +247296,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247308,7 +247307,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247319,7 +247318,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247330,7 +247329,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247341,7 +247340,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247352,7 +247351,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247363,7 +247362,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247374,7 +247373,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247385,7 +247384,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247396,7 +247395,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247407,7 +247406,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247418,7 +247417,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247429,7 +247428,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247440,7 +247439,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247451,7 +247450,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247462,7 +247461,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247473,7 +247472,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247484,7 +247483,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247495,7 +247494,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247506,7 +247505,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247517,7 +247516,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247528,7 +247527,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247539,7 +247538,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247550,7 +247549,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247561,7 +247560,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247572,7 +247571,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247583,7 +247582,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247594,7 +247593,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247605,7 +247604,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247616,7 +247615,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247627,7 +247626,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247638,7 +247637,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247649,7 +247648,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247660,7 +247659,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247671,7 +247670,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247682,7 +247681,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247693,7 +247692,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247704,7 +247703,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247715,7 +247714,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247726,7 +247725,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247737,7 +247736,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247748,7 +247747,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247759,7 +247758,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247770,7 +247769,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247781,7 +247780,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247792,7 +247791,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247803,7 +247802,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247814,7 +247813,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247825,7 +247824,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247836,7 +247835,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247847,7 +247846,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247858,7 +247857,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247869,7 +247868,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247880,7 +247879,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247891,7 +247890,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247902,7 +247901,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247913,7 +247912,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247924,7 +247923,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247935,7 +247934,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247946,7 +247945,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247957,7 +247956,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247968,7 +247967,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247979,7 +247978,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -247990,7 +247989,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248001,7 +248000,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248012,7 +248011,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248023,7 +248022,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248034,7 +248033,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248045,7 +248044,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248056,7 +248055,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248067,7 +248066,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248078,7 +248077,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248089,7 +248088,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248100,7 +248099,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248111,7 +248110,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248122,7 +248121,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248133,7 +248132,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248144,7 +248143,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248155,7 +248154,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248166,7 +248165,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248177,7 +248176,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248188,7 +248187,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248199,7 +248198,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248210,7 +248209,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248221,7 +248220,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248232,7 +248231,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248243,7 +248242,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248254,7 +248253,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248265,7 +248264,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248276,7 +248275,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248287,7 +248286,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248298,7 +248297,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248309,7 +248308,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248320,7 +248319,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248331,7 +248330,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248342,7 +248341,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248353,7 +248352,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248364,7 +248363,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248375,7 +248374,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         },
         {
@@ -248386,7 +248385,7 @@
           "Janet Mills": 0.0,
           "Jared Golden": 0.0,
           "Jordan Wood": 0.0,
-          "Player O": 0.0,
+          "Player Q": 0.0,
           "Troy Jackson": 0.0
         }
       ],
@@ -249545,7 +249544,7 @@
       "state": "MI",
       "district": null,
       "description": "Will Democrats win the Senate race in Michigan?",
-      "dem_base": 0.69,
+      "dem_base": 0.688,
       "pm": "michigan-senate-election-winner",
       "kalshi": "SENATEMI-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatemi/michigan-senate-race/senatemi-26",
@@ -252163,7 +252162,7 @@
         {
           "date": "10/17",
           "polymarket": 70,
-          "kalshi": 68
+          "kalshi": 67
         }
       ],
       "note": null
@@ -255319,6 +255318,7 @@
           "Andy Levin": 0.5,
           "Dana Nessel": 0.5,
           "Haley Stevens": 21.0,
+          "Jacob Frey": 0.0,
           "Kristen McDonald Rivet": 0.5,
           "Mallory McMorrow": 59.0,
           "Matt Sahr": 0.5,
@@ -257014,7 +257014,6 @@
           "Kristen McDonald Rivet": 0.1,
           "Mallory McMorrow": 0.1,
           "Matt Sahr": 0.1,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.1,
           "Sarah Anthony": 0.1
         },
@@ -257027,7 +257026,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257040,7 +257038,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257053,7 +257050,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257066,7 +257062,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257079,7 +257074,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257092,7 +257086,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257105,7 +257098,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257118,7 +257110,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257131,7 +257122,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257144,7 +257134,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257157,7 +257146,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257170,7 +257158,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257183,7 +257170,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257196,7 +257182,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257209,7 +257194,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257222,7 +257206,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257235,7 +257218,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257248,7 +257230,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257261,7 +257242,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257274,7 +257254,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257287,7 +257266,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257300,7 +257278,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257313,7 +257290,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257326,7 +257302,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257339,7 +257314,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257352,7 +257326,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257365,7 +257338,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257378,7 +257350,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257391,7 +257362,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257404,7 +257374,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257417,7 +257386,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257430,7 +257398,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257443,7 +257410,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257456,7 +257422,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257469,7 +257434,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257482,7 +257446,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257495,7 +257458,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257508,7 +257470,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257521,7 +257482,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257534,7 +257494,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257547,7 +257506,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257560,7 +257518,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257573,7 +257530,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257586,7 +257542,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257599,7 +257554,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257612,7 +257566,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257625,7 +257578,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257638,7 +257590,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257651,7 +257602,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257664,7 +257614,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257677,7 +257626,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257690,7 +257638,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257703,7 +257650,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257716,7 +257662,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257729,7 +257674,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257742,7 +257686,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257755,7 +257698,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257768,7 +257710,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257781,7 +257722,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257794,7 +257734,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257807,7 +257746,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257820,7 +257758,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257833,7 +257770,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257846,7 +257782,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257859,7 +257794,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257872,7 +257806,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257885,7 +257818,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257898,7 +257830,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257911,7 +257842,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257924,7 +257854,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257937,7 +257866,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257950,7 +257878,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         },
@@ -257963,7 +257890,6 @@
           "Kristen McDonald Rivet": 0.0,
           "Mallory McMorrow": 0.0,
           "Matt Sahr": 0.0,
-          "Person J": 0.0,
           "Rashida Tlaib": 0.0,
           "Sarah Anthony": 0.0
         }
@@ -267456,7 +267382,7 @@
       "state": "MS",
       "district": null,
       "description": "Will Democrats win the Senate race in Mississippi?",
-      "dem_base": 0.106,
+      "dem_base": 0.095,
       "pm": null,
       "kalshi": "SENATEMS-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatems/mississippi-senate-race/senatems-26",
@@ -267473,9 +267399,9 @@
       "race_to_watch": false,
       "had_disagreement": false,
       "movement": {
-        "label": "Moderate Shift",
-        "level": 2,
-        "change": 3
+        "label": "Steady",
+        "level": 1,
+        "change": 2
       },
       "polls": [
         {
@@ -268506,7 +268432,7 @@
         {
           "date": "10/17",
           "polymarket": null,
-          "kalshi": 11
+          "kalshi": 10
         }
       ],
       "note": null
@@ -272619,7 +272545,7 @@
         {
           "date": "10/17",
           "polymarket": 96,
-          "kalshi": 95
+          "kalshi": 96
         }
       ],
       "note": null
@@ -297305,7 +297231,7 @@
       "state": "TN",
       "district": null,
       "description": "Will Democrats win the Senate race in Tennessee?",
-      "dem_base": 0.045,
+      "dem_base": 0.047,
       "pm": null,
       "kalshi": "SENATETN-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatetn/tennessee-senate-race/senatetn-26",
@@ -299500,7 +299426,7 @@
         {
           "date": "10/17",
           "polymarket": 62,
-          "kalshi": 62
+          "kalshi": 61
         }
       ],
       "note": null
@@ -302208,9 +302134,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.5,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/6",
@@ -302221,9 +302147,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.5,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/7",
@@ -302234,9 +302160,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/8",
@@ -302247,9 +302173,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/10",
@@ -302260,9 +302186,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/11",
@@ -302273,9 +302199,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/12",
@@ -302286,9 +302212,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/13",
@@ -302299,9 +302225,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 1.5
+          "Scott Kelly": 1.5,
+          "Veronica Escobar": 1.5
         },
         {
           "date": "11/14",
@@ -302312,9 +302238,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 4.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/15",
@@ -302325,9 +302251,9 @@
           "Jasmine Crockett": 39.0,
           "Juli\u00e1n Castro": 3.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/16",
@@ -302338,9 +302264,9 @@
           "Jasmine Crockett": 41.0,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/17",
@@ -302351,9 +302277,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/18",
@@ -302364,9 +302290,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/19",
@@ -302377,9 +302303,9 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/20",
@@ -302390,9 +302316,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/23",
@@ -302403,9 +302329,9 @@
           "Jasmine Crockett": 42.5,
           "Juli\u00e1n Castro": 3.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/24",
@@ -302416,9 +302342,9 @@
           "Jasmine Crockett": 41.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/25",
@@ -302429,9 +302355,9 @@
           "Jasmine Crockett": 40.0,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/26",
@@ -302442,9 +302368,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/27",
@@ -302455,9 +302381,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/28",
@@ -302468,9 +302394,9 @@
           "Jasmine Crockett": 38.0,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         },
         {
           "date": "11/29",
@@ -302481,9 +302407,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "11/30",
@@ -302494,9 +302420,9 @@
           "Jasmine Crockett": 40.0,
           "Juli\u00e1n Castro": 2.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/1",
@@ -302507,9 +302433,9 @@
           "Jasmine Crockett": 43.5,
           "Juli\u00e1n Castro": 2.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/2",
@@ -302520,9 +302446,9 @@
           "Jasmine Crockett": 39.0,
           "Juli\u00e1n Castro": 10.0,
           "Nathan Johnson": 3.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 2.5
+          "Scott Kelly": 2.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/3",
@@ -302533,9 +302459,9 @@
           "Jasmine Crockett": 42.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/4",
@@ -302546,9 +302472,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/5",
@@ -302559,9 +302485,9 @@
           "Jasmine Crockett": 45.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/6",
@@ -302572,9 +302498,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/7",
@@ -302585,9 +302511,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/8",
@@ -302598,9 +302524,9 @@
           "Jasmine Crockett": 44.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/9",
@@ -302611,9 +302537,9 @@
           "Jasmine Crockett": 50.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/10",
@@ -302624,9 +302550,9 @@
           "Jasmine Crockett": 45.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/11",
@@ -302637,9 +302563,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/12",
@@ -302650,9 +302576,9 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 1.5,
           "Ronald Gutierrez": 1.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/13",
@@ -302663,9 +302589,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/14",
@@ -302676,9 +302602,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/15",
@@ -302689,9 +302615,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/16",
@@ -302702,9 +302628,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/17",
@@ -302715,9 +302641,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/18",
@@ -302728,9 +302654,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/19",
@@ -302741,9 +302667,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/20",
@@ -302754,9 +302680,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 1.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/21",
@@ -302767,9 +302693,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/22",
@@ -302780,9 +302706,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/23",
@@ -302793,9 +302719,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/24",
@@ -302806,9 +302732,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/25",
@@ -302819,9 +302745,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/26",
@@ -302832,9 +302758,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/27",
@@ -302845,9 +302771,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/28",
@@ -302858,9 +302784,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/29",
@@ -302871,9 +302797,9 @@
           "Jasmine Crockett": 40.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/30",
@@ -302884,9 +302810,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "12/31",
@@ -302897,9 +302823,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/1",
@@ -302910,9 +302836,9 @@
           "Jasmine Crockett": 37.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/2",
@@ -302923,9 +302849,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/3",
@@ -302936,9 +302862,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/4",
@@ -302949,9 +302875,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/5",
@@ -302962,9 +302888,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/6",
@@ -302975,9 +302901,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/7",
@@ -302988,9 +302914,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/8",
@@ -303001,9 +302927,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/9",
@@ -303014,9 +302940,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/10",
@@ -303027,9 +302953,9 @@
           "Jasmine Crockett": 32.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/11",
@@ -303040,9 +302966,9 @@
           "Jasmine Crockett": 34.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/12",
@@ -303053,9 +302979,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/13",
@@ -303066,9 +302992,9 @@
           "Jasmine Crockett": 34.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/14",
@@ -303079,9 +303005,9 @@
           "Jasmine Crockett": 32.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/15",
@@ -303092,9 +303018,9 @@
           "Jasmine Crockett": 28.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/16",
@@ -303105,9 +303031,9 @@
           "Jasmine Crockett": 17.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/17",
@@ -303118,9 +303044,9 @@
           "Jasmine Crockett": 17.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/18",
@@ -303131,9 +303057,9 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/19",
@@ -303144,9 +303070,9 @@
           "Jasmine Crockett": 15.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/20",
@@ -303157,9 +303083,9 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/21",
@@ -303170,9 +303096,9 @@
           "Jasmine Crockett": 15.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/22",
@@ -303183,9 +303109,9 @@
           "Jasmine Crockett": 18.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/23",
@@ -303196,9 +303122,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/24",
@@ -303209,9 +303135,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/25",
@@ -303222,9 +303148,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/26",
@@ -303235,9 +303161,9 @@
           "Jasmine Crockett": 20.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/27",
@@ -303248,9 +303174,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/28",
@@ -303261,9 +303187,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/29",
@@ -303274,9 +303200,9 @@
           "Jasmine Crockett": 19.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/30",
@@ -303287,9 +303213,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "1/31",
@@ -303300,9 +303226,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/1",
@@ -303313,9 +303239,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/2",
@@ -303326,9 +303252,9 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/3",
@@ -303339,9 +303265,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/4",
@@ -303352,9 +303278,9 @@
           "Jasmine Crockett": 20.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/5",
@@ -303365,9 +303291,9 @@
           "Jasmine Crockett": 20.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/6",
@@ -303378,9 +303304,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/7",
@@ -303391,9 +303317,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/8",
@@ -303404,9 +303330,9 @@
           "Jasmine Crockett": 24.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/9",
@@ -303417,9 +303343,9 @@
           "Jasmine Crockett": 26.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/10",
@@ -303430,9 +303356,9 @@
           "Jasmine Crockett": 34.0,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/11",
@@ -303457,9 +303383,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/14",
@@ -303470,9 +303396,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/15",
@@ -303483,9 +303409,9 @@
           "Jasmine Crockett": 38.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/16",
@@ -303496,9 +303422,9 @@
           "Jasmine Crockett": 39.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/17",
@@ -303509,9 +303435,9 @@
           "Jasmine Crockett": 36.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/18",
@@ -303522,9 +303448,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/19",
@@ -303535,9 +303461,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/20",
@@ -303548,9 +303474,9 @@
           "Jasmine Crockett": 29.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/21",
@@ -303561,9 +303487,9 @@
           "Jasmine Crockett": 28.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/22",
@@ -303574,9 +303500,9 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/23",
@@ -303587,9 +303513,9 @@
           "Jasmine Crockett": 21.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/24",
@@ -303600,9 +303526,9 @@
           "Jasmine Crockett": 22.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/25",
@@ -303613,9 +303539,9 @@
           "Jasmine Crockett": 21.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/26",
@@ -303626,9 +303552,9 @@
           "Jasmine Crockett": 30.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/27",
@@ -303639,9 +303565,9 @@
           "Jasmine Crockett": 30.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "2/28",
@@ -303652,9 +303578,9 @@
           "Jasmine Crockett": 35.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/1",
@@ -303665,9 +303591,9 @@
           "Jasmine Crockett": 31.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/2",
@@ -303678,9 +303604,9 @@
           "Jasmine Crockett": 25.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/3",
@@ -303691,9 +303617,9 @@
           "Jasmine Crockett": 16.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/4",
@@ -303704,9 +303630,9 @@
           "Jasmine Crockett": 0.5,
           "Juli\u00e1n Castro": 0.5,
           "Nathan Johnson": 0.5,
-          "Roland Gutierrez": 0.5,
           "Ronald Gutierrez": 0.5,
-          "Scott Kelly": 0.5
+          "Scott Kelly": 0.5,
+          "Veronica Escobar": 0.5
         },
         {
           "date": "3/5",
@@ -303717,9 +303643,9 @@
           "Jasmine Crockett": 1.0,
           "Juli\u00e1n Castro": 1.0,
           "Nathan Johnson": 1.0,
-          "Roland Gutierrez": 1.0,
           "Ronald Gutierrez": 1.0,
-          "Scott Kelly": 1.0
+          "Scott Kelly": 1.0,
+          "Veronica Escobar": 1.0
         }
       ],
       "note": null
@@ -309622,7 +309548,7 @@
       "state": "WV",
       "district": null,
       "description": "Will Democrats win the Senate race in West Virginia?",
-      "dem_base": 0.014,
+      "dem_base": 0.018,
       "pm": "west-virginia-senate-election-winner",
       "kalshi": "SENATEWV-26-D",
       "kalshi_url": "https://kalshi.com/markets/senatewv/west-virginia-senate-race/senatewv-26",
@@ -309641,7 +309567,7 @@
       "movement": {
         "label": "Steady",
         "level": 1,
-        "change": 0
+        "change": 1
       },
       "polls": null,
       "time_series": [
@@ -310642,7 +310568,7 @@
         },
         {
           "date": "10/17",
-          "polymarket": 1,
+          "polymarket": 2,
           "kalshi": 2
         }
       ],
